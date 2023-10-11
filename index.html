@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,893 +11,595 @@
     <script src="assets/css/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery-3.6.4.js"></script>
     <link rel="icon" type="image/x-icon" href="assets/image/index/LogoBYECO2-footer.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.2/chart.umd.js"></script>
     <title>Home</title>
     <style>
         @font-face {
             font-family: "Anybody";
             src: url("assets/font/Anybody/Anybody-VariableFont_wdth_wght.ttf");
         }
+
         @font-face {
             font-family: "Inter";
             src: url("assets/font/Inter/Inter-VariableFont_slnt,wght.ttf");
         }
+
         @font-face {
             font-family: "Mulish";
             src: url("assets/font/Mulish/Mulish-VariableFont_wght.ttf");
         }
+
         @font-face {
             font-family: "Work Sans";
             src: url("assets/font/Work_Sans/WorkSans-VariableFont_wght.ttf");
         }
     </style>
 </head>
+
 <body>
-    <!-- top -->
-    <div class="top" id="top">
-        <div class="left">
-            <img src="assets/image/index/phone.svg" alt="">
-            <p>Hotline: 1900 8989</p>
-        </div>
-        <div class="right">
-            <p>Follow us</p>
-            <a href=""><img src="assets/image/index/facebook.svg" alt=""></a>
-            <a href=""><img src="assets/image/index/instagram.svg" alt=""></a>
-            <a href=""><img src="assets/image/index/youtube.svg" alt=""></a>
-        </div>
-    </div> 
-    <nav class="container-fluid">
-        <div class="row">
-            <div class="left">
-                <img src="assets/image/index/LogoBYECO2.svg" alt="">
-            </div>  
-            <div class="center">
-                <ul>
-                    <li>
-                        <a href="index.html"><h6 style="color: #20A049;">Home</h6></a>
-                    </li>
-                    <li>
-                        <a href="aboutus.html"><h6>About us</h6></a>
-                    </li>
-                    <li>
-                        <a href="service.html"><h6>Services<img src="assets/image/index/nav-arrow.svg" alt=""></h6></a>
-                        <div class="menu-dropdown">
-                            <div class="menu-dropdown-item">
-                                <div class="menu-dropdown-item-content"><a href="">Service 1</a></div>
-                                <div class="menu-dropdown-item-content"><a href="">Service 2</a></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="gallery.html"><h6>Gallery</h6></a>
-                    </li>
-                    <li>
-                        <a href="news-main.html"><h6>News</h6></a>
-                    </li>
-                    <li>
-                        <a href="contact.html"><h6>Contact</h6></a>
-                    </li>
-                    <li>
-                        <a href=""><h6>Languages<img src="assets/image/index/nav-arrow.svg" alt=""></h6></a>
-                        <div class="menu-dropdown">
-                            <div class="menu-dropdown-item">
-                                <div class="menu-dropdown-item-content"><a href=""><img class="img-language" src="assets/image/index/us.svg" alt="">English</a></div>
-                                <div class="menu-dropdown-item-content"><a href=""><img class="img-language" src="assets/image/index/vi.svg" alt="">Vietnamese</a></div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="right">
-                <img src="assets/image/index/us-rect.svg" alt="">
-                <img src="assets/image/index/vi-rect.svg" alt="">
-            </div>
-            <div class="col-4 menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions">
-                <a class="bar"><img src="assets/image/index/bar.svg" alt=""></a>
-            </div>
-            <div class="offcanvas offcanvas-start offcanvas-change" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-                <div class="offcanvas-header">
-                    <img src="assets/image/index/LogoBYECO2.svg" alt="">
-                    <div data-bs-dismiss="offcanvas"><img src="assets/image/index/cheveron-right.svg" alt=""></div>
-                </div>
-                <div class="offcanvas-header-bottom">
-                    <a href="index.html"><h5 style="color: #20A049;">Home</h5></a>
-                    <a href="aboutus.html"><h5>About us</h5></a>
-                    <a href="service.html"><h5>Service</h5></a>
-                    <a href="gallery.html"><h5>Gallery</h5></a>
-                    <a href="news-main.html"><h5>News</h5></a>
-                    <a href="contact.html"><h5>Contact</h5></a>
-                    <div class="language">
-                        <img src="assets/image/index/us-rect.svg" alt="">
-                        <img src="assets/image/index/vi-rect.svg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </nav> 
-
-    <!-- image-slide -->
-    <div class="image-slide">
-        <div class="slide-button">
-            <a href="javascript:currentSlide(0)" class="image-slide-button"></a>
-            <a href="javascript:currentSlide(1)" class="image-slide-button"></a>
-            <a href="javascript:currentSlide(2)" class="image-slide-button"></a>
-            <a href="javascript:currentSlide(3)" class="image-slide-button"></a>
-            <a href="javascript:currentSlide(4)" class="image-slide-button"></a>
-        </div>
-        <div class="image-wrap" style="background-image: url(assets/image/index/bg1.png)">
-            <div class="text">
-                <p>WELCOME TO BYECO2</p>
-                <h1>Clean, Safe, Renewable</h1>
-                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec</h4>
-            </div>
-        </div>
-        <div class="image-wrap" style="background-image: url(assets/image/index/bg2.png)">
-            <div class="text">
-                <p>WELCOME TO BYECO2</p>
-                <h1>Clean, Safe, Renewable</h1>
-                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec</h4>
-            </div>
-        </div>
-        <div class="image-wrap" style="background-image: url(assets/image/index/bg1.png)">
-            <div class="text">
-                <p>WELCOME TO BYECO2</p>
-                <h1>Clean, Safe, Renewable</h1>
-                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec</h4>
-            </div>
-        </div>
-        <div class="image-wrap" style="background-image: url(assets/image/index/bg2.png)">
-            <div class="text">
-                <p>WELCOME TO BYECO2</p>
-                <h1>Clean, Safe, Renewable</h1>
-                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec</h4>
-            </div>
-        </div>
-        <div class="image-wrap" style="background-image: url(assets/image/index/bg1.png)">
-            <div class="text">
-                <p>WELCOME TO BYECO2</p>
-                <h1>Clean, Safe, Renewable</h1>
-                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec</h4>
-            </div>
-        </div>
-    </div>
-    <script>
-        let imgslide = document.getElementsByClassName("image-wrap");
-        let imgnav = document.getElementsByClassName("image-slide-button");
-        let index=1;
-        for (let i=0;i<imgslide.length;i++){
-                imgslide[i].style.display="none";
-            }
-        imgslide[0].style.display="flex";
-        imgnav[0].style.backgroundColor  = "white";
-    
-        function slide(){
-            for (let i=0;i<imgslide.length;i++){
-                imgslide[i].style.display="none";
-                imgnav[i].style.backgroundColor="transparent";
-            }
-            imgslide[index].style.display="flex";
-            imgnav[index].style.backgroundColor="white";
-           
-            if (index==imgslide.length-1){
-                index=0;
-            }
-            else index++;
-        }
-        function currentSlide(currentindex){
-            for (let i=0;i<imgslide.length;i++){
-                imgslide[i].style.display="none";
-                imgnav[i].style.backgroundColor="transparent";
-            }
-            index=currentindex;
-            imgslide[index].style.display="flex";
-            imgnav[index].style.backgroundColor="white";
-           
-        }
-        setInterval(slide,5000); 
-    </script>
-
-    <!-- content-ourservices -->
-    <div class="content-ourservices">
-        <div class="content-ourservices-top">
-            <p>FROM IDEA TO REALIZATION</p>
-            <h1>Our Services</h1>
-            <p>At lacus vitae nulla sagittis scelerisque nisl. Pellentesque duis cursus vestibulum, facilisi ac, sed.</p>
-        </div>
-        <div class="content-ourservices-bottom">
-            <div class="item">
-                <img src="assets/image/index/service4.png" alt="" class="img-service-hover">
-                <div>
-                    <img src="assets/image/index/service1.svg" alt="">
-                    <h3>Service 1</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="assets/image/index/service5.png" alt="" class="img-service-hover">
-                <div>
-                    <img src="assets/image/index/service2.svg" alt="">
-                    <h3>Service 2</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="assets/image/index/service6.png" alt="" class="img-service-hover">
-                <div>
-                    <img src="assets/image/index/service3.svg" alt="">
-                    <h3>Service 3</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- animate number -->
-    <section class="ftco-section ftco-counter" id="section-counter" style="background-image: url(assets/image/index/bg_4.png);" data-stellar-background-ratio="0.5">
-        <div class="container">
-            <div class="counter-wrap ftco-animate fadeInUp ftco-animated item">
-                    <div class="text">
-                        <strong class="number" data-number="2500">2.500+</strong>
-                        <h5>People Downloaded</h5>
-                    </div>
-            </div>
-            <div class="counter-wrap ftco-animate fadeInUp ftco-animated item">
-                    <div class="text">
-                        <strong class="number" data-number="500">500+</strong>
-                        <h5>Company Parter</h5>
-                    </div>
-            </div>
-            <div class="counter-wrap ftco-animate fadeInUp ftco-animated item">
-                    <div class="text">
-                        <strong class="number" data-number="150">150+</strong>
-                        <h5>Custom Required</h5>
-                    </div>
-            </div>
-            <div class="counter-wrap ftco-animate fadeInUp ftco-animated item">
-                    <div class="text">
-                        <strong class="number" data-number="300">300+</strong>
-                        <h5>Team Developer</h5>
-                    </div>
-            </div>
-        </div>
-    </section>
-    <script src="assets/js/jquery.animateNumber.min.js"></script>
-    <script src="assets/js/jquery.waypoints.min.js"></script>
-    <script>
-        var counter = function() {
-            $('#section-counter').waypoint( function( direction ) {
-                if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
-                    var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-                    $('.number').each(function(){
-                        var $this = $(this),
-                            num = $this.data('number');
-                        $this.animateNumber(
-                        {
-                            number: num,
-                            numberStep: comma_separator_number_step
-                        }, 7000
-                        );
-                    });
-                    
-                }
-
-            } , { offset: '95%' } );
-        }
-        counter();
-
-        var contentWayPoint = function() {
-            var i = 0;
-            $('.ftco-animate').waypoint( function( direction ) {
-                if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
-                    i++;
-                    $(this.element).addClass('item-animate');
-                    setTimeout(function(){
-                        $('body .ftco-animate.item-animate').each(function(k){
-                            var el = $(this);
-                            setTimeout( function () {
-                                var effect = el.data('animate-effect');
-                                if ( effect === 'fadeIn') {
-                                    el.addClass('fadeIn ftco-animated');
-                                } else if ( effect === 'fadeInLeft') {
-                                    el.addClass('fadeInLeft ftco-animated');
-                                } else if ( effect === 'fadeInRight') {
-                                    el.addClass('fadeInRight ftco-animated');
-                                } else {
-                                    el.addClass('fadeInUp ftco-animated');
-                                }
-                                el.removeClass('item-animate');
-                            },  k * 50, 'easeInOutExpo' );
-                        });
-                
-                    }, 100);
-                }
-            } , { offset: '95%' } );
-        };
-        contentWayPoint();
-    </script>
-
-    <!-- content-masssolutions -->
-    <div class="content-masssolutions" style="background-image: url(assets/image/index/pexels-los-muertos-crew-8853502.png);">
-        <div class="content-masssolutions-container">
-            <div class="masssolutions-wrap">
-                <div class="masssolutions-wrap-top">
-                    <p>FROM IDEA TO REALIZATION</p>
-                    <h1>Mass Solutions</h1>
-                    <p>At lacus vitae nulla sagittis scelerisque nisl.</p>
-                    <p>Pellentesque duis cursus vestibulum, facilisi ac, sed.</p>
-                </div>
-                <div class="masssolutions-wrap-bottom">
-                    <div class="item">
-                        <div></div>
-                        <img src="assets/image/index/10-year-experience.svg" alt="">
-                        <h4>10 Years Experience</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                    <div class="item">
-                        <div></div>
-                        <img src="assets/image/index/extra-performance.svg" alt="">
-                        <h4>Extra Performance</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                    <div class="item">
-                        <div></div>
-                        <img src="assets/image/index/pro-report.svg" alt="">
-                        <h4>Pro Reports</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                    <div class="item">
-                        <div></div>
-                        <img src="assets/image/index/staging-process.svg" alt="">
-                        <h4>Staging Process</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="masssolutions-wrap">
-                <div class="masssolutions-wrap-top">
-                    <p>FROM IDEA TO REALIZATION</p>
-                    <h1>Mass Solutions</h1>
-                    <p>At lacus vitae nulla sagittis scelerisque nisl.</p>
-                    <p>Pellentesque duis cursus vestibulum, facilisi ac, sed.</p>
-                </div>
-                <div class="masssolutions-wrap-bottom">
-                    <div class="item">
-                        <img src="assets/image/index/10-year-experience.svg" alt="">
-                        <h4>10 Years Experience</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                    <div class="item">
-                        <img src="assets/image/index/extra-performance.svg" alt="">
-                        <h4>Extra Performance</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                    <div class="item">
-                        <img src="assets/image/index/pro-report.svg" alt="">
-                        <h4>Pro Reports</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                    <div class="item">
-                        <img src="assets/image/index/staging-process.svg" alt="">
-                        <h4>Staging Process</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="masssolutions-wrap">
-                <div class="masssolutions-wrap-top">
-                    <p>FROM IDEA TO REALIZATION</p>
-                    <h1>Mass Solutions</h1>
-                    <p>At lacus vitae nulla sagittis scelerisque nisl.</p>
-                    <p>Pellentesque duis cursus vestibulum, facilisi ac, sed.</p>
-                </div>
-                <div class="masssolutions-wrap-bottom">
-                    <div class="item">
-                        <img src="assets/image/index/10-year-experience.svg" alt="">
-                        <h4>10 Years Experience</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                    <div class="item">
-                        <img src="assets/image/index/extra-performance.svg" alt="">
-                        <h4>Extra Performance</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                    <div class="item">
-                        <img src="assets/image/index/pro-report.svg" alt="">
-                        <h4>Pro Reports</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                    <div class="item">
-                        <img src="assets/image/index/staging-process.svg" alt="">
-                        <h4>Staging Process</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="masssolutions-wrap">
-                <div class="masssolutions-wrap-top">
-                    <p>FROM IDEA TO REALIZATION</p>
-                    <h1>Mass Solutions</h1>
-                    <p>At lacus vitae nulla sagittis scelerisque nisl.</p>
-                    <p>Pellentesque duis cursus vestibulum, facilisi ac, sed.</p>
-                </div>
-                <div class="masssolutions-wrap-bottom">
-                    <div class="item">
-                        <img src="assets/image/index/10-year-experience.svg" alt="">
-                        <h4>10 Years Experience</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                    <div class="item">
-                        <img src="assets/image/index/extra-performance.svg" alt="">
-                        <h4>Extra Performance</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                    <div class="item">
-                        <img src="assets/image/index/pro-report.svg" alt="">
-                        <h4>Pro Reports</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                    <div class="item">
-                        <img src="assets/image/index/staging-process.svg" alt="">
-                        <h4>Staging Process</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="masssolutions-button">
-                <a href="javascript:currentSlidemasssolutions(0)" class="masssolutions-slide-button"></a>
-                <a href="javascript:currentSlidemasssolutions(1)" class="masssolutions-slide-button"></a>
-                <a href="javascript:currentSlidemasssolutions(2)" class="masssolutions-slide-button"></a>
-                <a href="javascript:currentSlidemasssolutions(3)" class="masssolutions-slide-button"></a>
-            </div>
-        </div>
-    </div>
-    <script>
-        let imgslidemasssolutions = document.getElementsByClassName("masssolutions-wrap");
-        let imgnavmasssolutions = document.getElementsByClassName("masssolutions-slide-button");
-        let indexmasssolutions=1;
-        for (let i=0;i<imgslidemasssolutions.length;i++){
-                imgslidemasssolutions[i].style.display="none";
-                imgnavmasssolutions[i].style.backgroundColor="#9AA0A0";
-            }
-        imgslidemasssolutions[0].style.display="block";
-        imgnavmasssolutions[0].style.backgroundColor  = "#20A049";
-    
-        function slidemasssolutions(){
-            for (let i=0;i<imgslidemasssolutions.length;i++){
-                imgslidemasssolutions[i].style.display="none";
-                imgnavmasssolutions[i].style.backgroundColor="#9AA0A0";
-            }
-            imgslidemasssolutions[indexmasssolutions].style.display="block";
-            imgnavmasssolutions[indexmasssolutions].style.backgroundColor="#20A049";
-           
-            if (indexmasssolutions==imgslidemasssolutions.length-1){
-                indexmasssolutions=0;
-            }
-            else indexmasssolutions++;
-        }
-        function currentSlidemasssolutions(currentindexmasssolutions){
-            for (let i=0;i<imgslidemasssolutions.length;i++){
-                imgslidemasssolutions[i].style.display="none";
-                imgnavmasssolutions[i].style.backgroundColor="#9AA0A0";
-            }
-            indexmasssolutions=currentindexmasssolutions;
-            imgslidemasssolutions[indexmasssolutions].style.display="block";
-            imgnavmasssolutions[indexmasssolutions].style.backgroundColor="#20A049";
-           
-        }
-        // setInterval(slidemasssolutions,5000); 
-    </script>
-
-    <!-- content-whatpeoplesayaboutus -->
-    <div class="content-whatpeoplesayaboutus">
-        <div class="content-whatpeoplesayaboutus-top">
-            <p>TRUSTED COMPANY</p>
-            <h1>What people say about us</h1>
-            <p>At lacus vitae nulla sagittis scelerisque nisl. Pellentesque duis cursus vestibulum, facilisi ac, sed.</p>
-        </div>
-        <div class="content-whatpeoplesayaboutus-bottom">
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <div class="carousel-item-wrap">
-                        <div class="item">
-                            <div>
-                                <img src="assets/image/index/Ellipse-1.svg" alt="">
-                                <img src="assets/image/index/quote.svg" alt="" class="quote">
-                            </div>
-                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                            <a></a>
-                            <h6>Jan Stiedemann</h6>
-                            <p>Global Applications Representative</p>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <img src="assets/image/index/Ellipse-2.svg" alt="">
-                                <img src="assets/image/index/quote.svg" alt="" class="quote">
-                            </div>
-                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                            <a></a>
-                            <h6>Jan Stiedemann</h6>
-                            <p>Global Applications Representative</p>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <img src="assets/image/index/Ellipse-3.svg" alt="">
-                                <img src="assets/image/index/quote.svg" alt="" class="quote">
-                            </div>
-                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                            <a></a>
-                            <h6>Jan Stiedemann</h6>
-                            <p>Global Applications Representative</p>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="carousel-item-wrap">
-                        <div class="item">
-                            <div>
-                                <img src="assets/image/index/Ellipse-1.svg" alt="">
-                                <img src="assets/image/index/quote.svg" alt="" class="quote">
-                            </div>
-                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                            <a></a>
-                            <h6>Jan Stiedemann</h6>
-                            <p>Global Applications Representative</p>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <img src="assets/image/index/Ellipse-2.svg" alt="">
-                                <img src="assets/image/index/quote.svg" alt="" class="quote">
-                            </div>
-                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                            <a></a>
-                            <h6>Jan Stiedemann</h6>
-                            <p>Global Applications Representative</p>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <img src="assets/image/index/Ellipse-3.svg" alt="">
-                                <img src="assets/image/index/quote.svg" alt="" class="quote">
-                            </div>
-                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                            <a></a>
-                            <h6>Jan Stiedemann</h6>
-                            <p>Global Applications Representative</p>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"><img src="assets/image/index/arrowleft.svg" alt=""></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"><img src="assets/image/index/arrowright.svg" alt=""></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-        </div>
-    </div>
-
-    <!-- featuredproject -->
-    <div class="content-featuredproject">
-        <div class="content-featuredproject-top">
-            <p>BEST PRACTICE</p>
-            <h1>Featured Project</h1>
-            <p>At lacus vitae nulla sagittis scelerisque nisl. Pellentesque duis cursus vestibulum, facilisi ac, sed.</p>
-        </div>
-        <div class="content-featuredproject-content">
-            <div class="item">
-                <div>
-                    <img src="assets/image/index/featuredproject1.png" alt="">
-                </div>
-                <p>CATEGORY 1</p>
-                <h6>Empowering the world to design</h6>
-            </div>
-            <div class="item">
-                <div>
-                    <img src="assets/image/index/featuredproject2.png" alt="">
-                </div>
-                <p>CATEGORY 1</p>
-                <h6>Empowering the world to design</h6>
-            </div>
-            <div class="item">
-                <div>
-                    <img src="assets/image/index/featuredproject3.png" alt="">
-                </div>
-                <p>CATEGORY 1</p>
-                <h6>Empowering the world to design</h6>
-            </div>
-            <div class="item item4">
-                <div>
-                    <img src="assets/image/index/featuredproject4.png" alt="">
-                </div>
-                <p>CATEGORY 1</p>
-                <h6>Empowering the world to design</h6>
-            </div>
-            <div class="item item5">
-                <div>
-                    <img src="assets/image/index/featuredproject5.png" alt="">
-                </div>
-                <p>CATEGORY 1</p>
-                <h6>Empowering the world to design</h6>
-            </div>
-            <div class="item item6">
-                <div>
-                    <img src="assets/image/index/featuredproject6.png" alt="">
-                </div>
-                <p>CATEGORY 1</p>
-                <h6>Empowering the world to design</h6>
-            </div>
-        </div>
-        <div class="seemore1" onclick="window.location.href='gallery.html'">
-            <p>See more</p>
-            <div>
-                <img src="assets/image/index/seemore.svg" alt=""> 
-            </div>
-        </div>
-    </div>
-    
-    <!-- content-theytrustus -->
-    <div class="content-theytrustus">
-        <div class="content-theytrustus-top">
-            <p>TRUSTED COMPANY</p>
-            <h1>They trust us</h1>
-            <p>At lacus vitae nulla sagittis scelerisque nisl. Pellentesque duis cursus vestibulum, facilisi ac, sed.</p>
-        </div>
-        <div class="content-theytrustus-bottom">
-                <img src="assets/image/index/theytrustus1.svg" alt="">
-                <img src="assets/image/index/theytrustus2.svg" alt="">
-                <img src="assets/image/index/theytrustus3.svg" alt="">
-                <img src="assets/image/index/theytrustus1.svg" alt="">
-                <img src="assets/image/index/theytrustus4.svg" alt="" class="order4">
-                <img src="assets/image/index/theytrustus5.svg" alt="" class="order5">
-                <img src="assets/image/index/theytrustus6.svg" alt="" class="order7">
-                <img src="assets/image/index/theytrustus7.svg" alt="" class="order8">
-        </div>
-    </div>
-
-    <!-- content-newsandblogs- -->
-    <div class="content-newsandblogs">
-        <div class="content-newsandblogs-top">
-            <p>WHAT’S NEXT</p>
-            <h1>News & Blogs</h1>
-            <p>At lacus vitae nulla sagittis scelerisque nisl. Pellentesque duis cursus vestibulum, facilisi ac, sed.</p>
-        </div>
-        <div class="content-newsandblogs-center">
-            <div class="item">
-                <div><img src="assets/image/index/news1.png" alt=""></div>
-                <div class="text">
-                    <p>Featured</p>
-                    <h4>Tiêu đề bài viết</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi morbi sit consectetur</p>
-                </div>
-            </div>
-            <div class="item">
-                <div><img src="assets/image/index/news2.png" alt=""></div>
-                <div class="text">
-                    <p>Featured</p>
-                    <h4>Tiêu đề bài viết</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi morbi sit consectetur</p>
-                </div>
-            </div>
-            <div class="item">
-                <div><img src="assets/image/index/news3.png" alt=""></div>
-                <div class="text">
-                    <p>Featured</p>
-                    <h4>Tiêu đề bài viết</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi morbi sit consectetur</p>
-                </div>
-            </div>
-        </div>
-        <div class="seemore1">
-            <p onclick="window.location.href='news-main.html'">See more</p>
-            <div>
-                <img src="assets/image/index/seemore.svg" alt=""> 
-            </div>
-        </div>
-        <div class="content-newsandblogs-bottom">
-            <div class="item1">
-                <div><img src="assets/image/index/news4.png" alt=""></div>
-                
-                <div class="text">
-                    <p><span>BYECO2</span><a></a><span>Aug 11 2023</span></p>
-                    <h3>7 Types of Renewable Energy: The Future of Energy</h3>
-                    <p>Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn. Vì được dùng vào việc trình bày nên Lorem Ipsum không hề có một ý nghĩa cụ thể nào...</p>
-                </div>
-            </div>
-            <div class="item2">
-                <div class="content">
-                    <div class="content-img">
-                        <img src="assets/image/index/news5.png" alt="">
-                    </div>
-                    <div class="content-text">
-                        <p><span>BYECO2</span><a></a><span>Aug 11 2023</span></p>
-                        <h5>Green energy: Which sources are the most sustainable?</h5>
-                        <p>Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.</p>
-                    </div>
-                </div>
-               <hr>
-                <div class="content">
-                    <div class="content-img">
-                        <img src="assets/image/index/news6.png" alt="">
-                    </div>
-                    <div class="content-text">
-                        <p><span>BYECO2</span><a></a><span>Aug 11 2023</span></p>
-                        <h5>Renewable energy – Powering a safer future</h5>
-                        <p>Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="content">
-                    <div class="content-img">
-                        <img src="assets/image/index/news7.png" alt="">
-                    </div>
-                    <div class="content-text">
-                        <p><span>BYECO2</span><a></a><span>Aug 11 2023</span></p>
-                        <h5>Clean Energy Technology - 5 Ways to Shift to Renewables</h5>
-                        <p>Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="content-newsandblogs-bottom-tablet">
-            <div class="item1" style="background-image: url(assets/image/index/news4.png)">
-                <div class="text">
-                    <p><span>NEWS</span><a></a><span>Aug 11 2023</span></p>
-                    <h3>Today Hightlight</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi morbi sit consectetur</p>
-                    <div>Read more</div>
-                </div>
-            </div>
-            <div class="item2">
-                <div class="content">
-                    <h6>Green energy: Which sources are the most sustainable?</h6>
-                    <div class="bottom">
-                        <div class="content-bottom-img">
-                            <img src="assets/image/index/news5.png" alt="">
-                        </div>
-                        <div class="text">
-                            <p><span>BYECO2</span><a></a><span>Aug 11 2023</span></p>
-                            <p>Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.</p>
-                        </div>
-                    </div>
-                </div>
-               <hr>
-               <div class="content">
-                    <h6>Green energy: Which sources are the most sustainable?</h6>
-                    <div class="bottom">
-                        <div class="content-bottom-img">
-                            <img src="assets/image/index/news5.png" alt="">
-                        </div>
-                        <div class="text">
-                            <p><span>BYECO2</span><a></a><span>Aug 11 2023</span></p>
-                            <p>Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.</p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="content">
-                    <h6>Green energy: Which sources are the most sustainable?</h6>
-                    <div class="bottom">
-                        <div class="content-bottom-img">
-                            <img src="assets/image/index/news5.png" alt="">
-                        </div>
-                        <div class="text">
-                            <p><span>BYECO2</span><a></a><span>Aug 11 2023</span></p>
-                            <p>Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="seemore2">
-            <p onclick="window.location.href='news-main.html'">See more</p>
-            <div>
-                <img src="assets/image/index/seemore.svg" alt="">  
-            </div>
-        </div>
-    </div>
-
-    <!-- content-getintouch -->
-    <div class="content-getintouch" style="background-image: url(assets/image/index/getintouch1.png);">
-        <div class="wrap">
-            <div class="content-getintouch-container">
-                <div class="content-getintouch-top">
-                    <h1>Get in touch</h1>
-                </div>
-                <div class="content-getintouch-bottom">
-                    <div class="item1">
-                        <input type="text" placeholder="Enter your Name">
-                        <input type="text" placeholder="Enter your Email">
-                    </div>
-                    <div class="item2">
-                        <input type="text" placeholder="Enter your Subject">
-                    </div>
-                    <div class="item3">
-                        <textarea name="" id="" cols="30" rows="4" placeholder="Enter your Message..."></textarea>
-                    </div>
-                </div>
-                <button type="submit"><img src="assets/image/index/getintouch2.svg" alt=""> Submit</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- footer -->
-    <footer>
-        <div class="footer-top">
-            <div class="item1">
-                <img src="assets/image/index/LogoBYECO2-footer.svg" alt="">
-                <h5>CÔNG TY CỔ PHẦN NĂNG LƯỢNG VÀ MÔI TRƯỜNG THÔNG MINH BYECO2</h5>
-                <div>
-                    <a href=""><img src="assets/image/index/footer1.svg" alt=""></a>
-                    <a href=""><img src="assets/image/index/footer2.svg" alt=""></a>
-                    <a href=""><img src="assets/image/index/footer3.svg" alt=""></a>
-                    <a href=""><img src="assets/image/index/footer4.svg" alt=""></a>
-                </div>
-            </div>
-            <div class="item2">
-                <div class="contactus">
-                    <h4>Contact Us</h4>
-                    <div class="content">
-                        <p>Tầng trệt, Tòa nhà VCCI, số 171 Võ Thị Sáu, phường Võ Thị Sáu, Quận 3, Thành phố Hồ Chí Minh</p>
-                        <div>
-                            <img src="assets/image/index/footer5.svg" alt="">
-                            <p>Mail@Esaes.com</p>
-                        </div>
-                        <div>
-                            <img src="assets/image/index/footer6.svg" alt="">
-                            <p>086 2020 299</p>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="navigation">
-                    <h4>Navigation</h4>
-                    <div class="content">
-                        <a href="">Homepage</a>
-                        <a href="">About us</a>
-                        <a href="">Services</a>
-                        <a href="">Gallery</a>
-                        <a href="">Contact</a>
-                    </div>
-                </div>
-                <div class="quicklinks">
-                    <h4>Quick links</h4>
-                    <div class="content">
-                        <a href="">Social media</a>
-                        <a href="">Contact us</a>
-                        <a href="">Business Partner</a>
-                        <a href="">Sitemap</a>
-                        <a href="">Join us</a>
-                    </div>
-                </div>
-            </div>
+    <!-- Sidebar/menu -->
+    <nav id="mySidebar">
+        <div class="account">
+            <a href=""
+                style="width: 40px;height: 40px;background-color: white;border-radius: 50%;margin-right: 20px;"></a>
+            <a href="">PPJ01_4</a>
         </div>
         <hr>
-        <div class="footer-bottom">
-            <p>©2022 Company Name. All rights reserved</p>
-            <p>Giấy chứng nhận Đăng ký Kinh doanh số 0314866590 do Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp ngày 12/02/2015</p>
+        <div class="account">
+            <a href=""
+                style="width: 40px;height: 40px;background-color: white;border-radius: 50%;margin-right: 20px;"></a>
+            <a href="">Dang xuat</a>
         </div>
-    </footer>
-    <div id="scrolltop">
-        <img src="assets/image/index/totop.svg" alt="">
-    </div>
+        <hr>
+        <div class="dashboard">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+        </div>
+        <div class="dashboardiot">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>Dashboard IOT</span>
+        </div>
+        <div class="dashboard-report">
+            <div class="dashboard-report-left">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Báo cáo</span>
+            </div>
+            <i class="right fas fa-angle-left" id="angle-left"></i>
+            <i class="right fas fa-angle-down" id="angle-down"></i>
+        </div>
+        <div class="dashboard-report-left-content">
+            <div class="dashboard-report-left-content-energy">
+                <i class="far fa-circle nav-icon"></i>
+                <span>Báo cáo năng lượng</span>
+            </div>
+            <div class="dashboard-report-left-content-gas">
+                <i class="far fa-circle nav-icon"></i>
+                <span>Báo cáo khí thải</span>
+            </div>
+        </div>
+    </nav>
     <script>
-        $("#scrolltop").click(function name(params) {
-            $("html").animate({scrollTop:0});
-        })
-        window.onscroll=function(){scrolltop()};
-        function scrolltop(){
-            if ((document.body.scrollTop>100) || (document.documentElement.scrollTop>100)){
-            $("#scrolltop").addClass("scrolltop-show");
-            $("nav").addClass('nav-sticky');
-            }
-            else {
-                $("#scrolltop").removeClass("scrolltop-show");
-                $("nav").removeClass('nav-sticky');
-            };
+        $("#angle-down,.dashboard-report-left-content").hide();
+        $("#angle-left,#angle-down").click(function () {
+            $(".dashboard-report-left-content").slideToggle("fast");
+            $("#angle-left").toggle();
+            $("#angle-down").toggle();
         }
+        )
     </script>
+
+
+
+    <!-- Page Content  -->
+    <div id="content">
+        <div class="top">
+            <div class="top-content-left">
+                <i class="fas fa-bars" onclick="navigate_sidebar()"></i>
+                <a href="">Home</a>
+                <a href="">Contact</a>
+            </div>
+            <div class="top-content-right">
+                <i class="fas fa-search"></i>
+                <i class="far fa-comments"></i>
+                <i class="far fa-bell"></i>
+                <i class="fas fa-expand-arrows-alt"></i>
+                <i class="fas fa-th-large"></i>
+            </div>
+        </div>
+        <div id="content-dashboard">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="ppj-tab" data-bs-toggle="tab" data-bs-target="#ppj"
+                        type="button" role="tab" aria-controls="ppj" aria-selected="true">Dashboard PPJ</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="energy-tab" data-bs-toggle="tab" data-bs-target="#energy" type="button"
+                        role="tab" aria-controls="energy" aria-selected="false">Dashboard PPJ - Năng lượng</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="gas-tab" data-bs-toggle="tab" data-bs-target="#gas" type="button"
+                        role="tab" aria-controls="gas" aria-selected="false">Dashboard PPJ - Rác thải</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="ppj" role="tabpanel" aria-labelledby="ppj-tab">
+                    <div class="ppj-top">
+                        <img src="assets/image/index/LogoBYECO2.svg" alt="">
+                        <h1>ADO - DASHBOARD ANALYSIS</h1>
+                    </div>
+                    <div class="ppj-point">
+                        <div class="ppj-point-item">
+                            <div class="ppj-point-item-left">
+                                <img src="assets/image/index/LogoBYECO2.svg" alt="">
+                            </div>
+                            <div class="ppj-point-item-right">
+                                <h2>ELECTRICITY</h2>
+                                <h1>185.8 M</h1>
+                                <p>(Kw)</p>
+                            </div>
+                        </div>
+                        <div class="ppj-point-item">
+                            <div class="ppj-point-item-left">
+                                <img src="assets/image/index/LogoBYECO2.svg" alt="">
+                            </div>
+                            <div class="ppj-point-item-right">
+                                <h2>BIOMASS</h2>
+                                <h1>20,753</h1>
+                                <p>(ton)</p>
+                            </div>
+                        </div>
+                        <div class="ppj-point-item">
+                            <div class="ppj-point-item-left">
+                                <img src="assets/image/index/LogoBYECO2.svg" alt="">
+                            </div>
+                            <div class="ppj-point-item-right">
+                                <h2>COAL</h2>
+                                <h1>6,172</h1>
+                                <p>(ton)</p>
+                            </div>
+                        </div>
+                        <div class="ppj-point-item">
+                            <div class="ppj-point-item-left">
+                                <img src="assets/image/index/LogoBYECO2.svg" alt="">
+                            </div>
+                            <div class="ppj-point-item-right">
+                                <h2>PETROL</h2>
+                                <h1>106.9 K</h1>
+                                <p>(L)</p>
+                            </div>
+                        </div>
+                        <div class="ppj-point-item">
+                            <div class="ppj-point-item-left">
+                                <img src="assets/image/index/LogoBYECO2.svg" alt="">
+                            </div>
+                            <div class="ppj-point-item-right">
+                                <h2>DIESEL FOR CAR</h2>
+                                <h1>160.4 K</h1>
+                                <p>(L)</p>
+                            </div>
+                        </div>
+                        <div class="ppj-point-item">
+                            <div class="ppj-point-item-left">
+                                <!-- <img src="assets/image/index/LogoBYECO2.svg" alt=""> -->
+                            </div>
+                            <div class="ppj-point-item-right">
+                                <h2>DIESEL FOR FORKLIFT</h2>
+                                <h1>157.6 K</h1>
+                                <p>(L)</p>
+                            </div>
+                        </div>
+                        <div class="ppj-point-item">
+                            <div class="ppj-point-item-left">
+                                <!-- <img src="assets/image/index/LogoBYECO2.svg" alt=""> -->
+                            </div>
+                            <div class="ppj-point-item-right">
+                                <h2>DIESEL FOR GENERATOR</h2>
+                                <h1>166.4 K</h1>
+                                <p>(L)</p>
+                            </div>
+                        </div>
+                        <div class="ppj-point-item">
+                            <div class="ppj-point-item-left">
+                                <img src="assets/image/index/LogoBYECO2.svg" alt="">
+                            </div>
+                            <div class="ppj-point-item-right">
+                                <h2>GAS</h2>
+                                <h1>60.1</h1>
+                                <p>(ton)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ppj-emission-scope">
+                        <div class="ppj-emission-scope-item">
+                            <div class="ppj-emission-scope-item-left">
+
+                            </div>
+                            <div class="ppj-emission-scope-item-right">
+                                <h2>EMISSION CO2 - SCOPE 1 YoY</h2>
+                                <h1>21.7</h1><span>(Mil - Ton)</span>
+                            </div>
+                        </div>
+                        <div class="ppj-emission-scope-item">
+                            <div class="ppj-emission-scope-item-left">
+
+                            </div>
+                            <div class="ppj-emission-scope-item-right">
+                                <h2>EMISSION CO2 - SCOPE 2 YoY</h2>
+                                <h1>145.6</h1><span>(Mil - Ton)</span>
+                            </div>
+                        </div>
+                        <div class="ppj-emission-scope-item">
+                            <div class="ppj-emission-scope-item-left">
+
+                            </div>
+                            <div class="ppj-emission-scope-item-right">
+                                <h2>EMISSION CO2 - SCOPE 3</h2>
+                                <h1>0</h1><span>(Mil - Ton)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ppj-kpi">
+                        <div class="ppj-kpi-item">
+                            <h2>KPI 1 - ENERGY/SP</h2>
+                            <canvas id="myChartkpi1" style="height: 300px;"></canvas>
+                            <script>
+                                const xValueskpi1 = ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"];
+                                const yValuesbarkpi1 = [19.4, 19.4, 16.0, 18.7, 21.3, 20.5, 24.4, 24.4, 8.2];
+                                const yValueslinekpi1 = [73.3, 88.4, 67.7, 105.4, 72.9, 65.7, 63.5, 66.1, 26.0];
+
+                                new Chart("myChartkpi1", {
+                                    type: "line",
+                                    data: {
+                                        labels: xValueskpi1,
+                                        datasets: [{
+                                            borderColor: "rgb(17, 88, 240)",
+                                            data: yValueslinekpi1,
+                                            label: 'KPI 1 - ENERGY/SP',
+                                            yAxisID: 'A',
+                                            fill: true,
+                                            tension: 0.4,
+                                            borderWidth: 3,
+                                            pointBackgroundColor: "white",
+                                            pointRadius: 5,
+                                        },
+                                        {
+                                            type: "bar",
+                                            data: yValuesbarkpi1,
+                                            backgroundColor: "rgb(6, 6, 82)",
+                                            label: 'Total Production(Mil)',
+                                            yAxisID: 'B',
+                                            fill: true,
+                                            tension: 0.4,
+                                        }]
+                                    },
+                                    options: {
+                                        scales: {
+                                            A: {
+                                                position: 'right',
+                                                min: 0,
+                                            },
+                                            B: {
+                                                position: 'left',
+                                                min: 0,
+                                            }
+                                        }
+                                    }
+                                });
+                            </script>
+                        </div>
+                        <div class="ppj-kpi-item">
+                            <h2>KPI 2 - ENERGY COST/SP</h2>
+                            <canvas id="myChartkpi2" style="height: 300px;"></canvas>
+                            <script>
+                                const xValueskpi2 = ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"];
+                                const yValuesbarkpi2 = [19.4, 19.4, 16.0, 18.7, 21.3, 20.5, 24.4, 24.4, 8.2];
+                                const yValueslinekpi2 = [20.9, 26.4, 20.1, 35.4, 27.6, 26.7, 25.4, 26.2, 10.7];
+
+                                new Chart("myChartkpi2", {
+                                    type: "line",
+                                    data: {
+                                        labels: xValueskpi2,
+                                        datasets: [{
+                                            borderColor: "rgb(17, 88, 240)",
+                                            data: yValueslinekpi2,
+                                            label: 'KPI 2 - ENERGY COST/SP (K VND)',
+                                            yAxisID: 'A',
+                                            fill: true,
+                                            tension: 0.4,
+                                            borderWidth: 3,
+                                            pointBackgroundColor: "white",
+                                            pointRadius: 5,
+                                        },
+                                        {
+                                            type: "bar",
+                                            data: yValuesbarkpi2,
+                                            backgroundColor: "rgb(6, 6, 82)",
+                                            label: 'Total Production(Mil)',
+                                            yAxisID: 'B',
+                                            fill: true,
+                                            tension: 0.4,
+                                        }]
+                                    },
+                                    options: {
+                                        scales: {
+                                            A: {
+                                                position: 'right',
+                                                min: 0,
+                                            },
+                                            B: {
+                                                position: 'left',
+                                                min: 0,
+                                            },
+
+                                        }
+                                    }
+                                });
+                            </script>
+                        </div>
+                        <div class="ppj-kpi-item">
+                            <h2>KPI 3 - EMISSION CO2/SP</h2>
+                            <canvas id="myChartkpi3" style="height: 300px;"></canvas>
+                            <script>
+                                const xValueskpi3 = ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"];
+                                const yValuesbarkpi3 = [19.4, 19.4, 16.0, 18.7, 21.3, 20.5, 24.4, 24.4, 8.2];
+                                const yValueslinekpi3 = [11.3, 15.9, 11.2, 13.8, 8.5, 8.5, 7.9, 8.0, 3.1];
+                                new Chart("myChartkpi3", {
+                                    type: "line",
+                                    data: {
+                                        labels: xValueskpi3,
+                                        datasets: [{
+                                            borderColor: "rgb(17, 88, 240)",
+                                            data: yValueslinekpi3,
+                                            label: 'KPI 3 - EMISSION CO2/SP',
+                                            yAxisID: 'A',
+                                            fill: true,
+                                            tension: 0.4,
+                                            borderWidth: 3,
+                                            pointBackgroundColor: "white",
+                                            pointRadius: 5,
+                                        },
+                                        {
+                                            type: "bar",
+                                            data: yValuesbarkpi3,
+                                            backgroundColor: "rgb(6, 6, 82)",
+                                            label: 'Total Production(Mil)',
+                                            yAxisID: 'B',
+                                            fill: true,
+                                            tension: 0.4,
+                                        }]
+                                    },
+                                    options: {
+                                        scales: {
+                                            A: {
+                                                position: 'right',
+                                                min: 0,
+                                            },
+                                            B: {
+                                                position: 'left',
+                                                min: 0,
+                                            },
+
+                                        },
+
+                                    }
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="ppj-emission-value">
+                        <div class="ppj-emission-value-item">
+                            <h2>MJ VALUE CONTRIBUTION (MJ)</h2>
+                            <canvas id="myChartemissionvalue1" style="max-height: 300px;"></canvas>
+                            <script>
+                                const xValuesemissionvalue1 = ["PETROL", "GAS", "COAL", "BIOMASS", "ELECTRICITY", "DIESEL FOR GENERATOR", "DIESEL FOR FORKLIFT", "DIESEL FOR CAR"];
+                                const yValuesemissionvalue1 = [0, 0, 17, 28, 55, 0, 0, 0];
+                                const barcolors = ["red", "yellow", "rgb(127, 166, 248)", "rgb(17, 88, 240)", "rgb(6, 6, 82)", "rgb(6, 60, 82)", "rgb(60, 6, 82)", "rgb(60, 60, 60)"]
+                                new Chart("myChartemissionvalue1", {
+                                    type: "doughnut",
+                                    data: {
+                                        labels: xValuesemissionvalue1,
+                                        datasets: [{
+                                            backgroundColor: barcolors,
+                                            data: yValuesemissionvalue1,
+                                        }]
+                                    },
+                                    options: {
+
+                                    }
+                                });
+
+                            </script>
+                        </div>
+                        <div class="ppj-emission-value-item">
+                            <h2>EMISSION CO2 CONTRIBUTION</h2>
+                            <canvas id="myChartemissionvalue2" style="max-height: 300px;"></canvas>
+                            <script>
+                                const xValuesemissionvalue2 = ["PETROL", "GAS", "COAL", "BIOMASS", "ELECTRICITY", "DIESEL FOR GENERATOR", "DIESEL FOR FORKLIFT", "DIESEL FOR CAR"];
+                                const yValuesemissionvalue2 = [0, 0, 12, 1, 87, 0, 0, 0];
+                                new Chart("myChartemissionvalue2", {
+                                    type: "doughnut",
+                                    data: {
+                                        labels: xValuesemissionvalue2,
+                                        datasets: [{
+                                            backgroundColor: barcolors,
+                                            data: yValuesemissionvalue2,
+                                        }]
+                                    },
+                                    options: {
+
+                                    }
+                                });
+
+                            </script>
+                        </div>
+                        <div class="ppj-emission-value-item">
+                            <h2>EMISSION CO2 BY YEAR</h2>
+                            <canvas id="myChartemissionvalue3" style="max-height: 300px;"></canvas>
+                            <script>
+                                const xValuesemissionvalue3 = ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"];
+                                const yValuesbaremissionvalue3 = [19.4, 19.4, 16.0, 18.7, 21.3, 20.5, 24.4, 24.4, 8.2];
+                                const yValueslineemissionvalue3 = [73.3, 88.4, 67.7, 105.4, 72.9, 65.7, 63.5, 66.1, 26.0];
+
+                                new Chart("myChartemissionvalue3", {
+                                    type: "bar",
+                                    data: {
+                                        labels: xValuesemissionvalue3,
+                                        datasets: [{
+                                            label: 'SCOPE 1',
+                                            backgroundColor: "rgb(6, 6, 82)",
+                                            data: [7.6, 7.5, 4.7, 0.4, 0.5, 0.3,0.3,0.3,0.1],
+                                        }, {
+                                            label: 'SCOPE 2',
+                                            backgroundColor: "rgb(127, 166, 248)",
+                                            data: [14.5, 18.0, 16.2, 19.3, 17.4, 16.5,18.9,18.6,6.1],
+                                        },
+                                        ]
+                                    },
+                                    options: {
+                                        scales: {
+                                            x: {
+                                                stacked: true,
+                                            },
+                                            y: {
+                                                stacked: true
+                                            }
+                                        }
+                                    }
+                                });
+
+                            </script>
+                        </div>
+                    </div>
+                    <div class="ppj-totalenergyconsumption">
+                        <div class="ppj-totalenergyconsumption-item">
+                            <h2>Total energy consumption (Mil - MJ)</h2>
+                            <canvas id="myCharttotalenergycomsumption1" style="max-height: 300px;"></canvas>
+                            <script>
+                                const xValuesenergycomsumption1 = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023];
+
+                                new Chart("myCharttotalenergycomsumption1", {
+                                    type: "line",
+                                    data: {
+                                        labels: xValuesenergycomsumption1,
+                                        datasets: [{
+                                            data: [142.63, 142.18, 135.04, 150.60, 154.49, 130.76, 154.15, 157.37, 52.83],
+                                            borderColor: "rgb(6, 6, 82)",
+                                            borderWidth: 3,
+                                            pointBackgroundColor: "white",
+                                            pointRadius: 5,
+                                            fill: false,
+                                            yAxisID: 'A',
+                                            label: "Total energy consumption (Mil - MJ)"
+                                        }]
+                                    },
+                                    options: {
+                                        scales: {
+                                            A: {
+                                                position: 'left',
+                                                min: 0,
+                                            },
+
+                                        }
+                                    }
+                                })
+                            </script>
+                        </div>
+                        <div class="ppj-totalenergyconsumption-item">
+                            <h2>Total energy cost consumption (Bil VND)</h2>
+                            <canvas id="myCharttotalenergycomsumption2" style="max-height: 300px;"></canvas>
+                            <script>
+                                const xValuesenergycomsumption2 = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023];
+
+                                new Chart("myCharttotalenergycomsumption2", {
+                                    type: "line",
+                                    data: {
+                                        labels: xValuesenergycomsumption2,
+                                        datasets: [{
+                                            data: [40.4, 42.4, 40.8, 50.6, 58.4, 52.7, 61.5, 62.7, 21.7],
+                                            borderColor: "rgb(6, 6, 82)",
+                                            borderWidth: 3,
+                                            pointBackgroundColor: "white",
+                                            pointRadius: 5,
+                                            fill: false,
+                                            yAxisID: 'A',
+                                            label: "Total energy cost consumption (Bil VND)"
+                                        }]
+                                    },
+                                    options: {
+                                        scales: {
+                                            A: {
+                                                position: 'left',
+                                                min: 0,
+                                            },
+
+                                        }
+                                    }
+                                })
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="energy" role="tabpanel" aria-labelledby="energy-tab">energy</div>
+                <div class="tab-pane fade" id="gas" role="tabpanel" aria-labelledby="gas-tab">gas</div>
+            </div>
+
+        </div>
+
+        <div id="content-report-energy">
+            energy
+
+        </div>
+
+        <div id="content-report-gas">
+            gas
+
+        </div>
+    </div>
+
+
+
+    <script>
+        // Script to open and close sidebar
+        var index = 0;
+        function navigate_sidebar() {
+            var sidebar = document.getElementById("mySidebar");
+            var content = document.getElementById("content");
+            console.log(index)
+            if (index%2==0) {
+                sidebar.style.display = "none";
+                content.style.width = "100%";
+                index++;
+            }
+            else if (index%2!=0) {
+                sidebar.style.display = "block";
+                content.style.width = "calc(100% - 300px)";
+                index++;
+            }
+
+        }
+
+
+        $("#content-dashboard").show();
+        $("#content-report-energy").hide();
+        $("#content-report-gas").hide();
+        $(".dashboard").click(function () {
+            $("#content-report-energy,#content-dashboard,#content-report-gas").hide();
+            $("#content-dashboard").fadeIn();
+        })
+        $(".dashboard-report-left-content-energy").click(function () {
+            $("#content-report-energy,#content-dashboard,#content-report-gas").hide();
+            $("#content-report-energy").fadeIn();
+        })
+        $(".dashboard-report-left-content-gas").click(function () {
+            $("#content-report-energy,#content-dashboard,#content-report-gas").hide();
+            $("#content-report-gas").fadeIn();
+        })
+    </script>
+
+
 </body>
+
 </html>
