@@ -10,62 +10,78 @@ body {
 
 nav {
   width: 300px;
-  background-color: rgb(46, 45, 45);
+  background-color: #1C2434;
   display: block;
   min-height: 1000px;
+  padding: 23px 29px;
 }
-nav .account {
-  width: 100%;
-  display: flex;
-  padding: 10px;
-  padding-left: 30px;
-  align-items: center;
+nav .logo img {
+  width: 108px;
+  height: 68px;
 }
-nav .account a {
-  color: #b4b4b6;
-  text-decoration: none;
-  font-size: 18px;
+nav .logo p {
+  font-family: "Roboto";
+  color: #8A99AF;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-top: 24px;
 }
-nav hr {
-  height: 3px;
-  background-color: white;
-  margin: 0;
-}
-nav .dashboard, nav .dashboardiot, nav .dashboard-report {
-  padding: 10px;
-  padding-left: 40px;
-}
-nav .dashboard i, nav .dashboardiot i, nav .dashboard-report i {
-  font-size: 25px;
-  color: #b4b4b6;
-  margin-right: 25px;
-}
-nav .dashboard span, nav .dashboardiot span, nav .dashboard-report span {
-  color: #b4b4b6;
-  font-size: 18px;
-}
-nav .dashboard:hover, nav .dashboardiot:hover, nav .dashboard-report:hover {
-  background-color: rgb(94, 94, 94);
-  cursor: pointer;
-}
-nav .dashboard-report {
-  padding: 10px;
-  padding-left: 40px;
+nav .dashboard, nav .report {
+  padding: 15px;
+  height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-nav .dashboard-report-left-content .dashboard-report-left-content-energy, nav .dashboard-report-left-content .dashboard-report-left-content-gas {
-  padding: 10px;
-  color: #b4b4b6;
-  padding-left: 60px;
+nav .dashboard img, nav .report img {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  margin-bottom: 3px;
+}
+nav .dashboard i, nav .report i {
+  font-size: 18px;
+  color: #DEE4EE;
+}
+nav .dashboard span, nav .report span {
+  font-family: "Roboto";
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #DEE4EE;
+}
+nav .dashboard:hover, nav .report:hover {
+  background-color: #333A48;
   cursor: pointer;
 }
-nav .dashboard-report-left-content .dashboard-report-left-content-energy:hover, nav .dashboard-report-left-content .dashboard-report-left-content-gas:hover {
-  background-color: rgb(94, 94, 94);
+nav .dashboard-left-content .dashboard-left-content-ppj, nav .dashboard-left-content .dashboard-left-content-energy, nav .dashboard-left-content .dashboard-left-content-garbage {
+  padding: 8px 40px;
+  cursor: pointer;
 }
-nav .dashboard-report-left-content .dashboard-report-left-content-energy i, nav .dashboard-report-left-content .dashboard-report-left-content-gas i {
-  margin-right: 10px;
+nav .dashboard-left-content .dashboard-left-content-ppj span, nav .dashboard-left-content .dashboard-left-content-energy span, nav .dashboard-left-content .dashboard-left-content-garbage span {
+  color: #8A99AF;
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+}
+nav .dashboard-left-content .dashboard-left-content-ppj:hover, nav .dashboard-left-content .dashboard-left-content-energy:hover, nav .dashboard-left-content .dashboard-left-content-garbage:hover {
+  background-color: #333A48;
+}
+nav .report-left-content .report-left-content-energy, nav .report-left-content .report-left-content-gas {
+  padding: 8px 40px;
+  cursor: pointer;
+}
+nav .report-left-content .report-left-content-energy span, nav .report-left-content .report-left-content-gas span {
+  color: #8A99AF;
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+}
+nav .report-left-content .report-left-content-energy:hover, nav .report-left-content .report-left-content-gas:hover {
+  background-color: #333A48;
 }
 
 #content {
@@ -76,158 +92,202 @@ nav .dashboard-report-left-content .dashboard-report-left-content-energy i, nav 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 24px 32px;
 }
-#content .top i {
-  font-size: 20px;
-  margin-right: 25px;
-  color: #727272;
-}
-#content .top .top-content-left a {
-  color: #727272;
-  text-decoration: none;
-  margin-right: 25px;
-}
-#content .top .top-content-left i {
+#content .top .top-content-left img, #content .top .top-content-right img {
+  width: 22px;
+  height: 22px;
   cursor: pointer;
+  margin-right: 39px;
+}
+#content .top .top-content-left .search, #content .top .top-content-right .search {
+  display: inline-block;
+  background-color: #F5F4F6;
+  padding: 8px 15px;
+  width: 300px;
+}
+#content .top .top-content-left .search img, #content .top .top-content-right .search img {
+  margin-right: 10px;
+}
+#content .top .top-content-left .search input, #content .top .top-content-right .search input {
+  outline: none;
+  border: none;
+  border-left: 2px solid #20A049;
+  padding-left: 5px;
+  background-color: #F5F4F6;
 }
 #content #content-dashboard {
   padding: 10px;
   border-top: 2px solid rgb(6, 6, 82);
   border-radius: 10px;
 }
-#content #content-dashboard #ppj .ppj-top {
+#content #content-dashboard #ppj-tab {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: black;
+}
+#content #content-dashboard #overview-tab, #content #content-dashboard #energy-tab {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  color: #9AA0A0;
+}
+#content #content-dashboard #overview .ppj-top {
   display: flex;
   align-items: center;
-  border-bottom: 10px solid rgb(6, 6, 82);
+  border-bottom: 8px solid rgb(6, 6, 82);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px;
 }
-#content #content-dashboard #ppj .ppj-top img {
-  width: 80px;
-  height: 80px;
-  margin-right: 50px;
+#content #content-dashboard #overview .ppj-top img {
+  width: 53px;
+  height: 34px;
+  margin-right: 24px;
 }
-#content #content-dashboard #ppj .ppj-top h1 {
+#content #content-dashboard #overview .ppj-top h1 {
   color: rgb(6, 6, 82);
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 33px;
 }
-#content #content-dashboard #ppj .ppj-point {
+#content #content-dashboard #overview .ppj-point {
   display: flex;
   align-items: center;
   padding: 10px;
   -moz-column-gap: 10px;
        column-gap: 10px;
+  margin-top: 18px;
 }
-#content #content-dashboard #ppj .ppj-point .ppj-point-item {
+#content #content-dashboard #overview .ppj-point .ppj-point-item {
   flex: 1;
   display: flex;
   -moz-column-gap: 10px;
        column-gap: 10px;
+  border-right: 2px solid rgb(17, 88, 240);
 }
-#content #content-dashboard #ppj .ppj-point .ppj-point-item .ppj-point-item-left img {
+#content #content-dashboard #overview .ppj-point .ppj-point-item .ppj-point-item-left img {
   width: 60px;
   height: 60px;
 }
-#content #content-dashboard #ppj .ppj-point .ppj-point-item .ppj-point-item-right h1 {
+#content #content-dashboard #overview .ppj-point .ppj-point-item .ppj-point-item-right h1 {
   color: rgb(17, 88, 240);
   text-align: center;
   font-size: 30px;
-  font-weight: 500;
+  font-weight: 800;
+  font-family: "Roboto";
+  line-height: 37px;
 }
-#content #content-dashboard #ppj .ppj-point .ppj-point-item .ppj-point-item-right h2 {
+#content #content-dashboard #overview .ppj-point .ppj-point-item .ppj-point-item-right h2 {
   color: rgb(6, 6, 82);
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
-  font-weight: 700;
+  font-weight: 800;
+  font-family: "Roboto";
+  line-height: 18px;
 }
-#content #content-dashboard #ppj .ppj-point .ppj-point-item .ppj-point-item-right p {
+#content #content-dashboard #overview .ppj-point .ppj-point-item .ppj-point-item-right p {
   color: rgb(17, 88, 240);
   text-align: center;
 }
-#content #content-dashboard #ppj .ppj-emission-scope {
+#content #content-dashboard #overview .ppj-emission-scope {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 18px;
 }
-#content #content-dashboard #ppj .ppj-emission-scope .ppj-emission-scope-item {
+#content #content-dashboard #overview .ppj-emission-scope .ppj-emission-scope-item {
   display: flex;
   -moz-column-gap: 5px;
        column-gap: 5px;
 }
-#content #content-dashboard #ppj .ppj-emission-scope .ppj-emission-scope-item .ppj-emission-scope-item-left {
+#content #content-dashboard #overview .ppj-emission-scope .ppj-emission-scope-item .ppj-emission-scope-item-left {
   width: 15px;
   background-color: #20A049;
 }
-#content #content-dashboard #ppj .ppj-emission-scope .ppj-emission-scope-item .ppj-emission-scope-item-right {
+#content #content-dashboard #overview .ppj-emission-scope .ppj-emission-scope-item .ppj-emission-scope-item-right {
   background-color: #4fe27e;
-  padding: 5px 80px;
+  padding: 5px 120px;
 }
-#content #content-dashboard #ppj .ppj-emission-scope .ppj-emission-scope-item .ppj-emission-scope-item-right h2 {
+#content #content-dashboard #overview .ppj-emission-scope .ppj-emission-scope-item .ppj-emission-scope-item-right h2 {
   color: black;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   margin: 0;
   font-weight: 700;
+  font-family: "Roboto";
+  line-height: 18px;
 }
-#content #content-dashboard #ppj .ppj-emission-scope .ppj-emission-scope-item .ppj-emission-scope-item-right h1 {
+#content #content-dashboard #overview .ppj-emission-scope .ppj-emission-scope-item .ppj-emission-scope-item-right h1 {
   display: inline-block;
   margin: 0;
   margin-right: 20px;
   color: rgb(6, 6, 82);
   margin-left: 60px;
   padding: 0;
-  font-size: 28px;
+  font-size: 20px;
+  font-family: "Roboto";
+  font-weight: 800;
 }
-#content #content-dashboard #ppj .ppj-emission-scope .ppj-emission-scope-item .ppj-emission-scope-item-right span {
+#content #content-dashboard #overview .ppj-emission-scope .ppj-emission-scope-item .ppj-emission-scope-item-right span {
   color: rgb(17, 88, 240);
 }
-#content #content-dashboard #ppj .ppj-kpi {
+#content #content-dashboard #overview .ppj-kpi {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 60px;
 }
-#content #content-dashboard #ppj .ppj-kpi .ppj-kpi-item {
+#content #content-dashboard #overview .ppj-kpi .ppj-kpi-item {
   padding: 10px;
   border: 2px solid rgb(6, 6, 82);
   width: 33%;
 }
-#content #content-dashboard #ppj .ppj-kpi .ppj-kpi-item h2 {
-  font-size: 22px;
+#content #content-dashboard #overview .ppj-kpi .ppj-kpi-item h2 {
+  font-size: 18px;
   color: rgb(6, 6, 82);
   text-align: center;
   font-weight: 700;
+  font-family: "Roboto";
 }
-#content #content-dashboard #ppj .ppj-emission-value {
+#content #content-dashboard #overview .ppj-emission-value {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 60px;
 }
-#content #content-dashboard #ppj .ppj-emission-value .ppj-emission-value-item {
+#content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item {
   padding: 10px;
   border: 2px solid rgb(6, 6, 82);
   width: 33%;
   height: 360px;
 }
-#content #content-dashboard #ppj .ppj-emission-value .ppj-emission-value-item h2 {
-  font-size: 22px;
+#content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item h2 {
+  font-size: 18px;
   color: rgb(6, 6, 82);
   text-align: center;
   font-weight: 700;
+  font-family: "Roboto";
 }
-#content #content-dashboard #ppj .ppj-totalenergyconsumption {
+#content #content-dashboard #overview .ppj-totalenergyconsumption {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 60px;
 }
-#content #content-dashboard #ppj .ppj-totalenergyconsumption .ppj-totalenergyconsumption-item {
+#content #content-dashboard #overview .ppj-totalenergyconsumption .ppj-totalenergyconsumption-item {
   padding: 10px;
   border: 2px solid rgb(6, 6, 82);
   width: 50%;
 }
-#content #content-dashboard #ppj .ppj-totalenergyconsumption .ppj-totalenergyconsumption-item h2 {
-  font-size: 22px;
+#content #content-dashboard #overview .ppj-totalenergyconsumption .ppj-totalenergyconsumption-item h2 {
+  font-size: 18px;
   color: rgb(6, 6, 82);
   text-align: center;
   font-weight: 700;
+  font-family: "Roboto";
 }

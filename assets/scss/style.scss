@@ -14,65 +14,86 @@ body{
 //CSS sidebar
 nav{
     width: 300px;
-    background-color: rgb(46, 45, 45);
+    background-color: $dark-04;
     display: block;
     min-height: 1000px;
-    .account{
-        width: 100%;
-        display: flex;
-        padding: 10px;
-        padding-left: 30px;
-        align-items: center;
-        a{
-           color: $dark-01;
-           text-decoration: none;
-           font-size: 18px;
+    padding: 23px 29px;
+    .logo{
+        img{
+            width: 108px;
+            height: 68px;
+        }
+        p{
+          font-family: $fontRoboto;  
+          color: $dark-06;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 20px;
+          margin-top: 24px;
         }
     }
-    hr{
-        height: 3px;
-        background-color: white;
-        margin: 0;
-    }
-    .dashboard,.dashboardiot,.dashboard-report{
-        padding:10px;
-        padding-left: 40px;
-        i{
-           font-size: 25px;
-           color: $dark-01; 
-           margin-right: 25px;
-        }
-        span{
-            color: $dark-01;
-            font-size: 18px;
-        }
-        &:hover{
-            background-color: rgb(94, 94, 94);
-            cursor: pointer;
-        }
-    }
-    .dashboard-report{
-        padding: 10px;
-        padding-left: 40px;
+
+    .dashboard,.report{
+        padding:15px;
+        height: 40px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
-    .dashboard-report-left-content{
-        
-        .dashboard-report-left-content-energy,.dashboard-report-left-content-gas{
-            padding:10px;
-            color: $dark-01;
-            padding-left: 60px;
+        img{
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+            margin-bottom: 3px;
+        }
+        i{
+           font-size: 18px;
+           color: $dark-05; 
+        }
+        span{
+            font-family: $fontRoboto;
+            font-size: 15px;
+            line-height: 24px;
+            font-weight: 500;
+            color: $dark-05;
+        }
+        &:hover{
+            background-color: $dark-07;
             cursor: pointer;
-            &:hover{
-                background-color: rgb(94, 94, 94);
-            }
-           i{
-            margin-right: 10px;
-           }
         }
     }
+    .dashboard-left-content{
+        .dashboard-left-content-ppj,.dashboard-left-content-energy,.dashboard-left-content-garbage{
+            padding: 8px 40px;
+            cursor: pointer;
+            span{
+                color: $dark-06;
+                font-family: $fontRoboto;
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 24px;
+            }
+            &:hover{
+                background-color: $dark-07;
+            }
+        }
+    }
+    .report-left-content{
+        .report-left-content-energy,.report-left-content-gas{
+            padding: 8px 40px;
+            cursor: pointer;
+            span{
+                color: $dark-06;
+                font-family: $fontRoboto;
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 24px;
+            }
+            &:hover{
+                background-color: $dark-07;
+            }
+        }
+    }
+  
 }
 
 
@@ -84,20 +105,29 @@ nav{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 20px;
-        i{
-            font-size: 20px;
-            margin-right: 25px;
-            color: $dark-02;
-        }
-        .top-content-left{
-            a{
-                color: $dark-02;
-                text-decoration: none;
-                margin-right: 25px;
-            }
-            i{
+        padding: 24px 32px;
+        .top-content-left,.top-content-right{
+            img{
+                width: 22px;
+                height: 22px;
                 cursor: pointer;
+                margin-right: 39px;
+            }
+            .search{
+                display: inline-block;
+                background-color: $pink;
+                padding: 8px 15px;
+                width: 300px;
+                img{
+                    margin-right: 10px;
+                }
+                input{
+                    outline: none;
+                    border: none;
+                    border-left: 2px solid $primary-green;
+                    padding-left: 5px;
+                    background-color: $pink;
+                }
             }
         }
     }
@@ -105,19 +135,39 @@ nav{
         padding: 10px;
         border-top: 2px solid $primary-blue;
         border-radius: 10px;
-        #ppj{
+        #ppj-tab{
+            font-family: $fontRoboto;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            color: black;
+        }
+        #overview-tab,#energy-tab{
+            font-family: $fontRoboto;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 16px;
+            color: $dark-03;
+        }
+        #overview{
             .ppj-top{
                 display: flex;
                 align-items: center;
-                border-bottom: 10px solid $primary-blue;
+                border-bottom: 8px solid $primary-blue;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding: 5px;
                 img{
-                    width: 80px;
-                    height: 80px;
-                    margin-right: 50px;
-                
+                    width: 53px;
+                    height: 34px;
+                    margin-right: 24px;
                 }
                 h1{
                     color: $primary-blue;
+                    font-family: $fontRoboto;
+                    font-weight: 900;
+                    font-size: 32px;
+                    line-height: 33px;
                 }
             }
             .ppj-point{
@@ -125,10 +175,12 @@ nav{
                 align-items: center;
                 padding: 10px;
                 column-gap: 10px;
+                margin-top: 18px;
                 .ppj-point-item{
                     flex: 1;
                     display: flex;
                     column-gap: 10px;
+                    border-right: 2px solid $second-blue;
                     .ppj-point-item-left{
                         img{
                             width: 60px;
@@ -136,17 +188,22 @@ nav{
                         }
                     }
                     .ppj-point-item-right{
+                      
                         h1{
                             color: $second-blue;
                             text-align: center;
                             font-size: 30px;
-                            font-weight: 500;
+                            font-weight: 800;
+                            font-family: $fontRoboto;
+                            line-height: 37px;
                         }
                         h2{
                             color: $primary-blue;
-                            font-size: 20px;
+                            font-size: 16px;
                             text-align: center;
-                            font-weight: 700;
+                            font-weight: 800;
+                            font-family: $fontRoboto;
+                            line-height: 18px;
                         }
                         p{
                             color: $second-blue;
@@ -159,6 +216,7 @@ nav{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                margin-top: 18px;
                 .ppj-emission-scope-item{
                     display: flex;
                     column-gap: 5px;
@@ -168,13 +226,15 @@ nav{
                     }
                     .ppj-emission-scope-item-right{
                         background-color: $second-green;
-                        padding: 5px 80px;
+                        padding: 5px 120px;
                         h2{
                             color: black;
-                            font-size: 18px;
+                            font-size: 16px;
                             text-align: center;
                             margin: 0;
                             font-weight: 700;
+                            font-family: $fontRoboto;
+                            line-height: 18px;
                         }
                         h1{
                             display: inline-block;
@@ -183,7 +243,9 @@ nav{
                             color: $primary-blue;
                             margin-left: 60px;
                             padding: 0;
-                            font-size: 28px;
+                            font-size: 20px;
+                            font-family: $fontRoboto;
+                            font-weight: 800;
                         }
                         span{
                             color: $second-blue;
@@ -195,16 +257,17 @@ nav{
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                margin-top: 50px;
+                margin-top: 60px;
                 .ppj-kpi-item{
                     padding: 10px;
                     border: 2px solid $primary-blue;
                     width: 33%;
                     h2{
-                        font-size: 22px;
+                        font-size: 18px;
                         color: $primary-blue;
                         text-align: center;
                         font-weight: 700;
+                        font-family: $fontRoboto;
                     }
                 }   
             }
@@ -212,17 +275,18 @@ nav{
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                margin-top: 50px;
+                margin-top: 60px;
                 .ppj-emission-value-item{
                     padding: 10px;
                     border: 2px solid $primary-blue;
                     width: 33%;
                     height: 360px;
                     h2{
-                        font-size: 22px;
+                        font-size: 18px;
                         color: $primary-blue;
                         text-align: center;
                         font-weight: 700;
+                        font-family: $fontRoboto;
                     }
                 }
             }
@@ -230,16 +294,17 @@ nav{
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                margin-top: 50px;
+                margin-top: 60px;
                 .ppj-totalenergyconsumption-item{
                     padding: 10px;
                     border: 2px solid $primary-blue;
                     width: 50%;
                     h2{
-                        font-size: 22px;
+                        font-size: 18px;
                         color: $primary-blue;
                         text-align: center;
                         font-weight: 700;
+                        font-family: $fontRoboto;
                     }
                 }
             }

@@ -21,7 +21,10 @@
             font-family: "Anybody";
             src: url("assets/font/Anybody/Anybody-VariableFont_wdth_wght.ttf");
         }
-
+        @font-face {
+            font-family: "Roboto";
+            src: url("assets/font/Roboto/Roboto-Regular.ttf");
+        }
         @font-face {
             font-family: "Inter";
             src: url("assets/font/Inter/Inter-VariableFont_slnt,wght.ttf");
@@ -42,51 +45,64 @@
 <body>
     <!-- Sidebar/menu -->
     <nav id="mySidebar">
-        <div class="account">
-            <a href=""
-                style="width: 40px;height: 40px;background-color: white;border-radius: 50%;margin-right: 20px;"></a>
-            <a href="">PPJ01_4</a>
+        <div class="logo">
+           <img src="assets/image/index/LogoBYECO2-footer.svg" alt="">
+           <p>MENU</p>
         </div>
-        <hr>
-        <div class="account">
-            <a href=""
-                style="width: 40px;height: 40px;background-color: white;border-radius: 50%;margin-right: 20px;"></a>
-            <a href="">Dang xuat</a>
-        </div>
-        <hr>
+        
+        <!-- Dashboard -->
         <div class="dashboard">
-            <i class="fas fa-tachometer-alt"></i>
-            <span>Dashboard</span>
+            <div class="dashboard-left">
+               <img src="assets/image/index/dashboard.svg" alt="">
+                <span>Dashboard</span>
+            </div>
+            <i class="right fas fa-angle-up" id="dashboard-angle-up"></i>
+            <i class="right fas fa-angle-down" id="dashboard-angle-down"></i>
         </div>
-        <div class="dashboardiot">
-            <i class="fas fa-tachometer-alt"></i>
-            <span>Dashboard IOT</span>
+        <div class="dashboard-left-content">
+            <div class="dashboard-left-content-ppj">
+                <span style="color: white;">PPJ</span>
+            </div>
+            <div class="dashboard-left-content-energy">
+                <span>Năng lượng</span>
+            </div>
+            <div class="dashboard-left-content-garbage">
+                <span>Rác thải</span>
+            </div>
         </div>
-        <div class="dashboard-report">
-            <div class="dashboard-report-left">
-                <i class="fas fa-tachometer-alt"></i>
+
+
+
+        <!-- Report -->
+        <div class="report" style="margin-top: 16px;">
+            <div class="report-left">
+                <img src="assets/image/index/report.svg" alt="">
                 <span>Báo cáo</span>
             </div>
-            <i class="right fas fa-angle-left" id="angle-left"></i>
-            <i class="right fas fa-angle-down" id="angle-down"></i>
+            <i class="right fas fa-angle-up" id="report-angle-up"></i>
+            <i class="right fas fa-angle-down" id="report-angle-down"></i>
         </div>
-        <div class="dashboard-report-left-content">
-            <div class="dashboard-report-left-content-energy">
-                <i class="far fa-circle nav-icon"></i>
-                <span>Báo cáo năng lượng</span>
+        <div class="report-left-content">
+            <div class="report-left-content-energy">
+                <span>Năng lượng</span>
             </div>
-            <div class="dashboard-report-left-content-gas">
-                <i class="far fa-circle nav-icon"></i>
-                <span>Báo cáo khí thải</span>
+            <div class="report-left-content-gas">
+                <span>Khí thải</span>
             </div>
         </div>
     </nav>
     <script>
-        $("#angle-down,.dashboard-report-left-content").hide();
-        $("#angle-left,#angle-down").click(function () {
-            $(".dashboard-report-left-content").slideToggle("fast");
-            $("#angle-left").toggle();
-            $("#angle-down").toggle();
+        $("#report-angle-down,#dashboard-angle-down").hide();
+        $("#report-angle-up,#report-angle-down").click(function () {
+            $(".report-left-content").slideToggle("fast");
+            $("#report-angle-up").toggle();
+            $("#report-angle-down").toggle();
+        }
+        )
+        $("#dashboard-angle-up,#dashboard-angle-down").click(function () {
+            $(".dashboard-left-content").slideToggle("fast");
+            $("#dashboard-angle-up").toggle();
+            $("#dashboard-angle-down").toggle();
         }
         )
     </script>
@@ -97,35 +113,40 @@
     <div id="content">
         <div class="top">
             <div class="top-content-left">
-                <i class="fas fa-bars" onclick="navigate_sidebar()"></i>
-                <a href="">Home</a>
-                <a href="">Contact</a>
+                <img src="assets/image/index/home.svg" alt="" style="margin-right: 16px;">
+                <img src="assets/image/index/dashboard-toggle.svg" alt="" style="margin-right: 30px;" onclick="navigate_sidebar()">
+                <div class="search">
+                    <img src="assets/image/index/search.svg" alt="">
+                    <input type="text" placeholder="Search or type">
+                </div>
+               
             </div>
             <div class="top-content-right">
-                <i class="fas fa-search"></i>
-                <i class="far fa-comments"></i>
-                <i class="far fa-bell"></i>
-                <i class="fas fa-expand-arrows-alt"></i>
-                <i class="fas fa-th-large"></i>
+                <img src="assets/image/index/notification.svg" alt="">
+                <img src="assets/image/index/message.svg" alt="">
+                <img src="assets/image/index/fullscreen.svg" alt="">
+                <img src="assets/image/index/language.svg" alt="" style="margin-right: 5px;">
+                <img src="assets/image/index/dropdown.svg" alt="" style="width: 15px;height: 15px;">
+                <img src="assets/image/index/avatar.svg" alt="" style="width: 48px;height: 48px;border-radius: 50%;">
             </div>
         </div>
         <div id="content-dashboard">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="ppj-tab" data-bs-toggle="tab" data-bs-target="#ppj"
-                        type="button" role="tab" aria-controls="ppj" aria-selected="true">Dashboard PPJ</button>
+                    <button class="nav-link disabled" id="ppj-tab" data-bs-toggle="tab" data-bs-target="#ppj"
+                        type="button" role="tab" aria-controls="ppj" aria-selected="true">Dashboard</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview" type="button"
+                        role="tab" aria-controls="overview" aria-selected="false">Overview</button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="energy-tab" data-bs-toggle="tab" data-bs-target="#energy" type="button"
-                        role="tab" aria-controls="energy" aria-selected="false">Dashboard PPJ - Năng lượng</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="gas-tab" data-bs-toggle="tab" data-bs-target="#gas" type="button"
-                        role="tab" aria-controls="gas" aria-selected="false">Dashboard PPJ - Rác thải</button>
+                        role="tab" aria-controls="energy" aria-selected="false">Năng lượng</button>
                 </li>
             </ul>
             <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="ppj" role="tabpanel" aria-labelledby="ppj-tab">
+                <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
                     <div class="ppj-top">
                         <img src="assets/image/index/LogoBYECO2.svg" alt="">
                         <h1>ADO - DASHBOARD ANALYSIS</h1>
@@ -133,7 +154,7 @@
                     <div class="ppj-point">
                         <div class="ppj-point-item">
                             <div class="ppj-point-item-left">
-                                <img src="assets/image/index/LogoBYECO2.svg" alt="">
+                                <img src="assets/image/index/Vector.svg" alt="">
                             </div>
                             <div class="ppj-point-item-right">
                                 <h2>ELECTRICITY</h2>
@@ -143,7 +164,7 @@
                         </div>
                         <div class="ppj-point-item">
                             <div class="ppj-point-item-left">
-                                <img src="assets/image/index/LogoBYECO2.svg" alt="">
+                                <img src="assets/image/index/Vector.svg" alt="">
                             </div>
                             <div class="ppj-point-item-right">
                                 <h2>BIOMASS</h2>
@@ -153,7 +174,7 @@
                         </div>
                         <div class="ppj-point-item">
                             <div class="ppj-point-item-left">
-                                <img src="assets/image/index/LogoBYECO2.svg" alt="">
+                                <img src="assets/image/index/Vector.svg" alt="">
                             </div>
                             <div class="ppj-point-item-right">
                                 <h2>COAL</h2>
@@ -163,7 +184,7 @@
                         </div>
                         <div class="ppj-point-item">
                             <div class="ppj-point-item-left">
-                                <img src="assets/image/index/LogoBYECO2.svg" alt="">
+                                <img src="assets/image/index/Vector.svg" alt="">
                             </div>
                             <div class="ppj-point-item-right">
                                 <h2>PETROL</h2>
@@ -173,7 +194,7 @@
                         </div>
                         <div class="ppj-point-item">
                             <div class="ppj-point-item-left">
-                                <img src="assets/image/index/LogoBYECO2.svg" alt="">
+                                <img src="assets/image/index/Vector.svg" alt="">
                             </div>
                             <div class="ppj-point-item-right">
                                 <h2>DIESEL FOR CAR</h2>
@@ -203,7 +224,7 @@
                         </div>
                         <div class="ppj-point-item">
                             <div class="ppj-point-item-left">
-                                <img src="assets/image/index/LogoBYECO2.svg" alt="">
+                                <img src="assets/image/index/Vector.svg" alt="">
                             </div>
                             <div class="ppj-point-item-right">
                                 <h2>GAS</h2>
@@ -543,7 +564,6 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="energy" role="tabpanel" aria-labelledby="energy-tab">energy</div>
-                <div class="tab-pane fade" id="gas" role="tabpanel" aria-labelledby="gas-tab">gas</div>
             </div>
 
         </div>
@@ -589,11 +609,11 @@
             $("#content-report-energy,#content-dashboard,#content-report-gas").hide();
             $("#content-dashboard").fadeIn();
         })
-        $(".dashboard-report-left-content-energy").click(function () {
+        $(".report-left-content-energy").click(function () {
             $("#content-report-energy,#content-dashboard,#content-report-gas").hide();
             $("#content-report-energy").fadeIn();
         })
-        $(".dashboard-report-left-content-gas").click(function () {
+        $(".report-left-content-gas").click(function () {
             $("#content-report-energy,#content-dashboard,#content-report-gas").hide();
             $("#content-report-gas").fadeIn();
         })
