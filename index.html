@@ -15,16 +15,19 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.2/chart.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
     <title>Home</title>
     <style>
         @font-face {
             font-family: "Anybody";
             src: url("assets/font/Anybody/Anybody-VariableFont_wdth_wght.ttf");
         }
+
         @font-face {
             font-family: "Roboto";
             src: url("assets/font/Roboto/Roboto-Regular.ttf");
         }
+
         @font-face {
             font-family: "Inter";
             src: url("assets/font/Inter/Inter-VariableFont_slnt,wght.ttf");
@@ -46,14 +49,14 @@
     <!-- Sidebar/menu -->
     <nav id="mySidebar">
         <div class="logo">
-           <img src="assets/image/index/LogoBYECO2-footer.svg" alt="">
-           <p>MENU</p>
+            <img src="assets/image/index/LogoBYECO2-footer.svg" alt="">
+            <p>MENU</p>
         </div>
-        
+
         <!-- Dashboard -->
         <div class="dashboard">
             <div class="dashboard-left">
-               <img src="assets/image/index/dashboard.svg" alt="">
+                <img src="assets/image/index/dashboard.svg" alt="">
                 <span>Dashboard</span>
             </div>
             <i class="right fas fa-angle-up" id="dashboard-angle-up"></i>
@@ -114,12 +117,13 @@
         <div class="top">
             <div class="top-content-left">
                 <img src="assets/image/index/home.svg" alt="" style="margin-right: 16px;">
-                <img src="assets/image/index/dashboard-toggle.svg" alt="" style="margin-right: 30px;" onclick="navigate_sidebar()">
+                <img src="assets/image/index/dashboard-toggle.svg" alt="" style="margin-right: 30px;"
+                    onclick="navigate_sidebar()">
                 <div class="search">
                     <img src="assets/image/index/search.svg" alt="">
                     <input type="text" placeholder="Search or type">
                 </div>
-               
+
             </div>
             <div class="top-content-right">
                 <img src="assets/image/index/notification.svg" alt="">
@@ -137,8 +141,8 @@
                         type="button" role="tab" aria-controls="ppj" aria-selected="true">Dashboard</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview" type="button"
-                        role="tab" aria-controls="overview" aria-selected="false">Overview</button>
+                    <button class="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview"
+                        type="button" role="tab" aria-controls="overview" aria-selected="false">Overview</button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="energy-tab" data-bs-toggle="tab" data-bs-target="#energy" type="button"
@@ -285,6 +289,7 @@
                                             borderWidth: 3,
                                             pointBackgroundColor: "white",
                                             pointRadius: 5,
+
                                         },
                                         {
                                             type: "bar",
@@ -294,6 +299,7 @@
                                             yAxisID: 'B',
                                             fill: true,
                                             tension: 0.4,
+
                                         }]
                                     },
                                     options: {
@@ -306,7 +312,23 @@
                                                 position: 'left',
                                                 min: 0,
                                             }
-                                        }
+                                        },
+                                        plugins: {
+                                            legend: {
+                                                labels: {
+                                                    // This more specific font property overrides the global property
+                                                    font: {
+                                                        size: 13,
+                                                        family: "Roboto"
+                                                    }
+                                                }
+                                            },
+                                            tooltip: {
+                                                titleFont: "Arial",
+                                                padding: 10,
+                                            },
+
+                                        },
                                     }
                                 });
                             </script>
@@ -354,7 +376,21 @@
                                                 position: 'left',
                                                 min: 0,
                                             },
-
+                                        },
+                                        plugins: {
+                                            legend: {
+                                                labels: {
+                                                    // This more specific font property overrides the global property
+                                                    font: {
+                                                        size: 13,
+                                                        family: "Roboto"
+                                                    }
+                                                }
+                                            },
+                                            tooltip: {
+                                                titleFont: "Arial",
+                                                padding: 10,
+                                            }
                                         }
                                     }
                                 });
@@ -402,9 +438,22 @@
                                                 position: 'left',
                                                 min: 0,
                                             },
-
                                         },
-
+                                        plugins: {
+                                            legend: {
+                                                labels: {
+                                                    // This more specific font property overrides the global property
+                                                    font: {
+                                                        size: 13,
+                                                        family: "Roboto"
+                                                    }
+                                                }
+                                            },
+                                            tooltip: {
+                                                titleFont: "Arial",
+                                                padding: 10,
+                                            }
+                                        }
                                     }
                                 });
                             </script>
@@ -428,7 +477,13 @@
                                         }]
                                     },
                                     options: {
+                                        plugins: {
+                                            tooltip: {
+                                                titleFont: "Arial",
+                                                padding: 10,
+                                            },
 
+                                        }
                                     }
                                 });
 
@@ -450,7 +505,12 @@
                                         }]
                                     },
                                     options: {
-
+                                        plugins: {
+                                            tooltip: {
+                                                titleFont: "Arial",
+                                                padding: 10,
+                                            }
+                                        }
                                     }
                                 });
 
@@ -471,11 +531,11 @@
                                         datasets: [{
                                             label: 'SCOPE 1',
                                             backgroundColor: "rgb(6, 6, 82)",
-                                            data: [7.6, 7.5, 4.7, 0.4, 0.5, 0.3,0.3,0.3,0.1],
+                                            data: [7.6, 7.5, 4.7, 0.4, 0.5, 0.3, 0.3, 0.3, 0.1],
                                         }, {
                                             label: 'SCOPE 2',
                                             backgroundColor: "rgb(127, 166, 248)",
-                                            data: [14.5, 18.0, 16.2, 19.3, 17.4, 16.5,18.9,18.6,6.1],
+                                            data: [14.5, 18.0, 16.2, 19.3, 17.4, 16.5, 18.9, 18.6, 6.1],
                                         },
                                         ]
                                     },
@@ -486,6 +546,21 @@
                                             },
                                             y: {
                                                 stacked: true
+                                            }
+                                        },
+                                        plugins: {
+                                            legend: {
+                                                labels: {
+                                                    // This more specific font property overrides the global property
+                                                    font: {
+                                                        size: 13,
+                                                        family: "Roboto"
+                                                    }
+                                                }
+                                            },
+                                            tooltip: {
+                                                titleFont: "Arial",
+                                                padding: 10,
                                             }
                                         }
                                     }
@@ -523,6 +598,21 @@
                                                 min: 0,
                                             },
 
+                                        },
+                                        plugins: {
+                                            legend: {
+                                                labels: {
+                                                    // This more specific font property overrides the global property
+                                                    font: {
+                                                        size: 13,
+                                                        family: "Roboto"
+                                                    }
+                                                }
+                                            },
+                                            tooltip: {
+                                                titleFont: "Arial",
+                                                padding: 10,
+                                            }
                                         }
                                     }
                                 })
@@ -555,7 +645,21 @@
                                                 position: 'left',
                                                 min: 0,
                                             },
-
+                                        },
+                                        plugins: {
+                                            legend: {
+                                                labels: {
+                                                    // This more specific font property overrides the global property
+                                                    font: {
+                                                        size: 13,
+                                                        family: "Roboto"
+                                                    }
+                                                }
+                                            },
+                                            tooltip: {
+                                                titleFont: "Arial",
+                                                padding: 10,
+                                            }
                                         }
                                     }
                                 })
@@ -588,12 +692,12 @@
             var sidebar = document.getElementById("mySidebar");
             var content = document.getElementById("content");
             console.log(index)
-            if (index%2==0) {
+            if (index % 2 == 0) {
                 sidebar.style.display = "none";
                 content.style.width = "100%";
                 index++;
             }
-            else if (index%2!=0) {
+            else if (index % 2 != 0) {
                 sidebar.style.display = "block";
                 content.style.width = "calc(100% - 300px)";
                 index++;
