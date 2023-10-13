@@ -2,126 +2,151 @@
 @import "variable";
 @import "mixin";
 
-img{
+img {
     width: 100%;
     height: auto;
 }
-body{
+
+body {
     box-sizing: border-box;
     display: flex;
 }
 
 //CSS sidebar
-nav{
+nav {
     width: 300px;
     background-color: $dark-04;
     display: block;
     min-height: 1000px;
     padding: 23px 29px;
-    .logo{
-        img{
+
+    .logo {
+        img {
             width: 108px;
             height: 68px;
         }
-        p{
-          font-family: $fontRoboto;  
-          color: $dark-06;
-          font-size: 14px;
-          font-weight: 500;
-          line-height: 20px;
-          margin-top: 24px;
+
+        p {
+            font-family: $fontRoboto;
+            color: $dark-06;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            margin-top: 24px;
         }
     }
 
-    .dashboard,.report{
-        padding:15px;
+    .dashboard,
+    .report {
+        padding: 15px;
         height: 40px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        img{
+
+        img {
             width: 16px;
             height: 16px;
             margin-right: 5px;
             margin-bottom: 3px;
         }
-        i{
-           font-size: 18px;
-           color: $dark-05; 
+
+        i {
+            font-size: 18px;
+            color: $dark-05;
         }
-        span{
+
+        span {
             font-family: $fontRoboto;
             font-size: 15px;
             line-height: 24px;
             font-weight: 500;
             color: $dark-05;
         }
-        &:hover{
+
+        &:hover {
             background-color: $dark-07;
             cursor: pointer;
         }
     }
-    .dashboard-left-content{
-        .dashboard-left-content-ppj,.dashboard-left-content-energy,.dashboard-left-content-garbage{
+
+    .dashboard-left-content {
+
+        .dashboard-left-content-ppj,
+        .dashboard-left-content-energy,
+        .dashboard-left-content-garbage {
             padding: 8px 40px;
             cursor: pointer;
-            span{
+
+            span {
                 color: $dark-06;
                 font-family: $fontRoboto;
                 font-size: 15px;
                 font-weight: 500;
                 line-height: 24px;
             }
-            &:hover{
+
+            &:hover {
                 background-color: $dark-07;
             }
         }
     }
-    .report-left-content{
-        .report-left-content-energy,.report-left-content-gas{
+
+    .report-left-content {
+
+        .report-left-content-energy,
+        .report-left-content-gas {
             padding: 8px 40px;
             cursor: pointer;
-            span{
+
+            span {
                 color: $dark-06;
                 font-family: $fontRoboto;
                 font-size: 15px;
                 font-weight: 500;
                 line-height: 24px;
             }
-            &:hover{
+
+            &:hover {
                 background-color: $dark-07;
             }
         }
     }
-  
+
 }
 
 
 //CSS right content
-#content{
+#content {
     width: calc(100% - 300px);
     background-color: white;
-    .top{
+
+    .top {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 24px 32px;
-        .top-content-left,.top-content-right{
-            img{
+
+        .top-content-left,
+        .top-content-right {
+            img {
                 width: 22px;
                 height: 22px;
                 cursor: pointer;
                 margin-right: 39px;
             }
-            .search{
+
+            .search {
                 display: inline-block;
                 background-color: $pink;
                 padding: 8px 15px;
                 width: 300px;
-                img{
+
+                img {
                     margin-right: 10px;
                 }
-                input{
+
+                input {
                     outline: none;
                     border: none;
                     border-left: 2px solid $primary-green;
@@ -131,184 +156,377 @@ nav{
             }
         }
     }
-    #content-dashboard{
+
+    #content-dashboard {
         padding: 10px;
-        border-top: 2px solid $primary-blue;
         border-radius: 10px;
-        #ppj-tab{
+
+        #ppj-tab {
             font-family: $fontRoboto;
             font-weight: 700;
             font-size: 24px;
             line-height: 28px;
             color: black;
         }
-        #overview-tab,#energy-tab{
+
+        #overview-tab,
+        #energy-tab {
             font-family: $fontRoboto;
             font-weight: 700;
             font-size: 16px;
             line-height: 16px;
             color: $dark-03;
         }
-        #overview{
-            .ppj-top{
+
+        #overview {
+            .ppj-top {
                 display: flex;
                 align-items: center;
-                border-bottom: 8px solid $primary-blue;
-                margin-top: 20px;
+                border-bottom: 1px solid lightgray;
+                margin-top: 10px;
                 margin-bottom: 20px;
                 padding: 5px;
-                img{
-                    width: 53px;
-                    height: 34px;
+
+                img {
+                    width: 70px;
+                    height: 50px;
                     margin-right: 24px;
+
                 }
-                h1{
-                    color: $primary-blue;
-                    font-family: $fontRoboto;
+
+                h1 {
+                    color: $primary-green;
+                    font-family: $fontAnybody;
                     font-weight: 900;
                     font-size: 32px;
                     line-height: 33px;
+                    margin: 0;
                 }
             }
-            .ppj-point{
-                display: flex;
+
+            .ppj-point {
+                display: grid;
                 align-items: center;
-                padding: 10px;
+                justify-content: space-between;
+                grid-template-columns: auto auto auto auto;
+                padding: 10px 30px;
                 column-gap: 10px;
+                row-gap: 25px;
                 margin-top: 18px;
-                .ppj-point-item{
+
+                .ppj-point-item {
                     flex: 1;
                     display: flex;
                     column-gap: 10px;
-                    border-right: 2px solid $second-blue;
-                    .ppj-point-item-left{
-                        img{
-                            width: 60px;
-                            height: 60px;
+                    padding: 16px 14px;
+
+                    .ppj-point-item-left {
+                        img {
+                            width: 55px;
+                            height: 55px;
                         }
                     }
-                    .ppj-point-item-right{
-                      
-                        h1{
-                            color: $second-blue;
+
+                    .ppj-point-item-right {
+
+                        h1 {
+                            color: $primary-green;
                             text-align: center;
-                            font-size: 30px;
+                            font-size: 32px;
                             font-weight: 800;
                             font-family: $fontRoboto;
                             line-height: 37px;
                         }
-                        h2{
-                            color: $primary-blue;
+
+                        img {
+                            width: 10px;
+                            height: 10px;
+                        }
+
+                        .title {
+                            color: $dark-07;
                             font-size: 16px;
                             text-align: center;
                             font-weight: 800;
                             font-family: $fontRoboto;
                             line-height: 18px;
                         }
-                        p{
-                            color: $second-blue;
-                            text-align: center;
+
+                        .unit {
+                            color: $dark-06;
+                            margin-left: 5px;
+                            font-weight: 800;
+                            font-family: $fontRoboto;
+                            font-size: 16px;
                         }
+
                     }
                 }
             }
-            .ppj-emission-scope{
+
+            .ppj-emission-scope {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 margin-top: 18px;
-                .ppj-emission-scope-item{
+                padding: 0 30px;
+
+                .ppj-emission-scope-item {
                     display: flex;
-                    column-gap: 5px;
-                    .ppj-emission-scope-item-left{
-                        width: 15px;
-                        background-color: $primary-green;
-                    }
-                    .ppj-emission-scope-item-right{
-                        background-color: $second-green;
-                        padding: 5px 120px;
-                        h2{
-                            color: black;
-                            font-size: 16px;
-                            text-align: center;
-                            margin: 0;
+                    padding: 18px;
+                    align-items: center;
+                    justify-content: space-between;
+                    column-gap: 45px;
+
+                    .ppj-emission-scope-item-left {
+                        .scope {
+                            font-family: $fontRoboto;
                             font-weight: 700;
-                            font-family: $fontRoboto;
+                            font-size: 16px;
+                            color: $dark-03;
                             line-height: 18px;
-                        }
-                        h1{
-                            display: inline-block;
                             margin: 0;
-                            margin-right: 20px;
-                            color: $primary-blue;
-                            margin-left: 60px;
-                            padding: 0;
-                            font-size: 20px;
+                            margin-bottom: 8px;
+                        }
+
+                        .co2emission {
                             font-family: $fontRoboto;
-                            font-weight: 800;
+                            font-weight: 700;
+                            font-size: 16px;
+                            color: $dark-07;
+                            line-height: 18px;
+                            margin: 0;
+                            margin-bottom: 10px;
                         }
-                        span{
-                            color: $second-blue;
+
+                        .ppj-emission-scope-item-left-value {
+                            display: flex;
+                            align-items: flex-end;
+                            justify-content: space-between;
+                            column-gap: 40px;
+
+                            .value {
+                                font-family: $fontRoboto;
+                                font-weight: 800;
+                                font-size: 32px;
+                                color: $primary-green;
+                                line-height: 38px;
+                            }
+
+                            .unit {
+                                font-family: $fontInter;
+                                font-weight: 600;
+                                font-size: 16px;
+                                color: $dark-03;
+                            }
+                        }
+                    }
+
+                    .ppj-emission-scope-item-right {
+                        img {
+                            width: 57px;
+                            height: 57px;
+                            margin-top: -30px;
                         }
                     }
                 }
             }
-            .ppj-kpi{
+
+            .ppj-kpi {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                margin-top: 60px;
-                .ppj-kpi-item{
+                margin-top: 30px;
+                padding: 0 40px;
+
+                .ppj-kpi-item {
                     padding: 10px;
-                    border: 2px solid $primary-blue;
                     width: 33%;
-                    h2{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    h2 {
                         font-size: 18px;
                         color: $primary-blue;
                         text-align: center;
                         font-weight: 700;
                         font-family: $fontRoboto;
-                    }
-                }   
-            }
-            .ppj-emission-value{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                margin-top: 60px;
-                .ppj-emission-value-item{
-                    padding: 10px;
-                    border: 2px solid $primary-blue;
-                    width: 33%;
-                    height: 360px;
-                    h2{
-                        font-size: 18px;
-                        color: $primary-blue;
-                        text-align: center;
-                        font-weight: 700;
-                        font-family: $fontRoboto;
+                        line-height: 28px;
+                        color: $dark-02;
                     }
                 }
             }
-            .ppj-totalenergyconsumption{
+
+            .ppj-emission-value {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                margin-top: 40px;
+                padding: 0 40px;
+
+                .ppj-emission-value-item {
+                    padding: 10px;
+                    width: 33%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .top {
+                        display: flex;
+                        justify-content: center;
+                        column-gap: 10px;
+
+                        .title {
+                            font-family: $fontInter;
+                            color: black;
+                            font-size: 17px;
+                            font-weight: 700;
+                        }
+
+                        .unit {
+                            font-family: $fontInter;
+                            color: $dark-03;
+                            font-size: 17px;
+                            font-weight: 700;
+                        }
+                    }
+
+                    .details {
+                        margin-top: 20px;
+
+                        .details-title {
+                            img {
+                                width: 12px;
+                                height: 12px;
+                                margin-right: 10px;
+                                cursor: pointer;
+                            }
+
+                            span {
+                                font-family: $fontRoboto;
+                                font-weight: 400;
+                                line-height: 28px;
+                                font-size: 15px;
+                                color: black;
+                            }
+                        }
+
+                        .details-content {
+
+                            table {
+
+                                margin-top: 18px;
+
+                                tr {
+                                    border-bottom: 1px solid lightgray;
+
+                                    .title,
+                                    .value,
+                                    .percent {
+                                        font-family: Roboto;
+                                        font-size: 16px;
+                                        font-weight: 500;
+                                        line-height: 24px;
+                                        color: $dark-07;
+                                    }
+
+                                    .value {
+                                        padding: 0 30px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+
+                }
+            }
+
+            .ppj-totalenergyconsumption {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                margin-top: 60px;
-                .ppj-totalenergyconsumption-item{
+                margin-top: 70px;
+                padding: 0 40px;
+
+                .ppj-totalenergyconsumption-item {
                     padding: 10px;
-                    border: 2px solid $primary-blue;
                     width: 50%;
-                    h2{
-                        font-size: 18px;
-                        color: $primary-blue;
-                        text-align: center;
-                        font-weight: 700;
-                        font-family: $fontRoboto;
+
+                    .top {
+                        display: flex;
+                        justify-content: center;
+                        column-gap: 10px;
+
+                        .title {
+                            font-family: $fontInter;
+                            color: black;
+                            font-size: 17px;
+                            font-weight: 700;
+                        }
+
+                        .unit {
+                            font-family: $fontInter;
+                            color: $dark-03;
+                            font-size: 17px;
+                            font-weight: 700;
+                        }
                     }
                 }
             }
         }
-    }
-}
 
+        #energy {
+            .dashboard-energy-top {
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid lightgray;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                padding: 5px;
+
+                img {
+                    width: 70px;
+                    height: 50px;
+                    margin-right: 24px;
+
+                }
+
+                h1 {
+                    color: $primary-green;
+                    font-family: $fontAnybody;
+                    font-weight: 900;
+                    font-size: 32px;
+                    line-height: 33px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    #content-report-energy {
+        padding: 0 20px;
+        
+        .content-report-energy-top {
+            width: 100%;
+            height: 50px;
+            background-color: $primary-green;
+            display: flex;
+            align-items: center;
+            padding-left: 24px;
+
+            p {
+                color: white;
+                font-family: $fontRoboto;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 28px;
+                margin: 0;
+            }
+        }
+    }
+
+}

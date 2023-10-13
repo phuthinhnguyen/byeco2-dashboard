@@ -21,67 +21,81 @@ nav .logo img {
 }
 nav .logo p {
   font-family: "Roboto";
-  color: #8A99AF;
+  color: #BBBBBB;
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
   margin-top: 24px;
 }
-nav .dashboard, nav .report {
+nav .dashboard,
+nav .report {
   padding: 15px;
   height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-nav .dashboard img, nav .report img {
+nav .dashboard img,
+nav .report img {
   width: 16px;
   height: 16px;
   margin-right: 5px;
   margin-bottom: 3px;
 }
-nav .dashboard i, nav .report i {
+nav .dashboard i,
+nav .report i {
   font-size: 18px;
   color: #DEE4EE;
 }
-nav .dashboard span, nav .report span {
+nav .dashboard span,
+nav .report span {
   font-family: "Roboto";
   font-size: 15px;
   line-height: 24px;
   font-weight: 500;
   color: #DEE4EE;
 }
-nav .dashboard:hover, nav .report:hover {
-  background-color: #333A48;
+nav .dashboard:hover,
+nav .report:hover {
+  background-color: #323338;
   cursor: pointer;
 }
-nav .dashboard-left-content .dashboard-left-content-ppj, nav .dashboard-left-content .dashboard-left-content-energy, nav .dashboard-left-content .dashboard-left-content-garbage {
+nav .dashboard-left-content .dashboard-left-content-ppj,
+nav .dashboard-left-content .dashboard-left-content-energy,
+nav .dashboard-left-content .dashboard-left-content-garbage {
   padding: 8px 40px;
   cursor: pointer;
 }
-nav .dashboard-left-content .dashboard-left-content-ppj span, nav .dashboard-left-content .dashboard-left-content-energy span, nav .dashboard-left-content .dashboard-left-content-garbage span {
-  color: #8A99AF;
+nav .dashboard-left-content .dashboard-left-content-ppj span,
+nav .dashboard-left-content .dashboard-left-content-energy span,
+nav .dashboard-left-content .dashboard-left-content-garbage span {
+  color: #BBBBBB;
   font-family: "Roboto";
   font-size: 15px;
   font-weight: 500;
   line-height: 24px;
 }
-nav .dashboard-left-content .dashboard-left-content-ppj:hover, nav .dashboard-left-content .dashboard-left-content-energy:hover, nav .dashboard-left-content .dashboard-left-content-garbage:hover {
-  background-color: #333A48;
+nav .dashboard-left-content .dashboard-left-content-ppj:hover,
+nav .dashboard-left-content .dashboard-left-content-energy:hover,
+nav .dashboard-left-content .dashboard-left-content-garbage:hover {
+  background-color: #323338;
 }
-nav .report-left-content .report-left-content-energy, nav .report-left-content .report-left-content-gas {
+nav .report-left-content .report-left-content-energy,
+nav .report-left-content .report-left-content-gas {
   padding: 8px 40px;
   cursor: pointer;
 }
-nav .report-left-content .report-left-content-energy span, nav .report-left-content .report-left-content-gas span {
-  color: #8A99AF;
+nav .report-left-content .report-left-content-energy span,
+nav .report-left-content .report-left-content-gas span {
+  color: #BBBBBB;
   font-family: "Roboto";
   font-size: 15px;
   font-weight: 500;
   line-height: 24px;
 }
-nav .report-left-content .report-left-content-energy:hover, nav .report-left-content .report-left-content-gas:hover {
-  background-color: #333A48;
+nav .report-left-content .report-left-content-energy:hover,
+nav .report-left-content .report-left-content-gas:hover {
+  background-color: #323338;
 }
 
 #content {
@@ -94,22 +108,26 @@ nav .report-left-content .report-left-content-energy:hover, nav .report-left-con
   justify-content: space-between;
   padding: 24px 32px;
 }
-#content .top .top-content-left img, #content .top .top-content-right img {
+#content .top .top-content-left img,
+#content .top .top-content-right img {
   width: 22px;
   height: 22px;
   cursor: pointer;
   margin-right: 39px;
 }
-#content .top .top-content-left .search, #content .top .top-content-right .search {
+#content .top .top-content-left .search,
+#content .top .top-content-right .search {
   display: inline-block;
   background-color: #F5F4F6;
   padding: 8px 15px;
   width: 300px;
 }
-#content .top .top-content-left .search img, #content .top .top-content-right .search img {
+#content .top .top-content-left .search img,
+#content .top .top-content-right .search img {
   margin-right: 10px;
 }
-#content .top .top-content-left .search input, #content .top .top-content-right .search input {
+#content .top .top-content-left .search input,
+#content .top .top-content-right .search input {
   outline: none;
   border: none;
   border-left: 2px solid #20A049;
@@ -118,7 +136,6 @@ nav .report-left-content .report-left-content-energy:hover, nav .report-left-con
 }
 #content #content-dashboard {
   padding: 10px;
-  border-top: 2px solid rgb(6, 6, 82);
   border-radius: 10px;
 }
 #content #content-dashboard #ppj-tab {
@@ -128,7 +145,8 @@ nav .report-left-content .report-left-content-energy:hover, nav .report-left-con
   line-height: 28px;
   color: black;
 }
-#content #content-dashboard #overview-tab, #content #content-dashboard #energy-tab {
+#content #content-dashboard #overview-tab,
+#content #content-dashboard #energy-tab {
   font-family: "Roboto";
   font-weight: 700;
   font-size: 16px;
@@ -138,29 +156,33 @@ nav .report-left-content .report-left-content-energy:hover, nav .report-left-con
 #content #content-dashboard #overview .ppj-top {
   display: flex;
   align-items: center;
-  border-bottom: 8px solid rgb(6, 6, 82);
-  margin-top: 20px;
+  border-bottom: 1px solid lightgray;
+  margin-top: 10px;
   margin-bottom: 20px;
   padding: 5px;
 }
 #content #content-dashboard #overview .ppj-top img {
-  width: 53px;
-  height: 34px;
+  width: 70px;
+  height: 50px;
   margin-right: 24px;
 }
 #content #content-dashboard #overview .ppj-top h1 {
-  color: rgb(6, 6, 82);
-  font-family: "Roboto";
+  color: #20A049;
+  font-family: "Anybody";
   font-weight: 900;
   font-size: 32px;
   line-height: 33px;
+  margin: 0;
 }
 #content #content-dashboard #overview .ppj-point {
-  display: flex;
+  display: grid;
   align-items: center;
-  padding: 10px;
+  justify-content: space-between;
+  grid-template-columns: auto auto auto auto;
+  padding: 10px 30px;
   -moz-column-gap: 10px;
        column-gap: 10px;
+  row-gap: 25px;
   margin-top: 18px;
 }
 #content #content-dashboard #overview .ppj-point .ppj-point-item {
@@ -168,84 +190,111 @@ nav .report-left-content .report-left-content-energy:hover, nav .report-left-con
   display: flex;
   -moz-column-gap: 10px;
        column-gap: 10px;
-  border-right: 2px solid rgb(17, 88, 240);
+  padding: 16px 14px;
 }
 #content #content-dashboard #overview .ppj-point .ppj-point-item .ppj-point-item-left img {
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
 }
 #content #content-dashboard #overview .ppj-point .ppj-point-item .ppj-point-item-right h1 {
-  color: rgb(17, 88, 240);
+  color: #20A049;
   text-align: center;
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 800;
   font-family: "Roboto";
   line-height: 37px;
 }
-#content #content-dashboard #overview .ppj-point .ppj-point-item .ppj-point-item-right h2 {
-  color: rgb(6, 6, 82);
+#content #content-dashboard #overview .ppj-point .ppj-point-item .ppj-point-item-right img {
+  width: 10px;
+  height: 10px;
+}
+#content #content-dashboard #overview .ppj-point .ppj-point-item .ppj-point-item-right .title {
+  color: #323338;
   font-size: 16px;
   text-align: center;
   font-weight: 800;
   font-family: "Roboto";
   line-height: 18px;
 }
-#content #content-dashboard #overview .ppj-point .ppj-point-item .ppj-point-item-right p {
-  color: rgb(17, 88, 240);
-  text-align: center;
+#content #content-dashboard #overview .ppj-point .ppj-point-item .ppj-point-item-right .unit {
+  color: #BBBBBB;
+  margin-left: 5px;
+  font-weight: 800;
+  font-family: "Roboto";
+  font-size: 16px;
 }
 #content #content-dashboard #overview .ppj-emission-scope {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 18px;
+  padding: 0 30px;
 }
 #content #content-dashboard #overview .ppj-emission-scope .ppj-emission-scope-item {
   display: flex;
-  -moz-column-gap: 5px;
-       column-gap: 5px;
+  padding: 18px;
+  align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 45px;
+       column-gap: 45px;
 }
-#content #content-dashboard #overview .ppj-emission-scope .ppj-emission-scope-item .ppj-emission-scope-item-left {
-  width: 15px;
-  background-color: #20A049;
-}
-#content #content-dashboard #overview .ppj-emission-scope .ppj-emission-scope-item .ppj-emission-scope-item-right {
-  background-color: #4fe27e;
-  padding: 5px 120px;
-}
-#content #content-dashboard #overview .ppj-emission-scope .ppj-emission-scope-item .ppj-emission-scope-item-right h2 {
-  color: black;
-  font-size: 16px;
-  text-align: center;
-  margin: 0;
-  font-weight: 700;
+#content #content-dashboard #overview .ppj-emission-scope .ppj-emission-scope-item .ppj-emission-scope-item-left .scope {
   font-family: "Roboto";
+  font-weight: 700;
+  font-size: 16px;
+  color: #9AA0A0;
   line-height: 18px;
-}
-#content #content-dashboard #overview .ppj-emission-scope .ppj-emission-scope-item .ppj-emission-scope-item-right h1 {
-  display: inline-block;
   margin: 0;
-  margin-right: 20px;
-  color: rgb(6, 6, 82);
-  margin-left: 60px;
-  padding: 0;
-  font-size: 20px;
+  margin-bottom: 8px;
+}
+#content #content-dashboard #overview .ppj-emission-scope .ppj-emission-scope-item .ppj-emission-scope-item-left .co2emission {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 16px;
+  color: #323338;
+  line-height: 18px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+#content #content-dashboard #overview .ppj-emission-scope .ppj-emission-scope-item .ppj-emission-scope-item-left .ppj-emission-scope-item-left-value {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+#content #content-dashboard #overview .ppj-emission-scope .ppj-emission-scope-item .ppj-emission-scope-item-left .ppj-emission-scope-item-left-value .value {
   font-family: "Roboto";
   font-weight: 800;
+  font-size: 32px;
+  color: #20A049;
+  line-height: 38px;
 }
-#content #content-dashboard #overview .ppj-emission-scope .ppj-emission-scope-item .ppj-emission-scope-item-right span {
-  color: rgb(17, 88, 240);
+#content #content-dashboard #overview .ppj-emission-scope .ppj-emission-scope-item .ppj-emission-scope-item-left .ppj-emission-scope-item-left-value .unit {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  color: #9AA0A0;
+}
+#content #content-dashboard #overview .ppj-emission-scope .ppj-emission-scope-item .ppj-emission-scope-item-right img {
+  width: 57px;
+  height: 57px;
+  margin-top: -30px;
 }
 #content #content-dashboard #overview .ppj-kpi {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 60px;
+  margin-top: 30px;
+  padding: 0 40px;
 }
 #content #content-dashboard #overview .ppj-kpi .ppj-kpi-item {
   padding: 10px;
-  border: 2px solid rgb(6, 6, 82);
   width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #content #content-dashboard #overview .ppj-kpi .ppj-kpi-item h2 {
   font-size: 18px;
@@ -253,41 +302,142 @@ nav .report-left-content .report-left-content-energy:hover, nav .report-left-con
   text-align: center;
   font-weight: 700;
   font-family: "Roboto";
+  line-height: 28px;
+  color: #1D2129;
 }
 #content #content-dashboard #overview .ppj-emission-value {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  margin-top: 60px;
+  margin-top: 40px;
+  padding: 0 40px;
 }
 #content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item {
   padding: 10px;
-  border: 2px solid rgb(6, 6, 82);
   width: 33%;
-  height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-#content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item h2 {
-  font-size: 18px;
-  color: rgb(6, 6, 82);
-  text-align: center;
+#content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .top {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+#content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .top .title {
+  font-family: "Inter";
+  color: black;
+  font-size: 17px;
   font-weight: 700;
+}
+#content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .top .unit {
+  font-family: "Inter";
+  color: #9AA0A0;
+  font-size: 17px;
+  font-weight: 700;
+}
+#content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .details {
+  margin-top: 20px;
+}
+#content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .details .details-title img {
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+#content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .details .details-title span {
   font-family: "Roboto";
+  font-weight: 400;
+  line-height: 28px;
+  font-size: 15px;
+  color: black;
+}
+#content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .details .details-content table {
+  margin-top: 18px;
+}
+#content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .details .details-content table tr {
+  border-bottom: 1px solid lightgray;
+}
+#content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .details .details-content table tr .title,
+#content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .details .details-content table tr .value,
+#content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .details .details-content table tr .percent {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #323338;
+}
+#content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .details .details-content table tr .value {
+  padding: 0 30px;
 }
 #content #content-dashboard #overview .ppj-totalenergyconsumption {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 60px;
+  margin-top: 70px;
+  padding: 0 40px;
 }
 #content #content-dashboard #overview .ppj-totalenergyconsumption .ppj-totalenergyconsumption-item {
   padding: 10px;
-  border: 2px solid rgb(6, 6, 82);
   width: 50%;
 }
-#content #content-dashboard #overview .ppj-totalenergyconsumption .ppj-totalenergyconsumption-item h2 {
-  font-size: 18px;
-  color: rgb(6, 6, 82);
-  text-align: center;
+#content #content-dashboard #overview .ppj-totalenergyconsumption .ppj-totalenergyconsumption-item .top {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+#content #content-dashboard #overview .ppj-totalenergyconsumption .ppj-totalenergyconsumption-item .top .title {
+  font-family: "Inter";
+  color: black;
+  font-size: 17px;
   font-weight: 700;
+}
+#content #content-dashboard #overview .ppj-totalenergyconsumption .ppj-totalenergyconsumption-item .top .unit {
+  font-family: "Inter";
+  color: #9AA0A0;
+  font-size: 17px;
+  font-weight: 700;
+}
+#content #content-dashboard #energy .dashboard-energy-top {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+#content #content-dashboard #energy .dashboard-energy-top img {
+  width: 70px;
+  height: 50px;
+  margin-right: 24px;
+}
+#content #content-dashboard #energy .dashboard-energy-top h1 {
+  color: #20A049;
+  font-family: "Anybody";
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 33px;
+  margin: 0;
+}
+#content #content-report-energy {
+  padding: 0 20px;
+}
+#content #content-report-energy .content-report-energy-top {
+  width: 100%;
+  height: 50px;
+  background-color: #20A049;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+}
+#content #content-report-energy .content-report-energy-top p {
+  color: white;
   font-family: "Roboto";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0;
 }
