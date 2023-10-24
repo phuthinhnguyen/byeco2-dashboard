@@ -9,524 +9,352 @@ img {
 
 body {
     box-sizing: border-box;
-    display: flex;
+    // display: flex;
+ 
 }
 
-//CSS sidebar
-nav {
-    width: 300px;
-    background-color: $dark-04;
-    display: block;
-    min-height: 1000px;
-    padding: 23px 29px;
+.login {
+    width: 100%;
+    background-color: #ffffff;
+    // position: relative;
+    z-index: 2;
+    .login-language {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 12px;
+        position: absolute;
+        top: 49px;
+        right: 80px;
 
-    .logo {
         img {
-            width: 108px;
-            height: 68px;
+            width: 24px;
+            height: 24px;
         }
 
         p {
             font-family: $fontRoboto;
-            color: $dark-06;
-            font-size: 14px;
+            font-size: 20px;
             font-weight: 500;
-            line-height: 20px;
-            margin-top: 24px;
+            color: $primary-dark;
+            margin: 0;
         }
     }
 
-    .dashboard,
-    .report {
-        padding: 15px;
-        height: 40px;
+    .login-title {
+        margin: auto;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-
-        img {
-            width: 16px;
-            height: 16px;
-            margin-right: 5px;
-            margin-bottom: 3px;
-        }
-
-        i {
-            font-size: 18px;
-            color: $dark-05;
-        }
-
-        span {
-            font-family: $fontRoboto;
-            font-size: 15px;
-            line-height: 24px;
-            font-weight: 500;
-            color: $dark-05;
-        }
-
-        &:hover {
-            background-color: $dark-07;
-            cursor: pointer;
-        }
-    }
-
-    .dashboard-left-content {
-
-        .dashboard-left-content-ppj,
-        .dashboard-left-content-energy,
-        .dashboard-left-content-garbage {
-            padding: 8px 40px;
-            cursor: pointer;
-
-            span {
-                color: $dark-06;
-                font-family: $fontRoboto;
-                font-size: 15px;
-                font-weight: 500;
-                line-height: 24px;
-            }
-
-            &:hover {
-                background-color: $dark-07;
-            }
-        }
-    }
-
-    .report-left-content {
-
-        .report-left-content-energy,
-        .report-left-content-gas {
-            padding: 8px 40px;
-            cursor: pointer;
-
-            span {
-                color: $dark-06;
-                font-family: $fontRoboto;
-                font-size: 15px;
-                font-weight: 500;
-                line-height: 24px;
-            }
-
-            &:hover {
-                background-color: $dark-07;
-            }
-        }
-    }
-
-}
-
-
-//CSS right content
-#content {
-    width: calc(100% - 300px);
-    background-color: white;
-
-    .top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 24px 32px;
-
-        .top-content-left,
-        .top-content-right {
+        column-gap: 50px;
+        margin-top: 90px;
+        margin-left: -120px;
+        .login-title-left {
             img {
-                width: 22px;
-                height: 22px;
-                cursor: pointer;
-                margin-right: 39px;
+                width: 126px;
+                height: 80px;
+            }
+        }
+
+        .login-title-right {
+            h2 {
+                font-family: $fontAnybody;
+                font-weight: 700;
+                font-size: 32px;
+                color: $primary-green;
+                text-align: center;
+            }
+        }
+    }
+
+    .login-carbon-footprint {
+        font-family: $fontRoboto;
+        font-weight: 700;
+        font-size: 30px;
+        color: $primary-dark;
+        margin: auto;
+        margin-top: 64px;
+        text-align: center;
+        margin-left: -220px;
+    }
+
+    .login-form {
+        margin: auto;
+        width: 500px;
+        margin-top: 40px;
+        z-index: 2;
+        .form-input {
+            display: flex;
+            flex-direction: column;
+            row-gap: 12px;
+            padding: 20px 30px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0px 0px 6px 6px #eeeeee;
+            label {
+                font-family: $fontRoboto;
+                font-weight: 500;
+                font-size: 16px;
+                color: $primary-dark;
             }
 
-            .search {
-                display: inline-block;
-                background-color: $pink;
-                padding: 8px 15px;
-                width: 300px;
+            .usernameinput,
+            .passwordinput {
+                background-color: $third-green;
+                padding: 20px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                column-gap: 15px;
+                width: 446px;
+                height: 62px;
 
                 img {
-                    margin-right: 10px;
+                    width: 15px;
+                    height: 22px;
                 }
 
                 input {
-                    outline: none;
+                    font-family: Roboto;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 19px;
+                    color: $dark-08;
+                    margin: 0;
                     border: none;
-                    border-left: 2px solid $primary-green;
-                    padding-left: 5px;
-                    background-color: $pink;
-                }
-            }
-        }
-    }
-
-    #content-dashboard {
-        padding: 10px;
-        border-radius: 10px;
-
-        #ppj-tab {
-            font-family: $fontRoboto;
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 28px;
-            color: black;
-        }
-
-        #overview-tab,
-        #energy-tab {
-            font-family: $fontRoboto;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 16px;
-            color: $dark-03;
-        }
-
-        #overview {
-            .ppj-top {
-                display: flex;
-                align-items: center;
-                border-bottom: 1px solid lightgray;
-                margin-top: 10px;
-                margin-bottom: 20px;
-                padding: 5px;
-
-                img {
-                    width: 70px;
-                    height: 50px;
-                    margin-right: 24px;
-
-                }
-
-                h1 {
-                    color: $primary-green;
-                    font-family: $fontAnybody;
-                    font-weight: 900;
-                    font-size: 32px;
-                    line-height: 33px;
-                    margin: 0;
+                    background-color: transparent;
+                    outline: none;
                 }
             }
 
-            .ppj-point {
-                display: grid;
-                align-items: center;
+            .passwordinput {
                 justify-content: space-between;
-                grid-template-columns: auto auto auto auto;
-                padding: 10px 30px;
-                column-gap: 10px;
-                row-gap: 25px;
-                margin-top: 18px;
 
-                .ppj-point-item {
-                    flex: 1;
-                    display: flex;
-                    column-gap: 10px;
-                    padding: 16px 14px;
+                .passwordinput-left {
+                    input {}
 
-                    .ppj-point-item-left {
-                        img {
-                            width: 55px;
-                            height: 55px;
-                        }
-                    }
-
-                    .ppj-point-item-right {
-
-                        h1 {
-                            color: $primary-green;
-                            text-align: center;
-                            font-size: 32px;
-                            font-weight: 800;
-                            font-family: $fontRoboto;
-                            line-height: 37px;
-                        }
-
-                        img {
-                            width: 10px;
-                            height: 10px;
-                        }
-
-                        .title {
-                            color: $dark-07;
-                            font-size: 16px;
-                            text-align: center;
-                            font-weight: 800;
-                            font-family: $fontRoboto;
-                            line-height: 18px;
-                        }
-
-                        .unit {
-                            color: $dark-06;
-                            margin-left: 5px;
-                            font-weight: 800;
-                            font-family: $fontRoboto;
-                            font-size: 16px;
-                        }
-
+                    img {
+                        margin-bottom: 5px;
+                        height: 30px;
+                        width: 18px;
+                        margin-right: 10px;
                     }
                 }
-            }
 
-            .ppj-emission-scope {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-top: 18px;
-                padding: 0 30px;
-
-                .ppj-emission-scope-item {
-                    display: flex;
-                    padding: 18px;
-                    align-items: center;
-                    justify-content: space-between;
-                    column-gap: 45px;
-
-                    .ppj-emission-scope-item-left {
-                        .scope {
-                            font-family: $fontRoboto;
-                            font-weight: 700;
-                            font-size: 16px;
-                            color: $dark-03;
-                            line-height: 18px;
-                            margin: 0;
-                            margin-bottom: 8px;
-                        }
-
-                        .co2emission {
-                            font-family: $fontRoboto;
-                            font-weight: 700;
-                            font-size: 16px;
-                            color: $dark-07;
-                            line-height: 18px;
-                            margin: 0;
-                            margin-bottom: 10px;
-                        }
-
-                        .ppj-emission-scope-item-left-value {
-                            display: flex;
-                            align-items: flex-end;
-                            justify-content: space-between;
-                            column-gap: 40px;
-
-                            .value {
-                                font-family: $fontRoboto;
-                                font-weight: 800;
-                                font-size: 32px;
-                                color: $primary-green;
-                                line-height: 38px;
-                            }
-
-                            .unit {
-                                font-family: $fontInter;
-                                font-weight: 600;
-                                font-size: 16px;
-                                color: $dark-03;
-                            }
-                        }
-                    }
-
-                    .ppj-emission-scope-item-right {
-                        img {
-                            width: 57px;
-                            height: 57px;
-                            margin-top: -30px;
-                        }
-                    }
-                }
-            }
-
-            .ppj-kpi {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                margin-top: 30px;
-                padding: 0 40px;
-
-                .ppj-kpi-item {
-                    padding: 10px;
-                    width: 33%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-
-                    h2 {
-                        font-size: 18px;
-                        color: $primary-blue;
-                        text-align: center;
-                        font-weight: 700;
-                        font-family: $fontRoboto;
-                        line-height: 28px;
-                        color: $dark-02;
-                    }
-                }
-            }
-
-            .ppj-emission-value {
-                display: flex;
-                align-items: flex-start;
-                justify-content: space-between;
-                margin-top: 40px;
-                padding: 0 40px;
-
-                .ppj-emission-value-item {
-                    padding: 10px;
-                    width: 33%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-
-                    .top {
-                        display: flex;
-                        justify-content: center;
-                        column-gap: 10px;
-
-                        .title {
-                            font-family: $fontInter;
-                            color: black;
-                            font-size: 17px;
-                            font-weight: 700;
-                        }
-
-                        .unit {
-                            font-family: $fontInter;
-                            color: $dark-03;
-                            font-size: 17px;
-                            font-weight: 700;
-                        }
-                    }
-
-                    .details {
-                        margin-top: 20px;
-
-                        .details-title {
-                            img {
-                                width: 12px;
-                                height: 12px;
-                                margin-right: 10px;
-                                cursor: pointer;
-                            }
-
-                            span {
-                                font-family: $fontRoboto;
-                                font-weight: 400;
-                                line-height: 28px;
-                                font-size: 15px;
-                                color: black;
-                            }
-                        }
-
-                        .details-content {
-
-                            table {
-
-                                margin-top: 18px;
-
-                                tr {
-                                    border-bottom: 1px solid lightgray;
-
-                                    .title,
-                                    .value,
-                                    .percent {
-                                        font-family: Roboto;
-                                        font-size: 16px;
-                                        font-weight: 500;
-                                        line-height: 24px;
-                                        color: $dark-07;
-                                    }
-
-                                    .value {
-                                        padding: 0 30px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-
-                }
-            }
-
-            .ppj-totalenergyconsumption {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                margin-top: 70px;
-                padding: 0 40px;
-
-                .ppj-totalenergyconsumption-item {
-                    padding: 10px;
-                    width: 50%;
-
-                    .top {
-                        display: flex;
-                        justify-content: center;
-                        column-gap: 10px;
-
-                        .title {
-                            font-family: $fontInter;
-                            color: black;
-                            font-size: 17px;
-                            font-weight: 700;
-                        }
-
-                        .unit {
-                            font-family: $fontInter;
-                            color: $dark-03;
-                            font-size: 17px;
-                            font-weight: 700;
-                        }
+                .passwordinput-right {
+                    img {
+                        width: 20px;
+                        height: 16px;
+                        cursor: pointer;
                     }
                 }
             }
         }
 
-        #energy {
-            .dashboard-energy-top {
-                display: flex;
-                align-items: center;
-                border-bottom: 1px solid lightgray;
-                margin-top: 10px;
-                margin-bottom: 20px;
-                padding: 5px;
-
-                img {
-                    width: 70px;
-                    height: 50px;
-                    margin-right: 24px;
-
-                }
-
-                h1 {
-                    color: $primary-green;
-                    font-family: $fontAnybody;
-                    font-weight: 900;
-                    font-size: 32px;
-                    line-height: 33px;
-                    margin: 0;
-                }
-            }
-        }
-    }
-
-    #content-report-energy {
-        padding: 0 20px;
-        
-        .content-report-energy-top {
-            width: 100%;
-            height: 50px;
-            background-color: $primary-green;
+        .form-checkbox {
+            margin-top: 24px;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            padding-left: 24px;
 
-            p {
-                color: white;
+            .form-checkbox-left {
+                span {
+                    font-family: $fontRoboto;
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: $primary-dark;
+                    margin-left: 13px;
+
+                }
+            }
+
+            .form-checkbox-right {
                 font-family: $fontRoboto;
                 font-weight: 500;
-                font-size: 20px;
-                line-height: 28px;
-                margin: 0;
+                font-size: 16px;
+                color: $state-error;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+        .form-button {
+            background-color: $primary-green;
+            border-radius: 40px;
+            border: none;
+            width: 100%;
+            height: 48px;
+            color: #FFFFFF;
+            margin-top: 30px;
+            z-index: 2;
+        }
+    }
+   
+}
+.login-footer{
+    width: 100%;
+    margin-top: -180px;
+    z-index: -1;
+    position: relative;
+    img{
+        width: 100%;
+        height: auto;
+        z-index: -1;
+        
+    }
+    p{
+        display: none;
+        font-family: $fontRoboto;
+        font-size: 18px;
+        font-weight: 500;
+        color: $primary-green;
+    }
+}
+
+@media screen and (max-width:1080px) {
+    .login{
+        .login-title{
+            flex-direction: column;
+            row-gap: 20px;
+            margin-left: 0;
+            .login-title-left{
+                img{
+                    width: 130px;
+                    height: 130px;
+                }
+            }
+        }
+        .login-carbon-footprint{
+            margin-left: -280px;
+        }
+    }
+    .login-footer{
+        img{
+            height: 600px;
+        }
+    }
+}
+
+@media screen and (max-width:650px) {
+    .login{
+        padding: 0 30px;
+        .login-language{
+            top: 30px;
+            right: 30px;
+        }
+        .login-title{
+            display: none;
+        }
+        .login-carbon-footprint{
+            margin-left: 0;
+            text-align: left;
+            margin-top: 90px;
+        }
+        .login-form{
+            padding: 0;
+            width: 100%;
+            .form-input{
+                .usernameinput,.passwordinput{
+                    width: 100%;
+                    input{
+                 
+                
+                    }
+                }
+                .passwordinput{
+                    .passwordinput-left{
+                    width: 90%;
+                    }
+                    .passwordinput-right{
+                        width: 10%;
+                    }
+                }
+            }
+            .form-checkbox{
+                display: block;
+                .form-checkbox-left{
+                    display: none;
+                }
+                .form-checkbox-right{
+                    text-align: center;
+                    text-decoration: none;
+                }
+            }
+        }
+        
+    }
+    .login-footer{
+        p{  
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%,-50%);
+        }
+    }
+}
+@media screen and (max-width:380px) {
+    .login{
+        .login-language{
+            p{
+                font-size: 15px;
+            }
+            img{
+                width: 18px;
+                height: 18px;
+            }
+        }
+        .login-carbon-footprint{
+            font-size: 22px;
+        }
+        .login-form{
+            margin-top: 30px;
+            .form-input{
+                padding: 20px;
+                label{
+                    font-size: 15px;
+                }
+                .usernameinput,.passwordinput{
+                    height: 45px;
+                    input{
+                        
+                        font-size: 12px;
+                        max-width: 80px;
+                    }
+                }
+                .passwordinput{
+                    .passwordinput-left{
+          
+                    }
+                    .passwordinput-right{
+               
+                    }
+                }
+            }
+            .form-checkbox{
+                .form-checkbox-right{
+                    font-size: 13px;
+                }
             }
         }
     }
-
+    .login-footer{
+        p{
+            font-size: 14px;
+        }
+    }
+}
+@media screen and (max-width:300px) {
+    .login{
+        .login-form{
+            .form-input{
+                .usernameinput,.passwordinput{
+                    input{
+                        width: 60px;
+                    }
+                }
+            }
+        }
+    }
 }
