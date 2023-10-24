@@ -23,11 +23,13 @@ nav {
     .logo {
         background-color: $fourth-green;
         padding: 23px 29px;
+
         img {
             width: 108px;
             height: 68px;
         }
     }
+
     .menu-title {
         font-family: $fontRoboto;
         color: $third-green;
@@ -38,13 +40,18 @@ nav {
         padding-left: 29px;
         margin-bottom: 18px;
     }
+
     .dashboard,
     .report {
-        padding: 15px 44px;
+        padding: 15px 24px;
         height: 40px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        background-color: #248142;
+        width: 80%;
+        margin: auto;
+        border-radius: 5px;
         img {
             width: 16px;
             height: 16px;
@@ -62,11 +69,11 @@ nav {
             font-size: 15px;
             line-height: 24px;
             font-weight: 500;
-            color: #fff ;
+            color: #fff;
         }
 
         &:hover {
-            background-color: $fourth-green; 
+            background-color: #248142;
             cursor: pointer;
         }
     }
@@ -75,20 +82,25 @@ nav {
 
         .dashboard-left-content-ppj,
         .dashboard-left-content-energy,
-        .dashboard-left-content-garbage {
+        .dashboard-left-content-ghgemission,
+        .dashboard-left-content-projectportfolio {
             padding: 8px 69px;
             cursor: pointer;
-
+            width: 80%;
+            margin: auto;
+            border-radius: 5px;
+            margin-top: 5px;
             span {
                 color: #fff;
                 font-family: $fontRoboto;
                 font-size: 15px;
                 font-weight: 500;
                 line-height: 24px;
+                margin-left: -20px;
             }
 
             &:hover {
-                background-color: $fourth-green;
+                background-color: #248142;
             }
         }
     }
@@ -96,29 +108,36 @@ nav {
     .report-left-content {
 
         .report-left-content-energy,
-        .report-left-content-gas {
+        .report-left-content-ghgemission {
             padding: 8px 69px;
             cursor: pointer;
-
+            width: 80%;
+            margin: auto;
+            border-radius: 5px;
+            margin-top: 5px;
             span {
                 color: #fff;
                 font-family: $fontRoboto;
                 font-size: 15px;
                 font-weight: 500;
                 line-height: 24px;
+                margin-left: -20px;
+               
             }
 
             &:hover {
-                background-color: $fourth-green;
+                background-color: #248142;
             }
         }
     }
-    .nav-footer{
+
+    .nav-footer {
         position: absolute;
         bottom: 0;
         left: 10px;
         width: 300px;
-        img{
+
+        img {
             width: 100%;
             height: auto;
         }
@@ -180,7 +199,9 @@ nav {
         }
 
         #overview-tab,
-        #energy-tab,#ghgemission-tab,#projectportfolio-tab {
+        #energy-tab,
+        #ghgemission-tab,
+        #projectportfolio-tab {
             font-family: $fontRoboto;
             font-weight: 700;
             font-size: 16px;
@@ -272,7 +293,8 @@ nav {
                             font-family: $fontRoboto;
                             font-size: 16px;
                         }
-                        .ppj-point-item-right-bottom{
+
+                        .ppj-point-item-right-bottom {
                             width: 200px;
                             display: flex;
                             align-items: flex-end;
@@ -523,12 +545,427 @@ nav {
                     margin: 0;
                 }
             }
+
+            .dashboard-energy-content {
+                padding: 20px;
+                .dashboard-energy-content-electricity {
+                    .dashboard-energy-content-electricity-title {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        background-color: #f2f2f3;
+                        padding: 7px 10px;
+                        .dashboard-energy-content-electricity-title-left {
+                            display: flex;
+                            align-items: center;
+
+                            img {
+                                width: 40px;
+                                height: 40px;
+                                margin-right: 16px;
+                            }
+
+                            h2 {
+                                font-family: $fontRoboto;
+                                font-weight: 800;
+                                font-size: 24px;
+                                color: $dark-02;
+                                display: inline-block;
+                                margin: 0;
+
+                            }
+                        }
+
+                        .dashboard-energy-content-electricity-title-right {
+                            i {
+                                font-size: 22px;
+                                font-weight: 700;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                    .dashboard-energy-content-electricity-content {
+                        display: flex;
+                        column-gap: 40px;
+                        margin-top: 30px;
+                        .dashboard-energy-content-electricity-content-left {
+                            width: 50%;
+                            .top {
+
+                                display: flex;
+                                justify-content: center;
+
+                                .title {
+                                    font-family: $fontRoboto;
+                                    font-weight: 700;
+                                    font-size: 18px;
+                                    color: $dark-02;
+
+                                }
+                            }
+                        }
+
+                        .dashboard-energy-content-electricity-content-right {
+                            width: 50%;
+                            table {
+                                width: 95%;
+                                tr {
+
+                                    th {
+                                        background-color: $primary-green;
+                                        font-family: $fontInter;
+                                        font-weight: 600;
+                                        font-size: 15px;
+                                        color: #fff;
+                                        padding: 10px 20px;
+
+                                    }
+
+                                    td {
+                                        font-family: $fontRoboto;
+                                        font-size: 15px;
+                                        font-weight: 500;
+                                        text-align: right;
+                                        border: 2px dashed $primary-green;
+                                        padding: 0 10px;
+                                    }
+                                }
+                            }
+                            .dashboard-energy-content-electricity-content-right-bottom{
+                                .top {
+
+                                    display: flex;
+                                    justify-content: center;
+    
+                                    .title {
+                                        font-family: $fontRoboto;
+                                        font-weight: 700;
+                                        font-size: 18px;
+                                        color: $dark-02;
+    
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .dashboard-energy-content-diesel {
+                    margin-top: 50px;
+                    .dashboard-energy-content-diesel-title {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        background-color: #f2f2f3;
+                        padding: 7px 10px;
+                        .dashboard-energy-content-diesel-title-left {
+                            display: flex;
+                            align-items: center;
+
+                            img {
+                                width: 40px;
+                                height: 40px;
+                                margin-right: 16px;
+                            }
+
+                            h2 {
+                                font-family: $fontRoboto;
+                                font-weight: 800;
+                                font-size: 24px;
+                                color: $dark-02;
+                                display: inline-block;
+                                margin: 0;
+
+                            }
+                        }
+
+                        .dashboard-energy-content-diesel-title-right {
+                            i {
+                                font-size: 22px;
+                                font-weight: 700;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                    .dashboard-energy-content-diesel-content {
+                        display: flex;
+                        column-gap: 40px;
+                        margin-top: 30px;
+                        .dashboard-energy-content-diesel-content-left {
+                            width: 50%;
+                            .top {
+
+                                display: flex;
+                                justify-content: center;
+
+                                .title {
+                                    font-family: $fontRoboto;
+                                    font-weight: 700;
+                                    font-size: 18px;
+                                    color: $dark-02;
+
+                                }
+                            }
+                        }
+
+                        .dashboard-energy-content-diesel-content-right {
+                            width: 50%;
+                            table {
+                                width: 95%;
+                                tr {
+
+                                    th {
+                                        background-color: $primary-green;
+                                        font-family: $fontInter;
+                                        font-weight: 600;
+                                        font-size: 15px;
+                                        color: #fff;
+                                        padding: 10px 20px;
+
+                                    }
+
+                                    td {
+                                        font-family: $fontRoboto;
+                                        font-size: 15px;
+                                        font-weight: 500;
+                                        text-align: right;
+                                        border: 2px dashed $primary-green;
+                                        padding: 0 10px;
+                                    }
+                                }
+                            }
+                            .dashboard-energy-content-diesel-content-right-bottom{
+                                .top {
+
+                                    display: flex;
+                                    justify-content: center;
+    
+                                    .title {
+                                        font-family: $fontRoboto;
+                                        font-weight: 700;
+                                        font-size: 18px;
+                                        color: $dark-02;
+    
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .dashboard-energy-content-petrol {
+                    margin-top: 50px;
+                    .dashboard-energy-content-petrol-title {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        background-color: #f2f2f3;
+                        padding: 7px 10px;
+                        .dashboard-energy-content-petrol-title-left {
+                            display: flex;
+                            align-items: center;
+
+                            img {
+                                width: 40px;
+                                height: 40px;
+                                margin-right: 16px;
+                            }
+
+                            h2 {
+                                font-family: $fontRoboto;
+                                font-weight: 800;
+                                font-size: 24px;
+                                color: $dark-02;
+                                display: inline-block;
+                                margin: 0;
+
+                            }
+                        }
+
+                        .dashboard-energy-content-petrol-title-right {
+                            i {
+                                font-size: 22px;
+                                font-weight: 700;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                    .dashboard-energy-content-petrol-content {
+                        display: flex;
+                        column-gap: 40px;
+                        margin-top: 30px;
+                        .dashboard-energy-content-petrol-content-left {
+                            width: 50%;
+                            .top {
+
+                                display: flex;
+                                justify-content: center;
+
+                                .title {
+                                    font-family: $fontRoboto;
+                                    font-weight: 700;
+                                    font-size: 18px;
+                                    color: $dark-02;
+
+                                }
+                            }
+                        }
+
+                        .dashboard-energy-content-petrol-content-right {
+                            width: 50%;
+                            table {
+                                width: 95%;
+                                tr {
+
+                                    th {
+                                        background-color: $primary-green;
+                                        font-family: $fontInter;
+                                        font-weight: 600;
+                                        font-size: 15px;
+                                        color: #fff;
+                                        padding: 10px 20px;
+
+                                    }
+
+                                    td {
+                                        font-family: $fontRoboto;
+                                        font-size: 15px;
+                                        font-weight: 500;
+                                        text-align: right;
+                                        border: 2px dashed $primary-green;
+                                        padding: 0 10px;
+                                    }
+                                }
+                            }
+                            .dashboard-energy-content-petrol-content-right-bottom{
+                                .top {
+
+                                    display: flex;
+                                    justify-content: center;
+    
+                                    .title {
+                                        font-family: $fontRoboto;
+                                        font-weight: 700;
+                                        font-size: 18px;
+                                        color: $dark-02;
+    
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .dashboard-energy-content-gas {
+                    margin-top: 50px;
+                    .dashboard-energy-content-gas-title {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        background-color: #f2f2f3;
+                        padding: 7px 10px;
+                        .dashboard-energy-content-gas-title-left {
+                            display: flex;
+                            align-items: center;
+
+                            img {
+                                width: 40px;
+                                height: 40px;
+                                margin-right: 16px;
+                            }
+
+                            h2 {
+                                font-family: $fontRoboto;
+                                font-weight: 800;
+                                font-size: 24px;
+                                color: $dark-02;
+                                display: inline-block;
+                                margin: 0;
+
+                            }
+                        }
+
+                        .dashboard-energy-content-gas-title-right {
+                            i {
+                                font-size: 22px;
+                                font-weight: 700;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                    .dashboard-energy-content-gas-content {
+                        display: flex;
+                        column-gap: 40px;
+                        margin-top: 30px;
+                        .dashboard-energy-content-gas-content-left {
+                            width: 50%;
+                            .top {
+
+                                display: flex;
+                                justify-content: center;
+
+                                .title {
+                                    font-family: $fontRoboto;
+                                    font-weight: 700;
+                                    font-size: 18px;
+                                    color: $dark-02;
+
+                                }
+                            }
+                        }
+
+                        .dashboard-energy-content-gas-content-right {
+                            width: 50%;
+                            table {
+                                width: 95%;
+                                tr {
+
+                                    th {
+                                        background-color: $primary-green;
+                                        font-family: $fontInter;
+                                        font-weight: 600;
+                                        font-size: 15px;
+                                        color: #fff;
+                                        padding: 10px 20px;
+
+                                    }
+
+                                    td {
+                                        font-family: $fontRoboto;
+                                        font-size: 15px;
+                                        font-weight: 500;
+                                        text-align: right;
+                                        border: 2px dashed $primary-green;
+                                        padding: 0 10px;
+                                    }
+                                }
+                            }
+                            .dashboard-energy-content-gas-content-right-bottom{
+                                .top {
+
+                                    display: flex;
+                                    justify-content: center;
+    
+                                    .title {
+                                        font-family: $fontRoboto;
+                                        font-weight: 700;
+                                        font-size: 18px;
+                                        color: $dark-02;
+    
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
     #content-report-energy {
         padding: 0 20px;
-        
+
         .content-report-energy-top {
             width: 100%;
             height: 50px;

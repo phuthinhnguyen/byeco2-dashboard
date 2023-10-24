@@ -50,7 +50,7 @@
     <nav id="mySidebar">
         <div class="logo">
             <img src="assets/image/index/LogoBYECO2-footer.svg" alt="">
-      
+
         </div>
         <div class="menu-title">MENU</div>
         <!-- Dashboard -->
@@ -69,11 +69,11 @@
             <div class="dashboard-left-content-energy">
                 <span>Energy</span>
             </div>
-            <div class="dashboard-left-content-garbage">
+            <div class="dashboard-left-content-ghgemission">
                 <span>GHG Emission</span>
             </div>
-            <div class="dashboard-left-content-garbage">
-                <span>Project Portfolio</span>
+            <div class="dashboard-left-content-projectportfolio">
+                <span>Project Portfolio</span>  
             </div>
         </div>
 
@@ -92,7 +92,7 @@
             <div class="report-left-content-energy">
                 <span>Energy</span>
             </div>
-            <div class="report-left-content-gas">
+            <div class="report-left-content-ghgemission">
                 <span>GHG Emission</span>
             </div>
         </div>
@@ -103,17 +103,35 @@
         </div>
     </nav>
     <script>
-        $("#report-angle-down,#dashboard-angle-down").hide();
-        $("#report-angle-up,#report-angle-down").click(function () {
-            $(".report-left-content").slideToggle("fast");
-            $("#report-angle-up").toggle();
-            $("#report-angle-down").toggle();
-        }
-        )
-        $("#dashboard-angle-up,#dashboard-angle-down").click(function () {
+        $("#report-angle-up,#dashboard-angle-up").hide();
+        $(".dashboard").css({ backgroundColor: "#248142" })
+        $(".report").css({ backgroundColor: "#248142" })
+        $("#dashboard-angle-up").click(function () {
             $(".dashboard-left-content").slideToggle("fast");
             $("#dashboard-angle-up").toggle();
             $("#dashboard-angle-down").toggle();
+            $(".dashboard").css({ backgroundColor: "#248142" })
+        }
+        )
+        $("#dashboard-angle-down").click(function () {
+            $(".dashboard-left-content").slideToggle("fast");
+            $("#dashboard-angle-up").toggle();
+            $("#dashboard-angle-down").toggle();
+            $(".dashboard").css({ backgroundColor: "#20A049" })
+        }
+        )
+        $("#report-angle-down").click(function () {
+            $(".report-left-content").slideToggle("fast");
+            $("#report-angle-up").toggle();
+            $("#report-angle-down").toggle();
+            $(".report").css({ backgroundColor: "#20A049" })
+        }
+        )
+        $("#report-angle-up").click(function () {
+            $(".report-left-content").slideToggle("fast");
+            $("#report-angle-up").toggle();
+            $("#report-angle-down").toggle();
+            $(".report").css({ backgroundColor: "#248142" })
         }
         )
     </script>
@@ -141,7 +159,8 @@
                 <img src="assets/image/index/fullscreen.svg" alt="">
                 <img src="assets/image/index/language.svg" alt="" style="margin-right: 5px;">
                 <img src="assets/image/index/dropdown.svg" alt="" style="width: 15px;height: 15px;">
-                <img src="assets/image/index/avatar.svg" alt="" style="width: 48px;height: 48px;border-radius: 50%;margin-right: 0;">
+                <img src="assets/image/index/avatar.svg" alt=""
+                    style="width: 48px;height: 48px;border-radius: 50%;margin-right: 0;">
             </div>
         </div>
         <div id="content-dashboard">
@@ -159,12 +178,13 @@
                         role="tab" aria-controls="energy" aria-selected="false">Energy</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="ghgemission-tab" data-bs-toggle="tab" data-bs-target="#ghgemission" type="button"
-                        role="tab" aria-controls="ghgemission" aria-selected="false">GHG Emission</button>
+                    <button class="nav-link" id="ghgemission-tab" data-bs-toggle="tab" data-bs-target="#ghgemission"
+                        type="button" role="tab" aria-controls="ghgemission" aria-selected="false">GHG Emission</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="projectportfolio-tab" data-bs-toggle="tab" data-bs-target="#projectportfolio" type="button"
-                        role="tab" aria-controls="projectportfolio" aria-selected="false">Project Portfolio</button>
+                    <button class="nav-link" id="projectportfolio-tab" data-bs-toggle="tab"
+                        data-bs-target="#projectportfolio" type="button" role="tab" aria-controls="projectportfolio"
+                        aria-selected="false">Project Portfolio</button>
                 </li>
             </ul>
             <div class="tab-content" id="myTabContent">
@@ -187,7 +207,7 @@
                                     <h1>10.3 M</h1>
                                     <img src="assets/image/index/pointupright.svg" alt="">
                                 </div>
-                             
+
                             </div>
                         </div>
                         <div class="ppj-point-item">
@@ -986,85 +1006,1027 @@
                 <div class="tab-pane fade" id="energy" role="tabpanel" aria-labelledby="energy-tab">
                     <div class="dashboard-energy-top">
                         <img src="assets/image/index/LogoBYECO2.svg" alt="">
-                        <h1>BYECO2 - DASHBOARD ANALYSIS - NĂNG LƯỢNG</h1>
+                        <h1>{CLIENT_USERNAME} - EXECUTIVE DASHBOARD</h1>
                     </div>
                     <div class="dashboard-energy-content">
                         <div class="dashboard-energy-content-electricity">
                             <div class="dashboard-energy-content-electricity-title">
                                 <div class="dashboard-energy-content-electricity-title-left">
-                                    <img src="" alt="">
+                                    <img src="assets/image/index/electricity.svg" alt="">
                                     <h2>ELECTRICITY</h2>
                                 </div>
                                 <div class="dashboard-energy-content-electricity-title-right">
-                                    <img src=" " alt="">
+                                    <i class="right fas fa-angle-up"
+                                        id="dashboard-energy-content-electricity-title-right-angle-up"></i>
+                                    <i class="right fas fa-angle-down"
+                                        id="dashboard-energy-content-electricity-title-right-angle-down"></i>
                                 </div>
                             </div>
                             <div class="dashboard-energy-content-electricity-content">
+                                <div class="dashboard-energy-content-electricity-content-left">
+                                    <div class="top">
+                                        <span class="title">ELECTRICITY BY YEAR</span><span class="unit"></span>
+                                    </div>
+                                    <canvas id="myChart-dashboard-energy-content-electricity-content"
+                                        style="margin: auto;min-height: 500px;"></canvas>
+                                    <script>
+                                        const myChartdashboardenergycontentelectricitycontent = ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"];
 
+                                        new Chart("myChart-dashboard-energy-content-electricity-content", {
+                                            type: "bar",
+
+                                            data: {
+                                                labels: xValuesemissionvalue3,
+
+                                                datasets: [{
+                                                    label: 'Lượng điện tiêu thụ (KWh)',
+                                                    backgroundColor: "#20A049",
+                                                    data: [12, 12, 12, 12, 12, 12, 12, 12, 12],
+                                                    barThickness: 10,
+
+                                                }, {
+                                                    label: 'Gross calorific value (Mil MJ)',
+                                                    backgroundColor: "#C6D92D",
+                                                    data: [15, 15, 15, 15, 15, 15, 15, 15, 15],
+                                                    barThickness: 10,
+
+                                                },
+                                                {
+                                                    label: 'CO2 Emission (Mil Ton)',
+                                                    backgroundColor: "#FEB005",
+                                                    data: [10, 10, 10, 10, 10, 10, 10, 10, 10],
+                                                    barThickness: 10,
+
+                                                },
+                                                ]
+                                            },
+                                            options: {
+                                                responsive: true,
+                                                plugins: {
+                                                    legend: {
+                                                        labels: {
+
+                                                            font: {
+                                                                size: 10,
+                                                                family: "Roboto",
+                                                                weight: "bold",
+
+                                                            }
+                                                        }
+                                                    },
+                                                    tooltip: {
+                                                        titleFont: "Arial",
+                                                        padding: 10,
+                                                    }
+                                                }
+                                            }
+                                        });
+
+                                    </script>
+                                </div>
+                                <div class="dashboard-energy-content-electricity-content-right">
+                                    <table>
+                                        <tr>
+                                            <th style="width: 134px;border-top-left-radius: 10px;">Year</th>
+                                            <th style="border-left: 2px dashed #fff;">Electricity (kW)</th>
+                                            <th style="border-left: 2px dashed #fff;border-right: 2px dashed #fff;">
+                                                Gross calorific <br>value (MJ)</th>
+                                            <th style="border-top-right-radius: 10px;">CO2 Emission <br>(Ton)</th>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2015</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2016</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2017</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2018</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2019</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2020</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;font-weight: 600;">2021</td>
+                                            <td style="font-weight: 600;">2,774,827</td>
+                                            <td style="font-weight: 600;">9,898,377</td>
+                                            <td style="font-weight: 600;">2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2022</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2023</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                    </table>
+                                    <div class="dashboard-energy-content-electricity-content-right-bottom">
+                                        <div class="top">
+                                            <span class="title">%G/R</span><span class="unit"></span>
+                                        </div>
+                                        <canvas id="myChart-dashboard-energy-content-electricity-content-right-bottom"
+                                            style="max-height: 300px;max-width: 95%;"></canvas>
+                                        <script>
+                                            const dashboardenergycontentelectricitycontentrightbottom = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023];
+
+                                            new Chart("myChart-dashboard-energy-content-electricity-content-right-bottom", {
+                                                type: "line",
+                                                data: {
+                                                    labels: dashboardenergycontentelectricitycontentrightbottom,
+                                                    datasets: [{
+                                                        data: [60, 70, 50, 80, 70, 0, 100, 0, -50],
+                                                        borderColor: "#20A049",
+                                                        borderWidth: 3,
+                                                        pointBackgroundColor: "white",
+                                                        pointRadius: 5,
+                                                        fill: false,
+                                                        yAxisID: 'A',
+                                                        label: ""
+                                                    }]
+                                                },
+                                                options: {
+                                                    scales: {
+                                                        A: {
+                                                            position: 'left',
+                                                            min: -100,
+                                                            max: 100,
+                                                            ticks: {
+                                                                callback: function (value, index, values) {
+                                                                    return value + "%";
+                                                                },
+                                                                stepSize: 50
+                                                            }
+                                                        },
+
+                                                    },
+                                                    plugins: {
+                                                        legend: {
+                                                            display: false,
+                                                            labels: {
+                                                                font: {
+                                                                    size: 13,
+                                                                    family: "Roboto"
+                                                                }
+                                                            }
+                                                        },
+                                                        tooltip: {
+                                                            titleFont: "Arial",
+                                                            padding: 10,
+                                                        }
+                                                    }
+                                                }
+                                            })
+
+                                        </script>
+                                    </div>
+                                </div>
                             </div>
+                            <script>
+                                $("#dashboard-energy-content-electricity-title-right-angle-up").hide();
+                                $("#dashboard-energy-content-electricity-title-right-angle-down").click(function () {
+                                    $(this).hide();
+                                    $("#dashboard-energy-content-electricity-title-right-angle-up").toggle();
+                                    $('.dashboard-energy-content-electricity-content').slideToggle();
+                                })
+                                $("#dashboard-energy-content-electricity-title-right-angle-up").click(function () {
+                                    $(this).hide();
+                                    $("#dashboard-energy-content-electricity-title-right-angle-down").toggle();
+                                    $('.dashboard-energy-content-electricity-content').slideToggle();
+                                })
+                            </script>
+                        </div>
+                        <div class="dashboard-energy-content-diesel">
+                            <div class="dashboard-energy-content-diesel-title">
+                                <div class="dashboard-energy-content-diesel-title-left">
+                                    <img src="assets/image/index/forcar.svg" alt="">
+                                    <h2>DIESEL</h2>
+                                </div>
+                                <div class="dashboard-energy-content-diesel-title-right">
+                                    <i class="right fas fa-angle-up"
+                                        id="dashboard-energy-content-diesel-title-right-angle-up"></i>
+                                    <i class="right fas fa-angle-down"
+                                        id="dashboard-energy-content-diesel-title-right-angle-down"></i>
+                                </div>
+                            </div>
+                            <div class="dashboard-energy-content-diesel-content">
+                                <div class="dashboard-energy-content-diesel-content-left">
+                                    <div class="top">
+                                        <span class="title">DIESEL BY YEAR</span><span class="unit"></span>
+                                    </div>
+                                    <canvas id="myChart-dashboard-energy-content-diesel-content"
+                                        style="margin: auto;min-height: 500px;"></canvas>
+                                    <script>
+                                        const xValuesmyChartdashboardenergycontentdieselcontent = ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"];
+                                        const yValuesbarmyChartdashboardenergycontentdieselcontent1 = [16, 16, 16, 16, 16, 16, 16, 16, 16];
+                                        const yValuesbarmyChartdashboardenergycontentdieselcontent2 = [7, 7, 7, 7, 7, 7, 7, 7, 7];
+                                        const yValueslinemyChartdashboardenergycontentdieselcontent = [20, 21, 19, 22, 20, 17, 25, 17, 17];
+
+                                        new Chart("myChart-dashboard-energy-content-diesel-content", {
+                                            type: "line",
+                                            data: {
+                                                labels: xValuesmyChartdashboardenergycontentdieselcontent,
+                                                datasets: [{
+                                                    backgroundColor: "transparent",
+                                                    borderColor: "#EA6B39",
+                                                    data: yValueslinemyChartdashboardenergycontentdieselcontent,
+                                                    label: 'Diesel (Thousand Lit)',
+                                                    yAxisID: 'A',
+                                                    fill: true,
+                                                    tension: 0.4,
+                                                    borderWidth: 3,
+                                                    pointBackgroundColor: "white",
+                                                    pointRadius: 5,
+
+                                                },
+                                                {
+                                                    type: "bar",
+                                                    data: yValuesbarmyChartdashboardenergycontentdieselcontent1,
+                                                    backgroundColor: "#3BB346",
+                                                    label: 'Gross calorific value (Mil MJ)',
+                                                    yAxisID: 'B',
+                                                    fill: true,
+                                                    tension: 0.4,
+                                                    barThickness: 20,
+
+
+                                                },{
+                                                    type: "bar",
+                                                    data: yValuesbarmyChartdashboardenergycontentdieselcontent2,
+                                                    backgroundColor: "#C6D92D",
+                                                    label: 'CO2 Emission (Mil Ton)',
+                                                    yAxisID: 'B',
+                                                    fill: true,
+                                                    tension: 0.4,
+                                                    barThickness: 20,
+
+
+                                                }]
+                                            },
+                                            options: {
+                                                responsive: true,
+                                                scales: {
+                                                    A: {
+                                                        position: 'right',
+                                                        min: 0,
+                                                        display:false,
+                                                    },
+                                                    B: {
+                                                        position: 'left',
+                                                        min: 0,
+                                                        max: 25.0,
+                                                        display:false,
+                                                    },
+
+                                                },
+                                                plugins: {
+                                                    legend: {
+                                                        labels: {
+                                                            // This more specific font property overrides the global property
+                                                            font: {
+                                                                size: 13,
+                                                                family: "Roboto",
+
+                                                            }
+                                                        }
+                                                    },
+                                                    tooltip: {
+                                                        titleFont: "Arial",
+                                                        padding: 10,
+                                                    },
+
+                                                },
+                                            }
+                                        });
+                                    </script>
+                                </div>
+                                <div class="dashboard-energy-content-diesel-content-right">
+                                    <table>
+                                        <tr>
+                                            <th style="width: 134px;border-top-left-radius: 10px;">Year</th>
+                                            <th style="border-left: 2px dashed #fff;">Diesel (Lit)</th>
+                                            <th style="border-left: 2px dashed #fff;border-right: 2px dashed #fff;">
+                                                Gross calorific <br>value (MJ)</th>
+                                            <th style="border-top-right-radius: 10px;">CO2 Emission <br>(Ton)</th>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2015</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2016</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2017</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2018</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2019</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2020</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;font-weight: 600;">2021</td>
+                                            <td style="font-weight: 600;">2,774,827</td>
+                                            <td style="font-weight: 600;">9,898,377</td>
+                                            <td style="font-weight: 600;">2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2022</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2023</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                    </table>
+                                    <div class="dashboard-energy-content-diesel-content-right-bottom">
+                                        <div class="top">
+                                            <span class="title">%G/R</span><span class="unit"></span>
+                                        </div>
+                                        <canvas id="myChart-dashboard-energy-content-diesel-content-right-bottom"
+                                            style="max-height: 300px;max-width: 95%;"></canvas>
+                                        <script>
+                                            const dashboardenergycontentdieselcontentrightbottom = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023];
+
+                                            new Chart("myChart-dashboard-energy-content-diesel-content-right-bottom", {
+                                                type: "line",
+                                                data: {
+                                                    labels: dashboardenergycontentdieselcontentrightbottom,
+                                                    datasets: [{
+                                                        data: [60, 70, 50, 80, 70, 0, 100, 0, -50],
+                                                        borderColor: "#20A049",
+                                                        borderWidth: 3,
+                                                        pointBackgroundColor: "white",
+                                                        pointRadius: 5,
+                                                        fill: false,
+                                                        yAxisID: 'A',
+                                                        label: ""
+                                                    }]
+                                                },
+                                                options: {
+                                                    scales: {
+                                                        A: {
+                                                            position: 'left',
+                                                            min: -100,
+                                                            max: 100,
+                                                            ticks: {
+                                                                callback: function (value, index, values) {
+                                                                    return value + "%";
+                                                                },
+                                                                stepSize: 50
+                                                            }
+                                                        },
+
+                                                    },
+                                                    plugins: {
+                                                        legend: {
+                                                            display: false,
+                                                            labels: {
+                                                                font: {
+                                                                    size: 13,
+                                                                    family: "Roboto"
+                                                                }
+                                                            }
+                                                        },
+                                                        tooltip: {
+                                                            titleFont: "Arial",
+                                                            padding: 10,
+                                                        }
+                                                    }
+                                                }
+                                            })
+
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                $("#dashboard-energy-content-diesel-title-right-angle-up").hide();
+                                $("#dashboard-energy-content-diesel-title-right-angle-down").click(function () {
+                                    $(this).hide();
+                                    $("#dashboard-energy-content-diesel-title-right-angle-up").toggle();
+                                    $('.dashboard-energy-content-diesel-content').slideToggle();
+                                })
+                                $("#dashboard-energy-content-diesel-title-right-angle-up").click(function () {
+                                    $(this).hide();
+                                    $("#dashboard-energy-content-diesel-title-right-angle-down").toggle();
+                                    $('.dashboard-energy-content-diesel-content').slideToggle();
+                                })
+                            </script>
+                        </div>
+                        <div class="dashboard-energy-content-petrol">
+                            <div class="dashboard-energy-content-petrol-title">
+                                <div class="dashboard-energy-content-petrol-title-left">
+                                    <img src="assets/image/index/petrol.svg" alt="">
+                                    <h2>PETROL</h2>
+                                </div>
+                                <div class="dashboard-energy-content-petrol-title-right">
+                                    <i class="right fas fa-angle-up"
+                                        id="dashboard-energy-content-petrol-title-right-angle-up"></i>
+                                    <i class="right fas fa-angle-down"
+                                        id="dashboard-energy-content-petrol-title-right-angle-down"></i>
+                                </div>
+                            </div>
+                            <div class="dashboard-energy-content-petrol-content">
+                                <div class="dashboard-energy-content-petrol-content-left">
+                                    <div class="top">
+                                        <span class="title">PETROL BY YEAR</span><span class="unit"></span>
+                                    </div>
+                                    <canvas id="myChart-dashboard-energy-content-petrol-content"
+                                        style="margin: auto;min-height: 500px;"></canvas>
+                                    <script>
+                                        const xValuesmyChartdashboardenergycontentpetrolcontent = ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"];
+                                        const yValuesbarmyChartdashboardenergycontentpetrolcontent1 = [16, 16, 16, 16, 16, 16, 16, 16, 16];
+                                        const yValuesbarmyChartdashboardenergycontentpetrolcontent2 = [7, 7, 7, 7, 7, 7, 7, 7, 7];
+                                        const yValueslinemyChartdashboardenergycontentpetrolcontent = [20, 21, 19, 22, 20, 17, 25, 17, 17];
+
+                                        new Chart("myChart-dashboard-energy-content-petrol-content", {
+                                            type: "line",
+                                            data: {
+                                                labels: xValuesmyChartdashboardenergycontentpetrolcontent,
+                                                datasets: [{
+                                                    backgroundColor: "transparent",
+                                                    borderColor: "#EA6B39",
+                                                    data: yValueslinemyChartdashboardenergycontentpetrolcontent,
+                                                    label: 'Diesel (Thousand Lit)',
+                                                    yAxisID: 'A',
+                                                    fill: true,
+                                                    tension: 0.4,
+                                                    borderWidth: 3,
+                                                    pointBackgroundColor: "white",
+                                                    pointRadius: 5,
+
+                                                },
+                                                {
+                                                    type: "bar",
+                                                    data: yValuesbarmyChartdashboardenergycontentpetrolcontent1,
+                                                    backgroundColor: "#3BB346",
+                                                    label: 'Gross calorific value (Mil MJ)',
+                                                    yAxisID: 'B',
+                                                    fill: true,
+                                                    tension: 0.4,
+                                                    barThickness: 20,
+
+
+                                                },{
+                                                    type: "bar",
+                                                    data: yValuesbarmyChartdashboardenergycontentpetrolcontent2,
+                                                    backgroundColor: "#C6D92D",
+                                                    label: 'CO2 Emission (Mil Ton)',
+                                                    yAxisID: 'B',
+                                                    fill: true,
+                                                    tension: 0.4,
+                                                    barThickness: 20,
+
+
+                                                }]
+                                            },
+                                            options: {
+                                                responsive: true,
+                                                scales: {
+                                                    A: {
+                                                        position: 'right',
+                                                        min: 0,
+                                                        display:false,
+                                                    },
+                                                    B: {
+                                                        position: 'left',
+                                                        min: 0,
+                                                        max: 25.0,
+                                                        display:false,
+                                                    },
+
+                                                },
+                                                plugins: {
+                                                    legend: {
+                                                        labels: {
+                                                            // This more specific font property overrides the global property
+                                                            font: {
+                                                                size: 13,
+                                                                family: "Roboto",
+
+                                                            }
+                                                        }
+                                                    },
+                                                    tooltip: {
+                                                        titleFont: "Arial",
+                                                        padding: 10,
+                                                    },
+
+                                                },
+                                            }
+                                        });
+                                    </script>
+                                </div>
+                                <div class="dashboard-energy-content-petrol-content-right">
+                                    <table>
+                                        <tr>
+                                            <th style="width: 134px;border-top-left-radius: 10px;">Year</th>
+                                            <th style="border-left: 2px dashed #fff;">Petrol (Lit)</th>
+                                            <th style="border-left: 2px dashed #fff;border-right: 2px dashed #fff;">
+                                                Gross calorific <br>value (MJ)</th>
+                                            <th style="border-top-right-radius: 10px;">CO2 Emission <br>(Ton)</th>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2015</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2016</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2017</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2018</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2019</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2020</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;font-weight: 600;">2021</td>
+                                            <td style="font-weight: 600;">2,774,827</td>
+                                            <td style="font-weight: 600;">9,898,377</td>
+                                            <td style="font-weight: 600;">2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2022</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2023</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                    </table>
+                                    <div class="dashboard-energy-content-petrol-content-right-bottom">
+                                        <div class="top">
+                                            <span class="title">%G/R</span><span class="unit"></span>
+                                        </div>
+                                        <canvas id="myChart-dashboard-energy-content-petrol-content-right-bottom"
+                                            style="max-height: 300px;max-width: 95%;"></canvas>
+                                        <script>
+                                            const dashboardenergycontentpetrolcontentrightbottom = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023];
+
+                                            new Chart("myChart-dashboard-energy-content-petrol-content-right-bottom", {
+                                                type: "line",
+                                                data: {
+                                                    labels: dashboardenergycontentpetrolcontentrightbottom,
+                                                    datasets: [{
+                                                        data: [60, 70, 50, 80, 70, 0, 100, 0, -50],
+                                                        borderColor: "#20A049",
+                                                        borderWidth: 3,
+                                                        pointBackgroundColor: "white",
+                                                        pointRadius: 5,
+                                                        fill: false,
+                                                        yAxisID: 'A',
+                                                        label: ""
+                                                    }]
+                                                },
+                                                options: {
+                                                    scales: {
+                                                        A: {
+                                                            position: 'left',
+                                                            min: -100,
+                                                            max: 100,
+                                                            ticks: {
+                                                                callback: function (value, index, values) {
+                                                                    return value + "%";
+                                                                },
+                                                                stepSize: 50
+                                                            }
+                                                        },
+
+                                                    },
+                                                    plugins: {
+                                                        legend: {
+                                                            display: false,
+                                                            labels: {
+                                                                font: {
+                                                                    size: 13,
+                                                                    family: "Roboto"
+                                                                }
+                                                            }
+                                                        },
+                                                        tooltip: {
+                                                            titleFont: "Arial",
+                                                            padding: 10,
+                                                        }
+                                                    }
+                                                }
+                                            })
+
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                $("#dashboard-energy-content-petrol-title-right-angle-up").hide();
+                                $("#dashboard-energy-content-petrol-title-right-angle-down").click(function () {
+                                    $(this).hide();
+                                    $("#dashboard-energy-content-petrol-title-right-angle-up").toggle();
+                                    $('.dashboard-energy-content-petrol-content').slideToggle();
+                                })
+                                $("#dashboard-energy-content-petrol-title-right-angle-up").click(function () {
+                                    $(this).hide();
+                                    $("#dashboard-energy-content-petrol-title-right-angle-down").toggle();
+                                    $('.dashboard-energy-content-petrol-content').slideToggle();
+                                })
+                            </script>
+                        </div>
+                        <div class="dashboard-energy-content-gas">
+                            <div class="dashboard-energy-content-gas-title">
+                                <div class="dashboard-energy-content-gas-title-left">
+                                    <img src="assets/image/index/gas.svg" alt="">
+                                    <h2>GAS</h2>
+                                </div>
+                                <div class="dashboard-energy-content-gas-title-right">
+                                    <i class="right fas fa-angle-up"
+                                        id="dashboard-energy-content-gas-title-right-angle-up"></i>
+                                    <i class="right fas fa-angle-down"
+                                        id="dashboard-energy-content-gas-title-right-angle-down"></i>
+                                </div>
+                            </div>
+                            <div class="dashboard-energy-content-gas-content">
+                                <div class="dashboard-energy-content-gas-content-left">
+                                    <div class="top">
+                                        <span class="title">GAS BY YEAR</span><span class="unit"></span>
+                                    </div>
+                                    <canvas id="myChart-dashboard-energy-content-gas-content"
+                                        style="margin: auto;min-height: 500px;"></canvas>
+                                    <script>
+                                        const xValuesmyChartdashboardenergycontentgascontent = ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"];
+                                        const yValuesbarmyChartdashboardenergycontentgascontent1 = [16, 16, 16, 16, 16, 16, 16, 16, 16];
+                                        const yValuesbarmyChartdashboardenergycontentgascontent2 = [7, 7, 7, 7, 7, 7, 7, 7, 7];
+                                        const yValueslinemyChartdashboardenergycontentgascontent = [20, 21, 19, 22, 20, 17, 25, 17, 17];
+
+                                        new Chart("myChart-dashboard-energy-content-gas-content", {
+                                            type: "line",
+                                            data: {
+                                                labels: xValuesmyChartdashboardenergycontentgascontent,
+                                                datasets: [{
+                                                    backgroundColor: "transparent",
+                                                    borderColor: "#EA6B39",
+                                                    data: yValueslinemyChartdashboardenergycontentgascontent,
+                                                    label: 'Gas (Ton)',
+                                                    yAxisID: 'A',
+                                                    fill: true,
+                                                    tension: 0.4,
+                                                    borderWidth: 3,
+                                                    pointBackgroundColor: "white",
+                                                    pointRadius: 5,
+
+                                                },
+                                                {
+                                                    type: "bar",
+                                                    data: yValuesbarmyChartdashboardenergycontentgascontent1,
+                                                    backgroundColor: "#3BB346",
+                                                    label: 'Gross calorific value (Mil MJ)',
+                                                    yAxisID: 'B',
+                                                    fill: true,
+                                                    tension: 0.4,
+                                                    barThickness: 20,
+
+
+                                                },{
+                                                    type: "bar",
+                                                    data: yValuesbarmyChartdashboardenergycontentgascontent2,
+                                                    backgroundColor: "#C6D92D",
+                                                    label: 'CO2 Emission (Mil Ton)',
+                                                    yAxisID: 'B',
+                                                    fill: true,
+                                                    tension: 0.4,
+                                                    barThickness: 20,
+
+
+                                                }]
+                                            },
+                                            options: {
+                                                responsive: true,
+                                                scales: {
+                                                    A: {
+                                                        position: 'right',
+                                                        min: 0,
+                                                        display:false,
+                                                    },
+                                                    B: {
+                                                        position: 'left',
+                                                        min: 0,
+                                                        max: 25.0,
+                                                        display:false,
+                                                    },
+
+                                                },
+                                                plugins: {
+                                                    legend: {
+                                                        labels: {
+                                                            // This more specific font property overrides the global property
+                                                            font: {
+                                                                size: 13,
+                                                                family: "Roboto",
+
+                                                            }
+                                                        }
+                                                    },
+                                                    tooltip: {
+                                                        titleFont: "Arial",
+                                                        padding: 10,
+                                                    },
+
+                                                },
+                                            }
+                                        });
+                                    </script>
+                                </div>
+                                <div class="dashboard-energy-content-gas-content-right">
+                                    <table>
+                                        <tr>
+                                            <th style="width: 134px;border-top-left-radius: 10px;">Year</th>
+                                            <th style="border-left: 2px dashed #fff;">Gas (Kg)</th>
+                                            <th style="border-left: 2px dashed #fff;border-right: 2px dashed #fff;">
+                                                Gross calorific <br>value (MJ)</th>
+                                            <th style="border-top-right-radius: 10px;">CO2 Emission <br>(Ton)</th>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2015</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2016</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2017</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2018</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2019</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2020</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;font-weight: 600;">2021</td>
+                                            <td style="font-weight: 600;">2,774,827</td>
+                                            <td style="font-weight: 600;">9,898,377</td>
+                                            <td style="font-weight: 600;">2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2022</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left;">2023</td>
+                                            <td>2,774,827</td>
+                                            <td>9,898,377</td>
+                                            <td>2,003,702</td>
+                                        </tr>
+                                    </table>
+                                    <div class="dashboard-energy-content-gas-content-right-bottom">
+                                        <div class="top">
+                                            <span class="title">%G/R</span><span class="unit"></span>
+                                        </div>
+                                        <canvas id="myChart-dashboard-energy-content-gas-content-right-bottom"
+                                            style="max-height: 300px;max-width: 95%;"></canvas>
+                                        <script>
+                                            const dashboardenergycontentgascontentrightbottom = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023];
+
+                                            new Chart("myChart-dashboard-energy-content-gas-content-right-bottom", {
+                                                type: "line",
+                                                data: {
+                                                    labels: dashboardenergycontentgascontentrightbottom,
+                                                    datasets: [{
+                                                        data: [60, 70, 50, 80, 70, 0, 100, 0, -50],
+                                                        borderColor: "#20A049",
+                                                        borderWidth: 3,
+                                                        pointBackgroundColor: "white",
+                                                        pointRadius: 5,
+                                                        fill: false,
+                                                        yAxisID: 'A',
+                                                        label: ""
+                                                    }]
+                                                },
+                                                options: {
+                                                    scales: {
+                                                        A: {
+                                                            position: 'left',
+                                                            min: -100,
+                                                            max: 100,
+                                                            ticks: {
+                                                                callback: function (value, index, values) {
+                                                                    return value + "%";
+                                                                },
+                                                                stepSize: 50
+                                                            }
+                                                        },
+
+                                                    },
+                                                    plugins: {
+                                                        legend: {
+                                                            display: false,
+                                                            labels: {
+                                                                font: {
+                                                                    size: 13,
+                                                                    family: "Roboto"
+                                                                }
+                                                            }
+                                                        },
+                                                        tooltip: {
+                                                            titleFont: "Arial",
+                                                            padding: 10,
+                                                        }
+                                                    }
+                                                }
+                                            })
+
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                $("#dashboard-energy-content-gas-title-right-angle-up").hide();
+                                $("#dashboard-energy-content-gas-title-right-angle-down").click(function () {
+                                    $(this).hide();
+                                    $("#dashboard-energy-content-gas-title-right-angle-up").toggle();
+                                    $('.dashboard-energy-content-gas-content').slideToggle();
+                                })
+                                $("#dashboard-energy-content-gas-title-right-angle-up").click(function () {
+                                    $(this).hide();
+                                    $("#dashboard-energy-content-gas-title-right-angle-down").toggle();
+                                    $('.dashboard-energy-content-gas-content').slideToggle();
+                                })
+                            </script>
+                        </div>
                     </div>
+
                 </div>
                 <div class="tab-pane fade" id="ghgemission" role="tabpanel" aria-labelledby="ghgemission-tab">
-                    
+
+                </div>
+                <div class="tab-pane fade" id="projectportfolio" role="tabpanel" aria-labelledby="projectportfolio-tab">
+
                 </div>
             </div>
 
-        </div>
+            <div id="content-report-energy">
+                <div class="content-report-energy-top">
+                    <p>Báo cáo năng lượng</p>
+                </div>
 
-        <div id="content-report-energy">
-            <div class="content-report-energy-top">
-                <p>Báo cáo năng lượng</p>
             </div>
 
         </div>
 
-    </div>
 
 
+        <script>
+            // Script to open and close sidebar
+            $("#dashboard-toggle-show").hide();
+            var index = 0;
+            function navigate_sidebar() {
+                var sidebar = document.getElementById("mySidebar");
+                var content = document.getElementById("content");
 
-    <script>
-        // Script to open and close sidebar
-        $("#dashboard-toggle-show").hide();
-        var index = 0;
-        function navigate_sidebar() {
-            var sidebar = document.getElementById("mySidebar");
-            var content = document.getElementById("content");
+                if (index % 2 == 0) {
+                    sidebar.style.display = "none";
+                    content.style.width = "100%";
+                    index++;
+                    $("#dashboard-toggle-show").toggle();
+                    $("#dashboard-toggle-hide").toggle();
+                }
+                else if (index % 2 != 0) {
+                    sidebar.style.display = "block";
+                    content.style.width = "calc(100% - 300px)";
+                    index++;
+                    $("#dashboard-toggle-show").toggle();
+                    $("#dashboard-toggle-hide").toggle();
+                }
 
-            if (index % 2 == 0) {
-                sidebar.style.display = "none";
-                content.style.width = "100%";
-                index++;
-                $("#dashboard-toggle-show").toggle();
-                $("#dashboard-toggle-hide").toggle();
             }
-            else if (index % 2 != 0) {
-                sidebar.style.display = "block";
-                content.style.width = "calc(100% - 300px)";
-                index++;
-                $("#dashboard-toggle-show").toggle();
-                $("#dashboard-toggle-hide").toggle();
-            }
-
-        }
 
 
-        $("#content-dashboard").show();
-        $("#content-report-energy").hide();
-        $(".dashboard-left-content-ppj").click(function () {
-            $("#content-report-energy,#content-dashboard").hide();
-            $("#content-dashboard").fadeIn();
-            $('#myTab #overview-tab').tab('show');
-        })
-        $(".dashboard-left-content-energy").click(function () {
-            $("#content-report-energy,#content-dashboard").hide();
-            $("#content-dashboard").fadeIn();
-            $('#myTab #energy-tab').tab('show');
-        })
-        $(".report-left-content-energy").click(function () {
-            $("#content-report-energy,#content-dashboard").hide();
-            $("#content-report-energy").fadeIn();
-        })
-    </script>
+            $("#content-dashboard").show();
+            $("#content-report-energy").hide();
+            $(".dashboard-left-content-ppj").click(function () {
+                $("#content-report-energy,#content-dashboard").hide();
+                $("#content-dashboard").fadeIn();
+                $('#myTab #overview-tab').tab('show');
+            })
+            $(".dashboard-left-content-energy").click(function () {
+                $("#content-report-energy,#content-dashboard").hide();
+                $("#content-dashboard").fadeIn();
+                $('#myTab #energy-tab').tab('show');
+            })
+            $(".dashboard-left-content-ghgemission").click(function () {
+                $("#content-report-energy,#content-dashboard").hide();
+                $("#content-dashboard").fadeIn();
+                $('#myTab #ghgemission-tab').tab('show');
+            })
+            $(".dashboard-left-content-projectportfolio").click(function () {
+                $("#content-report-energy,#content-dashboard").hide();
+                $("#content-dashboard").fadeIn();
+                $('#myTab #projectportfolio-tab').tab('show');
+            })
+            $(".report-left-content-energy").click(function () {
+                $("#content-report-energy,#content-dashboard").hide();
+                $("#content-report-energy").fadeIn();
+            })
+        </script>
 
 
 </body>

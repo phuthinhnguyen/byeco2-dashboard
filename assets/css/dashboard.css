@@ -34,11 +34,15 @@ nav .menu-title {
 }
 nav .dashboard,
 nav .report {
-  padding: 15px 44px;
+  padding: 15px 24px;
   height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #248142;
+  width: 80%;
+  margin: auto;
+  border-radius: 5px;
 }
 nav .dashboard img,
 nav .report img {
@@ -62,45 +66,58 @@ nav .report span {
 }
 nav .dashboard:hover,
 nav .report:hover {
-  background-color: #013311;
+  background-color: #248142;
   cursor: pointer;
 }
 nav .dashboard-left-content .dashboard-left-content-ppj,
 nav .dashboard-left-content .dashboard-left-content-energy,
-nav .dashboard-left-content .dashboard-left-content-garbage {
+nav .dashboard-left-content .dashboard-left-content-ghgemission,
+nav .dashboard-left-content .dashboard-left-content-projectportfolio {
   padding: 8px 69px;
   cursor: pointer;
+  width: 80%;
+  margin: auto;
+  border-radius: 5px;
+  margin-top: 5px;
 }
 nav .dashboard-left-content .dashboard-left-content-ppj span,
 nav .dashboard-left-content .dashboard-left-content-energy span,
-nav .dashboard-left-content .dashboard-left-content-garbage span {
+nav .dashboard-left-content .dashboard-left-content-ghgemission span,
+nav .dashboard-left-content .dashboard-left-content-projectportfolio span {
   color: #fff;
   font-family: "Roboto";
   font-size: 15px;
   font-weight: 500;
   line-height: 24px;
+  margin-left: -20px;
 }
 nav .dashboard-left-content .dashboard-left-content-ppj:hover,
 nav .dashboard-left-content .dashboard-left-content-energy:hover,
-nav .dashboard-left-content .dashboard-left-content-garbage:hover {
-  background-color: #013311;
+nav .dashboard-left-content .dashboard-left-content-ghgemission:hover,
+nav .dashboard-left-content .dashboard-left-content-projectportfolio:hover {
+  background-color: #248142;
 }
 nav .report-left-content .report-left-content-energy,
-nav .report-left-content .report-left-content-gas {
+nav .report-left-content .report-left-content-ghgemission {
   padding: 8px 69px;
   cursor: pointer;
+  width: 80%;
+  margin: auto;
+  border-radius: 5px;
+  margin-top: 5px;
 }
 nav .report-left-content .report-left-content-energy span,
-nav .report-left-content .report-left-content-gas span {
+nav .report-left-content .report-left-content-ghgemission span {
   color: #fff;
   font-family: "Roboto";
   font-size: 15px;
   font-weight: 500;
   line-height: 24px;
+  margin-left: -20px;
 }
 nav .report-left-content .report-left-content-energy:hover,
-nav .report-left-content .report-left-content-gas:hover {
-  background-color: #013311;
+nav .report-left-content .report-left-content-ghgemission:hover {
+  background-color: #248142;
 }
 nav .nav-footer {
   position: absolute;
@@ -161,7 +178,9 @@ nav .nav-footer img {
   color: black;
 }
 #content #content-dashboard #overview-tab,
-#content #content-dashboard #energy-tab, #content #content-dashboard #ghgemission-tab, #content #content-dashboard #projectportfolio-tab {
+#content #content-dashboard #energy-tab,
+#content #content-dashboard #ghgemission-tab,
+#content #content-dashboard #projectportfolio-tab {
   font-family: "Roboto";
   font-weight: 700;
   font-size: 16px;
@@ -445,6 +464,338 @@ nav .nav-footer img {
   font-size: 32px;
   line-height: 33px;
   margin: 0;
+}
+#content #content-dashboard #energy .dashboard-energy-content {
+  padding: 20px;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f2f2f3;
+  padding: 7px 10px;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-title .dashboard-energy-content-electricity-title-left {
+  display: flex;
+  align-items: center;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-title .dashboard-energy-content-electricity-title-left img {
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-title .dashboard-energy-content-electricity-title-left h2 {
+  font-family: "Roboto";
+  font-weight: 800;
+  font-size: 24px;
+  color: #1D2129;
+  display: inline-block;
+  margin: 0;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-title .dashboard-energy-content-electricity-title-right i {
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-content {
+  display: flex;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  margin-top: 30px;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-content .dashboard-energy-content-electricity-content-left {
+  width: 50%;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-content .dashboard-energy-content-electricity-content-left .top {
+  display: flex;
+  justify-content: center;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-content .dashboard-energy-content-electricity-content-left .top .title {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 18px;
+  color: #1D2129;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-content .dashboard-energy-content-electricity-content-right {
+  width: 50%;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-content .dashboard-energy-content-electricity-content-right table {
+  width: 95%;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-content .dashboard-energy-content-electricity-content-right table tr th {
+  background-color: #20A049;
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+  padding: 10px 20px;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-content .dashboard-energy-content-electricity-content-right table tr td {
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 500;
+  text-align: right;
+  border: 2px dashed #20A049;
+  padding: 0 10px;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-content .dashboard-energy-content-electricity-content-right .dashboard-energy-content-electricity-content-right-bottom .top {
+  display: flex;
+  justify-content: center;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-content .dashboard-energy-content-electricity-content-right .dashboard-energy-content-electricity-content-right-bottom .top .title {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 18px;
+  color: #1D2129;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel {
+  margin-top: 50px;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f2f2f3;
+  padding: 7px 10px;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-title .dashboard-energy-content-diesel-title-left {
+  display: flex;
+  align-items: center;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-title .dashboard-energy-content-diesel-title-left img {
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-title .dashboard-energy-content-diesel-title-left h2 {
+  font-family: "Roboto";
+  font-weight: 800;
+  font-size: 24px;
+  color: #1D2129;
+  display: inline-block;
+  margin: 0;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-title .dashboard-energy-content-diesel-title-right i {
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-content {
+  display: flex;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  margin-top: 30px;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-content .dashboard-energy-content-diesel-content-left {
+  width: 50%;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-content .dashboard-energy-content-diesel-content-left .top {
+  display: flex;
+  justify-content: center;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-content .dashboard-energy-content-diesel-content-left .top .title {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 18px;
+  color: #1D2129;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-content .dashboard-energy-content-diesel-content-right {
+  width: 50%;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-content .dashboard-energy-content-diesel-content-right table {
+  width: 95%;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-content .dashboard-energy-content-diesel-content-right table tr th {
+  background-color: #20A049;
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+  padding: 10px 20px;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-content .dashboard-energy-content-diesel-content-right table tr td {
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 500;
+  text-align: right;
+  border: 2px dashed #20A049;
+  padding: 0 10px;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-content .dashboard-energy-content-diesel-content-right .dashboard-energy-content-diesel-content-right-bottom .top {
+  display: flex;
+  justify-content: center;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-content .dashboard-energy-content-diesel-content-right .dashboard-energy-content-diesel-content-right-bottom .top .title {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 18px;
+  color: #1D2129;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol {
+  margin-top: 50px;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f2f2f3;
+  padding: 7px 10px;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-title .dashboard-energy-content-petrol-title-left {
+  display: flex;
+  align-items: center;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-title .dashboard-energy-content-petrol-title-left img {
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-title .dashboard-energy-content-petrol-title-left h2 {
+  font-family: "Roboto";
+  font-weight: 800;
+  font-size: 24px;
+  color: #1D2129;
+  display: inline-block;
+  margin: 0;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-title .dashboard-energy-content-petrol-title-right i {
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-content {
+  display: flex;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  margin-top: 30px;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-content .dashboard-energy-content-petrol-content-left {
+  width: 50%;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-content .dashboard-energy-content-petrol-content-left .top {
+  display: flex;
+  justify-content: center;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-content .dashboard-energy-content-petrol-content-left .top .title {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 18px;
+  color: #1D2129;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-content .dashboard-energy-content-petrol-content-right {
+  width: 50%;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-content .dashboard-energy-content-petrol-content-right table {
+  width: 95%;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-content .dashboard-energy-content-petrol-content-right table tr th {
+  background-color: #20A049;
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+  padding: 10px 20px;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-content .dashboard-energy-content-petrol-content-right table tr td {
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 500;
+  text-align: right;
+  border: 2px dashed #20A049;
+  padding: 0 10px;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-content .dashboard-energy-content-petrol-content-right .dashboard-energy-content-petrol-content-right-bottom .top {
+  display: flex;
+  justify-content: center;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-content .dashboard-energy-content-petrol-content-right .dashboard-energy-content-petrol-content-right-bottom .top .title {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 18px;
+  color: #1D2129;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas {
+  margin-top: 50px;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f2f2f3;
+  padding: 7px 10px;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-title .dashboard-energy-content-gas-title-left {
+  display: flex;
+  align-items: center;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-title .dashboard-energy-content-gas-title-left img {
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-title .dashboard-energy-content-gas-title-left h2 {
+  font-family: "Roboto";
+  font-weight: 800;
+  font-size: 24px;
+  color: #1D2129;
+  display: inline-block;
+  margin: 0;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-title .dashboard-energy-content-gas-title-right i {
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-content {
+  display: flex;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  margin-top: 30px;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-content .dashboard-energy-content-gas-content-left {
+  width: 50%;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-content .dashboard-energy-content-gas-content-left .top {
+  display: flex;
+  justify-content: center;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-content .dashboard-energy-content-gas-content-left .top .title {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 18px;
+  color: #1D2129;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-content .dashboard-energy-content-gas-content-right {
+  width: 50%;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-content .dashboard-energy-content-gas-content-right table {
+  width: 95%;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-content .dashboard-energy-content-gas-content-right table tr th {
+  background-color: #20A049;
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+  padding: 10px 20px;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-content .dashboard-energy-content-gas-content-right table tr td {
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 500;
+  text-align: right;
+  border: 2px dashed #20A049;
+  padding: 0 10px;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-content .dashboard-energy-content-gas-content-right .dashboard-energy-content-gas-content-right-bottom .top {
+  display: flex;
+  justify-content: center;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-content .dashboard-energy-content-gas-content-right .dashboard-energy-content-gas-content-right-bottom .top .title {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 18px;
+  color: #1D2129;
 }
 #content #content-report-energy {
   padding: 0 20px;
