@@ -73,7 +73,7 @@
                 <span>GHG Emission</span>
             </div>
             <div class="dashboard-left-content-projectportfolio">
-                <span>Project Portfolio</span>  
+                <span>Project Portfolio</span>
             </div>
         </div>
 
@@ -1277,7 +1277,7 @@
                                                     barThickness: 20,
 
 
-                                                },{
+                                                }, {
                                                     type: "bar",
                                                     data: yValuesbarmyChartdashboardenergycontentdieselcontent2,
                                                     backgroundColor: "#C6D92D",
@@ -1296,13 +1296,13 @@
                                                     A: {
                                                         position: 'right',
                                                         min: 0,
-                                                        display:false,
+                                                        display: false,
                                                     },
                                                     B: {
                                                         position: 'left',
                                                         min: 0,
                                                         max: 25.0,
-                                                        display:false,
+                                                        display: false,
                                                     },
 
                                                 },
@@ -1520,7 +1520,7 @@
                                                     barThickness: 20,
 
 
-                                                },{
+                                                }, {
                                                     type: "bar",
                                                     data: yValuesbarmyChartdashboardenergycontentpetrolcontent2,
                                                     backgroundColor: "#C6D92D",
@@ -1539,13 +1539,13 @@
                                                     A: {
                                                         position: 'right',
                                                         min: 0,
-                                                        display:false,
+                                                        display: false,
                                                     },
                                                     B: {
                                                         position: 'left',
                                                         min: 0,
                                                         max: 25.0,
-                                                        display:false,
+                                                        display: false,
                                                     },
 
                                                 },
@@ -1763,7 +1763,7 @@
                                                     barThickness: 20,
 
 
-                                                },{
+                                                }, {
                                                     type: "bar",
                                                     data: yValuesbarmyChartdashboardenergycontentgascontent2,
                                                     backgroundColor: "#C6D92D",
@@ -1782,13 +1782,13 @@
                                                     A: {
                                                         position: 'right',
                                                         min: 0,
-                                                        display:false,
+                                                        display: false,
                                                     },
                                                     B: {
                                                         position: 'left',
                                                         min: 0,
                                                         max: 25.0,
-                                                        display:false,
+                                                        display: false,
                                                     },
 
                                                 },
@@ -1963,15 +1963,253 @@
                 </div>
             </div>
 
-            <div id="content-report-energy">
-                <div class="content-report-energy-top">
-                    <p>Báo cáo năng lượng</p>
+        </div>
+        <div id="content-report-energy">
+            <div class="content-report-energy-search">
+                <div class="content-report-energy-search-top">
+                    <p>Energy Report</p>
                 </div>
+                <div class="content-report-energy-search-bottom">
+                    <form action="" class="content-report-energy-search-bottom-form">
+                        <div class="content-report-energy-search-bottom-form-item">
+                            <p>Year:</p>
+                            <select name="year" id="year">
+                                <!-- <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option> -->
+                            </select>
+                        </div>
+                        <div class="content-report-energy-search-bottom-form-item">
+                            <p>Month:</p>
+                            <select name="month" id="month">
+                                <!-- <option value="1">Tháng 1</option>
+                                <option value="2">Tháng 2</option>
+                                <option value="3">Tháng 3</option>
+                                <option value="4">Tháng 4</option>
+                                <option value="5">Tháng 5</option>
+                                <option value="6">Tháng 6</option>
+                                <option value="7">Tháng 7</option>
+                                <option value="8">Tháng 8</option>
+                                <option value="9">Tháng 9</option>
+                                <option value="10">Tháng 10</option>
+                                <option value="11">Tháng 11</option>
+                                <option value="12">Tháng 12</option> -->
+                            </select>
+                        </div>
+                        <div class="content-report-energy-search-bottom-form-item">
+                            <p>From date created:</p>
+                            <select name="daystart" id="daystart" style="width: 200px;">
 
+                            </select>
+                        </div>
+                        <div class="content-report-energy-search-bottom-form-item">
+                            <p>To date created:</p>
+                            <select name="dayend" id="dayend" style="width: 200px;">
+
+                            </select>
+                        </div>
+                        <button type="button">SEARCH <img src="assets/image/index/search-report.svg" alt=""></button>
+                    </form>
+                    <script>
+                        $(document).ready(function () {
+                            const monthNames = ["January", "February", "March", "April", "May", "June",
+                                "July", "August", "September", "October", "November", "December"
+                            ];
+                            let qntYears = 9;
+                            let selectYear = $("#year");
+                            let selectMonth = $("#month");
+                            let selectDaystart = $("#daystart");
+                            let selectDayend = $("#dayend");
+                            let currentYear = new Date().getFullYear();
+
+                            for (var y = 0; y < qntYears; y++) {
+                                let date = new Date(currentYear);
+                                let yearElem = document.createElement("option");
+                                yearElem.value = currentYear
+                                yearElem.textContent = currentYear;
+                                selectYear.append(yearElem);
+                                currentYear--;
+                            }
+
+                            for (var m = 0; m < 12; m++) {
+                                let month = monthNames[m];
+                                let monthElem = document.createElement("option");
+                                monthElem.value = m;
+                                monthElem.textContent = month;
+                                selectMonth.append(monthElem);
+                            }
+
+                            var d = new Date();
+                            var month = d.getMonth();
+                            var year = d.getFullYear();
+                            var day = d.getDate();
+
+                            selectYear.val(year);
+                            selectYear.on("change", AdjustDaystart);
+                            selectYear.on("change", AdjustDayend);
+                            selectMonth.val(month);
+                            selectMonth.on("change", AdjustDaystart);
+                            selectYear.on("change", AdjustDayend);
+
+                            AdjustDaystart();
+                            selectDaystart.val(day)
+                            AdjustDayend();
+                            selectDayend.val(day)
+
+                            function AdjustDaystart() {
+                                let year = selectYear.val();
+                                let month = parseInt(selectMonth.val()) + 1;
+                                selectDaystart.empty();
+
+
+                                //get the last day, so the number of days in that month
+                                let daystart_AdjustDaystart = new Date(year, month, 0).getDate();
+
+                                //lets create the days of that month
+                                for (let d = 1; d <= daystart_AdjustDaystart; d++) {
+                                    let dayElem = document.createElement("option");
+                                    let monthvalue = document.getElementById("month")
+                                    let yearvalue = document.getElementById("year")
+                                    dayElem.value = d;
+                                    dayElem.textContent = d + " " + monthNames[monthvalue.value] + " " + yearvalue.value;
+                                    selectDaystart.append(dayElem);
+                                    console.log(selectDaystart)
+                                }
+                            }
+                            function AdjustDayend() {
+                                let year = selectYear.val();
+                                let month = parseInt(selectMonth.val()) + 1;
+                                selectDayend.empty();
+
+                                //get the last day, so the number of days in that month
+                                let dayend_AdjustDayend = new Date(year, month, 0).getDate();
+
+                                //lets create the days of that month
+                                for (let d = 1; d <= dayend_AdjustDayend; d++) {
+                                    let dayElem = document.createElement("option");
+                                    let monthvalue = document.getElementById("month")
+                                    let yearvalue = document.getElementById("year")
+                                    dayElem.value = d;
+                                    dayElem.textContent = d + " " + monthNames[monthvalue.value] + " " + yearvalue.value;
+                                    selectDayend.append(dayElem);
+                                }
+                            }
+                        });
+                    </script>
+                    <div class="content-report-energy-search-bottom-import">
+                        <div class="content-report-energy-search-bottom-import-left">
+                            <img src="assets/image/index/import.svg" alt=""> IMPORT DATA
+                        </div>
+                        <div class="content-report-energy-search-bottom-import-right">
+                            <div>EXPORT <img src="assets/image/index/export.svg" alt=""> </div>
+
+                            <img src="assets/image/index/setting.svg" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
 
-        </div>
+            <div class="content-report-energy-result">
+                <div class="content-report-energy-result-title">Result</div>
+                <div class="content-report-energy-result-table">
+                    <table>
+                        <tr>
+                            <th><input type="checkbox" name="" id="" style="margin-right: 12px;"> #</th>
+                            <th>Report ID</th>
+                            <th>Entity ID</th>
+                            <th>Entity name</th>
+                            <th>Status</th>
+                            <th>Created by</th>
+                            <th>Date created</th>
+                            <th>Year</th>
+                            <th>Month</th>
+                            <th>Date created</th>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="" id="" style="margin-right: 12px;">1</td>
+                            <td>116</td>
+                            <td>110008</td>
+                            <td>CÔNG TY CỔ PHẦN QUỐC TẾ PHONG PHÚ</td>
+                            <td>
+                                <div>Successfull</div>
+                            </td>
+                            <td>PPJ01</td>
+                            <td>20230607</td>
+                            <td>2022</td>
+                            <td>8</td>
+                            <td>7/6/2023 2:56:46 AM</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="content-report-energy-result-table-info">
+                    <div class="content-report-energy-result-table-info-left">
+                        Show 1 to 1 row
+                    </div>
+                    <div class="content-report-energy-result-table-info-right">
+                        <p style="margin-right: 8px;">Number of row each page</p>
+                        <p style="font-weight: 600;">10 <img src="assets/image/index/dropdown.svg" alt=""
+                                style="width: 10px;height: 5px;"></p>
+                        <p style="font-weight: 600;margin-left: 28px;">1-5 of 13</p>
+                        <img src="assets/image/index/left.svg" alt="" style="margin-left: 34px;">
+                        <img src="assets/image/index/right.svg" alt="" style="margin-left: 25px;">
+                    </div>
 
+                </div>
+                <div class="content-report-energy-result-energy-ghgemission-table">
+                    <div class="content-report-energy-result-energy-ghgemission-table-left">
+                      
+                    </div>
+                    <div class="content-report-energy-result-energy-ghgemission-table-right">
+                        <table>
+                            <tr>
+                                <th>#</th>
+                                <th>Lượng than <br>sử dụng <br>(Tấn)</th>
+                                <th>Tiền <br>Than <br>(VNĐ)</th>
+                                <th>Loại</th>
+                                <th>Nhiệt trị <br>(MJ)</th>
+                                <th>
+                                    <div>Lượng phát <br>thải CO2 (kg)</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>233,52</td>
+                                <td></td>
+                                <td>Than antraxit <br>cám loại 3,4</td>
+                                <td>5.866,4894</td>
+                                <td>427,3416</td>
+                            </tr>
+                        </table>
+                        <table style="margin-top: 24px;">
+                            <tr>
+                                <th>#</th>
+                                <th>Lượng than <br>sử dụng <br>(Tấn)</th>
+                                <th>Tiền dầu <br>cho xe ô <br>tô (VNĐ)</th>
+                                <th>Loại</th>
+                                <th>Nhiệt trị <br>(MJ)</th>
+                                <th>
+                                    <div>Lượng phát <br>thải CO2 (kg)</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>233,52</td>
+                                <td>1.826.000</td>
+                                <td>A95</td>
+                                <td>3.054,4</td>
+                                <td>427,3416</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <script>
@@ -1985,6 +2223,7 @@
                 if (index % 2 == 0) {
                     sidebar.style.display = "none";
                     content.style.width = "100%";
+                    content.style.left = 0;
                     index++;
                     $("#dashboard-toggle-show").toggle();
                     $("#dashboard-toggle-hide").toggle();
@@ -1992,6 +2231,7 @@
                 else if (index % 2 != 0) {
                     sidebar.style.display = "block";
                     content.style.width = "calc(100% - 300px)";
+                    content.style.left = "300px";
                     index++;
                     $("#dashboard-toggle-show").toggle();
                     $("#dashboard-toggle-hide").toggle();
