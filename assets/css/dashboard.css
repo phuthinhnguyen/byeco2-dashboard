@@ -802,6 +802,7 @@ nav .nav-footer img {
 }
 #content #content-report-energy {
   padding: 0 25px;
+  padding-bottom: 50px;
 }
 #content #content-report-energy .content-report-energy-search {
   box-shadow: 0px 0px 6px 6px #eeeeee;
@@ -996,12 +997,99 @@ nav .nav-footer img {
 #content #content-report-energy .content-report-energy-result .content-report-energy-result-energy-ghgemission-table {
   display: flex;
   margin-top: 80px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 #content #content-report-energy .content-report-energy-result .content-report-energy-result-energy-ghgemission-table .content-report-energy-result-energy-ghgemission-table-left {
-  width: 40%;
+  width: 50%;
+}
+#content #content-report-energy .content-report-energy-result .content-report-energy-result-energy-ghgemission-table .content-report-energy-result-energy-ghgemission-table-left #energy-ghgemission-tab {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#content #content-report-energy .content-report-energy-result .content-report-energy-result-energy-ghgemission-table .content-report-energy-result-energy-ghgemission-table-left #energy-ghgemission-tab #energy-tab,
+#content #content-report-energy .content-report-energy-result .content-report-energy-result-energy-ghgemission-table .content-report-energy-result-energy-ghgemission-table-left #energy-ghgemission-tab #ghgemission-tab {
+  padding: 10px 50px;
+  background-color: #fff;
+  color: gray;
+  font-weight: 600;
+}
+#content #content-report-energy .content-report-energy-result .content-report-energy-result-energy-ghgemission-table .content-report-energy-result-energy-ghgemission-table-left .hihi {
+  color: #20A049;
+  border-bottom: 3px solid #20A049;
+}
+#content #content-report-energy .content-report-energy-result .content-report-energy-result-energy-ghgemission-table .content-report-energy-result-energy-ghgemission-table-left #energy-ghgemission-tabcontent table {
+  width: 100%;
+}
+#content #content-report-energy .content-report-energy-result .content-report-energy-result-energy-ghgemission-table .content-report-energy-result-energy-ghgemission-table-left #energy-ghgemission-tabcontent table tr th {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 700;
+  color: black;
+  padding: 8px 16px;
+  border: 1px solid lightgray;
+}
+#content #content-report-energy .content-report-energy-result .content-report-energy-result-energy-ghgemission-table .content-report-energy-result-energy-ghgemission-table-left #energy-ghgemission-tabcontent table tr th:first-of-type {
+  width: 9%;
+}
+#content #content-report-energy .content-report-energy-result .content-report-energy-result-energy-ghgemission-table .content-report-energy-result-energy-ghgemission-table-left #energy-ghgemission-tabcontent table tr th:nth-of-type(2) {
+  width: 55%;
+}
+#content #content-report-energy .content-report-energy-result .content-report-energy-result-energy-ghgemission-table .content-report-energy-result-energy-ghgemission-table-left #energy-ghgemission-tabcontent table tr th:nth-of-type(3) {
+  width: 15%;
+}
+#content #content-report-energy .content-report-energy-result .content-report-energy-result-energy-ghgemission-table .content-report-energy-result-energy-ghgemission-table-left #energy-ghgemission-tabcontent .faq-content-menudropdown {
+  width: 100%;
+}
+#content #content-report-energy .content-report-energy-result .content-report-energy-result-energy-ghgemission-table .content-report-energy-result-energy-ghgemission-table-left #energy-ghgemission-tabcontent .faq-content-menudropdown .faq-content-menudropdown-item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FDE5DB;
+  height: 42px;
+  padding: 9px 16px;
+  border: 1px solid lightgray;
+}
+#content #content-report-energy .content-report-energy-result .content-report-energy-result-energy-ghgemission-table .content-report-energy-result-energy-ghgemission-table-left #energy-ghgemission-tabcontent .faq-content-menudropdown .faq-content-menudropdown-item h3 {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 700;
+  color: #EA6B39;
+  margin: 0;
+}
+#content #content-report-energy .content-report-energy-result .content-report-energy-result-energy-ghgemission-table .content-report-energy-result-energy-ghgemission-table-left #energy-ghgemission-tabcontent .faq-content-menudropdown .faq-content-menudropdown-item i {
+  color: #EA6B39;
+}
+#content #content-report-energy .content-report-energy-result .content-report-energy-result-energy-ghgemission-table .content-report-energy-result-energy-ghgemission-table-left #energy-ghgemission-tabcontent .faq-content-menudropdown .faq-content-menudropdown-item-show table tr td {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+  padding: 8px 16px;
+  border: 1px solid lightgray;
+}
+#content #content-report-energy .content-report-energy-result .content-report-energy-result-energy-ghgemission-table .content-report-energy-result-energy-ghgemission-table-left #energy-ghgemission-tabcontent .faq-content-menudropdown .faq-content-menudropdown-item-show table tr td div {
+  border-radius: 26px;
+  background-color: #05A660;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#content #content-report-energy .content-report-energy-result .content-report-energy-result-energy-ghgemission-table .content-report-energy-result-energy-ghgemission-table-left #energy-ghgemission-tabcontent .faq-content-menudropdown .faq-content-menudropdown-item-show table tr td:first-of-type {
+  width: 9%;
+}
+#content #content-report-energy .content-report-energy-result .content-report-energy-result-energy-ghgemission-table .content-report-energy-result-energy-ghgemission-table-left #energy-ghgemission-tabcontent .faq-content-menudropdown .faq-content-menudropdown-item-show table tr td:nth-of-type(2) {
+  width: 55%;
+}
+#content #content-report-energy .content-report-energy-result .content-report-energy-result-energy-ghgemission-table .content-report-energy-result-energy-ghgemission-table-left #energy-ghgemission-tabcontent .faq-content-menudropdown .faq-content-menudropdown-item-show table tr td:nth-of-type(3) {
+  width: 15%;
 }
 #content #content-report-energy .content-report-energy-result .content-report-energy-result-energy-ghgemission-table .content-report-energy-result-energy-ghgemission-table-right {
-  width: 60%;
+  width: 50%;
 }
 #content #content-report-energy .content-report-energy-result .content-report-energy-result-energy-ghgemission-table .content-report-energy-result-energy-ghgemission-table-right table {
   width: 100%;

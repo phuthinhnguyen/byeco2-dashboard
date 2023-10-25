@@ -16,6 +16,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.2/chart.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
     <title>Home</title>
     <style>
         @font-face {
@@ -2055,7 +2056,7 @@
                             selectYear.on("change", AdjustDayend);
                             selectMonth.val(month);
                             selectMonth.on("change", AdjustDaystart);
-                            selectYear.on("change", AdjustDayend);
+                            selectMonth.on("change", AdjustDayend);
 
                             AdjustDaystart();
                             selectDaystart.val(day)
@@ -2159,14 +2160,294 @@
                         <img src="assets/image/index/left.svg" alt="" style="margin-left: 34px;">
                         <img src="assets/image/index/right.svg" alt="" style="margin-left: 25px;">
                     </div>
-
                 </div>
                 <div class="content-report-energy-result-energy-ghgemission-table">
                     <div class="content-report-energy-result-energy-ghgemission-table-left">
-                      
+                        <ul class="nav nav-pills" id="energy-ghgemission-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="energy-tab" data-bs-toggle="tab"
+                                    data-bs-target="#energy-tab-pane" type="button" role="tab"
+                                    aria-controls="energy-tab-pane" aria-selected="true">ENERGY</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="ghgemission-tab" data-bs-toggle="tab"
+                                    data-bs-target="#ghgemission-tab-pane" type="button" role="tab"
+                                    aria-controls="ghgemission-tab-pane" aria-selected="false">GHG EMISSION</button>
+                            </li>
+                        </ul>
+                        <script>
+                            $("#energy-ghgemission-tab #energy-tab").css({"color":"#20A049","border-bottom": "3px solid #20A049"});
+                            $("#energy-ghgemission-tab #energy-tab").click(function () {
+                                $(this).css({"color":"#20A049","border-bottom": "3px solid #20A049"});
+                                $("#energy-ghgemission-tab #ghgemission-tab").css({"color":"gray","border-bottom": "none"});
+                            })
+                            $("#energy-ghgemission-tab #ghgemission-tab").click(function () {
+                                $(this).css({"color":"#20A049","border-bottom": "3px solid #20A049"});
+                                $("#energy-ghgemission-tab #energy-tab").css({"color":"gray","border-bottom": "none"});
+                            })
+                        </script>
+                        <div class="tab-content" id="energy-ghgemission-tabcontent">
+                            <div class="tab-pane fade show active" id="energy-tab-pane" role="tabpanel"
+                                aria-labelledby="energy-tab" tabindex="0">
+                                <table>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Tên hạng mục</th>
+                                        <th>Đơn vị</th>
+                                        <th>Giá trị</th>
+                                    </tr>
+                                </table>
+                                <div class="faq-content-menudropdown">
+                                    <div class="faq-content-menudropdown-item menudropdown-item-energy" data-faqitemid="faqitem1">
+                                        <h3>Lượng điện tiêu thụ</h3>
+                                        <a id="plus"><i class="fa-sharp fa-solid fa-plus"></i></a>
+                                        <a id="minus"><i class="fa fa-minus"></i></a>
+                                    </div>
+                                    <div class="faq-content-menudropdown-item-show menudropdown-item-energy-show" id="faqitem1">
+                                        <table>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Lượng điện tiêu thụ</td>
+                                                <td>kWh</td>
+                                                <td>123,621</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Tiền điện</td>
+                                                <td>VND</td>
+                                                <td>123,621</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Nhiệt trị - điện tiêu thụ</td>
+                                                <td>MJ</td>
+                                                <td>123,621</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>
+                                                    <div>Lượng phát thải CO2 - điện tiêu thụ</div>
+                                                </td>
+                                                <td>
+                                                    <div>kg</div>
+                                                </td>
+                                                <td>
+                                                    <div>123,621</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Lượng điện từ máy phát điện</td>
+                                                <td>kWh</td>
+                                                <td>123,621</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Lượng dầu diezel sử dụng cho máy phát điện</td>
+                                                <td>kWh</td>
+                                                <td>123,621</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>Tiền dầu cho máy phát điện</td>
+                                                <td>VND</td>
+                                                <td>123,621</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>
+                                                    <div>Lượng phát thải CO2 dầu</div>
+                                                </td>
+                                                <td>
+                                                    <div>kg</div>
+                                                </td>
+                                                <td>
+                                                    <div>123,621</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td>Nhiệt trị - dầu - phát điện</td>
+                                                <td>MJ</td>
+                                                <td>0</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="faq-content-menudropdown-item menudropdown-item-energy" data-faqitemid="faqitem2">
+                                        <h3>Than - Lò hơi</h3>
+                                        <a id="plus"><i class="fa-sharp fa-solid fa-plus"></i></a>
+                                        <a id="minus"><i class="fa fa-minus"></i></a>
+                                    </div>
+                                    <div class="faq-content-menudropdown-item-show menudropdown-item-energy-show" id="faqitem2">
+                                        <table>
+                                            <tr>
+                                                <td>10</td>
+                                                <td>Lượng điện tiêu thụ</td>
+                                                <td>kWh</td>
+                                                <td>123,621</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11</td>
+                                                <td>Tiền điện</td>
+                                                <td>VND</td>
+                                                <td>123,621</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12</td>
+                                                <td>Nhiệt trị - điện tiêu thụ</td>
+                                                <td>MJ</td>
+                                                <td>123,621</td>
+                                            </tr>
+                                            <tr>
+                                                <td>13</td>
+                                                <td>
+                                                    <div>Lượng phát thải CO2 - Than</div>
+                                                </td>
+                                                <td>
+                                                    <div>kg</div>
+                                                </td>
+                                                <td>
+                                                    <div>123,621</div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="faq-content-menudropdown-item menudropdown-item-energy" data-faqitemid="faqitem3">
+                                        <h3>Nhiên liệu sinh khối Biomass</h3>
+                                        <a id="plus"><i class="fa-sharp fa-solid fa-plus"></i></a>
+                                        <a id="minus"><i class="fa fa-minus"></i></a>
+                                    </div>
+                                    <div class="faq-content-menudropdown-item-show menudropdown-item-energy-show" id="faqitem3">
+                                        <table>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Lượng điện tiêu thụ</td>
+                                                <td>kWh</td>
+                                                <td>123,621</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Tiền điện</td>
+                                                <td>VND</td>
+                                                <td>123,621</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Nhiệt trị - điện tiêu thụ</td>
+                                                <td>MJ</td>
+                                                <td>123,621</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="faq-content-menudropdown-item menudropdown-item-energy" data-faqitemid="faqitem4">
+                                        <h3>Nhiên liệu sinh khối Biomass</h3>
+                                        <a id="plus"><i class="fa-sharp fa-solid fa-plus"></i></a>
+                                        <a id="minus"><i class="fa fa-minus"></i></a>
+                                    </div>
+                                    <div class="faq-content-menudropdown-item-show menudropdown-item-energy-show" id="faqitem4">
+
+                                    </div>
+
+                                    <script>
+                                        $(".menudropdown-item-energy-show").hide();
+                                        $(".menudropdown-item-energy").children("#minus").hide();
+                                        $(".menudropdown-item-energy").click(function name(params) {
+                                            // $(this).toggleClass("borderbottom");
+                                            $(this).children("#plus").toggle();
+                                            $(this).children("#minus").toggle();
+                                            let faqitemid = $(this).data("faqitemid");
+                                            $("#" + faqitemid).slideToggle();
+                                        });
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="ghgemission-tab-pane" role="tabpanel"
+                                aria-labelledby="ghgemission-tab" tabindex="0">
+                                <table>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Tên hạng mục</th>
+                                        <th>Đơn vị</th>
+                                        <th>Giá trị</th>
+                                    </tr>
+                                </table>
+                                <div class="faq-content-menudropdown">
+                                    <div class="faq-content-menudropdown-item menudropdown-item-ghgemission" data-faqitemghgemissionid="faqitemghgemissionid1">
+                                        <h3>Rác thải</h3>
+                                        <a id="plus"><i class="fa-sharp fa-solid fa-plus"></i></a>
+                                        <a id="minus"><i class="fa fa-minus"></i></a>
+                                    </div>
+                                    <div class="faq-content-menudropdown-item-show menudropdown-item-ghgemission-show" id="faqitemghgemissionid1">
+                                        <table>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Lượng chất thải rác</td>
+                                                <td>kg</td>
+                                                <td>123,621</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Tổng lượng chất thải tái chế</td>
+                                                <td>kg</td>
+                                                <td>123,621</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Số lượng chất thải nguy hại</td>
+                                                <td>kg</td>
+                                                <td>0</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="faq-content-menudropdown-item menudropdown-item-ghgemission" data-faqitemghgemissionid="faqitemghgemissionid2">
+                                        <h3>Xử lý chất thải</h3>
+                                        <a id="plus"><i class="fa-sharp fa-solid fa-plus"></i></a>
+                                        <a id="minus"><i class="fa fa-minus"></i></a>
+                                    </div>
+                                    <div class="faq-content-menudropdown-item-show menudropdown-item-ghgemission-show" id="faqitemghgemissionid2">
+                                        <table>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Chôn lấp</td>
+                                                <td>kWh</td>
+                                                <td>123,621</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td><div>Lượng khí phát thải CO2 - Chôn lấp</div></td>
+                                                <td><div>kg</div></td>
+                                                <td><div>123,621</div></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="faq-content-menudropdown-item menudropdown-item-ghgemission" data-faqitemghgemissionid="faqitemghgemissionid3">
+                                        <h3>SCOPE 3 - Category 5</h3>
+                                        <a id="plus"><i class="fa-sharp fa-solid fa-plus"></i></a>
+                                        <a id="minus"><i class="fa fa-minus"></i></a>
+                                    </div>
+                                    <div class="faq-content-menudropdown-item-show menudropdown-item-ghgemission-show" id="faqitemghgemissionid3">
+                                        
+                                    </div>
+                              
+                                    <script>
+                                        $(".menudropdown-item-ghgemission-show").hide();
+                                        $(".menudropdown-item-ghgemission").children("#minus").hide();
+                                        $(".menudropdown-item-ghgemission").click(function name(params) {
+                                            // $(this).toggleClass("borderbottom");
+                                            $(this).children("#plus").toggle();
+                                            $(this).children("#minus").toggle();
+                                            let faqitemghgemissionid = $(this).data("faqitemghgemissionid");
+                                            $("#" + faqitemghgemissionid).slideToggle();
+                                        });
+                                    </script>
+                                </div>
+                            </div>
+                                
+                        </div>
+
                     </div>
                     <div class="content-report-energy-result-energy-ghgemission-table-right">
-                        <table>
+                        <table class="for-energy">
                             <tr>
                                 <th>#</th>
                                 <th>Lượng than <br>sử dụng <br>(Tấn)</th>
@@ -2186,7 +2467,7 @@
                                 <td>427,3416</td>
                             </tr>
                         </table>
-                        <table style="margin-top: 24px;">
+                        <table style="margin-top: 24px;" class="for-energy">
                             <tr>
                                 <th>#</th>
                                 <th>Lượng than <br>sử dụng <br>(Tấn)</th>
@@ -2206,67 +2487,99 @@
                                 <td>427,3416</td>
                             </tr>
                         </table>
+                        <table class="for-ghgemission">
+                            <tr>
+                                <th>#</th>
+                                <th><div style="background-color: red;">Tái chế (Kg)</div></th>
+                                <th>Loại</th>
+                                <th>Hệ số CO2</th>
+                                <th><div>Lượng phát thải CO2 (kg)</div></th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>233,52</td>
+                                <td>Nhựa PET</td>
+                                <td>89.344</td>
+                                <td>5.866,4894</td>
+                            </tr>
+                        </table>
+                        <script>
+                                $(".for-ghgemission").hide();
+                                $('#energy-ghgemission-tab #ghgemission-tab').click(function () {
+                                    $(".for-ghgemission").fadeToggle();
+                                    $(".for-energy").fadeToggle();
+                                })
+                                $('#energy-ghgemission-tab #energy-tab').click(function () {
+                                    $(".for-energy").fadeToggle();
+                                    $(".for-ghgemission").fadeToggle();
+                                })
+                        </script>
                     </div>
+
                 </div>
             </div>
+
         </div>
+    </div>
+    </div>
 
 
-        <script>
-            // Script to open and close sidebar
-            $("#dashboard-toggle-show").hide();
-            var index = 0;
-            function navigate_sidebar() {
-                var sidebar = document.getElementById("mySidebar");
-                var content = document.getElementById("content");
+    <script>
+        // Script to open and close sidebar
+        $("#dashboard-toggle-show").hide();
+        var index = 0;
+        function navigate_sidebar() {
+            var sidebar = document.getElementById("mySidebar");
+            var content = document.getElementById("content");
 
-                if (index % 2 == 0) {
-                    sidebar.style.display = "none";
-                    content.style.width = "100%";
-                    content.style.left = 0;
-                    index++;
-                    $("#dashboard-toggle-show").toggle();
-                    $("#dashboard-toggle-hide").toggle();
-                }
-                else if (index % 2 != 0) {
-                    sidebar.style.display = "block";
-                    content.style.width = "calc(100% - 300px)";
-                    content.style.left = "300px";
-                    index++;
-                    $("#dashboard-toggle-show").toggle();
-                    $("#dashboard-toggle-hide").toggle();
-                }
-
+            if (index % 2 == 0) {
+                sidebar.style.display = "none";
+                content.style.width = "100%";
+                content.style.left = 0;
+                index++;
+                $("#dashboard-toggle-show").toggle();
+                $("#dashboard-toggle-hide").toggle();
+            }
+            else if (index % 2 != 0) {
+                sidebar.style.display = "block";
+                content.style.width = "calc(100% - 300px)";
+                content.style.left = "300px";
+                index++;
+                $("#dashboard-toggle-show").toggle();
+                $("#dashboard-toggle-hide").toggle();
             }
 
+        }
 
-            $("#content-dashboard").show();
-            $("#content-report-energy").hide();
-            $(".dashboard-left-content-ppj").click(function () {
-                $("#content-report-energy,#content-dashboard").hide();
-                $("#content-dashboard").fadeIn();
-                $('#myTab #overview-tab').tab('show');
-            })
-            $(".dashboard-left-content-energy").click(function () {
-                $("#content-report-energy,#content-dashboard").hide();
-                $("#content-dashboard").fadeIn();
-                $('#myTab #energy-tab').tab('show');
-            })
-            $(".dashboard-left-content-ghgemission").click(function () {
-                $("#content-report-energy,#content-dashboard").hide();
-                $("#content-dashboard").fadeIn();
-                $('#myTab #ghgemission-tab').tab('show');
-            })
-            $(".dashboard-left-content-projectportfolio").click(function () {
-                $("#content-report-energy,#content-dashboard").hide();
-                $("#content-dashboard").fadeIn();
-                $('#myTab #projectportfolio-tab').tab('show');
-            })
-            $(".report-left-content-energy").click(function () {
-                $("#content-report-energy,#content-dashboard").hide();
-                $("#content-report-energy").fadeIn();
-            })
-        </script>
+
+        $("#content-dashboard").show();
+        $("#content-report-energy").hide();
+        $(".dashboard-left-content-ppj").click(function () {
+            $("#content-report-energy,#content-dashboard").hide();
+            $("#content-dashboard").fadeIn();
+            $('#myTab #overview-tab').tab('show');
+        })
+        $(".dashboard-left-content-energy").click(function () {
+            $("#content-report-energy,#content-dashboard").hide();
+            $("#content-dashboard").fadeIn();
+            $('#myTab #energy-tab').tab('show');
+        })
+        $(".dashboard-left-content-ghgemission").click(function () {
+            $("#content-report-energy,#content-dashboard").hide();
+            $("#content-dashboard").fadeIn();
+            $('#myTab #ghgemission-tab').tab('show');
+        })
+        $(".dashboard-left-content-projectportfolio").click(function () {
+            $("#content-report-energy,#content-dashboard").hide();
+            $("#content-dashboard").fadeIn();
+            $('#myTab #projectportfolio-tab').tab('show');
+        })
+        $(".report-left-content-energy").click(function () {
+            $("#content-report-energy,#content-dashboard").hide();
+            $("#content-report-energy").fadeIn();
+        })
+    
+    </script>
 
 
 </body>

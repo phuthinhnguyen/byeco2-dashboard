@@ -1001,6 +1001,7 @@ nav {
 
     #content-report-energy {
         padding: 0 25px;
+        padding-bottom: 50px;
 
         .content-report-energy-search {
             box-shadow: 0px 0px 6px 6px #eeeeee;
@@ -1033,7 +1034,7 @@ nav {
                     display: flex;
                     column-gap: 60px;
                     align-items: flex-end;
-                
+
                     .content-report-energy-search-bottom-form-item {
                         p {
                             font-family: $fontRoboto;
@@ -1227,13 +1228,130 @@ nav {
             .content-report-energy-result-energy-ghgemission-table {
                 display: flex;
                 margin-top: 80px;
+                column-gap: 20px;
 
                 .content-report-energy-result-energy-ghgemission-table-left {
-                    width: 40%;
+                    width: 50%;
+
+                    #energy-ghgemission-tab {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        margin-bottom: 20px;
+
+                        #energy-tab,
+                        #ghgemission-tab {
+                            padding: 10px 50px;
+                            background-color: #fff;
+                            color: gray;
+                            font-weight: 600;
+
+                         
+                        }
+
+                    }
+
+                    .hihi {
+                        color: $primary-green;
+                        border-bottom: 3px solid $primary-green;
+                    }
+
+                    #energy-ghgemission-tabcontent {
+                        table {
+                            width: 100%;
+
+                            tr {
+                                th {
+                                    font-family: Roboto;
+                                    font-size: 15px;
+                                    font-weight: 700;
+                                    color: black;
+                                    padding: 8px 16px;
+                                    border: 1px solid lightgray;
+
+                                    &:first-of-type {
+                                        width: 9%;
+                                    }
+
+                                    &:nth-of-type(2) {
+                                        width: 55%;
+                                    }
+
+                                    &:nth-of-type(3) {
+                                        width: 15%;
+                                    }
+
+                                }
+                            }
+                        }
+
+                        .faq-content-menudropdown {
+                            width: 100%;
+
+                            .faq-content-menudropdown-item {
+                                display: flex;
+                                width: 100%;
+                                align-items: center;
+                                justify-content: space-between;
+                                background-color: $third-coral-80;
+                                height: 42px;
+                                padding: 9px 16px;
+                                border: 1px solid lightgray;
+
+                                h3 {
+                                    font-family: Roboto;
+                                    font-size: 16px;
+                                    font-weight: 700;
+                                    color: $second-coral-80;
+                                    margin: 0;
+                                }
+
+                                i {
+                                    color: $second-coral-80;
+                                }
+                            }
+
+                            .faq-content-menudropdown-item-show {
+                                table {
+                                    tr {
+                                        td {
+                                            font-family: Roboto;
+                                            font-size: 14px;
+                                            font-weight: 500;
+                                            color: black;
+                                            padding: 8px 16px;
+                                            border: 1px solid lightgray;
+
+                                            div {
+                                                border-radius: 26px;
+                                                background-color: $state-success;
+                                                color: #fff;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                            }
+
+                                            &:first-of-type {
+                                                width: 9%;
+                                            }
+
+                                            &:nth-of-type(2) {
+                                                width: 55%;
+                                            }
+
+                                            &:nth-of-type(3) {
+                                                width: 15%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
 
                 .content-report-energy-result-energy-ghgemission-table-right {
-                    width: 60%;
+                    width: 50%;
 
                     table {
                         width: 100%;
