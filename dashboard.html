@@ -2015,7 +2015,8 @@
 
                             </select>
                         </div>
-                        <button type="button">SEARCH <img src="assets/image/index/search-report.svg" alt=""></button>
+                        <button type="button" id="search-button">SEARCH <img src="assets/image/index/search-report.svg" alt=""></button>
+                      
                     </form>
                     <script>
                         $(document).ready(function () {
@@ -2518,8 +2519,142 @@
 
                 </div>
             </div>
+            <script>
+                $(".content-report-energy-result-table,.content-report-energy-result-table-info,.content-report-energy-result-energy-ghgemission-table").hide();
+                $("#search-button").click(function () {
+                    $(".content-report-energy-result-table,.content-report-energy-result-table-info,.content-report-energy-result-energy-ghgemission-table").show();
+                })
+            </script>
 
+            <div class="content-report-energy-importdata">
+                <div class="content-report-energy-importdata-top">
+                    <p>Import energy data</p>
+                </div>
+                <div class="content-report-energy-importdata-bottom">
+                    <div class="content-report-energy-importdata-bottom-exportexcel">
+                        <div>EXPORT EXCEL TEMPLATE <img src="assets/image/index/export.svg" alt=""> </div>
+                        <p>Instruction here</p>
+                    </div>
+                    <div class="content-report-energy-importdata-bottom-yearmonth">
+                        <div class="content-report-energy-importdata-bottom-yearmonth-item">
+                            <p>Year:</p>
+                            <select name="yearimport" id="yearimport" style="width: 105px;">
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                            </select>
+                        </div>
+                        <div class="content-report-energy-importdata-bottom-yearmonth-item">
+                            <p>Month:</p>
+                            <select name="monthimport" id="monthimport">
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="content-report-energy-importdata-bottom-choosefile">
+                        <div class="content-report-energy-importdata-bottom-choosefile-title">Choose file:</div>
+                        <div class="content-report-energy-importdata-bottom-choosefile-content">
+                            <img src="assets/image/index/upload.svg" alt="">
+                            <div>
+                                <span style="color: #20A049;cursor: pointer;">Click to upload</span>
+                                <span>or drag and drop</span>
+                            </div>
+                            <p>xls., </p>
+                        </div>
+                    </div>
+                    <div class="content-report-energy-importdata-bottom-showfile">
+                        <div class="content-report-energy-importdata-bottom-showfile-item">
+                            <div class="content-report-energy-importdata-bottom-showfile-item-left">
+                                <img src="assets/image/index/upload.svg" alt="">
+                                <div>
+                                    <p>document_file_name.pdf</p>
+                                    <p style="font-family: Roboto;font-size: 13px;font-weight: 400;color: gray;">100kb &nbsp;&nbsp;&#x2022;&nbsp;&nbsp; Loading</p>
+                                    <h1></h1>
+                                </div>
+                            </div>
+                            <div class="content-report-energy-importdata-bottom-showfile-item-right">
+                                <img src="assets/image/index/bin.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="content-report-energy-importdata-bottom-showfile-item">
+                            <div class="content-report-energy-importdata-bottom-showfile-item-left">
+                                <img src="assets/image/index/upload.svg" alt="">
+                                <div>
+                                    <p style="color: #FF3B3B;">Upload failed.</p>
+                                    <p style="font-family: Roboto;font-size: 13px;font-weight: 400;color: #FF3B3B;">File too large &nbsp;&nbsp;&#x2022;&nbsp;&nbsp; Failed</p>
+                                    <h1 style="background-color: #FF3B3B;"></h1>
+                                </div>
+                            </div>
+                            <div class="content-report-energy-importdata-bottom-showfile-item-right">
+                                <img src="assets/image/index/bin.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-report-energy-importdata-bottom-note">
+                        <img src="assets/image/index/note.svg" alt="">
+                        <p>Note: Need to export the latest form for each data entry</p>
+                    </div>
+                    <div class="content-report-energy-importdata-bottom-importbutton">
+                        <img src="assets/image/index/import.svg" alt="">IMPORT
+                    </div>
+                    <div class="content-report-energy-importdata-toast">
+                        <div class="content-report-energy-importdata-toast-item" style="background-color: #FDEDED;">
+                            <img src="assets/image/index/toast-error.svg" alt="">
+                            <div>
+                                <h3>{Title}</h3>
+                                <p>{Description}</p>
+                            </div>
+                        </div>
+                        <div class="content-report-energy-importdata-toast-item" style="background-color: #FFF4E5;">
+                            <img src="assets/image/index/toast-note.svg" alt="">
+                            <div>
+                                <h3>{Title}</h3>
+                                <p>{Description}</p>
+                            </div>
+                        </div>
+                        <div class="content-report-energy-importdata-toast-item" style="background-color: #E5F6FD;">
+                            <img src="assets/image/index/toast-error.svg" alt="">
+                            <div>
+                                <h3>{Title}</h3>
+                                <p>{Description}</p>
+                            </div>
+                        </div>
+                        <div class="content-report-energy-importdata-toast-item" style="background-color: #EDF7ED;">
+                            <img src="assets/image/index/toast-success.svg" alt="">
+                            <div>
+                                <h3>{Title}</h3>
+                                <p>{Description}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
         </div>
+        <script>
+            $(".content-report-energy-importdata").hide();
+            $(".content-report-energy-search-bottom-import-left").click(function name(params) {
+                $(".content-report-energy-search,.content-report-energy-result").hide();
+                $(".content-report-energy-importdata").show();
+            })
+        </script>
     </div>
     </div>
 
@@ -2577,6 +2712,8 @@
         $(".report-left-content-energy").click(function () {
             $("#content-report-energy,#content-dashboard").hide();
             $("#content-report-energy").fadeIn();
+            $(".content-report-energy-importdata").hide();
+            $(".content-report-energy-search,.content-report-energy-result").show();
         })
     
     </script>

@@ -19,7 +19,7 @@ nav {
     display: block;
     min-height: 1000px;
     position: fixed;
-
+    background-image: linear-gradient(-50deg, #8DD92D, #63C23D, #33A850, #2AA44D, #20A049);
     .logo {
         background-color: $fourth-green;
         padding: 23px 29px;
@@ -1246,7 +1246,7 @@ nav {
                             color: gray;
                             font-weight: 600;
 
-                         
+
                         }
 
                     }
@@ -1391,6 +1391,282 @@ nav {
                     }
                 }
             }
+        }
+
+        .content-report-energy-importdata {
+            box-shadow: 0px 0px 6px 6px #eeeeee;
+            
+            .content-report-energy-importdata-top {
+                width: 100%;
+                height: 50px;
+                background-color: $primary-green;
+                display: flex;
+                align-items: center;
+                padding-left: 24px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+
+                p {
+                    color: #fff;
+                    font-family: $fontRoboto;
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 28px;
+                    margin: 0;
+                }
+            }
+
+            .content-report-energy-importdata-bottom {
+                width: 100%;
+                padding: 20px;
+                position: relative;
+                .content-report-energy-importdata-bottom-exportexcel {
+                    display: flex;
+                    align-items: center;
+
+                    div {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-family: Roboto;
+                        font-size: 16px;
+                        font-weight: 500;
+                        background-color: $fourth-blue;
+                        border-radius: 5px;
+                        height: 36px;
+                        width: 284px;
+                        color: #fff;
+                        cursor: pointer;
+
+                        img {
+                            width: 22px;
+                            height: 22px;
+                            margin-left: 8px;
+                        }
+
+                    }
+
+                    p {
+                        font-family: Roboto;
+                        font-size: 16px;
+                        font-weight: 700;
+                        color: $state-error;
+                        margin: 0;
+                        margin-left: 24px;
+                        text-decoration: underline;
+
+
+                    }
+                }
+
+                .content-report-energy-importdata-bottom-yearmonth {
+                    display: flex;
+                    column-gap: 24px;
+                    margin-top: 50px;
+
+                    .content-report-energy-importdata-bottom-yearmonth-item {
+                        p {
+                            font-family: $fontRoboto;
+                            font-weight: 700;
+                            font-size: 16px;
+                            color: black;
+                            margin: 0;
+                            margin-top: 10px;
+                        }
+
+                        select {
+                            width: 150px;
+                            font-family: $fontRoboto;
+                            font-weight: 400;
+                            font-size: 16px;
+                            padding: 6px;
+                            border-radius: 5px;
+                            border: none;
+                            outline: 1px solid gray;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+
+                .content-report-energy-importdata-bottom-choosefile {
+                    margin-top: 45px;
+
+                    .content-report-energy-importdata-bottom-choosefile-title {
+                        font-family: Roboto;
+                        font-size: 16px;
+                        font-weight: 700;
+                        color: black;
+
+                    }
+
+                    .content-report-energy-importdata-bottom-choosefile-content {
+                        margin-top: 30px;
+                        border: 1px dashed lightgray;
+                        padding: 32px;
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 12px;
+                        justify-content: center;
+                        align-items: center;
+
+                        img {
+                            width: 16px;
+                            height: 20px;
+                        }
+
+                        div {
+                            margin-top: 5px;
+
+                            span {
+                                font-family: Roboto;
+                                font-size: 16px;
+                                font-weight: 400;
+                                color: black;
+
+                            }
+                        }
+
+                        p {
+                            font-family: Roboto;
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: $dark-03;
+
+                        }
+                    }
+                }
+
+                .content-report-energy-importdata-bottom-showfile {
+                    margin-top: 16px;
+
+                    .content-report-energy-importdata-bottom-showfile-item {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 32px;
+
+                        .content-report-energy-importdata-bottom-showfile-item-left {
+                            display: flex;
+                            column-gap: 25px;
+                            align-items: center;
+
+                            img {
+                                width: 16px;
+                                height: 20px;
+                            }
+
+                            div {
+                                display: flex;
+                                flex-direction: column;
+                                row-gap: 5px;
+
+                                p {
+                                    font-family: Roboto;
+                                    font-size: 15px;
+                                    font-weight: 400;
+                                    color: black;
+                                    margin: 0;
+
+                                }
+
+                                h1 {
+                                    height: 4px;
+                                    width: 200px;
+                                    background-color: $primary-green;
+
+                                }
+                            }
+                        }
+
+                        .content-report-energy-importdata-bottom-showfile-item-right {
+                            img {
+                                width: 20px;
+                                height: 20px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+
+                .content-report-energy-importdata-bottom-note {
+                    display: flex;
+                    column-gap: 10px;
+                    align-items: center;
+
+                    img {
+                        width: 21px;
+                        height: 19px;
+                        cursor: pointer;
+                    }
+
+                    p {
+                        font-family: Roboto;
+                        font-size: 15px;
+                        font-weight: 400;
+                        color: $state-error;
+                        margin: 0;
+                    }
+                }
+
+                .content-report-energy-importdata-bottom-importbutton {
+                    width: 142px;
+                    height: 40px;
+                    background-color: $second-coral-80;
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    column-gap: 8px;
+                    font-family: Roboto;
+                    font-size: 16px;
+                    font-weight: 700;
+                    border-radius: 5px;
+                    margin-top: 45px;
+                    cursor: pointer;
+
+                    img {
+                        width: 22px;
+                        height: 22px;
+                    }
+                }
+                .content-report-energy-importdata-toast {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                  
+                    .content-report-energy-importdata-toast-item {
+                        display: flex;
+                        column-gap: 8px;
+                        width: 320px;
+                        height: 76px;
+                        padding: 13px 16px;
+                        margin-bottom: 50px;
+                        img {
+                            width: 19px;
+                            height: 19px;
+                        }
+    
+                        div {
+                            h3 {
+                                font-family: Roboto;
+                                font-size: 15px;
+                                font-weight: 600;
+                                color: #5F2120;
+    
+                            }
+    
+                            p {
+                                font-family: Roboto;
+                                font-size: 13px;
+                                font-weight: 400;
+                                color: #5F2120;
+    
+                            }
+                        }
+                    }
+                }
+            }
+
+           
         }
     }
 
