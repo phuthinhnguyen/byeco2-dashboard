@@ -10,6 +10,7 @@ img {
 body {
     box-sizing: border-box;
     display: flex;
+    position: relative;
 }
 
 //CSS sidebar
@@ -20,6 +21,7 @@ nav {
     min-height: 1000px;
     position: fixed;
     background-image: linear-gradient(-50deg, #8DD92D, #63C23D, #33A850, #2AA44D, #20A049);
+
     .logo {
         background-color: $fourth-green;
         padding: 23px 29px;
@@ -28,7 +30,21 @@ nav {
             width: 108px;
             height: 68px;
         }
+
+        h2 {
+            font-family: Roboto;
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            display: none;
+        }
+
+        .closeoffcanvas {
+            display: none;
+        }
     }
+
+
 
     .menu-title {
         font-family: $fontRoboto;
@@ -39,6 +55,26 @@ nav {
         margin-top: 24px;
         padding-left: 29px;
         margin-bottom: 18px;
+    }
+
+    .username-offcanvas {
+        display: none;
+    }
+
+    .home-title {
+        display: none;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .language-offcanvas {
+        display: none;
+    }
+
+    .logout-offcanvas {
+        display: none;
     }
 
     .dashboard,
@@ -110,7 +146,8 @@ nav {
     .report-left-content {
 
         .report-left-content-energy,
-        .report-left-content-ghgemission {
+        .report-left-content-ghgemission,
+        .report-left-content-waste {
             padding: 8px 69px;
             cursor: pointer;
             width: 80%;
@@ -128,9 +165,14 @@ nav {
 
             }
 
+
             &:hover {
                 background-color: #248142;
             }
+        }
+
+        .report-left-content-waste {
+            display: none;
         }
     }
 
@@ -189,11 +231,54 @@ nav {
                 }
             }
         }
+
+    }
+
+    .showsearchbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 30px;
+        margin-bottom: 20px;
+
+        .showsearchbar-left {
+            border-radius: 8px;
+            border: 1px solid $primary-green;
+            padding: 12px;
+            width: calc(100% - 30px);
+
+            img {
+                width: 22px;
+                height: 22px;
+            }
+
+            input {
+                outline: none;
+                border: none;
+                margin-left: 5px;
+            }
+        }
+
+        .showsearchbar-right {
+            img {
+                width: 24px;
+                height: 24px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .top-responsive {
+        display: none;
     }
 
     #content-dashboard {
         padding: 10px;
         border-radius: 10px;
+
+        .content-dashboard-top {
+            display: none;
+        }
 
         #ppj-tab {
             font-family: $fontRoboto;
@@ -238,6 +323,10 @@ nav {
                     line-height: 33px;
                     margin: 0;
                 }
+            }
+
+            .ppj-dashboard {
+                display: none;
             }
 
             .ppj-point {
@@ -312,10 +401,11 @@ nav {
 
             .ppj-emission-scope {
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-around;
                 align-items: center;
                 margin-top: 18px;
                 padding: 0 30px;
+                flex-wrap: wrap;
 
                 .ppj-emission-scope-item {
                     display: flex;
@@ -378,16 +468,22 @@ nav {
                 }
             }
 
+            .ppj-emission-scope-responsive {
+                display: none;
+            }
+
             .ppj-kpi {
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: space-around;
+                row-gap: 30px;
                 margin-top: 30px;
                 padding: 0 40px;
+                flex-wrap: wrap;
 
                 .ppj-kpi-item {
                     padding: 10px;
-                    width: 33%;
+                    // width: 33%;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -402,19 +498,24 @@ nav {
                         line-height: 28px;
                         color: $dark-02;
                     }
+                    canvas{
+                        min-width: 400px;
+                    }
                 }
             }
 
             .ppj-emission-value {
                 display: flex;
                 align-items: flex-start;
-                justify-content: space-between;
+                justify-content: space-around;
                 margin-top: 40px;
                 padding: 0 40px;
+                flex-wrap: wrap;
+                row-gap: 10px;
 
                 .ppj-emission-value-item {
                     padding: 10px;
-                    width: 33%;
+                    // width: 50%;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -439,7 +540,9 @@ nav {
                             font-weight: 700;
                         }
                     }
-
+                    .canvas{
+                        max-width: 280px;
+                    }
                     .details {
                         margin-top: 20px;
 
@@ -461,9 +564,10 @@ nav {
                         }
 
                         .details-content {
-
+                           
+                            width: 100%;
                             table {
-
+                                
                                 margin-top: 18px;
 
                                 tr {
@@ -494,9 +598,10 @@ nav {
             .ppj-totalenergyconsumption {
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: space-around;
                 margin-top: 70px;
                 padding: 0 40px;
+                flex-wrap: wrap;
 
                 .ppj-totalenergyconsumption-item {
                     padding: 10px;
@@ -520,6 +625,9 @@ nav {
                             font-size: 17px;
                             font-weight: 700;
                         }
+                    }
+                    .canvas{
+                        max-width: 280px;
                     }
                 }
             }
@@ -612,6 +720,10 @@ nav {
                                     color: $dark-02;
 
                                 }
+                            }
+
+                            canvas {
+                                min-height: 400px;
                             }
                         }
 
@@ -724,6 +836,10 @@ nav {
 
                                 }
                             }
+
+                            canvas {
+                                min-height: 400px;
+                            }
                         }
 
                         .dashboard-energy-content-diesel-content-right {
@@ -835,6 +951,10 @@ nav {
 
                                 }
                             }
+
+                            canvas {
+                                min-height: 400px;
+                            }
                         }
 
                         .dashboard-energy-content-petrol-content-right {
@@ -945,6 +1065,10 @@ nav {
                                     color: $dark-02;
 
                                 }
+                            }
+
+                            canvas {
+                                min-height: 400px;
                             }
                         }
 
@@ -1395,7 +1519,7 @@ nav {
 
         .content-report-energy-importdata {
             box-shadow: 0px 0px 6px 6px #eeeeee;
-            
+
             .content-report-energy-importdata-top {
                 width: 100%;
                 height: 50px;
@@ -1420,6 +1544,7 @@ nav {
                 width: 100%;
                 padding: 20px;
                 position: relative;
+
                 .content-report-energy-importdata-bottom-exportexcel {
                     display: flex;
                     align-items: center;
@@ -1628,11 +1753,12 @@ nav {
                         height: 22px;
                     }
                 }
+
                 .content-report-energy-importdata-toast {
                     position: absolute;
                     top: 20px;
                     right: 20px;
-                  
+
                     .content-report-energy-importdata-toast-item {
                         display: flex;
                         column-gap: 8px;
@@ -1640,34 +1766,894 @@ nav {
                         height: 76px;
                         padding: 13px 16px;
                         margin-bottom: 50px;
+
                         img {
                             width: 19px;
                             height: 19px;
                         }
-    
+
                         div {
                             h3 {
                                 font-family: Roboto;
                                 font-size: 15px;
                                 font-weight: 600;
                                 color: #5F2120;
-    
+
                             }
-    
+
                             p {
                                 font-family: Roboto;
                                 font-size: 13px;
                                 font-weight: 400;
                                 color: #5F2120;
-    
+
                             }
                         }
                     }
                 }
             }
 
-           
+
         }
     }
 
+}
+
+
+@media screen and (max-width:1600px) {
+    #content {
+        #content-dashboard {
+            #overview {
+                .ppj-emission-value {
+                    .ppj-emission-value-item {
+                        .details {
+                            .details-content {
+                                table {
+
+                                    tr {
+                                        .value {
+                                            padding: 0 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1450px) {
+    #content {
+        #content-dashboard {
+            #overview {
+                .ppj-emission-value {
+                    .ppj-emission-value-item {
+                        .details {
+                            .details-content {
+                                table {
+
+                                    tr {
+                                        .value {
+                                            padding: 0 15px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1400px) {
+    #content {
+        #content-dashboard {
+            #overview {
+                .ppj-point {
+                    grid-template-columns: auto auto;
+
+                    .ppj-point-item {
+                        width: 50%;
+                    }
+                }
+
+
+                .ppj-totalenergyconsumption {
+                    .ppj-totalenergyconsumption-item {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    #content {
+        #content-dashboard {
+            #energy {
+                .dashboard-energy-content {
+                    .dashboard-energy-content-electricity {
+                        .dashboard-energy-content-electricity-content {
+                            flex-direction: column;
+                            row-gap: 30px;
+
+                            .dashboard-energy-content-electricity-content-left,
+                            .dashboard-energy-content-electricity-content-right {
+                                width: 100%;
+
+                                .dashboard-energy-content-electricity-content-right-table {
+                                    overflow-x: auto;
+
+                                    table {
+                                        margin: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .dashboard-energy-content-diesel {
+                        .dashboard-energy-content-diesel-content {
+                            flex-direction: column;
+                            row-gap: 30px;
+
+                            .dashboard-energy-content-diesel-content-left,
+                            .dashboard-energy-content-diesel-content-right {
+                                width: 100%;
+
+                                .dashboard-energy-content-diesel-content-right-table {
+                                    overflow-x: auto;
+
+                                    table {
+                                        margin: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .dashboard-energy-content-petrol {
+                        .dashboard-energy-content-petrol-content {
+                            flex-direction: column;
+                            row-gap: 30px;
+
+                            .dashboard-energy-content-petrol-content-left,
+                            .dashboard-energy-content-petrol-content-right {
+                                width: 100%;
+
+                                .dashboard-energy-content-petrol-content-right-table {
+                                    overflow-x: auto;
+
+                                    table {
+                                        margin: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .dashboard-energy-content-gas {
+                        .dashboard-energy-content-gas-content {
+                            flex-direction: column;
+                            row-gap: 30px;
+
+                            .dashboard-energy-content-gas-content-left,
+                            .dashboard-energy-content-gas-content-right {
+                                width: 100%;
+
+                                .dashboard-energy-content-gas-content-right-table {
+                                    overflow-x: auto;
+
+                                    table {
+                                        margin: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1120px) {
+    #content {
+        .top {
+            .top-content-left {
+                img:not(:first-of-type) {
+                    margin-left: 30px;
+                }
+
+                .search {
+                    width: 50px;
+                    background-color: transparent;
+                    margin-left: 0;
+
+                    input {
+                        display: none;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width:1050px) {
+    #content {
+        #content-dashboard {
+            #overview {
+                .ppj-point {
+                    // grid-template-columns: auto;
+                    padding: 10px;
+
+                    .ppj-point-item {
+                        width: 50%;
+
+                        .ppj-point-item-left {
+                            img {
+                                width: 30px;
+                                height: 30px;
+                            }
+                        }
+
+                        .ppj-point-item-right {
+                            h1 {
+                                font-size: 22px;
+                                margin-top: 5px;
+
+                            }
+
+                            .ppj-point-item-right-bottom {
+                                width: 200px;
+
+                                img {
+                                    width: 10px;
+                                    height: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+                .ppj-totalenergyconsumption {
+                    .ppj-totalenergyconsumption-item {
+                        width: 100%;
+                    }
+                }
+            }
+
+            #energy {
+                .dashboard-energy-top {
+                    h1 {
+                        font-size: 22px;
+                    }
+                }
+
+                .dashboard-energy-content {
+                    .dashboard-energy-content-electricity {
+                        .dashboard-energy-content-electricity-title {
+                            .dashboard-energy-content-electricity-title-left {
+                                h2 {
+                                    font-size: 18px;
+                                }
+                            }
+
+                            .dashboard-energy-content-electricity-title-right {
+                                i {
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+
+                    .dashboard-energy-content-diesel {
+                        .dashboard-energy-content-diesel-title {
+                            .dashboard-energy-content-diesel-title-left {
+                                h2 {
+                                    font-size: 18px;
+                                }
+                            }
+
+                            .dashboard-energy-content-diesel-title-right {
+                                i {
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+
+                    .dashboard-energy-content-petrol {
+                        .dashboard-energy-content-petrol-title {
+                            .dashboard-energy-content-petrol-title-left {
+                                h2 {
+                                    font-size: 18px;
+                                }
+                            }
+
+                            .dashboard-energy-content-petrol-title-right {
+                                i {
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+
+                    .dashboard-energy-content-gas {
+                        .dashboard-energy-content-gas-title {
+                            .dashboard-energy-content-gas-title-left {
+                                h2 {
+                                    font-size: 18px;
+                                }
+                            }
+
+                            .dashboard-energy-content-gas-title-right {
+                                i {
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:980px) {
+    #content {
+        .top {
+
+            .top-content-right {
+
+                .top-content-right-fullscreen,
+                .top-content-right-language,
+                .top-content-right-dropdown {
+                    display: none;
+                }
+            }
+        }
+
+        #content-dashboard {
+
+            #ghgemission-tab,
+            #projectportfolio-tab {
+                display: none;
+            }
+
+            #overview {
+                .ppj-top {
+                    h1 {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:920px) {
+    #content {
+        #content-dashboard {
+            #overview {
+                .ppj-point {
+
+                    .ppj-point-item {
+
+                        .ppj-point-item-right {
+
+                            .ppj-point-item-right-bottom {
+                                width: 100px;
+
+                                img {
+                                    margin-left: 20px;
+                                }
+
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:800px) {
+    nav {
+        // position: absolute;
+        left: 0;
+        top: 0;
+        width: 300px;
+        display: none;
+        z-index: 2;
+
+        // overflow-x: auto;
+        .logo {
+            img {
+                width: 54px;
+                height: 34px;
+            }
+
+            h2 {
+                display: inline-block;
+                font-size: 20px;
+                position: absolute;
+                left: 100px;
+                top: 30px;
+            }
+
+            .closeoffcanvas {
+                display: block;
+                position: absolute;
+                right: 10px;
+                top: 25px;
+                width: 30px;
+                height: 32px;
+                cursor: pointer;
+            }
+        }
+
+        .menu-title {
+            display: none;
+        }
+
+        .username-offcanvas {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #1EAE4A;
+            width: 260px;
+            margin: auto;
+            margin-top: 30px;
+
+            .username-offcanvas-left {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                column-gap: 20px;
+
+                .username-offcanvas-left-left {
+                    img {
+                        width: 48px;
+                        height: 48px;
+                    }
+                }
+
+                .username-offcanvas-left-right {
+                    h2 {
+                        font-family: Roboto;
+                        font-size: 18px;
+                        font-weight: 600;
+                        color: #fff;
+                        margin: 0;
+                    }
+
+                    p {
+                        font-family: Roboto;
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: #fff;
+                        margin: 0;
+                    }
+                }
+            }
+
+            #username-offcanvas-angle-up {
+                display: none;
+            }
+
+            #username-offcanvas-angle-down {
+                color: #fff;
+                font-size: 20px;
+                cursor: pointer;
+            }
+        }
+
+        .home-title {
+            display: block;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+            margin-left: 20px;
+            margin-top: 32px;
+        }
+
+        hr {
+            display: block;
+            background-color: #fff;
+            border: none;
+            outline: none;
+            margin-top: 22px;
+        }
+
+        .dashboard {
+            margin-top: 35px;
+        }
+
+        .dashboard-left-content,
+        #dashboard-angle-down {
+            display: none;
+        }
+
+        .report-left-content {
+            .report-left-content-ghgemission {
+                display: none;
+            }
+
+            .report-left-content-waste {
+                display: block;
+            }
+        }
+
+        .language-offcanvas {
+            display: flex;
+            margin-left: 20px;
+            justify-content: flex-start;
+            align-items: center;
+            column-gap: 15px;
+            margin-top: 32px;
+
+            p {
+                font-family: Roboto;
+                font-size: 16px;
+                font-weight: 500;
+                color: #fff;
+                display: inline-block;
+                margin: 0;
+            }
+
+            img {
+                width: 16px;
+                height: 16px;
+
+            }
+        }
+
+        .logout-offcanvas {
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 600;
+            color: $state-error;
+            display: block;
+            margin-left: 20px;
+            margin-top: 32px;
+        }
+    }
+
+    #content {
+        width: 100%;
+        left: 0;
+
+        .top {
+            display: none;
+        }
+
+        .top-responsive {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+
+            img {
+                width: 24px;
+                height: 24px;
+                cursor: pointer;
+
+                &:first-of-type {
+                    width: 80px;
+                    height: 50px;
+                }
+            }
+
+        }
+
+        #content-dashboard {
+            #ppj-tab {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    #content {
+        .top-responsive {
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        #content-dashboard {
+            .content-dashboard-top {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                column-gap: 16px;
+                margin-bottom: 30px;
+                margin-top: 10px;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                h2 {
+                    font-family: Roboto;
+                    font-size: 23px;
+                    font-weight: 700;
+                    color: black;
+                    margin: 0;
+                }
+            }
+
+            #energy {
+                .dashboard-energy-top {
+                    display: none;
+                }
+
+                .dashboard-energy-content {
+                    .dashboard-energy-content-electricity {
+                        .dashboard-energy-content-electricity-content {
+
+                            .dashboard-energy-content-electricity-content-left,
+                            .dashboard-energy-content-electricity-content-right {
+                                canvas {
+                                    min-height: auto;
+                                }
+                            }
+                        }
+                    }
+
+                    .dashboard-energy-content-diesel {
+                        .dashboard-energy-content-diesel-content {
+
+                            .dashboard-energy-content-diesel-content-left,
+                            .dashboard-energy-content-diesel-content-right {
+                                canvas {
+                                    min-height: auto;
+                                }
+                            }
+                        }
+                    }
+
+                    .dashboard-energy-content-petrol {
+                        .dashboard-energy-content-petrol-content {
+
+                            .dashboard-energy-content-petrol-content-left,
+                            .dashboard-energy-content-petrol-content-right {
+                                canvas {
+                                    min-height: auto;
+                                }
+                            }
+                        }
+                    }
+
+                    .dashboard-energy-content-gas {
+                        .dashboard-energy-content-gas-content {
+
+                            .dashboard-energy-content-gas-content-left,
+                            .dashboard-energy-content-gas-content-right {
+                                canvas {
+                                    min-height: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            #overview {
+                .ppj-top {
+                    display: none;
+
+                    h1 {
+                        font-size: 15px;
+                    }
+                }
+
+                .ppj-point {
+                    padding: 0;
+
+                    .ppj-point-item {
+                        column-gap: 10px;
+                        padding: 0;
+
+                        .ppj-point-item-right {
+
+                            .title,
+                            .unit {
+                                font-size: 13px;
+                            }
+
+                            .ppj-point-item-right-bottom {
+                                width: 100px;
+
+                                h1 {
+                                    font-size: 22px;
+                                }
+
+
+                            }
+                        }
+                    }
+                }
+               
+                .ppj-emission-scope {
+                    display: none;
+                }
+
+                .ppj-emission-scope-responsive {
+                    display: block;
+                    width: 100%;
+                    padding: 20px;
+                    margin-top: 21px;
+                    .ppj-emission-scope-responsive-top {
+                        margin-bottom: 20px;
+                        display: flex;
+                        align-items: center;
+                        column-gap: 16px;
+                        img {
+                            width: 43px;
+                            height: 43px;
+                        }
+
+                        h2 {
+                            font-family: Roboto;
+                            font-size: 20px;
+                            font-weight: 700;
+                            color: black;
+                            margin: 0;
+                        }
+                    }
+
+                    .ppj-emission-scope-responsive-item {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-top: 20px;
+                        .ppj-emission-scope-responsive-item-left {
+                            display: flex;
+                            align-items: center;
+                            column-gap: 16px;
+                            img {
+                                width: 40px;
+                                height: 40px;
+                            }
+
+                            h3 {
+                                font-family: Inter;
+                                font-size: 16px;
+                                font-weight: 700;
+                                color: black;
+                                margin: 0;
+                            }
+                        }
+
+                        .ppj-emission-scope-responsive-item-right {
+                            h2 {
+                                font-family: Inter;
+                                font-size: 27px;
+                                font-weight: 700;
+                                color: $primary-green;
+                                margin: 0;
+                            }
+
+                            p {
+                                font-family: Roboto;
+                                font-size: 12px;
+                                font-weight: 400;
+                                color: #7E8CA0;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+                .ppj-kpi{
+                    .ppj-kpi-item{
+                        canvas{
+                            max-width: 340px;
+                            min-width: 300px;
+                        }
+                    }
+                }
+                .ppj-emission-value{
+                    .ppj-emission-value-item{
+                        canvas{
+                            max-width: 340px;
+                            min-width: 300px;
+                        }
+                        .details{
+                            .details-content{
+                                overflow-x: auto;
+                            }
+                        }
+                    }
+                }
+                .ppj-totalenergyconsumption{
+                    padding: 0;
+                    .ppj-totalenergyconsumption-item{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:360px) {
+    #content{
+        #content-dashboard{
+            #overview{
+                .ppj-point{
+                    display: block;
+                    .ppj-point-item{
+                        width: 100%;
+                        margin-top: 10px;
+                        .ppj-point-item-right{
+                            .ppj-point-item-right-bottom{
+                                width: 210px;
+                            }
+                        }
+                    }
+                }
+                .ppj-emission-scope-responsive{
+                    padding: 0;
+                }
+                .ppj-kpi{
+                    .ppj-kpi-item{
+                        canvas{
+                            max-width: 260px;
+                            min-width: 260px;
+                        }
+                    }
+                }
+                .ppj-emission-value{
+                    .ppj-emission-value-item{
+                        canvas{
+                            max-width: 260px;
+                            min-width: 260px;
+                        }
+                        .details{
+                            width: 100%;
+                            .details-content{
+                                width: 100%;
+                                overflow-x: auto;
+                                table{
+                                    width: 100%;
+                                    tr{
+                                        .title{
+                                            font-size: 14px;
+                                          
+                                        }
+                                        .value{
+                                            font-size: 14px;
+                                            padding: 0 10px;
+                                        }
+                                        .percent{
+                                            font-size: 14px;
+                                          
+                                        }
+                                    }   
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

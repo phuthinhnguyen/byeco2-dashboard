@@ -51,9 +51,32 @@
     <nav id="mySidebar">
         <div class="logo">
             <img src="assets/image/index/LogoBYECO2-footer.svg" alt="">
-
+            <h2>Main Menu</h2>
+            <img src="assets/image/index/close.svg" alt="" onclick="closeoffcanvas()" class="closeoffcanvas">
         </div>
+        <script>
+            function closeoffcanvas(){
+                document.getElementById('mySidebar').style.display = 'none';
+                document.getElementById('content').style.width = '100%';
+                document.getElementById('content').style.left = '0';
+            }
+        </script>
         <div class="menu-title">MENU</div>
+        <div class="username-offcanvas">
+            <div class="username-offcanvas-left">
+                <div class="username-offcanvas-left-left">
+                    <img src="assets/image/index/avatarresponsive.svg" alt="">
+                </div>
+                <div class="username-offcanvas-left-right">
+                    <h2>Username</h2>
+                    <p>User Role</p>
+                </div>
+            </div>
+            <i class="right fas fa-angle-up" id="username-offcanvas-angle-up"></i>
+            <i class="right fas fa-angle-down" id="username-offcanvas-angle-down"></i>
+        </div>
+        <div class="home-title">Home</div>
+        <hr>
         <!-- Dashboard -->
         <div class="dashboard">
             <div class="dashboard-left">
@@ -96,8 +119,19 @@
             <div class="report-left-content-ghgemission">
                 <span>GHG Emission</span>
             </div>
+            <div class="report-left-content-waste">
+                <span>Waste</span>
+            </div>
         </div>
-
+        <hr>
+        <div class="language-offcanvas">
+            <p>ENG</p>
+            <img src="assets/image/index/language.svg" alt="">
+            <img src="assets/image/index/dropdownoffcanvas.svg" alt="" style="width: 10px;height: 10px;">
+        </div>
+        <div class="logout-offcanvas">
+            Logout
+        </div>
         <!-- footer -->
         <div class="nav-footer">
             <img src="assets/image/index/electric blower.svg" alt="">
@@ -149,7 +183,7 @@
                 <img src="assets/image/index/dashboard-toggle-show.svg" alt="" style="margin-right: 30px;"
                     onclick="navigate_sidebar()" id="dashboard-toggle-show">
                 <div class="search">
-                    <img src="assets/image/index/search.svg" alt="">
+                    <img src="assets/image/index/search.svg" alt="" onclick="showsearchbar()">
                     <input type="text" placeholder="Search or type">
                 </div>
 
@@ -157,14 +191,55 @@
             <div class="top-content-right">
                 <img src="assets/image/index/notification.svg" alt="">
                 <img src="assets/image/index/message.svg" alt="">
-                <img src="assets/image/index/fullscreen.svg" alt="">
-                <img src="assets/image/index/language.svg" alt="" style="margin-right: 5px;">
-                <img src="assets/image/index/dropdown.svg" alt="" style="width: 15px;height: 15px;">
+                <img src="assets/image/index/fullscreen.svg" alt="" class="top-content-right-fullscreen">
+                <img src="assets/image/index/language.svg" alt="" style="margin-right: 5px;" class="top-content-right-language">
+                <img src="assets/image/index/dropdown.svg" alt="" style="width: 15px;height: 15px;" class="top-content-right-dropdown">
                 <img src="assets/image/index/avatar.svg" alt=""
                     style="width: 48px;height: 48px;border-radius: 50%;margin-right: 0;">
             </div>
+            
         </div>
+        <div class="top-responsive">
+            <img src="assets/image/index/LogoBYECO2-footer.svg" alt="">
+            <img src="assets/image/index/search.svg" alt="" onclick="showsearchbar()">
+            <img src="assets/image/index/notification.svg" alt="">
+            <img src="assets/image/index/message.svg" alt="">
+            <img src="assets/image/index/offcanvasbar.svg" alt="" onclick="showoffcanvas()">
+        </div>
+        <div class="showsearchbar">
+            <div class="showsearchbar-left">
+                <img src="assets/image/index/search.svg" alt="">
+                <input type="text" placeholder="Search something here">
+            </div>
+            <div class="showsearchbar-right">
+                <img src="assets/image/index/close.svg" alt="" onclick="hidesearchbar()">
+            </div>
+        </div>
+        <script>
+            $(".showsearchbar").hide();
+            function showsearchbar(){
+                if (window.innerWidth <1121){
+                    $(".showsearchbar").slideToggle('fast');
+                }
+            }
+            function hidesearchbar(){
+                $(".showsearchbar").slideToggle('fast');
+            }
+            function showoffcanvas(){
+                document.getElementById('mySidebar').style.display = 'block';
+                // document.getElementById('mySidebar').style.position = 'absolute';
+                // document.getElementById('mySidebar').style.left = '0';
+                // document.getElementById('mySidebar').style.top = '0';
+                document.getElementById('content').style.width = '100%';
+                document.getElementById('content').style.left = '0';
+            }
+        </script>
+       
         <div id="content-dashboard">
+            <div class="content-dashboard-top">
+                <img src="assets/image/index/dashboardresponsive.svg" alt="">
+                <h2>Dashboard</h2>
+            </div>
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link disabled" id="ppj-tab" data-bs-toggle="tab" data-bs-target="#ppj"
@@ -374,6 +449,42 @@
                             </div>
                         </div>
                     </div>
+                    <div class="ppj-emission-scope-responsive">
+                        <div class="ppj-emission-scope-responsive-top">
+                            <img src="assets/image/index/emissionscopeco2.svg" alt="">
+                            <h2>CO2 Emission</h2>
+                        </div>
+                        <div class="ppj-emission-scope-responsive-item">
+                            <div class="ppj-emission-scope-responsive-item-left">
+                                <img src="assets/image/index/emissionscopeco2responsive.svg" alt="">
+                                <h3>Scope 1 YoY</h3>
+                            </div>
+                            <div class="ppj-emission-scope-responsive-item-right">
+                                <h2>5,744</h2>
+                                <p>MtCO2e</p>
+                            </div>
+                        </div>
+                        <div class="ppj-emission-scope-responsive-item">
+                            <div class="ppj-emission-scope-responsive-item-left">
+                                <img src="assets/image/index/emissionscopeco2responsive.svg" alt="">
+                                <h3>Scope 2 YoY</h3>
+                            </div>
+                            <div class="ppj-emission-scope-responsive-item-right">
+                                <h2>5,744</h2>
+                                <p>MtCO2e</p>
+                            </div>
+                        </div>
+                        <div class="ppj-emission-scope-responsive-item">
+                            <div class="ppj-emission-scope-responsive-item-left">
+                                <img src="assets/image/index/emissionscopeco2responsive.svg" alt="">
+                                <h3>Scope 3 YoY</h3>
+                            </div>
+                            <div class="ppj-emission-scope-responsive-item-right">
+                                <h2>5,744</h2>
+                                <p>MtCO2e</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="ppj-kpi">
                         <div class="ppj-kpi-item">
                             <h2>KPI 1 - ENERGY/UNIT</h2>
@@ -414,7 +525,7 @@
                                         }]
                                     },
                                     options: {
-                                        responsive: false,
+                                        responsive: true,
                                         scales: {
                                             A: {
                                                 position: 'right',
@@ -487,7 +598,7 @@
                                         }]
                                     },
                                     options: {
-                                        responsive: false,
+                                        responsive: true,
                                         scales: {
                                             A: {
                                                 position: 'right',
@@ -558,7 +669,7 @@
                                         }]
                                     },
                                     options: {
-                                        responsive: false,
+                                        responsive: true,
                                         scales: {
                                             A: {
                                                 position: 'right',
@@ -613,6 +724,7 @@
                                         }]
                                     },
                                     options: {
+                                        responsive: true,
                                         plugins: {
                                             tooltip: {
                                                 titleFont: "Arial",
@@ -700,6 +812,7 @@
                                         }]
                                     },
                                     options: {
+                                        responsive: true,
                                         plugins: {
                                             tooltip: {
                                                 titleFont: "Arial",
@@ -771,7 +884,7 @@
                             <div class="top">
                                 <span class="title">CO2 EMISSION BY YEAR</span><span class="unit"></span>
                             </div>
-                            <canvas id="myChartemissionvalue3" style="height: 300px;width: 450px;"></canvas>
+                            <canvas id="myChartemissionvalue3"></canvas>
                             <script>
                                 const xValuesemissionvalue3 = ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"];
 
@@ -800,7 +913,7 @@
                                         ]
                                     },
                                     options: {
-                                        responsive: false,
+                                        responsive: true,
                                         scales: {
                                             x: {
                                                 stacked: true,
@@ -924,6 +1037,7 @@
                                         }]
                                     },
                                     options: {
+                                        responsive: true,
                                         scales: {
                                             A: {
                                                 position: 'left',
@@ -976,6 +1090,7 @@
                                         }]
                                     },
                                     options: {
+                                        responsive: true,
                                         scales: {
                                             A: {
                                                 position: 'left',
@@ -1029,7 +1144,7 @@
                                         <span class="title">ELECTRICITY BY YEAR</span><span class="unit"></span>
                                     </div>
                                     <canvas id="myChart-dashboard-energy-content-electricity-content"
-                                        style="margin: auto;min-height: 500px;"></canvas>
+                                        style="margin: auto;"></canvas>
                                     <script>
                                         const myChartdashboardenergycontentelectricitycontent = ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"];
 
@@ -1086,69 +1201,71 @@
                                     </script>
                                 </div>
                                 <div class="dashboard-energy-content-electricity-content-right">
-                                    <table>
-                                        <tr>
-                                            <th style="width: 134px;border-top-left-radius: 10px;">Year</th>
-                                            <th style="border-left: 2px dashed #fff;">Electricity (kW)</th>
-                                            <th style="border-left: 2px dashed #fff;border-right: 2px dashed #fff;">
-                                                Gross calorific <br>value (MJ)</th>
-                                            <th style="border-top-right-radius: 10px;">CO2 Emission <br>(Ton)</th>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2015</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2016</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2017</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2018</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2019</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2020</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;font-weight: 600;">2021</td>
-                                            <td style="font-weight: 600;">2,774,827</td>
-                                            <td style="font-weight: 600;">9,898,377</td>
-                                            <td style="font-weight: 600;">2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2022</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2023</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                    </table>
+                                    <div class="dashboard-energy-content-electricity-content-right-table">
+                                        <table>
+                                            <tr>
+                                                <th style="width: 134px;border-top-left-radius: 10px;">Year</th>
+                                                <th style="border-left: 2px dashed #fff;">Electricity (kW)</th>
+                                                <th style="border-left: 2px dashed #fff;border-right: 2px dashed #fff;">
+                                                    Gross calorific <br>value (MJ)</th>
+                                                <th style="border-top-right-radius: 10px;">CO2 Emission <br>(Ton)</th>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2015</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2016</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2017</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2018</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2019</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2020</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;font-weight: 600;">2021</td>
+                                                <td style="font-weight: 600;">2,774,827</td>
+                                                <td style="font-weight: 600;">9,898,377</td>
+                                                <td style="font-weight: 600;">2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2022</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2023</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                        </table>
+                                    </div>
                                     <div class="dashboard-energy-content-electricity-content-right-bottom">
                                         <div class="top">
                                             <span class="title">%G/R</span><span class="unit"></span>
@@ -1243,7 +1360,7 @@
                                         <span class="title">DIESEL BY YEAR</span><span class="unit"></span>
                                     </div>
                                     <canvas id="myChart-dashboard-energy-content-diesel-content"
-                                        style="margin: auto;min-height: 500px;"></canvas>
+                                        style="margin: auto;"></canvas>
                                     <script>
                                         const xValuesmyChartdashboardenergycontentdieselcontent = ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"];
                                         const yValuesbarmyChartdashboardenergycontentdieselcontent1 = [16, 16, 16, 16, 16, 16, 16, 16, 16];
@@ -1329,69 +1446,71 @@
                                     </script>
                                 </div>
                                 <div class="dashboard-energy-content-diesel-content-right">
-                                    <table>
-                                        <tr>
-                                            <th style="width: 134px;border-top-left-radius: 10px;">Year</th>
-                                            <th style="border-left: 2px dashed #fff;">Diesel (Lit)</th>
-                                            <th style="border-left: 2px dashed #fff;border-right: 2px dashed #fff;">
-                                                Gross calorific <br>value (MJ)</th>
-                                            <th style="border-top-right-radius: 10px;">CO2 Emission <br>(Ton)</th>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2015</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2016</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2017</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2018</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2019</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2020</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;font-weight: 600;">2021</td>
-                                            <td style="font-weight: 600;">2,774,827</td>
-                                            <td style="font-weight: 600;">9,898,377</td>
-                                            <td style="font-weight: 600;">2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2022</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2023</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                    </table>
+                                    <div class="dashboard-energy-content-diesel-content-right-table">
+                                        <table>
+                                            <tr>
+                                                <th style="width: 134px;border-top-left-radius: 10px;">Year</th>
+                                                <th style="border-left: 2px dashed #fff;">Diesel (Lit)</th>
+                                                <th style="border-left: 2px dashed #fff;border-right: 2px dashed #fff;">
+                                                    Gross calorific <br>value (MJ)</th>
+                                                <th style="border-top-right-radius: 10px;">CO2 Emission <br>(Ton)</th>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2015</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2016</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2017</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2018</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2019</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2020</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;font-weight: 600;">2021</td>
+                                                <td style="font-weight: 600;">2,774,827</td>
+                                                <td style="font-weight: 600;">9,898,377</td>
+                                                <td style="font-weight: 600;">2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2022</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2023</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                        </table>
+                                    </div>
                                     <div class="dashboard-energy-content-diesel-content-right-bottom">
                                         <div class="top">
                                             <span class="title">%G/R</span><span class="unit"></span>
@@ -1486,7 +1605,7 @@
                                         <span class="title">PETROL BY YEAR</span><span class="unit"></span>
                                     </div>
                                     <canvas id="myChart-dashboard-energy-content-petrol-content"
-                                        style="margin: auto;min-height: 500px;"></canvas>
+                                        style="margin: auto;"></canvas>
                                     <script>
                                         const xValuesmyChartdashboardenergycontentpetrolcontent = ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"];
                                         const yValuesbarmyChartdashboardenergycontentpetrolcontent1 = [16, 16, 16, 16, 16, 16, 16, 16, 16];
@@ -1572,69 +1691,71 @@
                                     </script>
                                 </div>
                                 <div class="dashboard-energy-content-petrol-content-right">
-                                    <table>
-                                        <tr>
-                                            <th style="width: 134px;border-top-left-radius: 10px;">Year</th>
-                                            <th style="border-left: 2px dashed #fff;">Petrol (Lit)</th>
-                                            <th style="border-left: 2px dashed #fff;border-right: 2px dashed #fff;">
-                                                Gross calorific <br>value (MJ)</th>
-                                            <th style="border-top-right-radius: 10px;">CO2 Emission <br>(Ton)</th>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2015</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2016</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2017</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2018</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2019</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2020</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;font-weight: 600;">2021</td>
-                                            <td style="font-weight: 600;">2,774,827</td>
-                                            <td style="font-weight: 600;">9,898,377</td>
-                                            <td style="font-weight: 600;">2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2022</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2023</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                    </table>
+                                    <div class="dashboard-energy-content-petrol-content-right-table">
+                                        <table>
+                                            <tr>
+                                                <th style="width: 134px;border-top-left-radius: 10px;">Year</th>
+                                                <th style="border-left: 2px dashed #fff;">Petrol (Lit)</th>
+                                                <th style="border-left: 2px dashed #fff;border-right: 2px dashed #fff;">
+                                                    Gross calorific <br>value (MJ)</th>
+                                                <th style="border-top-right-radius: 10px;">CO2 Emission <br>(Ton)</th>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2015</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2016</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2017</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2018</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2019</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2020</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;font-weight: 600;">2021</td>
+                                                <td style="font-weight: 600;">2,774,827</td>
+                                                <td style="font-weight: 600;">9,898,377</td>
+                                                <td style="font-weight: 600;">2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2022</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2023</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                        </table>
+                                    </div>
                                     <div class="dashboard-energy-content-petrol-content-right-bottom">
                                         <div class="top">
                                             <span class="title">%G/R</span><span class="unit"></span>
@@ -1729,7 +1850,7 @@
                                         <span class="title">GAS BY YEAR</span><span class="unit"></span>
                                     </div>
                                     <canvas id="myChart-dashboard-energy-content-gas-content"
-                                        style="margin: auto;min-height: 500px;"></canvas>
+                                        style="margin: auto;"></canvas>
                                     <script>
                                         const xValuesmyChartdashboardenergycontentgascontent = ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"];
                                         const yValuesbarmyChartdashboardenergycontentgascontent1 = [16, 16, 16, 16, 16, 16, 16, 16, 16];
@@ -1815,69 +1936,71 @@
                                     </script>
                                 </div>
                                 <div class="dashboard-energy-content-gas-content-right">
-                                    <table>
-                                        <tr>
-                                            <th style="width: 134px;border-top-left-radius: 10px;">Year</th>
-                                            <th style="border-left: 2px dashed #fff;">Gas (Kg)</th>
-                                            <th style="border-left: 2px dashed #fff;border-right: 2px dashed #fff;">
-                                                Gross calorific <br>value (MJ)</th>
-                                            <th style="border-top-right-radius: 10px;">CO2 Emission <br>(Ton)</th>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2015</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2016</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2017</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2018</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2019</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2020</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;font-weight: 600;">2021</td>
-                                            <td style="font-weight: 600;">2,774,827</td>
-                                            <td style="font-weight: 600;">9,898,377</td>
-                                            <td style="font-weight: 600;">2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2022</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align: left;">2023</td>
-                                            <td>2,774,827</td>
-                                            <td>9,898,377</td>
-                                            <td>2,003,702</td>
-                                        </tr>
-                                    </table>
+                                    <div class="dashboard-energy-content-gas-content-right-table">
+                                        <table>
+                                            <tr>
+                                                <th style="width: 134px;border-top-left-radius: 10px;">Year</th>
+                                                <th style="border-left: 2px dashed #fff;">Gas (Kg)</th>
+                                                <th style="border-left: 2px dashed #fff;border-right: 2px dashed #fff;">
+                                                    Gross calorific <br>value (MJ)</th>
+                                                <th style="border-top-right-radius: 10px;">CO2 Emission <br>(Ton)</th>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2015</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2016</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2017</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2018</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2019</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2020</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;font-weight: 600;">2021</td>
+                                                <td style="font-weight: 600;">2,774,827</td>
+                                                <td style="font-weight: 600;">9,898,377</td>
+                                                <td style="font-weight: 600;">2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2022</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">2023</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
+                                            </tr>
+                                        </table>
+                                    </div>
                                     <div class="dashboard-energy-content-gas-content-right-bottom">
                                         <div class="top">
                                             <span class="title">%G/R</span><span class="unit"></span>
@@ -2666,26 +2789,32 @@
         function navigate_sidebar() {
             var sidebar = document.getElementById("mySidebar");
             var content = document.getElementById("content");
-
-            if (index % 2 == 0) {
+            if (window.innerWidth>800){
+                if (index % 2 == 0) {
                 sidebar.style.display = "none";
                 content.style.width = "100%";
                 content.style.left = 0;
                 index++;
                 $("#dashboard-toggle-show").toggle();
                 $("#dashboard-toggle-hide").toggle();
+                }
+                else if (index % 2 != 0) {
+                    sidebar.style.display = "block";
+                    content.style.width = "calc(100% - 300px)";
+                    content.style.left = "300px";
+                    index++;
+                    $("#dashboard-toggle-show").toggle();
+                    $("#dashboard-toggle-hide").toggle();
+                }
             }
-            else if (index % 2 != 0) {
-                sidebar.style.display = "block";
-                content.style.width = "calc(100% - 300px)";
-                content.style.left = "300px";
-                index++;
-                $("#dashboard-toggle-show").toggle();
-                $("#dashboard-toggle-hide").toggle();
+            else if (window.innerWidth<=800){
+                content.style.width = "100%";
+                content.style.left = 0;
             }
+            
 
         }
-
+   
 
         $("#content-dashboard").show();
         $("#content-report-energy").hide();

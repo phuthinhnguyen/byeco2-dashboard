@@ -6,6 +6,7 @@ img {
 body {
   box-sizing: border-box;
   display: flex;
+  position: relative;
 }
 
 nav {
@@ -24,6 +25,16 @@ nav .logo img {
   width: 108px;
   height: 68px;
 }
+nav .logo h2 {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  display: none;
+}
+nav .logo .closeoffcanvas {
+  display: none;
+}
 nav .menu-title {
   font-family: "Roboto";
   color: #E1FAE4;
@@ -33,6 +44,21 @@ nav .menu-title {
   margin-top: 24px;
   padding-left: 29px;
   margin-bottom: 18px;
+}
+nav .username-offcanvas {
+  display: none;
+}
+nav .home-title {
+  display: none;
+}
+nav hr {
+  display: none;
+}
+nav .language-offcanvas {
+  display: none;
+}
+nav .logout-offcanvas {
+  display: none;
 }
 nav .dashboard,
 nav .report {
@@ -100,7 +126,8 @@ nav .dashboard-left-content .dashboard-left-content-projectportfolio:hover {
   background-color: #248142;
 }
 nav .report-left-content .report-left-content-energy,
-nav .report-left-content .report-left-content-ghgemission {
+nav .report-left-content .report-left-content-ghgemission,
+nav .report-left-content .report-left-content-waste {
   padding: 8px 69px;
   cursor: pointer;
   width: 80%;
@@ -109,7 +136,8 @@ nav .report-left-content .report-left-content-ghgemission {
   margin-top: 5px;
 }
 nav .report-left-content .report-left-content-energy span,
-nav .report-left-content .report-left-content-ghgemission span {
+nav .report-left-content .report-left-content-ghgemission span,
+nav .report-left-content .report-left-content-waste span {
   color: #fff;
   font-family: "Roboto";
   font-size: 15px;
@@ -118,8 +146,12 @@ nav .report-left-content .report-left-content-ghgemission span {
   margin-left: -20px;
 }
 nav .report-left-content .report-left-content-energy:hover,
-nav .report-left-content .report-left-content-ghgemission:hover {
+nav .report-left-content .report-left-content-ghgemission:hover,
+nav .report-left-content .report-left-content-waste:hover {
   background-color: #248142;
+}
+nav .report-left-content .report-left-content-waste {
+  display: none;
 }
 nav .nav-footer {
   position: absolute;
@@ -170,9 +202,42 @@ nav .nav-footer img {
   padding-left: 5px;
   background-color: #F5F4F6;
 }
+#content .showsearchbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  margin-bottom: 20px;
+}
+#content .showsearchbar .showsearchbar-left {
+  border-radius: 8px;
+  border: 1px solid #20A049;
+  padding: 12px;
+  width: calc(100% - 30px);
+}
+#content .showsearchbar .showsearchbar-left img {
+  width: 22px;
+  height: 22px;
+}
+#content .showsearchbar .showsearchbar-left input {
+  outline: none;
+  border: none;
+  margin-left: 5px;
+}
+#content .showsearchbar .showsearchbar-right img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+#content .top-responsive {
+  display: none;
+}
 #content #content-dashboard {
   padding: 10px;
   border-radius: 10px;
+}
+#content #content-dashboard .content-dashboard-top {
+  display: none;
 }
 #content #content-dashboard #ppj-tab {
   font-family: "Roboto";
@@ -211,6 +276,9 @@ nav .nav-footer img {
   font-size: 32px;
   line-height: 33px;
   margin: 0;
+}
+#content #content-dashboard #overview .ppj-dashboard {
+  display: none;
 }
 #content #content-dashboard #overview .ppj-point {
   display: grid;
@@ -272,10 +340,11 @@ nav .nav-footer img {
 }
 #content #content-dashboard #overview .ppj-emission-scope {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin-top: 18px;
   padding: 0 30px;
+  flex-wrap: wrap;
 }
 #content #content-dashboard #overview .ppj-emission-scope .ppj-emission-scope-item {
   display: flex;
@@ -328,16 +397,20 @@ nav .nav-footer img {
   height: 57px;
   margin-top: -30px;
 }
+#content #content-dashboard #overview .ppj-emission-scope-responsive {
+  display: none;
+}
 #content #content-dashboard #overview .ppj-kpi {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  row-gap: 30px;
   margin-top: 30px;
   padding: 0 40px;
+  flex-wrap: wrap;
 }
 #content #content-dashboard #overview .ppj-kpi .ppj-kpi-item {
   padding: 10px;
-  width: 33%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -352,16 +425,20 @@ nav .nav-footer img {
   line-height: 28px;
   color: #1D2129;
 }
+#content #content-dashboard #overview .ppj-kpi .ppj-kpi-item canvas {
+  min-width: 400px;
+}
 #content #content-dashboard #overview .ppj-emission-value {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 40px;
   padding: 0 40px;
+  flex-wrap: wrap;
+  row-gap: 10px;
 }
 #content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item {
   padding: 10px;
-  width: 33%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -385,6 +462,9 @@ nav .nav-footer img {
   font-size: 17px;
   font-weight: 700;
 }
+#content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .canvas {
+  max-width: 280px;
+}
 #content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .details {
   margin-top: 20px;
 }
@@ -400,6 +480,9 @@ nav .nav-footer img {
   line-height: 28px;
   font-size: 15px;
   color: black;
+}
+#content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .details .details-content {
+  width: 100%;
 }
 #content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .details .details-content table {
   margin-top: 18px;
@@ -422,9 +505,10 @@ nav .nav-footer img {
 #content #content-dashboard #overview .ppj-totalenergyconsumption {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 70px;
   padding: 0 40px;
+  flex-wrap: wrap;
 }
 #content #content-dashboard #overview .ppj-totalenergyconsumption .ppj-totalenergyconsumption-item {
   padding: 10px;
@@ -447,6 +531,9 @@ nav .nav-footer img {
   color: #9AA0A0;
   font-size: 17px;
   font-weight: 700;
+}
+#content #content-dashboard #overview .ppj-totalenergyconsumption .ppj-totalenergyconsumption-item .canvas {
+  max-width: 280px;
 }
 #content #content-dashboard #energy .dashboard-energy-top {
   display: flex;
@@ -519,6 +606,9 @@ nav .nav-footer img {
   font-weight: 700;
   font-size: 18px;
   color: #1D2129;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-content .dashboard-energy-content-electricity-content-left canvas {
+  min-height: 400px;
 }
 #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-content .dashboard-energy-content-electricity-content-right {
   width: 50%;
@@ -603,6 +693,9 @@ nav .nav-footer img {
   font-size: 18px;
   color: #1D2129;
 }
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-content .dashboard-energy-content-diesel-content-left canvas {
+  min-height: 400px;
+}
 #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-content .dashboard-energy-content-diesel-content-right {
   width: 50%;
 }
@@ -686,6 +779,9 @@ nav .nav-footer img {
   font-size: 18px;
   color: #1D2129;
 }
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-content .dashboard-energy-content-petrol-content-left canvas {
+  min-height: 400px;
+}
 #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-content .dashboard-energy-content-petrol-content-right {
   width: 50%;
 }
@@ -768,6 +864,9 @@ nav .nav-footer img {
   font-weight: 700;
   font-size: 18px;
   color: #1D2129;
+}
+#content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-content .dashboard-energy-content-gas-content-left canvas {
+  min-height: 400px;
 }
 #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-content .dashboard-energy-content-gas-content-right {
   width: 50%;
@@ -1352,4 +1451,533 @@ nav .nav-footer img {
   font-size: 13px;
   font-weight: 400;
   color: #5F2120;
+}
+
+@media screen and (max-width: 1600px) {
+  #content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .details .details-content table tr .value {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 1450px) {
+  #content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .details .details-content table tr .value {
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  #content #content-dashboard #overview .ppj-point {
+    grid-template-columns: auto auto;
+  }
+  #content #content-dashboard #overview .ppj-point .ppj-point-item {
+    width: 50%;
+  }
+  #content #content-dashboard #overview .ppj-totalenergyconsumption .ppj-totalenergyconsumption-item {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-content {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-content .dashboard-energy-content-electricity-content-left,
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-content .dashboard-energy-content-electricity-content-right {
+    width: 100%;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-content .dashboard-energy-content-electricity-content-left .dashboard-energy-content-electricity-content-right-table,
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-content .dashboard-energy-content-electricity-content-right .dashboard-energy-content-electricity-content-right-table {
+    overflow-x: auto;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-content .dashboard-energy-content-electricity-content-left .dashboard-energy-content-electricity-content-right-table table,
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-content .dashboard-energy-content-electricity-content-right .dashboard-energy-content-electricity-content-right-table table {
+    margin: auto;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-content {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-content .dashboard-energy-content-diesel-content-left,
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-content .dashboard-energy-content-diesel-content-right {
+    width: 100%;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-content .dashboard-energy-content-diesel-content-left .dashboard-energy-content-diesel-content-right-table,
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-content .dashboard-energy-content-diesel-content-right .dashboard-energy-content-diesel-content-right-table {
+    overflow-x: auto;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-content .dashboard-energy-content-diesel-content-left .dashboard-energy-content-diesel-content-right-table table,
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-content .dashboard-energy-content-diesel-content-right .dashboard-energy-content-diesel-content-right-table table {
+    margin: auto;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-content {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-content .dashboard-energy-content-petrol-content-left,
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-content .dashboard-energy-content-petrol-content-right {
+    width: 100%;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-content .dashboard-energy-content-petrol-content-left .dashboard-energy-content-petrol-content-right-table,
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-content .dashboard-energy-content-petrol-content-right .dashboard-energy-content-petrol-content-right-table {
+    overflow-x: auto;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-content .dashboard-energy-content-petrol-content-left .dashboard-energy-content-petrol-content-right-table table,
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-content .dashboard-energy-content-petrol-content-right .dashboard-energy-content-petrol-content-right-table table {
+    margin: auto;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-content {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-content .dashboard-energy-content-gas-content-left,
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-content .dashboard-energy-content-gas-content-right {
+    width: 100%;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-content .dashboard-energy-content-gas-content-left .dashboard-energy-content-gas-content-right-table,
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-content .dashboard-energy-content-gas-content-right .dashboard-energy-content-gas-content-right-table {
+    overflow-x: auto;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-content .dashboard-energy-content-gas-content-left .dashboard-energy-content-gas-content-right-table table,
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-content .dashboard-energy-content-gas-content-right .dashboard-energy-content-gas-content-right-table table {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1120px) {
+  #content .top .top-content-left img:not(:first-of-type) {
+    margin-left: 30px;
+  }
+  #content .top .top-content-left .search {
+    width: 50px;
+    background-color: transparent;
+    margin-left: 0;
+  }
+  #content .top .top-content-left .search input {
+    display: none;
+  }
+}
+@media screen and (max-width: 1050px) {
+  #content #content-dashboard #overview .ppj-point {
+    padding: 10px;
+  }
+  #content #content-dashboard #overview .ppj-point .ppj-point-item {
+    width: 50%;
+  }
+  #content #content-dashboard #overview .ppj-point .ppj-point-item .ppj-point-item-left img {
+    width: 30px;
+    height: 30px;
+  }
+  #content #content-dashboard #overview .ppj-point .ppj-point-item .ppj-point-item-right h1 {
+    font-size: 22px;
+    margin-top: 5px;
+  }
+  #content #content-dashboard #overview .ppj-point .ppj-point-item .ppj-point-item-right .ppj-point-item-right-bottom {
+    width: 200px;
+  }
+  #content #content-dashboard #overview .ppj-point .ppj-point-item .ppj-point-item-right .ppj-point-item-right-bottom img {
+    width: 10px;
+    height: 10px;
+  }
+  #content #content-dashboard #overview .ppj-totalenergyconsumption .ppj-totalenergyconsumption-item {
+    width: 100%;
+  }
+  #content #content-dashboard #energy .dashboard-energy-top h1 {
+    font-size: 22px;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-title .dashboard-energy-content-electricity-title-left h2 {
+    font-size: 18px;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-title .dashboard-energy-content-electricity-title-right i {
+    font-size: 18px;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-title .dashboard-energy-content-diesel-title-left h2 {
+    font-size: 18px;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-title .dashboard-energy-content-diesel-title-right i {
+    font-size: 18px;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-title .dashboard-energy-content-petrol-title-left h2 {
+    font-size: 18px;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-title .dashboard-energy-content-petrol-title-right i {
+    font-size: 18px;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-title .dashboard-energy-content-gas-title-left h2 {
+    font-size: 18px;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-title .dashboard-energy-content-gas-title-right i {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 980px) {
+  #content .top .top-content-right .top-content-right-fullscreen,
+  #content .top .top-content-right .top-content-right-language,
+  #content .top .top-content-right .top-content-right-dropdown {
+    display: none;
+  }
+  #content #content-dashboard #ghgemission-tab,
+  #content #content-dashboard #projectportfolio-tab {
+    display: none;
+  }
+  #content #content-dashboard #overview .ppj-top h1 {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 920px) {
+  #content #content-dashboard #overview .ppj-point .ppj-point-item .ppj-point-item-right .ppj-point-item-right-bottom {
+    width: 100px;
+  }
+  #content #content-dashboard #overview .ppj-point .ppj-point-item .ppj-point-item-right .ppj-point-item-right-bottom img {
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  nav {
+    left: 0;
+    top: 0;
+    width: 300px;
+    display: none;
+    z-index: 2;
+  }
+  nav .logo img {
+    width: 54px;
+    height: 34px;
+  }
+  nav .logo h2 {
+    display: inline-block;
+    font-size: 20px;
+    position: absolute;
+    left: 100px;
+    top: 30px;
+  }
+  nav .logo .closeoffcanvas {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 25px;
+    width: 30px;
+    height: 32px;
+    cursor: pointer;
+  }
+  nav .menu-title {
+    display: none;
+  }
+  nav .username-offcanvas {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #1EAE4A;
+    width: 260px;
+    margin: auto;
+    margin-top: 30px;
+  }
+  nav .username-offcanvas .username-offcanvas-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  nav .username-offcanvas .username-offcanvas-left .username-offcanvas-left-left img {
+    width: 48px;
+    height: 48px;
+  }
+  nav .username-offcanvas .username-offcanvas-left .username-offcanvas-left-right h2 {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+  }
+  nav .username-offcanvas .username-offcanvas-left .username-offcanvas-left-right p {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+  }
+  nav .username-offcanvas #username-offcanvas-angle-up {
+    display: none;
+  }
+  nav .username-offcanvas #username-offcanvas-angle-down {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  nav .home-title {
+    display: block;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    margin-left: 20px;
+    margin-top: 32px;
+  }
+  nav hr {
+    display: block;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    margin-top: 22px;
+  }
+  nav .dashboard {
+    margin-top: 35px;
+  }
+  nav .dashboard-left-content,
+  nav #dashboard-angle-down {
+    display: none;
+  }
+  nav .report-left-content .report-left-content-ghgemission {
+    display: none;
+  }
+  nav .report-left-content .report-left-content-waste {
+    display: block;
+  }
+  nav .language-offcanvas {
+    display: flex;
+    margin-left: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    margin-top: 32px;
+  }
+  nav .language-offcanvas p {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    display: inline-block;
+    margin: 0;
+  }
+  nav .language-offcanvas img {
+    width: 16px;
+    height: 16px;
+  }
+  nav .logout-offcanvas {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 600;
+    color: #FF3B3B;
+    display: block;
+    margin-left: 20px;
+    margin-top: 32px;
+  }
+  #content {
+    width: 100%;
+    left: 0;
+  }
+  #content .top {
+    display: none;
+  }
+  #content .top-responsive {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  #content .top-responsive img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  #content .top-responsive img:first-of-type {
+    width: 80px;
+    height: 50px;
+  }
+  #content #content-dashboard #ppj-tab {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  #content .top-responsive img {
+    width: 20px;
+    height: 20px;
+  }
+  #content #content-dashboard .content-dashboard-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    -moz-column-gap: 16px;
+         column-gap: 16px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+  }
+  #content #content-dashboard .content-dashboard-top img {
+    width: 40px;
+    height: 40px;
+  }
+  #content #content-dashboard .content-dashboard-top h2 {
+    font-family: Roboto;
+    font-size: 23px;
+    font-weight: 700;
+    color: black;
+    margin: 0;
+  }
+  #content #content-dashboard #energy .dashboard-energy-top {
+    display: none;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-content .dashboard-energy-content-electricity-content-left canvas,
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-electricity .dashboard-energy-content-electricity-content .dashboard-energy-content-electricity-content-right canvas {
+    min-height: auto;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-content .dashboard-energy-content-diesel-content-left canvas,
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-diesel .dashboard-energy-content-diesel-content .dashboard-energy-content-diesel-content-right canvas {
+    min-height: auto;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-content .dashboard-energy-content-petrol-content-left canvas,
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-petrol .dashboard-energy-content-petrol-content .dashboard-energy-content-petrol-content-right canvas {
+    min-height: auto;
+  }
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-content .dashboard-energy-content-gas-content-left canvas,
+  #content #content-dashboard #energy .dashboard-energy-content .dashboard-energy-content-gas .dashboard-energy-content-gas-content .dashboard-energy-content-gas-content-right canvas {
+    min-height: auto;
+  }
+  #content #content-dashboard #overview .ppj-top {
+    display: none;
+  }
+  #content #content-dashboard #overview .ppj-top h1 {
+    font-size: 15px;
+  }
+  #content #content-dashboard #overview .ppj-point {
+    padding: 0;
+  }
+  #content #content-dashboard #overview .ppj-point .ppj-point-item {
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    padding: 0;
+  }
+  #content #content-dashboard #overview .ppj-point .ppj-point-item .ppj-point-item-right .title,
+  #content #content-dashboard #overview .ppj-point .ppj-point-item .ppj-point-item-right .unit {
+    font-size: 13px;
+  }
+  #content #content-dashboard #overview .ppj-point .ppj-point-item .ppj-point-item-right .ppj-point-item-right-bottom {
+    width: 100px;
+  }
+  #content #content-dashboard #overview .ppj-point .ppj-point-item .ppj-point-item-right .ppj-point-item-right-bottom h1 {
+    font-size: 22px;
+  }
+  #content #content-dashboard #overview .ppj-emission-scope {
+    display: none;
+  }
+  #content #content-dashboard #overview .ppj-emission-scope-responsive {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin-top: 21px;
+  }
+  #content #content-dashboard #overview .ppj-emission-scope-responsive .ppj-emission-scope-responsive-top {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 16px;
+         column-gap: 16px;
+  }
+  #content #content-dashboard #overview .ppj-emission-scope-responsive .ppj-emission-scope-responsive-top img {
+    width: 43px;
+    height: 43px;
+  }
+  #content #content-dashboard #overview .ppj-emission-scope-responsive .ppj-emission-scope-responsive-top h2 {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    margin: 0;
+  }
+  #content #content-dashboard #overview .ppj-emission-scope-responsive .ppj-emission-scope-responsive-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  #content #content-dashboard #overview .ppj-emission-scope-responsive .ppj-emission-scope-responsive-item .ppj-emission-scope-responsive-item-left {
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 16px;
+         column-gap: 16px;
+  }
+  #content #content-dashboard #overview .ppj-emission-scope-responsive .ppj-emission-scope-responsive-item .ppj-emission-scope-responsive-item-left img {
+    width: 40px;
+    height: 40px;
+  }
+  #content #content-dashboard #overview .ppj-emission-scope-responsive .ppj-emission-scope-responsive-item .ppj-emission-scope-responsive-item-left h3 {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    margin: 0;
+  }
+  #content #content-dashboard #overview .ppj-emission-scope-responsive .ppj-emission-scope-responsive-item .ppj-emission-scope-responsive-item-right h2 {
+    font-family: Inter;
+    font-size: 27px;
+    font-weight: 700;
+    color: #20A049;
+    margin: 0;
+  }
+  #content #content-dashboard #overview .ppj-emission-scope-responsive .ppj-emission-scope-responsive-item .ppj-emission-scope-responsive-item-right p {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    color: #7E8CA0;
+    margin: 0;
+  }
+  #content #content-dashboard #overview .ppj-kpi .ppj-kpi-item canvas {
+    max-width: 340px;
+    min-width: 300px;
+  }
+  #content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item canvas {
+    max-width: 340px;
+    min-width: 300px;
+  }
+  #content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .details .details-content {
+    overflow-x: auto;
+  }
+  #content #content-dashboard #overview .ppj-totalenergyconsumption {
+    padding: 0;
+  }
+  #content #content-dashboard #overview .ppj-totalenergyconsumption .ppj-totalenergyconsumption-item {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 360px) {
+  #content #content-dashboard #overview .ppj-point {
+    display: block;
+  }
+  #content #content-dashboard #overview .ppj-point .ppj-point-item {
+    width: 100%;
+    margin-top: 10px;
+  }
+  #content #content-dashboard #overview .ppj-point .ppj-point-item .ppj-point-item-right .ppj-point-item-right-bottom {
+    width: 210px;
+  }
+  #content #content-dashboard #overview .ppj-emission-scope-responsive {
+    padding: 0;
+  }
+  #content #content-dashboard #overview .ppj-kpi .ppj-kpi-item canvas {
+    max-width: 260px;
+    min-width: 260px;
+  }
+  #content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item canvas {
+    max-width: 260px;
+    min-width: 260px;
+  }
+  #content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .details {
+    width: 100%;
+  }
+  #content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .details .details-content {
+    width: 100%;
+    overflow-x: auto;
+  }
+  #content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .details .details-content table {
+    width: 100%;
+  }
+  #content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .details .details-content table tr .title {
+    font-size: 14px;
+  }
+  #content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .details .details-content table tr .value {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  #content #content-dashboard #overview .ppj-emission-value .ppj-emission-value-item .details .details-content table tr .percent {
+    font-size: 14px;
+  }
 }
