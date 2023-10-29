@@ -2093,6 +2093,10 @@
                 <div class="content-report-energy-search-top">
                     <p>Energy Report</p>
                 </div>
+                <div class="content-report-energy-search-top-responsive">
+                    <img src="assets/image/index/energyreportresponsive.svg" alt="">
+                    <h3>Enery Report</h3>
+                </div>
                 <div class="content-report-energy-search-bottom">
                     <form action="" class="content-report-energy-search-bottom-form">
                         <div class="content-report-energy-search-bottom-form-item">
@@ -2128,19 +2132,20 @@
                         </div>
                         <div class="content-report-energy-search-bottom-form-item">
                             <p>From date created:</p>
-                            <select name="daystart" id="daystart" style="width: 200px;">
+                            <select name="daystart" id="daystart">
 
                             </select>
                         </div>
                         <div class="content-report-energy-search-bottom-form-item">
                             <p>To date created:</p>
-                            <select name="dayend" id="dayend" style="width: 200px;">
+                            <select name="dayend" id="dayend">
 
                             </select>
                         </div>
-                        <button type="button" id="search-button">SEARCH <img src="assets/image/index/search-report.svg" alt=""></button>
+                
                       
                     </form>
+                    <button type="button" id="search-button">SEARCH <img src="assets/image/index/search-report.svg" alt=""></button>
                     <script>
                         $(document).ready(function () {
                             const monthNames = ["January", "February", "March", "April", "May", "June",
@@ -2231,6 +2236,9 @@
                         <div class="content-report-energy-search-bottom-import-left">
                             <img src="assets/image/index/import.svg" alt=""> IMPORT DATA
                         </div>
+                        <div class="content-report-energy-search-bottom-import-left-responsive">
+                            <img src="assets/image/index/import.svg" alt=""> IMPORT
+                        </div>
                         <div class="content-report-energy-search-bottom-import-right">
                             <div>EXPORT <img src="assets/image/index/export.svg" alt=""> </div>
 
@@ -2242,6 +2250,13 @@
 
             <div class="content-report-energy-result">
                 <div class="content-report-energy-result-title">Result</div>
+                <div class="content-report-energy-result-title-responsive">
+                    <img src="assets/image/index/searchresultresponsive.svg" alt="">
+                    <h3>Search Result</h3>
+                </div>
+                <div class="content-report-energy-result-tableinfo-title-responsive">
+                    Hiển thị 1 đến 1 dữ liệu
+                </div>
                 <div class="content-report-energy-result-table">
                     <table>
                         <tr>
@@ -2285,6 +2300,16 @@
                         <img src="assets/image/index/right.svg" alt="" style="margin-left: 25px;">
                     </div>
                 </div>
+                <div class="content-report-energy-result-table-info-responsive">
+                    <img src="assets/image/index/leftpagination.svg" alt="">
+                    <a href="">1</a>
+                    <a href="">2</a>
+                    <img src="assets/image/index/rightpagination.svg" alt="">
+                </div>
+                <div class="content-report-energy-result-reportid-title">
+                    <img src="assets/image/index/dashboardresponsive.svg" alt="">
+                    <h3>Report_ID</h3>
+                </div>
                 <div class="content-report-energy-result-energy-ghgemission-table">
                     <div class="content-report-energy-result-energy-ghgemission-table-left">
                         <ul class="nav nav-pills" id="energy-ghgemission-tab" role="tablist">
@@ -2327,7 +2352,7 @@
                                         <a id="plus"><i class="fa-sharp fa-solid fa-plus"></i></a>
                                         <a id="minus"><i class="fa fa-minus"></i></a>
                                     </div>
-                                    <div class="faq-content-menudropdown-item-show menudropdown-item-energy-show" id="faqitem1">
+                                    <div class="faq-content-menudropdown-item-show menudropdown-item-energy-show" id="faqitem1" style="overflow-x: auto;">
                                         <table>
                                             <tr>
                                                 <td>1</td>
@@ -2402,7 +2427,7 @@
                                         <a id="plus"><i class="fa-sharp fa-solid fa-plus"></i></a>
                                         <a id="minus"><i class="fa fa-minus"></i></a>
                                     </div>
-                                    <div class="faq-content-menudropdown-item-show menudropdown-item-energy-show" id="faqitem2">
+                                    <div class="faq-content-menudropdown-item-show menudropdown-item-energy-show" id="faqitem2" style="overflow-x: auto;">
                                         <table>
                                             <tr>
                                                 <td>10</td>
@@ -2441,7 +2466,7 @@
                                         <a id="plus"><i class="fa-sharp fa-solid fa-plus"></i></a>
                                         <a id="minus"><i class="fa fa-minus"></i></a>
                                     </div>
-                                    <div class="faq-content-menudropdown-item-show menudropdown-item-energy-show" id="faqitem3">
+                                    <div class="faq-content-menudropdown-item-show menudropdown-item-energy-show" id="faqitem3" style="overflow-x: auto;">
                                         <table>
                                             <tr>
                                                 <td>1</td>
@@ -2501,7 +2526,7 @@
                                         <a id="plus"><i class="fa-sharp fa-solid fa-plus"></i></a>
                                         <a id="minus"><i class="fa fa-minus"></i></a>
                                     </div>
-                                    <div class="faq-content-menudropdown-item-show menudropdown-item-ghgemission-show" id="faqitemghgemissionid1">
+                                    <div class="faq-content-menudropdown-item-show menudropdown-item-ghgemission-show" id="faqitemghgemissionid1" style="overflow-x: auto;">
                                         <table>
                                             <tr>
                                                 <td>1</td>
@@ -2528,7 +2553,7 @@
                                         <a id="plus"><i class="fa-sharp fa-solid fa-plus"></i></a>
                                         <a id="minus"><i class="fa fa-minus"></i></a>
                                     </div>
-                                    <div class="faq-content-menudropdown-item-show menudropdown-item-ghgemission-show" id="faqitemghgemissionid2">
+                                    <div class="faq-content-menudropdown-item-show menudropdown-item-ghgemission-show" id="faqitemghgemissionid2" style="overflow-x: auto;">
                                         <table>
                                             <tr>
                                                 <td>4</td>
@@ -2653,6 +2678,10 @@
                 <div class="content-report-energy-importdata-top">
                     <p>Import energy data</p>
                 </div>
+                <div class="content-report-energy-importdata-top-responsive">
+                    <img src="assets/image/index/importdataresponsive.svg" alt="">
+                    <h3>Import data</h3>
+                </div>
                 <div class="content-report-energy-importdata-bottom">
                     <div class="content-report-energy-importdata-bottom-exportexcel">
                         <div>EXPORT EXCEL TEMPLATE <img src="assets/image/index/export.svg" alt=""> </div>
@@ -2661,7 +2690,7 @@
                     <div class="content-report-energy-importdata-bottom-yearmonth">
                         <div class="content-report-energy-importdata-bottom-yearmonth-item">
                             <p>Year:</p>
-                            <select name="yearimport" id="yearimport" style="width: 105px;">
+                            <select name="yearimport" id="yearimport">
                                 <option value="2015">2015</option>
                                 <option value="2016">2016</option>
                                 <option value="2017">2017</option>
@@ -2693,6 +2722,7 @@
                     </div>
                     <div class="content-report-energy-importdata-bottom-choosefile">
                         <div class="content-report-energy-importdata-bottom-choosefile-title">Choose file:</div>
+                        <div class="content-report-energy-importdata-bottom-choosefile-titleresponsive">Upload file to import here</div>
                         <div class="content-report-energy-importdata-bottom-choosefile-content">
                             <img src="assets/image/index/upload.svg" alt="">
                             <div>
@@ -2734,6 +2764,10 @@
                         <img src="assets/image/index/note.svg" alt="">
                         <p>Note: Need to export the latest form for each data entry</p>
                     </div>
+                    <div class="content-report-energy-importdata-bottom-noteresponsive">
+                        <img src="assets/image/index/note.svg" alt="">
+                        <p>Note: Need to export the latest template for each data input</p>
+                    </div>
                     <div class="content-report-energy-importdata-bottom-importbutton">
                         <img src="assets/image/index/import.svg" alt="">IMPORT
                     </div>
@@ -2773,7 +2807,7 @@
         </div>
         <script>
             $(".content-report-energy-importdata").hide();
-            $(".content-report-energy-search-bottom-import-left").click(function name(params) {
+            $(".content-report-energy-search-bottom-import-left,.content-report-energy-search-bottom-import-left-responsive").click(function name(params) {
                 $(".content-report-energy-search,.content-report-energy-result").hide();
                 $(".content-report-energy-importdata").show();
             })
@@ -2818,7 +2852,7 @@
 
         $("#content-dashboard").show();
         $("#content-report-energy").hide();
-        $(".dashboard-left-content-ppj").click(function () {
+        $(".dashboard-left-content-ppj,.dashboard").click(function () {
             $("#content-report-energy,#content-dashboard").hide();
             $("#content-dashboard").fadeIn();
             $('#myTab #overview-tab').tab('show');
@@ -2838,7 +2872,7 @@
             $("#content-dashboard").fadeIn();
             $('#myTab #projectportfolio-tab').tab('show');
         })
-        $(".report-left-content-energy").click(function () {
+        $(".report-left-content-energy,.report").click(function () {
             $("#content-report-energy,#content-dashboard").hide();
             $("#content-report-energy").fadeIn();
             $(".content-report-energy-importdata").hide();
