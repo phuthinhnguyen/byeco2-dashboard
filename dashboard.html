@@ -263,6 +263,25 @@
                         aria-selected="false">Project Portfolio</button>
                 </li>
             </ul>
+            <script>
+                $("#myTab #overview-tab").css({"color":"black","box-shadow":"0px 0px 6px 6px #eeeeee"});
+                $("#myTab #overview-tab").click(function () {
+                    $(this).css({"color":"black","box-shadow":"0px 0px 6px 6px #eeeeee"})
+                    $("#energy-tab,#ghgemission-tab,#projectportfolio-tab").css({"color":"#9AA0A0","box-shadow":"none"})
+                })
+                $("#myTab #energy-tab").click(function () {
+                    $(this).css({"color":"black","box-shadow":"0px 0px 6px 6px #eeeeee"})
+                    $("#overview-tab,#ghgemission-tab,#projectportfolio-tab").css({"color":"#9AA0A0","box-shadow":"none"})
+                })
+                $("#myTab #ghgemission-tab").click(function () {
+                    $(this).css({"color":"black","box-shadow":"0px 0px 6px 6px #eeeeee"})
+                    $("#overview-tab,#energy-tab,#projectportfolio-tab").css({"color":"#9AA0A0","box-shadow":"none"})
+                })
+                $("#myTab #projectportfolio-tab").click(function () {
+                    $(this).css({"color":"black","box-shadow":"0px 0px 6px 6px #eeeeee"})
+                    $("#overview-tab,#energy-tab,#ghgemission-tab").css({"color":"#9AA0A0","box-shadow":"none"})
+                })
+            </script>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
                     <div class="ppj-top">
@@ -505,11 +524,11 @@
                                             label: 'MJ/Unit',
                                             yAxisID: 'A',
                                             fill: true,
-                                            tension: 0.4,
+                                            tension: 0,
                                             borderWidth: 3,
                                             pointBackgroundColor: "white",
                                             pointRadius: 5,
-
+                                      
                                         },
                                         {
                                             type: "bar",
@@ -520,8 +539,7 @@
                                             fill: true,
                                             tension: 0.4,
                                             barThickness: 25,
-
-
+                                          
                                         }]
                                     },
                                     options: {
@@ -530,13 +548,26 @@
                                             A: {
                                                 position: 'right',
                                                 min: 0,
+                                                max:120,
+                                                ticks: {
+                                                    stepSize: 24,
+                                                },
+                                                border:{
+                                                    dash: [10,5]
+                                                }
+                                              
                                             },
                                             B: {
                                                 position: 'left',
                                                 min: 0,
                                                 max: 25.0,
+                                                border:{
+                                                    dash: [10,5]
+                                                }
                                             },
-
+                                            xAxis:{
+                                              display: false
+                                            }
                                         },
                                         plugins: {
                                             legend: {
@@ -578,7 +609,7 @@
                                             label: 'VND/Unit',
                                             yAxisID: 'A',
                                             fill: true,
-                                            tension: 0.4,
+                                            tension: 0,
                                             borderWidth: 3,
                                             pointBackgroundColor: "white",
                                             pointRadius: 5,
@@ -603,13 +634,24 @@
                                             A: {
                                                 position: 'right',
                                                 min: 0,
+                                                ticks: {
+                                                    stepSize: 24,
+                                                },
+                                                border:{
+                                                    dash: [10,5]
+                                                }
                                             },
                                             B: {
                                                 position: 'left',
                                                 min: 0,
                                                 max: 25.0,
+                                                border:{
+                                                    dash: [10,5]
+                                                }
                                             },
-
+                                            xAxis:{
+                                              display: false
+                                            }
                                         },
                                         plugins: {
                                             legend: {
@@ -651,7 +693,7 @@
                                             label: 'Kg CO2e/Unit',
                                             yAxisID: 'A',
                                             fill: true,
-                                            tension: 0.4,
+                                            tension: 0,
                                             borderWidth: 3,
                                             pointBackgroundColor: "white",
                                             pointRadius: 5,
@@ -674,13 +716,24 @@
                                             A: {
                                                 position: 'right',
                                                 min: 0,
+                                                ticks: {
+                                                    stepSize: 24,
+                                                },
+                                                border:{
+                                                    dash: [10,5]
+                                                }
                                             },
                                             B: {
                                                 position: 'left',
                                                 min: 0,
                                                 max: 25.0,
+                                                border:{
+                                                    dash: [10,5]
+                                                }
                                             },
-
+                                            xAxis:{
+                                              display: false
+                                            }
                                         },
                                         plugins: {
                                             legend: {
@@ -1247,10 +1300,10 @@
                                                 <td>2,003,702</td>
                                             </tr>
                                             <tr>
-                                                <td style="text-align: left;font-weight: 600;">2021</td>
-                                                <td style="font-weight: 600;">2,774,827</td>
-                                                <td style="font-weight: 600;">9,898,377</td>
-                                                <td style="font-weight: 600;">2,003,702</td>
+                                                <td style="text-align: left;">2021</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
                                             </tr>
                                             <tr>
                                                 <td style="text-align: left;">2022</td>
@@ -1295,7 +1348,7 @@
                                                         A: {
                                                             position: 'left',
                                                             min: -100,
-                                                            max: 100,
+                                                            max: 150,
                                                             ticks: {
                                                                 callback: function (value, index, values) {
                                                                     return value + "%";
@@ -1492,10 +1545,10 @@
                                                 <td>2,003,702</td>
                                             </tr>
                                             <tr>
-                                                <td style="text-align: left;font-weight: 600;">2021</td>
-                                                <td style="font-weight: 600;">2,774,827</td>
-                                                <td style="font-weight: 600;">9,898,377</td>
-                                                <td style="font-weight: 600;">2,003,702</td>
+                                                <td style="text-align: left;">2021</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
                                             </tr>
                                             <tr>
                                                 <td style="text-align: left;">2022</td>
@@ -1540,7 +1593,7 @@
                                                         A: {
                                                             position: 'left',
                                                             min: -100,
-                                                            max: 100,
+                                                            max: 150,
                                                             ticks: {
                                                                 callback: function (value, index, values) {
                                                                     return value + "%";
@@ -1737,10 +1790,10 @@
                                                 <td>2,003,702</td>
                                             </tr>
                                             <tr>
-                                                <td style="text-align: left;font-weight: 600;">2021</td>
-                                                <td style="font-weight: 600;">2,774,827</td>
-                                                <td style="font-weight: 600;">9,898,377</td>
-                                                <td style="font-weight: 600;">2,003,702</td>
+                                                <td style="text-align: left;">2021</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
                                             </tr>
                                             <tr>
                                                 <td style="text-align: left;">2022</td>
@@ -1785,7 +1838,7 @@
                                                         A: {
                                                             position: 'left',
                                                             min: -100,
-                                                            max: 100,
+                                                            max: 150,
                                                             ticks: {
                                                                 callback: function (value, index, values) {
                                                                     return value + "%";
@@ -1982,10 +2035,10 @@
                                                 <td>2,003,702</td>
                                             </tr>
                                             <tr>
-                                                <td style="text-align: left;font-weight: 600;">2021</td>
-                                                <td style="font-weight: 600;">2,774,827</td>
-                                                <td style="font-weight: 600;">9,898,377</td>
-                                                <td style="font-weight: 600;">2,003,702</td>
+                                                <td style="text-align: left;">2021</td>
+                                                <td>2,774,827</td>
+                                                <td>9,898,377</td>
+                                                <td>2,003,702</td>
                                             </tr>
                                             <tr>
                                                 <td style="text-align: left;">2022</td>
@@ -2030,7 +2083,7 @@
                                                         A: {
                                                             position: 'left',
                                                             min: -100,
-                                                            max: 100,
+                                                            max: 150,
                                                             ticks: {
                                                                 callback: function (value, index, values) {
                                                                     return value + "%";
@@ -2668,9 +2721,13 @@
                 </div>
             </div>
             <script>
-                $(".content-report-energy-result-table,.content-report-energy-result-table-info,.content-report-energy-result-energy-ghgemission-table").hide();
+                $(".content-report-energy-result-table,.content-report-energy-result-table-info,.content-report-energy-result-energy-ghgemission-table,.content-report-energy-result-tableinfo-title-responsive,.content-report-energy-result-table-info-responsive").hide();
                 $("#search-button").click(function () {
                     $(".content-report-energy-result-table,.content-report-energy-result-table-info,.content-report-energy-result-energy-ghgemission-table").show();
+                    if (window.innerWidth<1261){
+                        $(".content-report-energy-result-table-info").hide();
+                        $(".content-report-energy-result-tableinfo-title-responsive,.content-report-energy-result-table-info-responsive").show();
+                    }
                 })
             </script>
 
@@ -2856,21 +2913,29 @@
             $("#content-report-energy,#content-dashboard").hide();
             $("#content-dashboard").fadeIn();
             $('#myTab #overview-tab').tab('show');
+            $('#myTab #overview-tab').css({"color":"black","box-shadow":"0px 0px 6px 6px #eeeeee"})
+            $("#energy-tab,#ghgemission-tab,#projectportfolio-tab").css({"color":"#9AA0A0","box-shadow":"none"})
         })
         $(".dashboard-left-content-energy").click(function () {
             $("#content-report-energy,#content-dashboard").hide();
             $("#content-dashboard").fadeIn();
             $('#myTab #energy-tab').tab('show');
+            $('#myTab #energy-tab').css({"color":"black","box-shadow":"0px 0px 6px 6px #eeeeee"})
+            $("#overview-tab,#ghgemission-tab,#projectportfolio-tab").css({"color":"#9AA0A0","box-shadow":"none"})
         })
         $(".dashboard-left-content-ghgemission").click(function () {
             $("#content-report-energy,#content-dashboard").hide();
             $("#content-dashboard").fadeIn();
             $('#myTab #ghgemission-tab').tab('show');
+            $('#myTab #ghgemission-tab').css({"color":"black","box-shadow":"0px 0px 6px 6px #eeeeee"})
+            $("#overview-tab,#energy-tab,#projectportfolio-tab").css({"color":"#9AA0A0","box-shadow":"none"})
         })
         $(".dashboard-left-content-projectportfolio").click(function () {
             $("#content-report-energy,#content-dashboard").hide();
             $("#content-dashboard").fadeIn();
             $('#myTab #projectportfolio-tab').tab('show');
+            $('#myTab #projectportfolio-tab').css({"color":"black","box-shadow":"0px 0px 6px 6px #eeeeee"})
+            $("#overview-tab,#energy-tab,#ghgemission-tab").css({"color":"#9AA0A0","box-shadow":"none"})
         })
         $(".report-left-content-energy,.report").click(function () {
             $("#content-report-energy,#content-dashboard").hide();
