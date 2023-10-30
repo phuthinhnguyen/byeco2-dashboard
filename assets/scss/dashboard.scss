@@ -258,6 +258,7 @@ nav {
                 outline: none;
                 border: none;
                 margin-left: 5px;
+                background-color: transparent;
             }
         }
 
@@ -495,13 +496,14 @@ nav {
                 flex-wrap: wrap;
 
                 .ppj-kpi-item {
-                    padding: 10px;
+                    padding: 15px;
                     // width: 33%;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-
+                    background-color: #fff;
+                    border-radius: 14px;
                     h2 {
                         font-size: 18px;
                         color: $primary-blue;
@@ -525,16 +527,17 @@ nav {
                 margin-top: 40px;
                 padding: 0 40px;
                 flex-wrap: wrap;
-                row-gap: 10px;
+                row-gap: 30px;
 
                 .ppj-emission-value-item {
-                    padding: 10px;
+                    padding: 15px;
                     // width: 50%;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-
+                    background-color: #fff;
+                    border-radius: 14px;
                     .top {
                         display: flex;
                         justify-content: center;
@@ -619,21 +622,25 @@ nav {
                 margin-top: 70px;
                 padding: 0 40px;
                 flex-wrap: wrap;
-
+                row-gap: 30px;
+                column-gap: 30px;
+                margin-bottom: 40px;
                 .ppj-totalenergyconsumption-item {
                     padding: 10px;
-                    width: 50%;
-
+                    width: 45%;
+                    background-color: #fff;
+                    border-radius: 14px;
                     .top {
                         display: flex;
                         justify-content: center;
                         column-gap: 10px;
-
+                        justify-content: flex-start;
                         .title {
                             font-family: $fontInter;
                             color: black;
                             font-size: 17px;
                             font-weight: 700;
+                          
                         }
 
                         .unit {
@@ -641,6 +648,7 @@ nav {
                             color: $dark-03;
                             font-size: 17px;
                             font-weight: 700;
+                          
                         }
                     }
 
@@ -1201,7 +1209,7 @@ nav {
                 width: 100%;
                 padding: 20px;
                 position: relative;
-
+                background-color: #fff;
                 .content-report-energy-search-bottom-form {
                     display: flex;
                     column-gap: 60px;
@@ -1326,7 +1334,8 @@ nav {
 
         .content-report-energy-result {
             margin-top: 56px;
-
+            background-color: #fff;
+            padding: 30px 20px;
             .content-report-energy-result-title {
                 font-family: Roboto;
                 font-size: 14px;
@@ -1345,7 +1354,7 @@ nav {
 
             .content-report-energy-result-table {
                 margin-top: 16px;
-
+               
                 table {
                     width: 100%;
 
@@ -1554,7 +1563,7 @@ nav {
 
                 .content-report-energy-result-energy-ghgemission-table-right {
                     width: 50%;
-
+                    overflow-x: auto;
                     table {
                         width: 100%;
 
@@ -2631,7 +2640,28 @@ nav {
     }
 
 }
-
+@media screen and (max-width:855px) {
+    #content{
+        #content-dashboard{
+            #overview{
+                .ppj-totalenergyconsumption{
+                    display: block;
+                    .ppj-totalenergyconsumption-item{
+                     
+                        .top{
+                            .title{
+                                flex: 1.5;
+                            }
+                            .unit{
+                                flex: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 @media screen and (max-width:800px) {
     nav {
         // position: absolute;
@@ -3008,7 +3038,7 @@ nav {
                 .ppj-kpi {
                     .ppj-kpi-item {
                         canvas {
-                            max-width: 340px;
+                            max-width: 310px;
                             min-width: 300px;
                         }
                     }
@@ -3017,7 +3047,7 @@ nav {
                 .ppj-emission-value {
                     .ppj-emission-value-item {
                         canvas {
-                            max-width: 340px;
+                            max-width: 310px;
                             min-width: 300px;
                         }
 
