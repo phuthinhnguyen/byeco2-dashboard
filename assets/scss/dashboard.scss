@@ -474,6 +474,7 @@ nav {
                                 font-size: 32px;
                                 color: $primary-green;
                                 line-height: 38px;
+                                
                             }
 
                             .unit {
@@ -502,15 +503,15 @@ nav {
             .ppj-kpi {
                 display: flex;
                 align-items: center;
-                justify-content: space-around;
+                justify-content: space-between;
                 row-gap: 30px;
                 margin-top: 30px;
-                padding: 0 40px;
+                padding: 0 30px;
                 flex-wrap: wrap;
-
+                column-gap: 30px;
                 .ppj-kpi-item {
                     padding: 15px;
-                    // width: 33%;
+                    width: 30%;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -529,7 +530,7 @@ nav {
                     }
 
                     canvas {
-                        min-width: 400px;
+                        // min-width: 400px;
                     }
                 }
             }
@@ -537,15 +538,15 @@ nav {
             .ppj-emission-value {
                 display: flex;
                 align-items: flex-start;
-                justify-content: space-around;
+                justify-content: space-between;
                 margin-top: 40px;
-                padding: 0 40px;
+                padding: 0 30px;
                 flex-wrap: wrap;
                 row-gap: 30px;
-
+                column-gap: 30px;
                 .ppj-emission-value-item {
                     padding: 15px;
-                    // width: 50%;
+                    width: 30%;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -557,12 +558,13 @@ nav {
                         display: flex;
                         justify-content: center;
                         column-gap: 10px;
-
+                       
                         .title {
                             font-family: $fontInter;
                             color: black;
                             font-size: 17px;
                             font-weight: 700;
+                            text-align: center;
                         }
 
                         .unit {
@@ -570,17 +572,19 @@ nav {
                             color: $dark-03;
                             font-size: 17px;
                             font-weight: 700;
+                            text-align: center;
                         }
                     }
 
                     .canvas {
-                        max-width: 280px;
+                        // max-width: 280px;
                     }
 
                     .details {
                         margin-top: 20px;
-
+                        width: 100%;
                         .details-title {
+                            margin: auto;
                             img {
                                 width: 12px;
                                 height: 12px;
@@ -600,11 +604,12 @@ nav {
                         .details-content {
 
                             width: 100%;
-
+                            overflow-x: auto;
+                            margin: auto;
                             table {
-
+                                width: 100%;
+                                margin: auto;
                                 margin-top: 18px;
-
                                 tr {
                                     border-bottom: 1px solid lightgray;
 
@@ -620,6 +625,7 @@ nav {
 
                                     .value {
                                         padding: 0 30px;
+                                        text-align: center;
                                     }
                                 }
                             }
@@ -633,16 +639,16 @@ nav {
             .ppj-totalenergyconsumption {
                 display: flex;
                 align-items: center;
-                justify-content: space-around;
-                margin-top: 70px;
-                padding: 0 40px;
+                justify-content: space-between;
+                margin-top: 40px;
+                padding: 0 30px;
                 flex-wrap: wrap;
                 row-gap: 30px;
                 column-gap: 30px;
                 margin-bottom: 40px;
 
                 .ppj-totalenergyconsumption-item {
-                    padding: 10px;
+                    padding: 15px;
                     width: 45%;
                     background-color: #fff;
                     border-radius: 14px;
@@ -651,14 +657,14 @@ nav {
                         display: flex;
                         justify-content: center;
                         column-gap: 10px;
-                        justify-content: flex-start;
+                        justify-content: center;
 
                         .title {
                             font-family: $fontInter;
                             color: black;
                             font-size: 17px;
                             font-weight: 700;
-
+                            text-align: center;
                         }
 
                         .unit {
@@ -666,12 +672,12 @@ nav {
                             color: $dark-03;
                             font-size: 17px;
                             font-weight: 700;
-
+                            text-align: center;
                         }
                     }
 
                     .canvas {
-                        max-width: 280px;
+                        // max-width: 280px;
                     }
                 }
             }
@@ -765,7 +771,7 @@ nav {
                                     font-weight: 700;
                                     font-size: 18px;
                                     color: $dark-02;
-
+                                    text-align: center;
                                 }
                             }
 
@@ -2010,6 +2016,7 @@ nav {
                                     tr {
                                         .value {
                                             padding: 0 20px;
+                                            text-align: center;
                                         }
                                     }
                                 }
@@ -2067,6 +2074,7 @@ nav {
                                     tr {
                                         .value {
                                             padding: 0 15px;
+                                            text-align: center;
                                         }
                                     }
                                 }
@@ -2092,10 +2100,34 @@ nav {
                     }
                 }
 
-
+                .ppj-kpi{
+                    display: block;
+                    .ppj-kpi-item{
+                        width: 70%;
+                        margin: auto;
+                        margin-top: 30px;
+                        min-width: 350px;
+                        max-width: 550px;
+                    }
+                }
+                .ppj-emission-value{
+                    display: block;
+                    .ppj-emission-value-item{
+                        width: 70%;
+                        margin: auto;
+                        margin-top: 30px;
+                        min-width: 350px;
+                        max-width: 550px;
+                    }
+                }
                 .ppj-totalenergyconsumption {
+                    display: block;
                     .ppj-totalenergyconsumption-item {
-                        width: 100%;
+                        width: 70%;
+                        margin: auto;
+                        margin-top: 30px;
+                        min-width: 350px;
+                        max-width: 550px;
                     }
                 }
             }
@@ -2558,11 +2590,11 @@ nav {
                 }
 
 
-                .ppj-totalenergyconsumption {
-                    .ppj-totalenergyconsumption-item {
-                        width: 100%;
-                    }
-                }
+                // .ppj-totalenergyconsumption {
+                //     .ppj-totalenergyconsumption-item {
+                //         width: 100%;
+                //     }
+                // }
             }
 
             #energy {
@@ -3098,6 +3130,21 @@ nav {
                 .ppj-top {
                     display: none;
                 }
+                .ppj-kpi{
+                    .ppj-kpi-item{
+                        width: 75%;
+                    }
+                }
+                .ppj-emission-value{
+                    .ppj-emission-value-item{
+                        width: 75%;
+                    }
+                }
+                .ppj-totalenergyconsumption{
+                    .ppj-totalenergyconsumption-item{
+                        width: 75%;
+                    }
+                }
             }
 
             #energy {
@@ -3243,20 +3290,24 @@ nav {
 
 
                 .ppj-kpi {
+                    padding: 0;
                     .ppj-kpi-item {
-                        canvas {
-                            max-width: 310px;
-                            min-width: 300px;
-                        }
+                        width: 100%;
+                        // canvas {
+                        //     max-width: 310px;
+                        //     min-width: 300px;
+                        // }
                     }
                 }
 
                 .ppj-emission-value {
+                    padding: 0;
                     .ppj-emission-value-item {
-                        canvas {
-                            max-width: 310px;
-                            min-width: 300px;
-                        }
+                        width: 100%;
+                        // canvas {
+                        //     max-width: 310px;
+                        //     min-width: 300px;
+                        // }
 
                         .details {
                             .details-content {
@@ -3349,7 +3400,20 @@ nav {
         }
     }
 }
-
+// @media screen and (max-width:430px) {
+//     #content {
+//         #content-dashboard {
+//             #overview {
+//                 .ppj-kpi{
+//                     .ppj-kpi-item{
+//                         width: 100%;
+//                         min-width: 300px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
 @media screen and (max-width:410px) {
     #content {
         #content-dashboard {
@@ -3383,10 +3447,36 @@ nav {
                     padding: 10px 19px;
                 }
             }
+            
         }
     }
 }
-
+@media screen and (max-width:380px) {
+    #content {
+        #content-dashboard {
+            #overview {
+                .ppj-kpi{
+                    .ppj-kpi-item{
+                        width: 100%;
+                        min-width: 250px;
+                    }
+                }
+                .ppj-emission-value{
+                    .ppj-emission-value-item{
+                        width: 100%;
+                        min-width: 250px;
+                    }
+                }
+                .ppj-totalenergyconsumption{
+                    .ppj-totalenergyconsumption-item{
+                        width: 100%;
+                        min-width: 250px;
+                    }
+                }
+            }
+        }
+    }
+}
 @media screen and (max-width:360px) {
     nav {
         width: 260px;
@@ -3417,20 +3507,20 @@ nav {
                     }
                 }
 
-                .ppj-kpi {
-                    .ppj-kpi-item {
-                        canvas {
-                            max-width: 260px;
-                            min-width: 260px;
-                        }
-                    }
-                }
+                // .ppj-kpi {
+                //     .ppj-kpi-item {
+                //         canvas {
+                //             max-width: 260px;
+                //             min-width: 260px;
+                //         }
+                //     }
+                // }
 
                 .ppj-emission-value {
                     .ppj-emission-value-item {
                         canvas {
-                            max-width: 260px;
-                            min-width: 260px;
+                            // max-width: 260px;
+                            // min-width: 260px;
                         }
 
                         .details {
@@ -3468,3 +3558,31 @@ nav {
         }
     }
 }
+@media screen and (max-width:340px) {
+    #content {
+        #content-dashboard {
+            #overview {
+                .ppj-kpi{
+                    .ppj-kpi-item{
+                     
+                        min-width: 250px;
+                    }
+                }
+            }
+        }
+    }
+}
+// @media screen and (max-width:310px) {
+//     #content {
+//         #content-dashboard {
+//             #overview {
+//                 .ppj-kpi{
+//                     .ppj-kpi-item{
+                     
+//                         min-width: 230px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
