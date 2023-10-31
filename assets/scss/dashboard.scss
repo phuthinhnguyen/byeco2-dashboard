@@ -1279,6 +1279,10 @@ nav {
                             color: rgb(70, 70, 70);
                             width: 100%;
                             height: 40px;
+                            background-color: #fff;
+                        }
+                        select option{
+                            background-color: #fff;
                         }
 
                         input[type=text] {
@@ -1643,7 +1647,7 @@ nav {
                 .content-report-energy-result-energy-ghgemission-table-right {
                     width: 50%;
                     overflow-x: auto;
-
+                    padding-top: 65px;
                     table {
                         width: 100%;
 
@@ -1785,6 +1789,10 @@ nav {
                             color: rgb(80, 80, 80);
                             height: 40px;
                             padding-left: 10px;
+                            background-color: #fff;
+                        }
+                        select option{
+                            background-color: #fff;
                         }
                     }
                 }
@@ -2702,9 +2710,10 @@ nav {
                     width: 100%;
                     padding: 20px;
                     margin-top: 21px;
-
+                    border-radius: 14px;
+                    background-color: #fff;
                     .ppj-emission-scope-responsive-top {
-                        margin-bottom: 20px;
+                        margin-bottom: 30px;
                         display: flex;
                         align-items: center;
                         column-gap: 16px;
@@ -3402,7 +3411,10 @@ nav {
                 // }
 
                 .ppj-emission-scope-responsive {
-                    padding: 0;
+                    padding: 20px;
+                    .ppj-emission-scope-responsive-item{
+                        column-gap: 20px;
+                    }
                 }
 
                 .ppj-kpi {

@@ -487,6 +487,7 @@
                                 <p>MtCO2e</p>
                             </div>
                         </div>
+                        <hr>
                         <div class="ppj-emission-scope-responsive-item">
                             <div class="ppj-emission-scope-responsive-item-left">
                                 <img src="assets/image/index/emissionscopeco2responsive.svg" alt="">
@@ -497,6 +498,7 @@
                                 <p>MtCO2e</p>
                             </div>
                         </div>
+                        <hr>
                         <div class="ppj-emission-scope-responsive-item">
                             <div class="ppj-emission-scope-responsive-item-left">
                                 <img src="assets/image/index/emissionscopeco2responsive.svg" alt="">
@@ -1980,60 +1982,7 @@
                                             }
                                         });
                                     </script>
-                                        <canvas id="myChart-dashboard-energy-content-gas-content-right-bottomtest"
-                                        style="max-height: 300px;max-width: 95%;"></canvas>
-                                    <script>
-                                        const dashboardenergycontentgascontentrightbottomtest = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023];
-
-                                        new Chart("myChart-dashboard-energy-content-gas-content-right-bottomtest", {
-                                            type: "line",
-                                            data: {
-                                                labels: dashboardenergycontentgascontentrightbottomtest,
-                                                datasets: [{
-                                                    data: [60, 70, 50, 80, 70, 0, 100, 0, -50],
-                                                    borderColor: "#20A049",
-                                                    borderWidth: 3,
-                                                    pointBackgroundColor: "white",
-                                                    pointRadius: 5,
-                                                    fill: false,
-                                                    yAxisID: 'A',
-                                                    label: ""
-                                                }]
-                                            },
-                                            options: {
-                                                scales: {
-                                                    A: {
-                                                        position: 'left',
-                                                        min: -100,
-                                                        max: 150,
-                                                        ticks: {
-                                                            callback: function (value, index, values) {
-                                                                return value + "%";
-                                                            },
-                                                            stepSize: 50
-                                                        }
-                                                    },
-
-                                                },
-                                                plugins: {
-                                                    legend: {
-                                                        display: false,
-                                                        labels: {
-                                                            font: {
-                                                                size: 13,
-                                                                family: "Roboto"
-                                                            }
-                                                        }
-                                                    },
-                                                    tooltip: {
-                                                        titleFont: "Arial",
-                                                        padding: 10,
-                                                    }
-                                                }
-                                            }
-                                        })
-
-                                    </script>
+                                        
                                 </div>
                                 <div class="dashboard-energy-content-gas-content-right">
                                     <div class="dashboard-energy-content-gas-content-right-table">
