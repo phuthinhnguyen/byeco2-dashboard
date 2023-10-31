@@ -17,6 +17,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.2/chart.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <title>Home</title>
     <style>
         @font-face {
@@ -1201,7 +1205,7 @@
                                     <script>
                                         const myChartdashboardenergycontentelectricitycontent = ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"];
 
-                                        new Chart("myChart-dashboard-energy-content-electricity-content", {
+                                        new Chart("myChart-dashboard-energy-content-electricity-content", {     
                                             type: "bar",
 
                                             data: {
@@ -1938,18 +1942,7 @@
                                                     barThickness: 20,
 
 
-                                                }, {
-                                                    type: "bar",
-                                                    data: yValuesbarmyChartdashboardenergycontentgascontent2,
-                                                    backgroundColor: "#C6D92D",
-                                                    label: 'CO2 Emission (Mil Ton)',
-                                                    yAxisID: 'B',
-                                                    fill: true,
-                                                    tension: 0.4,
-                                                    barThickness: 20,
-
-
-                                                }]
+                                                }, ]
                                             },
                                             options: {
                                                 responsive: true,
@@ -2155,7 +2148,7 @@
                         <div class="content-report-energy-search-bottom-form-item">
                             <p>Year:</p>
                             <select name="year" id="year">
-                                <!-- <option value="2015">2015</option>
+                                <option value="2015">2015</option>
                                 <option value="2016">2016</option>
                                 <option value="2017">2017</option>
                                 <option value="2018">2018</option>
@@ -2163,12 +2156,29 @@
                                 <option value="2020">2020</option>
                                 <option value="2021">2021</option>
                                 <option value="2022">2022</option>
-                                <option value="2023">2023</option> -->
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
                             </select>
                         </div>
                         <div class="content-report-energy-search-bottom-form-item">
                             <p>Month:</p>
                             <select name="month" id="month">
+                                <option value="allmonth">-All-</option>
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
                                 <!-- <option value="1">Tháng 1</option>
                                 <option value="2">Tháng 2</option>
                                 <option value="3">Tháng 3</option>
@@ -2185,105 +2195,150 @@
                         </div>
                         <div class="content-report-energy-search-bottom-form-item">
                             <p>From date created:</p>
-                            <select name="daystart" id="daystart">
+                            <!-- <select name="daystart" id="daystart">
 
-                            </select>
+                            </select> -->
+                            <!-- <input type="date" id="daystart" name="daystart"> -->
+                            <div class="form-date">
+                                <input type="text" name="daystart" value="" id="daystart"/>
+                                <div class="input-group-text input-group-text-daystart"><i class="fa fa-calendar"></i></div>
+                            </div>
+                         
+                            <script>
+                            $(function() {
+                              $('.input-group-text-daystart').daterangepicker({
+                                singleDatePicker: true,
+                                showDropdowns: true,
+                                minYear: 1901,
+                                maxYear: parseInt(moment().format('YYYY'),10),
+                                useCurrent: false,
+  
+                              }, function(start, end, label) {
+                                let inputpickerdaystart = document.getElementById("daystart")
+                                inputpickerdaystart.value= start.format('DD/MM/YYYY')
+                              
+                              });
+                            });
+                            </script>
                         </div>
+                     
                         <div class="content-report-energy-search-bottom-form-item">
                             <p>To date created:</p>
-                            <select name="dayend" id="dayend">
+                            <!-- <select name="dayend" id="dayend">
 
-                            </select>
+                            </select> -->
+                             <!-- <input type="date" id="dayend" name="dayend"> -->
+                             <div class="form-date">
+                                <input type="text" name="daystart" value="" id="daysend"/>
+                                <div class=" input-group-text input-group-text-daysend"><i class="fa fa-calendar"></i></div>
+                            </div>
+                         
+                            <script>
+                            $(function() {
+                              $('.input-group-text-daysend').daterangepicker({
+                                singleDatePicker: true,
+                                showDropdowns: true,
+                                minYear: 1901,
+                                maxYear: parseInt(moment().format('YYYY'),10),
+                                useCurrent: false,
+  
+                              }, function(start, end, label) {
+                                let inputpickerdaysend = document.getElementById("daysend")
+                                inputpickerdaysend.value= start.format('DD/MM/YYYY')
+                              
+                              });
+                            });
+                            </script>
                         </div>
-                
+                  
                       
                     </form>
                     <button type="button" id="search-button">SEARCH <img src="assets/image/index/search-report.svg" alt=""></button>
                     <script>
-                        $(document).ready(function () {
-                            const monthNames = ["January", "February", "March", "April", "May", "June",
-                                "July", "August", "September", "October", "November", "December"
-                            ];
-                            let qntYears = 9;
-                            let selectYear = $("#year");
-                            let selectMonth = $("#month");
-                            let selectDaystart = $("#daystart");
-                            let selectDayend = $("#dayend");
-                            let currentYear = new Date().getFullYear();
+                        // $(document).ready(function () {
+                        //     const monthNames = ["January", "February", "March", "April", "May", "June",
+                        //         "July", "August", "September", "October", "November", "December"
+                        //     ];
+                        //     let qntYears = 9;
+                        //     let selectYear = $("#year");
+                        //     let selectMonth = $("#month");
+                        //     let selectDaystart = $("#daystart");
+                        //     let selectDayend = $("#dayend");
+                        //     let currentYear = new Date().getFullYear();
 
-                            for (var y = 0; y < qntYears; y++) {
-                                let date = new Date(currentYear);
-                                let yearElem = document.createElement("option");
-                                yearElem.value = currentYear
-                                yearElem.textContent = currentYear;
-                                selectYear.append(yearElem);
-                                currentYear--;
-                            }
+                        //     for (var y = 0; y < qntYears; y++) {
+                        //         let date = new Date(currentYear);
+                        //         let yearElem = document.createElement("option");
+                        //         yearElem.value = currentYear
+                        //         yearElem.textContent = currentYear;
+                        //         selectYear.append(yearElem);
+                        //         currentYear--;
+                        //     }
 
-                            for (var m = 0; m < 12; m++) {
-                                let month = monthNames[m];
-                                let monthElem = document.createElement("option");
-                                monthElem.value = m;
-                                monthElem.textContent = month;
-                                selectMonth.append(monthElem);
-                            }
+                        //     for (var m = 0; m < 12; m++) {
+                        //         let month = monthNames[m];
+                        //         let monthElem = document.createElement("option");
+                        //         monthElem.value = m;
+                        //         monthElem.textContent = month;
+                        //         selectMonth.append(monthElem);
+                        //     }
 
-                            var d = new Date();
-                            var month = d.getMonth();
-                            var year = d.getFullYear();
-                            var day = d.getDate();
+                        //     var d = new Date();
+                        //     var month = d.getMonth();
+                        //     var year = d.getFullYear();
+                        //     var day = d.getDate();
 
-                            selectYear.val(year);
-                            selectYear.on("change", AdjustDaystart);
-                            selectYear.on("change", AdjustDayend);
-                            selectMonth.val(month);
-                            selectMonth.on("change", AdjustDaystart);
-                            selectMonth.on("change", AdjustDayend);
+                        //     selectYear.val(year);
+                        //     selectYear.on("change", AdjustDaystart);
+                        //     selectYear.on("change", AdjustDayend);
+                        //     selectMonth.val(month);
+                        //     selectMonth.on("change", AdjustDaystart);
+                        //     selectMonth.on("change", AdjustDayend);
 
-                            AdjustDaystart();
-                            selectDaystart.val(day)
-                            AdjustDayend();
-                            selectDayend.val(day)
+                        //     AdjustDaystart();
+                        //     selectDaystart.val(day)
+                        //     AdjustDayend();
+                        //     selectDayend.val(day)
 
-                            function AdjustDaystart() {
-                                let year = selectYear.val();
-                                let month = parseInt(selectMonth.val()) + 1;
-                                selectDaystart.empty();
+                        //     function AdjustDaystart() {
+                        //         let year = selectYear.val();
+                        //         let month = parseInt(selectMonth.val()) + 1;
+                        //         selectDaystart.empty();
 
 
-                                //get the last day, so the number of days in that month
-                                let daystart_AdjustDaystart = new Date(year, month, 0).getDate();
+                        //         //get the last day, so the number of days in that month
+                        //         let daystart_AdjustDaystart = new Date(year, month, 0).getDate();
 
-                                //lets create the days of that month
-                                for (let d = 1; d <= daystart_AdjustDaystart; d++) {
-                                    let dayElem = document.createElement("option");
-                                    let monthvalue = document.getElementById("month")
-                                    let yearvalue = document.getElementById("year")
-                                    dayElem.value = d;
-                                    dayElem.textContent = d + " " + monthNames[monthvalue.value] + " " + yearvalue.value;
-                                    selectDaystart.append(dayElem);
-                                    console.log(selectDaystart)
-                                }
-                            }
-                            function AdjustDayend() {
-                                let year = selectYear.val();
-                                let month = parseInt(selectMonth.val()) + 1;
-                                selectDayend.empty();
+                        //         //lets create the days of that month
+                        //         for (let d = 1; d <= daystart_AdjustDaystart; d++) {
+                        //             let dayElem = document.createElement("option");
+                        //             let monthvalue = document.getElementById("month")
+                        //             let yearvalue = document.getElementById("year")
+                        //             dayElem.value = d;
+                        //             dayElem.textContent = d + " " + monthNames[monthvalue.value] + " " + yearvalue.value;
+                        //             selectDaystart.append(dayElem);
+                        //             console.log(selectDaystart)
+                        //         }
+                        //     }
+                        //     function AdjustDayend() {
+                        //         let year = selectYear.val();
+                        //         let month = parseInt(selectMonth.val()) + 1;
+                        //         selectDayend.empty();
 
-                                //get the last day, so the number of days in that month
-                                let dayend_AdjustDayend = new Date(year, month, 0).getDate();
+                        //         //get the last day, so the number of days in that month
+                        //         let dayend_AdjustDayend = new Date(year, month, 0).getDate();
 
-                                //lets create the days of that month
-                                for (let d = 1; d <= dayend_AdjustDayend; d++) {
-                                    let dayElem = document.createElement("option");
-                                    let monthvalue = document.getElementById("month")
-                                    let yearvalue = document.getElementById("year")
-                                    dayElem.value = d;
-                                    dayElem.textContent = d + " " + monthNames[monthvalue.value] + " " + yearvalue.value;
-                                    selectDayend.append(dayElem);
-                                }
-                            }
-                        });
+                        //         //lets create the days of that month
+                        //         for (let d = 1; d <= dayend_AdjustDayend; d++) {
+                        //             let dayElem = document.createElement("option");
+                        //             let monthvalue = document.getElementById("month")
+                        //             let yearvalue = document.getElementById("year")
+                        //             dayElem.value = d;
+                        //             dayElem.textContent = d + " " + monthNames[monthvalue.value] + " " + yearvalue.value;
+                        //             selectDayend.append(dayElem);
+                        //         }
+                        //     }
+                        // });
                     </script>
                     <div class="content-report-energy-search-bottom-import">
                         <div class="content-report-energy-search-bottom-import-left">
@@ -2427,7 +2482,7 @@
                                             </tr>
                                             <tr>
                                                 <td>4</td>
-                                                <td>
+                                                <td style="min-width: 300px;">
                                                     <div>Lượng phát thải CO2 - điện tiêu thụ</div>
                                                 </td>
                                                 <td>
@@ -2463,7 +2518,7 @@
                                                 <td>
                                                     <div>kg</div>
                                                 </td>
-                                                <td>
+                                                <td style="min-width: 100px;">
                                                     <div>123,621</div>
                                                 </td>
                                             </tr>
@@ -2502,13 +2557,13 @@
                                             </tr>
                                             <tr>
                                                 <td>13</td>
-                                                <td>
+                                                <td style="min-width: 300px;">
                                                     <div>Lượng phát thải CO2 - Than</div>
                                                 </td>
                                                 <td>
                                                     <div>kg</div>
                                                 </td>
-                                                <td>
+                                                <td style="min-width: 100px;">
                                                     <div>123,621</div>
                                                 </td>
                                             </tr>
@@ -2616,9 +2671,9 @@
                                             </tr>
                                             <tr>
                                                 <td>7</td>
-                                                <td><div>Lượng khí phát thải CO2 - Chôn lấp</div></td>
+                                                <td style="min-width: 300px;"><div>Lượng khí phát thải CO2 - Chôn lấp</div></td>
                                                 <td><div>kg</div></td>
-                                                <td><div>123,621</div></td>
+                                                <td style="min-width: 100px;"><div>123,621</div></td>
                                             </tr>
                                         </table>
                                     </div>
@@ -2734,7 +2789,7 @@
             <div class="content-report-energy-importdata">
                 <div class="content-report-energy-importdata-top">
                     <p>Import energy data</p>
-                </div>
+                </div>  
                 <div class="content-report-energy-importdata-top-responsive">
                     <img src="assets/image/index/importdataresponsive.svg" alt="">
                     <h3>Import data</h3>

@@ -26,6 +26,7 @@ nav {
         // background-color: $fourth-green;
         padding: 23px 29px;
         background-color: rgb(1, 51, 17);
+
         img {
             width: 108px;
             height: 68px;
@@ -197,6 +198,7 @@ nav {
     position: relative;
     left: 300px;
     background-color: $backgroundall;
+
     .top {
         display: flex;
         align-items: center;
@@ -282,7 +284,8 @@ nav {
         .content-dashboard-top {
             display: none;
         }
-        #myTab{
+
+        #myTab {
             background-color: rgb(247, 247, 247);
             padding: 5px;
             display: flex;
@@ -290,6 +293,7 @@ nav {
             column-gap: 20px;
             border: none;
         }
+
         #ppj-tab {
             font-family: $fontRoboto;
             font-weight: 700;
@@ -357,7 +361,11 @@ nav {
                     flex: 1;
                     display: flex;
                     column-gap: 22px;
-                    padding: 16px 14px;
+                    padding: 24px 14px;
+                    // padding: 20px;
+                    background-color: #fff;
+                    border-radius: 14px;
+                    min-width: 320px;
 
                     .ppj-point-item-left {
                         img {
@@ -415,11 +423,13 @@ nav {
 
             .ppj-emission-scope {
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-between;
                 align-items: center;
                 margin-top: 18px;
                 padding: 0 30px;
                 flex-wrap: wrap;
+                row-gap: 20px;
+                column-gap: 20px;
 
                 .ppj-emission-scope-item {
                     display: flex;
@@ -427,6 +437,9 @@ nav {
                     align-items: center;
                     justify-content: space-between;
                     column-gap: 45px;
+                    background-color: #fff;
+                    border-radius: 14px;
+                    min-width: 330px;
 
                     .ppj-emission-scope-item-left {
                         .scope {
@@ -504,6 +517,7 @@ nav {
                     align-items: center;
                     background-color: #fff;
                     border-radius: 14px;
+
                     h2 {
                         font-size: 18px;
                         color: $primary-blue;
@@ -538,6 +552,7 @@ nav {
                     align-items: center;
                     background-color: #fff;
                     border-radius: 14px;
+
                     .top {
                         display: flex;
                         justify-content: center;
@@ -625,22 +640,25 @@ nav {
                 row-gap: 30px;
                 column-gap: 30px;
                 margin-bottom: 40px;
+
                 .ppj-totalenergyconsumption-item {
                     padding: 10px;
                     width: 45%;
                     background-color: #fff;
                     border-radius: 14px;
+
                     .top {
                         display: flex;
                         justify-content: center;
                         column-gap: 10px;
                         justify-content: flex-start;
+
                         .title {
                             font-family: $fontInter;
                             color: black;
                             font-size: 17px;
                             font-weight: 700;
-                          
+
                         }
 
                         .unit {
@@ -648,7 +666,7 @@ nav {
                             color: $dark-03;
                             font-size: 17px;
                             font-weight: 700;
-                          
+
                         }
                     }
 
@@ -667,7 +685,7 @@ nav {
                 margin-top: 10px;
                 margin-bottom: 20px;
                 padding: 5px;
-             
+
                 img {
                     width: 70px;
                     height: 50px;
@@ -696,6 +714,7 @@ nav {
                         // background-color: #f2f2f3;
                         padding: 7px 10px;
                         background-color: #fff;
+                        border-radius: 14px;
                         .dashboard-energy-content-electricity-title-left {
                             display: flex;
                             align-items: center;
@@ -732,6 +751,7 @@ nav {
                         margin-top: 30px;
                         background-color: #fff;
                         padding: 20px 10px;
+                        border-radius: 14px;
                         .dashboard-energy-content-electricity-content-left {
                             width: 50%;
 
@@ -762,11 +782,13 @@ nav {
 
                                 tr {
                                     cursor: default;
-                                    &:hover{
-                                        td{
+
+                                    &:hover {
+                                        td {
                                             font-weight: 700;
                                         }
                                     }
+
                                     th {
                                         background-color: $primary-green;
                                         font-family: $fontRoboto;
@@ -817,6 +839,7 @@ nav {
                         // background-color: #f2f2f3;
                         padding: 7px 10px;
                         background-color: #fff;
+                        border-radius: 14px;
                         .dashboard-energy-content-diesel-title-left {
                             display: flex;
                             align-items: center;
@@ -853,6 +876,7 @@ nav {
                         margin-top: 30px;
                         background-color: #fff;
                         padding: 20px 10px;
+                        border-radius: 14px;
                         .dashboard-energy-content-diesel-content-left {
                             width: 50%;
 
@@ -883,11 +907,13 @@ nav {
 
                                 tr {
                                     cursor: default;
-                                    &:hover{
-                                        td{
+
+                                    &:hover {
+                                        td {
                                             font-weight: 700;
                                         }
                                     }
+
                                     th {
                                         background-color: $primary-green;
                                         font-family: $fontRoboto;
@@ -938,6 +964,7 @@ nav {
                         // background-color: #f2f2f3;
                         padding: 7px 10px;
                         background-color: #fff;
+                        border-radius: 14px;
                         .dashboard-energy-content-petrol-title-left {
                             display: flex;
                             align-items: center;
@@ -974,6 +1001,7 @@ nav {
                         margin-top: 30px;
                         background-color: #fff;
                         padding: 20px 10px;
+                        border-radius: 14px;
                         .dashboard-energy-content-petrol-content-left {
                             width: 50%;
 
@@ -1004,11 +1032,13 @@ nav {
 
                                 tr {
                                     cursor: default;
-                                    &:hover{
-                                        td{
+
+                                    &:hover {
+                                        td {
                                             font-weight: 700;
                                         }
                                     }
+
                                     th {
                                         background-color: $primary-green;
                                         font-family: $fontRoboto;
@@ -1059,6 +1089,7 @@ nav {
                         // background-color: #f2f2f3;
                         padding: 7px 10px;
                         background-color: #fff;
+                        border-radius: 14px;
                         .dashboard-energy-content-gas-title-left {
                             display: flex;
                             align-items: center;
@@ -1095,6 +1126,7 @@ nav {
                         margin-top: 30px;
                         background-color: #fff;
                         padding: 20px 10px;
+                        border-radius: 14px;
                         .dashboard-energy-content-gas-content-left {
                             width: 50%;
 
@@ -1125,11 +1157,13 @@ nav {
 
                                 tr {
                                     cursor: default;
-                                    &:hover{
-                                        td{
+
+                                    &:hover {
+                                        td {
                                             font-weight: 700;
                                         }
                                     }
+
                                     th {
                                         background-color: $primary-green;
                                         font-family: $fontRoboto;
@@ -1181,6 +1215,7 @@ nav {
             box-shadow: 0px 0px 6px 6px #eeeeee;
             border-top-left-radius: 30px;
             border-top-right-radius: 30px;
+
             .content-report-energy-search-top {
                 width: 100%;
                 height: 50px;
@@ -1210,13 +1245,18 @@ nav {
                 padding: 20px;
                 position: relative;
                 background-color: #fff;
+
                 .content-report-energy-search-bottom-form {
                     display: flex;
                     column-gap: 60px;
                     align-items: flex-end;
-                    flex-wrap: wrap;
+                    // flex-wrap: wrap;
+                    width: 80%;
 
                     .content-report-energy-search-bottom-form-item {
+                        width: 18%;
+                        min-width: 200px;
+
                         p {
                             font-family: $fontRoboto;
                             font-weight: 700;
@@ -1227,15 +1267,51 @@ nav {
                         }
 
                         select {
-                            // width: 150px;
+
                             font-family: $fontRoboto;
                             font-weight: 400;
                             font-size: 16px;
-                            padding: 6px;
+                            padding: 6px 10px;
                             border-radius: 5px;
                             border: none;
-                            outline: 1px solid gray;
+                            outline: 1px solid lightgray;
                             margin-top: 10px;
+                            color: rgb(70, 70, 70);
+                            width: 100%;
+                            height: 40px;
+                        }
+
+                        input[type=text] {
+                            font-family: $fontRoboto;
+                            font-weight: 400;
+                            font-size: 16px;
+                            padding: 6px 10px;
+                            border-radius: 5px;
+                            border: none;
+                            outline: 1px solid lightgray;
+                            margin-top: 10px;
+                            color: rgb(70, 70, 70);
+                            // min-width: 150px;
+                            width: 100%;
+                            height: 40px;
+                            border-top-right-radius: 0;
+                            border-bottom-right-radius: 0;
+                        }
+
+                        .form-date {
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            width: 100%;
+
+                            div {
+                                margin-top: 10px;
+                                height: 42px;
+                                width: 45px;
+                                cursor: pointer;
+                                border-top-left-radius: 0;
+                                border-bottom-left-radius: 0;
+                            }
                         }
                     }
 
@@ -1336,6 +1412,7 @@ nav {
             margin-top: 56px;
             background-color: #fff;
             padding: 30px 20px;
+
             .content-report-energy-result-title {
                 font-family: Roboto;
                 font-size: 14px;
@@ -1354,7 +1431,7 @@ nav {
 
             .content-report-energy-result-table {
                 margin-top: 16px;
-               
+
                 table {
                     width: 100%;
 
@@ -1385,7 +1462,8 @@ nav {
                                 align-items: center;
                             }
                         }
-                        th{
+
+                        th {
                             font-weight: 700;
                         }
                     }
@@ -1468,6 +1546,7 @@ nav {
                     // }
 
                     #energy-ghgemission-tabcontent {
+
                         table {
                             width: 100%;
 
@@ -1564,6 +1643,7 @@ nav {
                 .content-report-energy-result-energy-ghgemission-table-right {
                     width: 50%;
                     overflow-x: auto;
+
                     table {
                         width: 100%;
 
@@ -1700,8 +1780,11 @@ nav {
                             padding: 6px;
                             border-radius: 5px;
                             border: none;
-                            outline: 1px solid gray;
+                            outline: 1px solid rgb(192, 192, 192);
                             margin-top: 10px;
+                            color: rgb(80, 80, 80);
+                            height: 40px;
+                            padding-left: 10px;
                         }
                     }
                 }
@@ -1928,6 +2011,38 @@ nav {
                 }
             }
         }
+
+        #content-report-energy {
+            .content-report-energy-search {
+                .content-report-energy-search-bottom {
+
+                    .content-report-energy-search-bottom-form {
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        row-gap: 20px;
+                        width: 100%;
+
+                        .content-report-energy-search-bottom-form-item {
+                            width: 100%;
+
+                            .form-date {
+                                div {
+                                    height: 43px;
+                                }
+                            }
+                        }
+
+                    }
+
+                    button {
+                        position: static;
+                        margin-left: 50%;
+                        transform: translate(-50%);
+                        margin-top: 50px;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -1965,6 +2080,7 @@ nav {
 
                     .ppj-point-item {
                         width: 50%;
+                        min-width: 340px;
                     }
                 }
 
@@ -1984,6 +2100,8 @@ nav {
         #content-report-energy {
             .content-report-energy-search {
                 padding-top: 30px;
+                border-radius: 0;
+                background-color: #fff;
 
                 .content-report-energy-search-top {
                     display: none;
@@ -2009,30 +2127,30 @@ nav {
                     }
                 }
 
-                .content-report-energy-search-bottom {
+                // .content-report-energy-search-bottom {
 
-                    .content-report-energy-search-bottom-form {
-                        display: grid;
-                        grid-template-columns: auto auto;
-                        row-gap: 20px;
+                //     .content-report-energy-search-bottom-form {
+                //         display: grid;
+                //         grid-template-columns: auto auto;
+                //         row-gap: 20px;
 
-                        .content-report-energy-search-bottom-form-item {
-                            width: 100%;
+                //         .content-report-energy-search-bottom-form-item {
+                //             width: 100%;
 
-                            select {
-                                width: 100%;
-                            }
-                        }
+                //             select {
+                //                 width: 100%;
+                //             }
+                //         }
 
-                    }
+                //     }
 
-                    button {
-                        position: static;
-                        margin-left: 50%;
-                        transform: translate(-50%);
-                        margin-top: 50px;
-                    }
-                }
+                //     button {
+                //         position: static;
+                //         margin-left: 50%;
+                //         transform: translate(-50%);
+                //         margin-top: 50px;
+                //     }
+                // }
             }
 
             .content-report-energy-result {
@@ -2382,7 +2500,9 @@ nav {
             }
 
         }
-        #content-dashboard{
+
+        #content-dashboard {
+
             #ghgemission-tab,
             #projectportfolio-tab {
                 display: none;
@@ -2401,6 +2521,7 @@ nav {
 
                     .ppj-point-item {
                         width: 50%;
+                        min-width: 300px;
 
                         .ppj-point-item-left {
                             img {
@@ -2513,6 +2634,42 @@ nav {
     }
 }
 
+@media screen and (max-width:991px) {
+    #content {
+        #content-report-energy {
+            .content-report-energy-search {
+                .content-report-energy-search-bottom {
+
+                    .content-report-energy-search-bottom-form {
+                        display: grid;
+                        grid-template-columns: auto;
+                        row-gap: 20px;
+                        width: 100%;
+
+                        .content-report-energy-search-bottom-form-item {
+                            width: 100%;
+
+                            .form-date {
+                                div {
+                                    height: 43px;
+                                }
+                            }
+                        }
+
+                    }
+
+                    button {
+                        position: static;
+                        margin-left: 50%;
+                        transform: translate(-50%);
+                        margin-top: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width:980px) {
     #content {
         .top {
@@ -2535,9 +2692,11 @@ nav {
                         font-size: 22px;
                     }
                 }
-                .ppj-emission-scope{
+
+                .ppj-emission-scope {
                     display: none;
                 }
+
                 .ppj-emission-scope-responsive {
                     display: block;
                     width: 100%;
@@ -2613,13 +2772,14 @@ nav {
     }
 }
 
-@media screen and (max-width:920px) {
+@media screen and (max-width:960px) {
     #content {
         #content-dashboard {
             #overview {
                 .ppj-point {
 
                     .ppj-point-item {
+                        min-width: 220px;
 
                         .ppj-point-item-right {
 
@@ -2640,19 +2800,50 @@ nav {
     }
 
 }
+@media screen and (max-width:900px) {
+    #content {
+        #content-dashboard {
+            #myTab {
+
+                #overview-tab,
+                #energy-tab {
+                    padding: 10px 50px;
+                }
+            }
+        }
+
+        #content-report-energy {
+            .content-report-energy-importdata {
+                .content-report-energy-importdata-bottom {
+                    .content-report-energy-importdata-bottom-yearmonth {
+                        display: block;
+
+                        .content-report-energy-importdata-bottom-yearmonth-item {
+                            width: 100%;
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
 @media screen and (max-width:855px) {
-    #content{
-        #content-dashboard{
-            #overview{
-                .ppj-totalenergyconsumption{
+    #content {
+        #content-dashboard {
+            #overview {
+                .ppj-totalenergyconsumption {
                     display: block;
-                    .ppj-totalenergyconsumption-item{
-                     
-                        .top{
-                            .title{
+
+                    .ppj-totalenergyconsumption-item {
+
+                        .top {
+                            .title {
                                 flex: 1.5;
                             }
-                            .unit{
+
+                            .unit {
                                 flex: 1;
                             }
                         }
@@ -2662,6 +2853,7 @@ nav {
         }
     }
 }
+
 @media screen and (max-width:800px) {
     nav {
         // position: absolute;
@@ -2876,31 +3068,39 @@ nav {
                     margin: 0;
                 }
             }
-            #myTab{
+
+            #myTab {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 width: 100%;
                 background-color: transparent;
                 margin-top: 20px;
-                #overview-tab,#energy-tab{
+
+                #overview-tab,
+                #energy-tab {
                     padding: 10px 100px;
                 }
             }
-            #overview{
+
+            #overview {
                 padding-top: 30px;
-                .ppj-top{
+
+                .ppj-top {
                     display: none;
                 }
             }
-            #energy{
-                .dashboard-energy-top{
+
+            #energy {
+                .dashboard-energy-top {
                     display: none;
                 }
-                .dashboard-energy-content{
+
+                .dashboard-energy-content {
                     padding-top: 60px;
                 }
             }
+
             #ppj-tab {
                 display: none;
             }
@@ -2908,17 +3108,8 @@ nav {
     }
 }
 
-@media screen and (max-width:600px) {
-    #content{
-        #content-dashboard {
-            #myTab{
-                #overview-tab,#energy-tab{
-                    padding: 10px 50px;
-                }
-            }
-        }
-    }
-}
+
+
 @media screen and (max-width:500px) {
 
     #content {
@@ -2932,6 +3123,7 @@ nav {
         #content-dashboard {
 
             #energy {
+
                 // padding: 20px 0;
                 .dashboard-energy-top {
                     display: none;
@@ -2939,8 +3131,10 @@ nav {
 
                 .dashboard-energy-content {
                     padding: 60px 0;
+
                     .dashboard-energy-content-electricity {
                         margin-top: 0;
+
                         .dashboard-energy-content-electricity-content {
 
                             .dashboard-energy-content-electricity-content-left,
@@ -2954,6 +3148,7 @@ nav {
 
                     .dashboard-energy-content-diesel {
                         margin-top: 40px;
+
                         .dashboard-energy-content-diesel-content {
 
                             .dashboard-energy-content-diesel-content-left,
@@ -2967,6 +3162,7 @@ nav {
 
                     .dashboard-energy-content-petrol {
                         margin-top: 40px;
+
                         .dashboard-energy-content-petrol-content {
 
                             .dashboard-energy-content-petrol-content-left,
@@ -2980,6 +3176,7 @@ nav {
 
                     .dashboard-energy-content-gas {
                         margin-top: 40px;
+
                         .dashboard-energy-content-gas-content {
 
                             .dashboard-energy-content-gas-content-left,
@@ -3007,7 +3204,8 @@ nav {
 
                     .ppj-point-item {
                         column-gap: 10px;
-                        padding: 0;
+                        padding: 10px;
+                        min-width: 180px;
 
                         .ppj-point-item-right {
 
@@ -3033,7 +3231,7 @@ nav {
                     display: none;
                 }
 
-             
+
 
                 .ppj-kpi {
                     .ppj-kpi-item {
@@ -3121,41 +3319,29 @@ nav {
                 }
             }
 
-            .content-report-energy-result{
-                .content-report-energy-result-energy-ghgemission-table{
-                    .content-report-energy-result-energy-ghgemission-table-left{
-                        #energy-ghgemission-tab{
+            .content-report-energy-result {
+                .content-report-energy-result-energy-ghgemission-table {
+                    .content-report-energy-result-energy-ghgemission-table-left {
+                        #energy-ghgemission-tab {
                             display: flex;
                             flex-direction: row;
-                            #energy-tab,#ghgemission-tab{
+
+                            #energy-tab,
+                            #ghgemission-tab {
                                 flex: 1;
                                 padding: 10px;
                                 font-size: 15px;
                             }
                         }
-                       
+
                     }
                 }
             }
         }
     }
 }
-@media screen and (max-width:400px) {
-    #content{
-        #content-dashboard {
-            #myTab{
-                #overview-tab,#energy-tab{
-                    padding: 10px 19px;
-                }
-            }
-        }
-    }
-}
-@media screen and (max-width:360px) {
-    nav {
-        width: 260px;
-    }
 
+@media screen and (max-width:410px) {
     #content {
         #content-dashboard {
             #overview {
@@ -3168,11 +3354,52 @@ nav {
 
                         .ppj-point-item-right {
                             .ppj-point-item-right-bottom {
-                                width: 210px;
+                                width: 180px;
                             }
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:400px) {
+    #content {
+        #content-dashboard {
+            #myTab {
+
+                #overview-tab,
+                #energy-tab {
+                    padding: 10px 19px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:360px) {
+    nav {
+        width: 260px;
+    }
+
+    #content {
+        #content-dashboard {
+            #overview {
+                // .ppj-point {
+                //     display: block;
+
+                //     .ppj-point-item {
+                //         width: 100%;
+                //         margin-top: 10px;
+
+                //         .ppj-point-item-right {
+                //             .ppj-point-item-right-bottom {
+                //                 width: 210px;
+                //             }
+                //         }
+                //     }
+                // }
 
                 .ppj-emission-scope-responsive {
                     padding: 0;
