@@ -309,7 +309,7 @@ nav .nav-footer img {
   width: 100%;
 }
 #content #content-dashboard #overview .ppj-point .ppj-point-item {
-  width: 100%;
+  width: 30%;
   display: flex;
   -moz-column-gap: 32px;
        column-gap: 32px;
