@@ -52,6 +52,16 @@
             <img src="assets/image/index/language.svg" alt="">
             <img src="assets/image/index/dropdown.svg" alt="" style="width: 16px;height: 16px;cursor: pointer;">
         </div>
+        <div class="login-language-menu-dropdown">
+            <div><img src="assets/image/index/language.svg" alt=""> English</div>
+            <div><img src="assets/image/index/vi.svg" alt=""> Vietnamese</div>
+        </div>
+        <script>
+            $(".login-language-menu-dropdown").hide();
+            $('.login-language').click(function() {
+                $(".login-language-menu-dropdown").slideToggle(120);
+            });
+        </script>
         <div class="login-title">
             <div class="login-title-left">
                 <img src="assets/image/index/LogoBYECO2.svg" alt="">
@@ -92,10 +102,10 @@
             </div>
             <button class="form-button" formaction="dashboard.html">Log in</button>
         </form>
-       
+        <div class="login-footer">
+            <img src="assets/image/index/loginfooter-01.svg" alt="">
+            <p>BYECO2 SMART ENVIRONMENT <br>AND ENERGY JSC</p>
+        </div>
     </div>
-    <div class="login-footer">
-        <img src="assets/image/index/loginfooter.svg" alt="">
-        <p>BYECO2 SMART ENVIRONMENT AND ENERGY JSC</p>
-    </div>
+   
 </body>

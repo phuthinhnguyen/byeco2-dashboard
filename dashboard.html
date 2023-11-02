@@ -14,10 +14,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.2/chart.umd.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.2/chart.umd.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>   
-
+   
     <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script> -->
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script> -->
@@ -134,7 +133,17 @@
         <div class="language-offcanvas">
             <p>ENG</p>
             <img src="assets/image/index/language.svg" alt="">
-            <img src="assets/image/index/dropdownoffcanvas.svg" alt="" style="width: 10px;height: 10px;">
+            <img src="assets/image/index/dropdownoffcanvas.svg" alt="" style="width: 10px;height: 10px;cursor: pointer;" class="dropdownoffcanvas">
+            <div class="offcanvas-language-menu-dropdown">
+                <div><img src="assets/image/index/language.svg" alt=""> English</div>
+                <div><img src="assets/image/index/vi.svg" alt=""> Vietnamese</div>
+            </div>
+            <script>
+                $(".offcanvas-language-menu-dropdown").hide();
+                $('.dropdownoffcanvas').click(function() {
+                    $(".offcanvas-language-menu-dropdown").slideToggle(120);
+                });
+            </script>
         </div>
         <div class="logout-offcanvas">
             Logout
@@ -203,6 +212,16 @@
                 <img src="assets/image/index/dropdown.svg" alt="" style="width: 15px;height: 15px;" class="top-content-right-dropdown">
                 <img src="assets/image/index/avatar.svg" alt=""
                     style="width: 48px;height: 48px;border-radius: 50%;margin-right: 0;">
+                <div class="top-content-right-language-menu-dropdown">
+                    <div><img src="assets/image/index/language.svg" alt=""> English</div>
+                    <div><img src="assets/image/index/vi.svg" alt=""> Vietnamese</div>
+                </div>
+                <script>
+                    $(".top-content-right-language-menu-dropdown").hide();
+                    $('.top-content-right-dropdown').click(function() {
+                        $(".top-content-right-language-menu-dropdown").slideToggle(120);
+                    });
+                </script>
             </div>
             
         </div>
@@ -1949,7 +1968,19 @@
                                                     barThickness: 20,
 
 
-                                                }, ]
+                                                },  
+                                                {
+                                                    type: "bar",
+                                                    data: yValuesbarmyChartdashboardenergycontentpetrolcontent2,
+                                                    backgroundColor: "#C6D92D",
+                                                    label: 'CO2 Emission (Mil Ton)',
+                                                    yAxisID: 'B',
+                                                    fill: true,
+                                                    tension: 0.4,
+                                                    barThickness: 20,
+
+
+                                                }]
                                             },
                                             options: {
                                                 responsive: true,

@@ -73,6 +73,28 @@ nav {
 
     .language-offcanvas {
         display: none;
+        position: relative;
+        .offcanvas-language-menu-dropdown{
+            position: absolute;
+            top: 15px;
+            right: 100px;
+            div{
+                margin-top: 10px;
+                font-family: $fontRoboto;
+                font-size: 14px;
+                font-weight: 500;
+                color: #fff;
+                cursor: pointer;
+                img{
+                    width: 18px;
+                    height: 18px;
+                    margin-right: 10px;
+                }
+                &:hover{
+                    color: $primary-green;
+                }
+            }
+        }
     }
 
     .logout-offcanvas {
@@ -235,6 +257,28 @@ nav {
                     font-size: 14px;
                 }
             }
+
+            .top-content-right-language-menu-dropdown {
+                position: fixed;
+                top: 65px;
+                right: 61px;
+                div{
+                    margin-top: 10px;
+                    font-family: $fontRoboto;
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: $primary-dark;
+                    cursor: pointer;
+                    img{
+                        width: 22px;
+                        height: 22px;
+                        margin-right: 10px;
+                    }
+                    &:hover{
+                        color: $primary-green;
+                    }
+                }
+            }
         }
 
     }
@@ -360,6 +404,7 @@ nav {
                 row-gap: 25px;
                 margin-top: 18px;
                 width: 100%;
+
                 .ppj-point-item {
                     width: 30%;
                     display: flex;
@@ -371,7 +416,7 @@ nav {
                     min-width: 490px;
 
                     .ppj-point-item-left {
-                        
+
                         img {
                             width: 82px;
                             height: 77px;
@@ -380,6 +425,7 @@ nav {
 
                     .ppj-point-item-right {
                         width: 85%;
+
                         h1 {
                             color: $primary-green;
                             text-align: center;
@@ -480,7 +526,7 @@ nav {
                                 font-size: 32px;
                                 color: $primary-green;
                                 line-height: 38px;
-                                
+
                             }
 
                             .unit {
@@ -515,6 +561,7 @@ nav {
                 padding: 0 30px;
                 flex-wrap: wrap;
                 column-gap: 30px;
+
                 .ppj-kpi-item {
                     padding: 15px;
                     width: 30%;
@@ -550,6 +597,7 @@ nav {
                 flex-wrap: wrap;
                 row-gap: 30px;
                 column-gap: 30px;
+
                 .ppj-emission-value-item {
                     padding: 15px;
                     width: 30%;
@@ -564,7 +612,7 @@ nav {
                         display: flex;
                         justify-content: center;
                         column-gap: 10px;
-                       
+
                         .title {
                             font-family: $fontInter;
                             color: black;
@@ -589,8 +637,10 @@ nav {
                     .details {
                         margin-top: 20px;
                         width: 100%;
+
                         .details-title {
                             margin: auto;
+
                             img {
                                 width: 12px;
                                 height: 12px;
@@ -612,10 +662,12 @@ nav {
                             width: 100%;
                             overflow-x: auto;
                             margin: auto;
+
                             table {
                                 width: 100%;
                                 margin: auto;
                                 margin-top: 18px;
+
                                 tr {
                                     border-bottom: 1px solid lightgray;
 
@@ -727,6 +779,7 @@ nav {
                         padding: 7px 10px;
                         background-color: #fff;
                         border-radius: 14px;
+
                         .dashboard-energy-content-electricity-title-left {
                             display: flex;
                             align-items: center;
@@ -764,6 +817,7 @@ nav {
                         background-color: #fff;
                         padding: 20px 10px;
                         border-radius: 14px;
+
                         .dashboard-energy-content-electricity-content-left {
                             width: 50%;
 
@@ -852,6 +906,7 @@ nav {
                         padding: 7px 10px;
                         background-color: #fff;
                         border-radius: 14px;
+
                         .dashboard-energy-content-diesel-title-left {
                             display: flex;
                             align-items: center;
@@ -889,6 +944,7 @@ nav {
                         background-color: #fff;
                         padding: 20px 10px;
                         border-radius: 14px;
+
                         .dashboard-energy-content-diesel-content-left {
                             width: 50%;
 
@@ -977,6 +1033,7 @@ nav {
                         padding: 7px 10px;
                         background-color: #fff;
                         border-radius: 14px;
+
                         .dashboard-energy-content-petrol-title-left {
                             display: flex;
                             align-items: center;
@@ -1014,6 +1071,7 @@ nav {
                         background-color: #fff;
                         padding: 20px 10px;
                         border-radius: 14px;
+
                         .dashboard-energy-content-petrol-content-left {
                             width: 50%;
 
@@ -1102,6 +1160,7 @@ nav {
                         padding: 7px 10px;
                         background-color: #fff;
                         border-radius: 14px;
+
                         .dashboard-energy-content-gas-title-left {
                             display: flex;
                             align-items: center;
@@ -1139,6 +1198,7 @@ nav {
                         background-color: #fff;
                         padding: 20px 10px;
                         border-radius: 14px;
+
                         .dashboard-energy-content-gas-content-left {
                             width: 50%;
 
@@ -1293,7 +1353,8 @@ nav {
                             height: 40px;
                             background-color: #fff;
                         }
-                        select option{
+
+                        select option {
                             background-color: #fff;
                         }
 
@@ -1660,6 +1721,7 @@ nav {
                     width: 50%;
                     overflow-x: auto;
                     padding-top: 65px;
+
                     table {
                         width: 100%;
 
@@ -1803,7 +1865,8 @@ nav {
                             padding-left: 10px;
                             background-color: #fff;
                         }
-                        select option{
+
+                        select option {
                             background-color: #fff;
                         }
                     }
@@ -2007,17 +2070,19 @@ nav {
     }
 
 }
+
 @media screen and (max-width:1919px) {
-    #content{
-        #content-dashboard{
-            #overview{
-                .ppj-point{
-                    .ppj-point-item{
+    #content {
+        #content-dashboard {
+            #overview {
+                .ppj-point {
+                    .ppj-point-item {
                         min-width: 450px;
                     }
                 }
-                .ppj-emission-scope{
-                    .ppj-emission-scope-item{
+
+                .ppj-emission-scope {
+                    .ppj-emission-scope-item {
                         min-width: 450px;
                     }
                 }
@@ -2027,16 +2092,17 @@ nav {
 }
 
 @media screen and (max-width:1800px) {
-    #content{
-        #content-dashboard{
-            #overview{
-                .ppj-point{
-                    .ppj-point-item{
+    #content {
+        #content-dashboard {
+            #overview {
+                .ppj-point {
+                    .ppj-point-item {
                         min-width: 400px;
                     }
                 }
-                .ppj-emission-scope{
-                    .ppj-emission-scope-item{
+
+                .ppj-emission-scope {
+                    .ppj-emission-scope-item {
                         min-width: 400px;
                     }
                 }
@@ -2044,17 +2110,19 @@ nav {
         }
     }
 }
+
 @media screen and (max-width:1650px) {
-    #content{
-        #content-dashboard{
-            #overview{
-                .ppj-point{
-                    .ppj-point-item{
+    #content {
+        #content-dashboard {
+            #overview {
+                .ppj-point {
+                    .ppj-point-item {
                         min-width: 350px;
                     }
                 }
-                .ppj-emission-scope{
-                    .ppj-emission-scope-item{
+
+                .ppj-emission-scope {
+                    .ppj-emission-scope-item {
                         min-width: 350px;
                     }
                 }
@@ -2062,6 +2130,7 @@ nav {
         }
     }
 }
+
 @media screen and (max-width:1600px) {
     #content {
         #content-dashboard {
@@ -2119,18 +2188,20 @@ nav {
         }
     }
 }
+
 @media screen and (max-width:1500px) {
-    #content{
-        #content-dashboard{
-            #overview{
-                .ppj-point{
-                    .ppj-point-item{
+    #content {
+        #content-dashboard {
+            #overview {
+                .ppj-point {
+                    .ppj-point-item {
                         min-width: 300px;
                     }
                 }
-                .ppj-emission-scope{
-                   
-                    .ppj-emission-scope-item{
+
+                .ppj-emission-scope {
+
+                    .ppj-emission-scope-item {
                         column-gap: 0;
                         min-width: 300px;
                     }
@@ -2139,6 +2210,7 @@ nav {
         }
     }
 }
+
 @media screen and (max-width:1450px) {
     #content {
         #content-dashboard {
@@ -2174,9 +2246,10 @@ nav {
 
                     .ppj-point-item {
                         width: 100%;
-                        min-width: 450px; 
+                        min-width: 450px;
                     }
                 }
+
                 .ppj-emission-scope {
                     display: none;
                 }
@@ -2188,6 +2261,7 @@ nav {
                     margin-top: 21px;
                     border-radius: 14px;
                     background-color: #fff;
+
                     .ppj-emission-scope-responsive-top {
                         margin-bottom: 35px;
                         display: flex;
@@ -2252,9 +2326,11 @@ nav {
                         }
                     }
                 }
-                .ppj-kpi{
+
+                .ppj-kpi {
                     display: block;
-                    .ppj-kpi-item{
+
+                    .ppj-kpi-item {
                         width: 70%;
                         margin: auto;
                         margin-top: 30px;
@@ -2262,9 +2338,11 @@ nav {
                         max-width: 550px;
                     }
                 }
-                .ppj-emission-value{
+
+                .ppj-emission-value {
                     display: block;
-                    .ppj-emission-value-item{
+
+                    .ppj-emission-value-item {
                         width: 70%;
                         margin: auto;
                         margin-top: 30px;
@@ -2272,8 +2350,10 @@ nav {
                         max-width: 550px;
                     }
                 }
+
                 .ppj-totalenergyconsumption {
                     display: block;
+
                     .ppj-totalenergyconsumption-item {
                         width: 70%;
                         margin: auto;
@@ -2286,12 +2366,13 @@ nav {
         }
     }
 }
+
 @media screen and (max-width:1320px) {
-    #content{
-        #content-dashboard{
-            #overview{
-                .ppj-point{
-                    .ppj-point-item{
+    #content {
+        #content-dashboard {
+            #overview {
+                .ppj-point {
+                    .ppj-point-item {
                         min-width: 400px;
                     }
                 }
@@ -2299,12 +2380,13 @@ nav {
         }
     }
 }
+
 @media screen and (max-width:1220px) {
-    #content{
-        #content-dashboard{
-            #overview{
-                .ppj-point{
-                    .ppj-point-item{
+    #content {
+        #content-dashboard {
+            #overview {
+                .ppj-point {
+                    .ppj-point-item {
                         min-width: 350px;
                     }
                 }
@@ -2312,6 +2394,7 @@ nav {
         }
     }
 }
+
 @media screen and (max-width:1260px) {
     #content {
         #content-report-energy {
@@ -2719,13 +2802,14 @@ nav {
         }
 
         #content-dashboard {
-            #overview{
-                .ppj-point{
-                    .ppj-point-item{
+            #overview {
+                .ppj-point {
+                    .ppj-point-item {
                         min-width: 300px;
                     }
                 }
             }
+
             #ghgemission-tab,
             #projectportfolio-tab {
                 display: none;
@@ -2733,6 +2817,7 @@ nav {
         }
     }
 }
+
 // @media screen and (max-width:1320px) {
 //     #content{
 //         #content-dashboard{
@@ -2753,11 +2838,12 @@ nav {
                 .ppj-point {
                     // grid-template-columns: auto;
                     padding: 10px;
-                    
+
                     .ppj-point-item {
                         width: 100%;
                         min-width: 280px;
                         column-gap: 10px;
+
                         .ppj-point-item-left {
                             img {
                                 width: 30px;
@@ -3025,6 +3111,7 @@ nav {
     }
 
 }
+
 @media screen and (max-width:920px) {
     #content {
         #content-dashboard {
@@ -3042,9 +3129,10 @@ nav {
     }
 
 }
+
 @media screen and (max-width:900px) {
     #content {
-     
+
         #content-report-energy {
             .content-report-energy-importdata {
                 .content-report-energy-importdata-bottom {
@@ -3062,12 +3150,14 @@ nav {
         }
     }
 }
+
 @media screen and (max-width:890px) {
     #content {
         #content-dashboard {
             #overview {
                 .ppj-point {
                     column-gap: 10px;
+
                     .ppj-point-item {
                         min-width: 220px;
 
@@ -3079,6 +3169,7 @@ nav {
     }
 
 }
+
 @media screen and (max-width:855px) {
     #content {
         #content-dashboard {
@@ -3339,25 +3430,29 @@ nav {
                 .ppj-top {
                     display: none;
                 }
+
                 .ppj-point {
-                 
+
                     .ppj-point-item {
                         min-width: 330px;
 
                     }
                 }
-                .ppj-kpi{
-                    .ppj-kpi-item{
+
+                .ppj-kpi {
+                    .ppj-kpi-item {
                         width: 75%;
                     }
                 }
-                .ppj-emission-value{
-                    .ppj-emission-value-item{
+
+                .ppj-emission-value {
+                    .ppj-emission-value-item {
                         width: 75%;
                     }
                 }
-                .ppj-totalenergyconsumption{
-                    .ppj-totalenergyconsumption-item{
+
+                .ppj-totalenergyconsumption {
+                    .ppj-totalenergyconsumption-item {
                         width: 75%;
                     }
                 }
@@ -3397,6 +3492,7 @@ nav {
     }
 
 }
+
 @media screen and (max-width:660px) {
     #content {
         #content-dashboard {
@@ -3407,6 +3503,7 @@ nav {
                     padding: 10px 39px;
                 }
             }
+
             #overview {
                 .ppj-point {
 
@@ -3421,6 +3518,7 @@ nav {
     }
 
 }
+
 @media screen and (max-width:560px) {
     #content {
         #content-dashboard {
@@ -3438,6 +3536,7 @@ nav {
     }
 
 }
+
 @media screen and (max-width:500px) {
 
     #content {
@@ -3563,6 +3662,7 @@ nav {
 
                 .ppj-kpi {
                     padding: 0;
+
                     .ppj-kpi-item {
                         width: 100%;
                         // canvas {
@@ -3574,6 +3674,7 @@ nav {
 
                 .ppj-emission-value {
                     padding: 0;
+
                     .ppj-emission-value-item {
                         width: 100%;
                         // canvas {
@@ -3672,6 +3773,7 @@ nav {
         }
     }
 }
+
 @media screen and (max-width:440px) {
     #content {
         #content-dashboard {
@@ -3717,10 +3819,11 @@ nav {
                     padding: 10px 19px;
                 }
             }
-            
+
         }
     }
 }
+
 @media screen and (max-width:391px) {
     #content {
         #content-dashboard {
@@ -3737,24 +3840,27 @@ nav {
         }
     }
 }
+
 @media screen and (max-width:380px) {
     #content {
         #content-dashboard {
             #overview {
-                .ppj-kpi{
-                    .ppj-kpi-item{
+                .ppj-kpi {
+                    .ppj-kpi-item {
                         width: 100%;
                         min-width: 250px;
                     }
                 }
-                .ppj-emission-value{
-                    .ppj-emission-value-item{
+
+                .ppj-emission-value {
+                    .ppj-emission-value-item {
                         width: 100%;
                         min-width: 250px;
                     }
                 }
-                .ppj-totalenergyconsumption{
-                    .ppj-totalenergyconsumption-item{
+
+                .ppj-totalenergyconsumption {
+                    .ppj-totalenergyconsumption-item {
                         width: 100%;
                         min-width: 250px;
                     }
@@ -3763,6 +3869,7 @@ nav {
         }
     }
 }
+
 @media screen and (max-width:360px) {
     nav {
         width: 260px;
@@ -3788,7 +3895,8 @@ nav {
 
                 .ppj-emission-scope-responsive {
                     padding: 20px;
-                    .ppj-emission-scope-responsive-item{
+
+                    .ppj-emission-scope-responsive-item {
                         column-gap: 20px;
                     }
                 }
@@ -3844,6 +3952,7 @@ nav {
         }
     }
 }
+
 @media screen and (max-width:357px) {
     #content {
         #content-dashboard {
@@ -3860,6 +3969,7 @@ nav {
         }
     }
 }
+
 @media screen and (max-width:340px) {
     #content {
         #content-dashboard {
@@ -3868,12 +3978,13 @@ nav {
 
                     .ppj-point-item {
                         min-width: 100px;
-                        
+
                     }
                 }
-                .ppj-kpi{
-                    .ppj-kpi-item{
-                     
+
+                .ppj-kpi {
+                    .ppj-kpi-item {
+
                         min-width: 250px;
                     }
                 }
@@ -3881,12 +3992,14 @@ nav {
         }
     }
 }
+
 @media screen and (max-width:330px) {
     #content {
         #content-dashboard {
             #overview {
                 .ppj-point {
                     display: block;
+
                     .ppj-point-item {
                         margin-top: 10px;
                         height: 80px;
