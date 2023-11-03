@@ -345,21 +345,6 @@ body {
     width: 60px;
   }
 }
-@media screen and (max-height: 800px) and (max-width: 1024px) {
-  body {
-    overflow-y: auto;
-  }
-}
-@media screen and (max-height: 768px) and (max-width: 1024px) {
-  body {
-    overflow-y: auto;
-  }
-}
-@media screen and (max-height: 600px) and (max-width: 1024px) {
-  body {
-    overflow-y: auto;
-  }
-}
 @media screen and (max-width: 320px) {
   body {
     overflow-y: hidden;
@@ -375,5 +360,20 @@ body {
   }
   .login .login-footer p {
     font-size: 11px;
+  }
+}
+@media screen and (height: 800px) and (width: 1024px) {
+  body {
+    overflow-y: auto;
+  }
+}
+@media screen and (height: 768px) and (width: 1024px) {
+  body {
+    overflow-y: auto;
+  }
+}
+@media screen and (height: 600px) and (width: 1024px) {
+  body {
+    overflow-y: auto;
   }
 }
