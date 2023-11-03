@@ -18,7 +18,6 @@ nav {
     width: 300px;
     background-color: $primary-green;
     display: block;
-    // min-height: 1200px;
     height: 100vh;
     position: fixed;
     background-image: linear-gradient(-50deg, #8DD92D, #63C23D, #33A850, #2AA44D, #20A049);
@@ -397,7 +396,8 @@ nav {
                 // display: flex;
                 align-items: center;
                 justify-content: space-between;
-                grid-template-columns: auto auto auto;
+                // grid-template-columns: auto auto auto;
+                grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));;
                 // flex-wrap: wrap;
                 padding: 10px 30px;
                 column-gap: 32px;
@@ -406,7 +406,7 @@ nav {
                 width: 100%;
 
                 .ppj-point-item {
-                    width: 30%;
+                    // width: 30%;
                     display: flex;
                     column-gap: 32px;
                     padding: 24px 14px;
@@ -474,7 +474,8 @@ nav {
 
             .ppj-emission-scope {
                 display: grid;
-                grid-template-columns: auto auto auto;
+                // grid-template-columns: auto auto auto;
+                grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));;
                 justify-content: space-between;
                 align-items: center;
                 margin-top: 18px;
@@ -559,19 +560,19 @@ nav {
                 row-gap: 30px;
                 margin-top: 30px;
                 padding: 0 30px;
-                flex-wrap: wrap;
-                column-gap: 30px;
+                // flex-wrap: wrap;
+                column-gap: 32px;
 
                 .ppj-kpi-item {
                     padding: 15px;
-                    width: 30%;
+                    width: 32%;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
                     background-color: #fff;
                     border-radius: 14px;
-
+                    // min-width: 490px;
                     h2 {
                         font-size: 18px;
                         color: $primary-blue;
@@ -594,13 +595,13 @@ nav {
                 justify-content: space-between;
                 margin-top: 40px;
                 padding: 0 30px;
-                flex-wrap: wrap;
+                // flex-wrap: wrap;
                 row-gap: 30px;
-                column-gap: 30px;
+                column-gap: 32px;
 
                 .ppj-emission-value-item {
                     padding: 15px;
-                    width: 30%;
+                    width: 32%;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -1024,7 +1025,7 @@ nav {
 
                 .dashboard-energy-content-petrol {
                     margin-top: 50px;
-
+                    margin-bottom: 50px;
                     .dashboard-energy-content-petrol-title {
                         display: flex;
                         align-items: center;
@@ -1616,11 +1617,6 @@ nav {
                         }
 
                     }
-
-                    // .hihi {
-                    //     color: $primary-green;
-                    //     border-bottom: 3px solid $primary-green;
-                    // }
 
                     #energy-ghgemission-tabcontent {
 
@@ -2242,8 +2238,8 @@ nav {
         #content-dashboard {
             #overview {
                 .ppj-point {
-                    grid-template-columns: auto auto;
-
+                    // grid-template-columns: auto auto;
+                    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
                     .ppj-point-item {
                         width: 100%;
                         min-width: 450px;
@@ -2427,30 +2423,6 @@ nav {
                     }
                 }
 
-                // .content-report-energy-search-bottom {
-
-                //     .content-report-energy-search-bottom-form {
-                //         display: grid;
-                //         grid-template-columns: auto auto;
-                //         row-gap: 20px;
-
-                //         .content-report-energy-search-bottom-form-item {
-                //             width: 100%;
-
-                //             select {
-                //                 width: 100%;
-                //             }
-                //         }
-
-                //     }
-
-                //     button {
-                //         position: static;
-                //         margin-left: 50%;
-                //         transform: translate(-50%);
-                //         margin-top: 50px;
-                //     }
-                // }
             }
 
             .content-report-energy-result {
@@ -2818,19 +2790,7 @@ nav {
     }
 }
 
-// @media screen and (max-width:1320px) {
-//     #content{
-//         #content-dashboard{
-//             #overview{
-//                 .ppj-point{
-//                     .ppj-point-item{
-//                         min-width: 400px;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
+
 @media screen and (max-width:1050px) {
     #content {
         #content-dashboard {
@@ -2869,13 +2829,6 @@ nav {
                         }
                     }
                 }
-
-
-                // .ppj-totalenergyconsumption {
-                //     .ppj-totalenergyconsumption-item {
-                //         width: 100%;
-                //     }
-                // }
             }
 
             #energy {
@@ -3013,82 +2966,6 @@ nav {
                         font-size: 22px;
                     }
                 }
-
-                // .ppj-emission-scope {
-                //     display: none;
-                // }
-
-                // .ppj-emission-scope-responsive {
-                //     display: block;
-                //     width: 100%;
-                //     padding: 20px;
-                //     margin-top: 21px;
-                //     border-radius: 14px;
-                //     background-color: #fff;
-                //     .ppj-emission-scope-responsive-top {
-                //         margin-bottom: 30px;
-                //         display: flex;
-                //         align-items: center;
-                //         column-gap: 16px;
-
-                //         img {
-                //             width: 43px;
-                //             height: 43px;
-                //         }
-
-                //         h2 {
-                //             font-family: Roboto;
-                //             font-size: 20px;
-                //             font-weight: 700;
-                //             color: black;
-                //             margin: 0;
-                //         }
-                //     }
-
-                //     .ppj-emission-scope-responsive-item {
-                //         display: flex;
-                //         justify-content: space-between;
-                //         align-items: center;
-                //         margin-top: 20px;
-
-                //         .ppj-emission-scope-responsive-item-left {
-                //             display: flex;
-                //             align-items: center;
-                //             column-gap: 16px;
-
-                //             img {
-                //                 width: 40px;
-                //                 height: 40px;
-                //             }
-
-                //             h3 {
-                //                 font-family: Inter;
-                //                 font-size: 16px;
-                //                 font-weight: 700;
-                //                 color: black;
-                //                 margin: 0;
-                //             }
-                //         }
-
-                //         .ppj-emission-scope-responsive-item-right {
-                //             h2 {
-                //                 font-family: Inter;
-                //                 font-size: 27px;
-                //                 font-weight: 700;
-                //                 color: $primary-green;
-                //                 margin: 0;
-                //             }
-
-                //             p {
-                //                 font-family: Roboto;
-                //                 font-size: 12px;
-                //                 font-weight: 400;
-                //                 color: #7E8CA0;
-                //                 margin: 0;
-                //             }
-                //         }
-                //     }
-                // }
             }
         }
     }
@@ -3878,20 +3755,6 @@ nav {
     #content {
         #content-dashboard {
             #overview {
-                // .ppj-point {
-                //     display: block;
-
-                //     .ppj-point-item {
-                //         width: 100%;
-                //         margin-top: 10px;
-
-                //         .ppj-point-item-right {
-                //             .ppj-point-item-right-bottom {
-                //                 width: 210px;
-                //             }
-                //         }
-                //     }
-                // }
 
                 .ppj-emission-scope-responsive {
                     padding: 20px;
@@ -3900,15 +3763,6 @@ nav {
                         column-gap: 20px;
                     }
                 }
-
-                // .ppj-kpi {
-                //     .ppj-kpi-item {
-                //         canvas {
-                //             max-width: 260px;
-                //             min-width: 260px;
-                //         }
-                //     }
-                // }
 
                 .ppj-emission-value {
                     .ppj-emission-value-item {

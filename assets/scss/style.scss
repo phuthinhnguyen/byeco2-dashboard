@@ -9,10 +9,8 @@ img {
 
 body {
     box-sizing: border-box;
-    // display: flex;
     max-height: 100vh;
     overflow: hidden;
-
 }
 
 .login {
@@ -358,23 +356,13 @@ body {
 
         .login-footer {
             margin-top: 0;
-            // bottom: 0;
-            // position: relative;
-            // background-image: url('/assets/image/index/loginfooter.svg');
-            // background-position: center;
-            // background-repeat: no-repeat;
-            // background-size: contain;
             display:  flex;
             flex-direction: column;
             align-items: flex-end;
             justify-content: flex-end;
-            // height: 150px;
             width: 100%;
             img{
-                // width: 120%;
                 height: 50%;
-                // min-height: 400px;
-                // display: none;
                 margin-bottom: -100px;
             }
             p {

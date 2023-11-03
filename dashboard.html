@@ -18,8 +18,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>   
    
     <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
-    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script> -->
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script> -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
@@ -191,6 +189,8 @@
 
     <!-- Page Content  -->
     <div id="content">
+
+        <!-- Top Menu -->
         <div class="top">
             <div class="top-content-left">
                 <img src="assets/image/index/home.svg" alt="" style="margin-right: 16px;">
@@ -202,7 +202,6 @@
                     <img src="assets/image/index/search.svg" alt="" onclick="showsearchbar()">
                     <input type="text" placeholder="Search or type">
                 </div>
-
             </div>
             <div class="top-content-right">
                 <img src="assets/image/index/notification.svg" alt="">
@@ -253,14 +252,12 @@
             }
             function showoffcanvas(){
                 document.getElementById('mySidebar').style.display = 'block';
-                // document.getElementById('mySidebar').style.position = 'absolute';
-                // document.getElementById('mySidebar').style.left = '0';
-                // document.getElementById('mySidebar').style.top = '0';
                 document.getElementById('content').style.width = '100%';
                 document.getElementById('content').style.left = '0';
             }
         </script>
        
+       <!-- Content Dashboard -->
         <div id="content-dashboard">
             <div class="content-dashboard-top">
                 <img src="assets/image/index/dashboardresponsive.svg" alt="">
@@ -309,6 +306,8 @@
                 })
             </script>
             <div class="tab-content" id="myTabContent">
+
+                <!-- Overview -->
                 <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
                     <div class="ppj-top">
                         <img src="assets/image/index/LogoBYECO2.svg" alt="">
@@ -1202,6 +1201,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Energy -->
                 <div class="tab-pane fade" id="energy" role="tabpanel" aria-labelledby="energy-tab">
                     <div class="dashboard-energy-top">
                         <img src="assets/image/index/LogoBYECO2.svg" alt="">
@@ -1914,7 +1915,7 @@
                                 })
                             </script>
                         </div>
-                        <div class="dashboard-energy-content-gas">
+                        <d iv class="dashboard-energy-content-gas">
                             <div class="dashboard-energy-content-gas-title">
                                 <div class="dashboard-energy-content-gas-title-left">
                                     <img src="assets/image/index/gas.svg" alt="">
@@ -2160,19 +2161,23 @@
                                     $('.dashboard-energy-content-gas-content').slideToggle();
                                 })
                             </script>
-                        </div>
+                        </d>
                     </div>
 
                 </div>
-                <div class="tab-pane fade" id="ghgemission" role="tabpanel" aria-labelledby="ghgemission-tab">
 
+                <!-- GHG Emission -->
+                <div class="tab-pane fade" id="ghgemission" role="tabpanel" aria-labelledby="ghgemission-tab">
+                
+                <!-- Project Portfolio -->
                 </div>
                 <div class="tab-pane fade" id="projectportfolio" role="tabpanel" aria-labelledby="projectportfolio-tab">
 
                 </div>
             </div>
-
         </div>
+
+        <!-- Report Energy -->
         <div id="content-report-energy">
             <div class="content-report-energy-search">
                 <div class="content-report-energy-search-top">
@@ -2395,6 +2400,7 @@
                 </div>
             </div>
 
+            <!-- Search Result -->
             <div class="content-report-energy-result">
                 <div class="content-report-energy-result-title">Result</div>
                 <div class="content-report-energy-result-title-responsive">
@@ -2825,6 +2831,7 @@
                 })
             </script>
 
+            <!-- Import data -->
             <div class="content-report-energy-importdata">
                 <div class="content-report-energy-importdata-top">
                     <p>Import energy data</p>
