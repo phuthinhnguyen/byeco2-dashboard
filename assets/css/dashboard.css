@@ -2652,6 +2652,7 @@ nav .nav-footer img {
 @media screen and (max-width: 410px) {
   #content #content-dashboard #overview .ppj-point .ppj-point-item {
     min-width: 150px;
+    height: 100px;
   }
 }
 @media screen and (max-width: 400px) {
