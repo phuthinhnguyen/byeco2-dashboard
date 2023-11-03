@@ -478,6 +478,13 @@ body {
 @media screen and (max-width:320px) {
     body {
         overflow-y: hidden;
+        .login{
+            .login-footer{
+                p{
+                    font-size: 11px;
+                }
+            }
+        }
     }
 }
 @media screen and (max-width:280px) {

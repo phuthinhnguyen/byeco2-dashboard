@@ -364,6 +364,9 @@ body {
   body {
     overflow-y: hidden;
   }
+  body .login .login-footer p {
+    font-size: 11px;
+  }
 }
 @media screen and (max-width: 280px) {
   .login .login-footer img {
