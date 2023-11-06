@@ -18,10 +18,11 @@ nav {
     width: 300px;
     background-color: $primary-green;
     display: block;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     background-image: linear-gradient(-50deg, #8DD92D, #63C23D, #33A850, #2AA44D, #20A049);
-
+    overflow-y: auto;
+    overflow-x: hidden;
     .logo {
         // background-color: $fourth-green;
         padding: 23px 29px;
@@ -117,11 +118,13 @@ nav {
             height: 16px;
             margin-right: 5px;
             margin-bottom: 3px;
+            user-select: none;
         }
 
         i {
             font-size: 18px;
             color: #fff;
+
         }
 
         span {
@@ -130,6 +133,7 @@ nav {
             line-height: 24px;
             font-weight: 500;
             color: #fff;
+            user-select: none;
         }
 
         &:hover {
@@ -150,7 +154,7 @@ nav {
             margin: auto;
             border-radius: 5px;
             margin-top: 5px;
-
+            user-select: none;
             span {
                 color: #fff;
                 font-family: $fontRoboto;
@@ -177,7 +181,7 @@ nav {
             margin: auto;
             border-radius: 5px;
             margin-top: 5px;
-
+            user-select: none;
             span {
                 color: #fff;
                 font-family: $fontRoboto;
@@ -204,7 +208,7 @@ nav {
         bottom: 0;
         left: 10px;
         width: 300px;
-
+        z-index: -1;
         img {
             width: 100%;
             height: auto;
@@ -336,6 +340,9 @@ nav {
             align-items: center;
             column-gap: 20px;
             border: none;
+            // height: 50px;
+            // overflow: hidden;
+           
         }
 
         #ppj-tab {
@@ -3189,7 +3196,7 @@ nav {
 
         .dashboard-left-content,
         #dashboard-angle-down {
-            display: none;
+            // display: none;
         }
 
         .report-left-content {
@@ -3234,6 +3241,7 @@ nav {
             display: block;
             margin-left: 20px;
             margin-top: 32px;
+            margin-bottom: 30px;
         }
     }
 
@@ -3294,10 +3302,18 @@ nav {
                 width: 100%;
                 background-color: transparent;
                 margin-top: 20px;
-
+           
                 #overview-tab,
                 #energy-tab {
                     padding: 10px 100px;
+            
+                }
+                #ghgemission-tab{
+                    padding: 10px 80px;
+                    margin-left: -55px;
+                }
+                #projectportfolio-tab{
+                    padding: 10px 60px;
                 }
             }
 
@@ -3378,6 +3394,9 @@ nav {
                 #overview-tab,
                 #energy-tab {
                     padding: 10px 39px;
+                }
+                #ghgemission-tab,#projectportfolio-tab{
+                    padding: 10px 20px;
                 }
             }
 
@@ -3694,6 +3713,11 @@ nav {
                 #overview-tab,
                 #energy-tab {
                     padding: 10px 19px;
+                  
+                }
+                #ghgemission-tab,#projectportfolio-tab{
+                    padding: 10px 5px;
+                   
                 }
             }
 
@@ -3749,7 +3773,7 @@ nav {
 
 @media screen and (max-width:360px) {
     nav {
-        width: 260px;
+        width: 290px;
     }
 
     #content {

@@ -13,9 +13,11 @@ nav {
   width: 300px;
   background-color: #20A049;
   display: block;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   background-image: linear-gradient(-50deg, #8DD92D, #63C23D, #33A850, #2AA44D, #20A049);
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 nav .logo {
   padding: 23px 29px;
@@ -100,6 +102,9 @@ nav .report img {
   height: 16px;
   margin-right: 5px;
   margin-bottom: 3px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 nav .dashboard i,
 nav .report i {
@@ -113,6 +118,9 @@ nav .report span {
   line-height: 24px;
   font-weight: 500;
   color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 nav .dashboard:hover,
 nav .report:hover {
@@ -129,6 +137,9 @@ nav .dashboard-left-content .dashboard-left-content-projectportfolio {
   margin: auto;
   border-radius: 5px;
   margin-top: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 nav .dashboard-left-content .dashboard-left-content-ppj span,
 nav .dashboard-left-content .dashboard-left-content-energy span,
@@ -156,6 +167,9 @@ nav .report-left-content .report-left-content-waste {
   margin: auto;
   border-radius: 5px;
   margin-top: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 nav .report-left-content .report-left-content-energy span,
 nav .report-left-content .report-left-content-ghgemission span,
@@ -180,6 +194,7 @@ nav .nav-footer {
   bottom: 0;
   left: 10px;
   width: 300px;
+  z-index: -1;
 }
 nav .nav-footer img {
   width: 100%;
@@ -2376,10 +2391,6 @@ nav .nav-footer img {
   nav .dashboard {
     margin-top: 35px;
   }
-  nav .dashboard-left-content,
-  nav #dashboard-angle-down {
-    display: none;
-  }
   nav .report-left-content .report-left-content-ghgemission {
     display: none;
   }
@@ -2415,6 +2426,7 @@ nav .nav-footer img {
     display: block;
     margin-left: 20px;
     margin-top: 32px;
+    margin-bottom: 30px;
   }
   #content {
     width: 100%;
@@ -2470,6 +2482,13 @@ nav .nav-footer img {
   #content #content-dashboard #myTab #energy-tab {
     padding: 10px 100px;
   }
+  #content #content-dashboard #myTab #ghgemission-tab {
+    padding: 10px 80px;
+    margin-left: -55px;
+  }
+  #content #content-dashboard #myTab #projectportfolio-tab {
+    padding: 10px 60px;
+  }
   #content #content-dashboard #overview {
     padding-top: 30px;
   }
@@ -2507,6 +2526,9 @@ nav .nav-footer img {
   #content #content-dashboard #myTab #overview-tab,
   #content #content-dashboard #myTab #energy-tab {
     padding: 10px 39px;
+  }
+  #content #content-dashboard #myTab #ghgemission-tab, #content #content-dashboard #myTab #projectportfolio-tab {
+    padding: 10px 20px;
   }
   #content #content-dashboard #overview .ppj-point .ppj-point-item {
     min-width: 250px;
@@ -2660,6 +2682,9 @@ nav .nav-footer img {
   #content #content-dashboard #myTab #energy-tab {
     padding: 10px 19px;
   }
+  #content #content-dashboard #myTab #ghgemission-tab, #content #content-dashboard #myTab #projectportfolio-tab {
+    padding: 10px 5px;
+  }
 }
 @media screen and (max-width: 391px) {
   #content #content-dashboard #overview .ppj-point .ppj-point-item {
@@ -2683,7 +2708,7 @@ nav .nav-footer img {
 }
 @media screen and (max-width: 360px) {
   nav {
-    width: 260px;
+    width: 290px;
   }
   #content #content-dashboard #overview .ppj-emission-scope-responsive {
     padding: 20px;

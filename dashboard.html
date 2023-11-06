@@ -16,7 +16,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.2/chart.umd.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>   
-   
     <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
@@ -289,19 +288,39 @@
             <script>
                 $("#myTab #overview-tab").css({"color":"black","box-shadow":"0px 0px 6px 6px #eeeeee"});
                 $("#myTab #overview-tab").click(function () {
-                    $(this).css({"color":"black","box-shadow":"0px 0px 6px 6px #eeeeee"})
+                    if (window.innerWidth>800){
+                        $(this).css({"color":"black","box-shadow":"0px 0px 6px 6px #eeeeee"})
+                    }
+                    else if (window.innerWidth<=800){
+                        $(this).css({"color":"#20A049","box-shadow":"0px 0px 6px 6px #eeeeee"})
+                    }
                     $("#energy-tab,#ghgemission-tab,#projectportfolio-tab").css({"color":"#9AA0A0","box-shadow":"none"})
                 })
                 $("#myTab #energy-tab").click(function () {
-                    $(this).css({"color":"black","box-shadow":"0px 0px 6px 6px #eeeeee"})
+                    if (window.innerWidth>800){
+                        $(this).css({"color":"black","box-shadow":"0px 0px 6px 6px #eeeeee"})
+                    }
+                    else if (window.innerWidth<=800){
+                        $(this).css({"color":"#20A049","box-shadow":"0px 0px 6px 6px #eeeeee"})
+                    }
                     $("#overview-tab,#ghgemission-tab,#projectportfolio-tab").css({"color":"#9AA0A0","box-shadow":"none"})
                 })
                 $("#myTab #ghgemission-tab").click(function () {
-                    $(this).css({"color":"black","box-shadow":"0px 0px 6px 6px #eeeeee"})
+                    if (window.innerWidth>800){
+                        $(this).css({"color":"black","box-shadow":"0px 0px 6px 6px #eeeeee"})
+                    }
+                    else if (window.innerWidth<=800){
+                        $(this).css({"color":"#20A049","box-shadow":"0px 0px 6px 6px #eeeeee"})
+                    }
                     $("#overview-tab,#energy-tab,#projectportfolio-tab").css({"color":"#9AA0A0","box-shadow":"none"})
                 })
                 $("#myTab #projectportfolio-tab").click(function () {
-                    $(this).css({"color":"black","box-shadow":"0px 0px 6px 6px #eeeeee"})
+                    if (window.innerWidth>800){
+                        $(this).css({"color":"black","box-shadow":"0px 0px 6px 6px #eeeeee"})
+                    }
+                    else if (window.innerWidth<=800){
+                        $(this).css({"color":"#20A049","box-shadow":"0px 0px 6px 6px #eeeeee"})
+                    }
                     $("#overview-tab,#energy-tab,#ghgemission-tab").css({"color":"#9AA0A0","box-shadow":"none"})
                 })
             </script>
@@ -3010,12 +3029,20 @@
 
         $("#content-dashboard").show();
         $("#content-report-energy").hide();
+        if (window.innerWidth<=800){
+            $('#myTab #overview-tab').css({"color":"#20A049"})
+        }
         $(".dashboard-left-content-ppj,.dashboard").click(function () {
             $("#content-report-energy,#content-dashboard").hide();
             $("#content-dashboard").fadeIn();
             $('#myTab #overview-tab').tab('show');
             $('#myTab #overview-tab').css({"color":"black","box-shadow":"0px 0px 6px 6px #eeeeee"})
             $("#energy-tab,#ghgemission-tab,#projectportfolio-tab").css({"color":"#9AA0A0","box-shadow":"none"})
+            if (window.innerWidth<=800){
+                $('#myTab #overview-tab,#energy-tab').css({"display":"block"})
+                $('#myTab #ghgemission-tab,#projectportfolio-tab').css({"display":"none"})
+                $('#myTab #overview-tab').css({"color":"#20A049","box-shadow":"0px 0px 6px 6px #eeeeee"})
+            }
         })
         $(".dashboard-left-content-energy").click(function () {
             $("#content-report-energy,#content-dashboard").hide();
@@ -3023,6 +3050,11 @@
             $('#myTab #energy-tab').tab('show');
             $('#myTab #energy-tab').css({"color":"black","box-shadow":"0px 0px 6px 6px #eeeeee"})
             $("#overview-tab,#ghgemission-tab,#projectportfolio-tab").css({"color":"#9AA0A0","box-shadow":"none"})
+            if (window.innerWidth<=800){
+                $('#myTab #overview-tab,#energy-tab').css({"display":"block"})
+                $('#myTab #ghgemission-tab,#projectportfolio-tab').css({"display":"none"})
+                $('#myTab #energy-tab').css({"color":"#20A049","box-shadow":"0px 0px 6px 6px #eeeeee"})
+            }
         })
         $(".dashboard-left-content-ghgemission").click(function () {
             $("#content-report-energy,#content-dashboard").hide();
@@ -3030,6 +3062,11 @@
             $('#myTab #ghgemission-tab').tab('show');
             $('#myTab #ghgemission-tab').css({"color":"black","box-shadow":"0px 0px 6px 6px #eeeeee"})
             $("#overview-tab,#energy-tab,#projectportfolio-tab").css({"color":"#9AA0A0","box-shadow":"none"})
+            if (window.innerWidth<=800){
+                $('#myTab #overview-tab,#energy-tab').css({"display":"none"})
+                $('#myTab #ghgemission-tab,#projectportfolio-tab').css({"display":"block"})
+                $('#myTab #ghgemission-tab').css({"color":"#20A049","box-shadow":"0px 0px 6px 6px #eeeeee"})
+            }
         })
         $(".dashboard-left-content-projectportfolio").click(function () {
             $("#content-report-energy,#content-dashboard").hide();
@@ -3037,6 +3074,11 @@
             $('#myTab #projectportfolio-tab').tab('show');
             $('#myTab #projectportfolio-tab').css({"color":"black","box-shadow":"0px 0px 6px 6px #eeeeee"})
             $("#overview-tab,#energy-tab,#ghgemission-tab").css({"color":"#9AA0A0","box-shadow":"none"})
+            if (window.innerWidth<=800){
+                $('#myTab #overview-tab,#energy-tab').css({"display":"none"})
+                $('#myTab #ghgemission-tab,#projectportfolio-tab').css({"display":"block"})
+                $('#myTab #projectportfolio-tab').css({"color":"#20A049","box-shadow":"0px 0px 6px 6px #eeeeee"})
+            }
         })
         $(".report-left-content-energy,.report").click(function () {
             $("#content-report-energy,#content-dashboard").hide();
