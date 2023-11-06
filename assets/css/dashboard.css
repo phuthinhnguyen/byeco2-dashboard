@@ -2301,7 +2301,7 @@ nav .nav-footer img {
   nav {
     left: 0;
     top: 0;
-    width: 300px;
+    width: 301px;
     display: none;
     z-index: 2;
   }
@@ -2707,9 +2707,6 @@ nav .nav-footer img {
   }
 }
 @media screen and (max-width: 360px) {
-  nav {
-    width: 290px;
-  }
   #content #content-dashboard #overview .ppj-emission-scope-responsive {
     padding: 20px;
   }
@@ -2758,5 +2755,10 @@ nav .nav-footer img {
   #content #content-dashboard #overview .ppj-point .ppj-point-item {
     margin-top: 10px;
     height: 80px;
+  }
+}
+@media screen and (max-height: 830px) {
+  nav .nav-footer {
+    display: none;
   }
 }

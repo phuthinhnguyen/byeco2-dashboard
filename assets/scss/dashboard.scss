@@ -3084,7 +3084,7 @@ nav {
         // position: absolute;
         left: 0;
         top: 0;
-        width: 300px;
+        width: 301px;
         display: none;
         z-index: 2;
 
@@ -3773,7 +3773,7 @@ nav {
 
 @media screen and (max-width:360px) {
     nav {
-        width: 290px;
+        // width: 310px;
     }
 
     #content {
@@ -3884,6 +3884,13 @@ nav {
                     }
                 }
             }
+        }
+    }
+}
+@media screen and (max-height:830px) {
+    nav{
+        .nav-footer{
+            display: none;
         }
     }
 }
