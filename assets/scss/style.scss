@@ -115,16 +115,20 @@ body {
             width: 500px;
             margin-top: 40px;
             z-index: 2;
+            background-color: #FFFFFF;
+            border-radius: 16px;
+            box-shadow: 0px 0px 4px 1px #eeeeee;
+            padding: 40px 30px;
             // margin-top: -50px;
             // margin-left: 170px;
             .form-input {
                 display: flex;
                 flex-direction: column;
                 row-gap: 12px;
-                padding: 20px 30px;
-                background-color: #FFFFFF;
-                border-radius: 10px;
-                box-shadow: 0px 0px 6px 6px #eeeeee;
+                // padding: 20px 30px;
+                // background-color: #FFFFFF;
+                // border-radius: 10px;
+                // box-shadow: 0px 0px 6px 6px #eeeeee;
     
                 label {
                     font-family: $fontRoboto;
@@ -143,7 +147,7 @@ body {
                     column-gap: 15px;
                     width: 446px;
                     height: 62px;
-    
+                    border-radius: 10px;
                     img {
                         width: 15px;
                         height: 22px;
@@ -330,9 +334,9 @@ body {
             }
     
             .login-form {
-                padding: 0;
+                // padding: 0;
                 width: 100%;
-    
+                box-shadow: 0px 0px 4px 3px #eeeeee;
                 .form-input {
     
                     .usernameinput,
@@ -407,9 +411,9 @@ body {
     
             .login-form {
                 margin-top: 30px;
-    
+                padding: 25px;
                 .form-input {
-                    padding: 20px;
+                    // padding: 20px;
     
                     label {
                         font-size: 15px;

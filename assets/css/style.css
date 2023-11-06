@@ -97,15 +97,15 @@ body {
   width: 500px;
   margin-top: 40px;
   z-index: 2;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0px 0px 4px 1px #eeeeee;
+  padding: 40px 30px;
 }
 .login .login-content .login-form .form-input {
   display: flex;
   flex-direction: column;
   row-gap: 12px;
-  padding: 20px 30px;
-  background-color: #FFFFFF;
-  border-radius: 10px;
-  box-shadow: 0px 0px 6px 6px #eeeeee;
 }
 .login .login-content .login-form .form-input label {
   font-family: "Roboto";
@@ -124,6 +124,7 @@ body {
        column-gap: 15px;
   width: 446px;
   height: 62px;
+  border-radius: 10px;
 }
 .login .login-content .login-form .form-input .usernameinput img,
 .login .login-content .login-form .form-input .passwordinput img {
@@ -270,8 +271,8 @@ body {
     margin-top: 100px;
   }
   .login .login-content .login-form {
-    padding: 0;
     width: 100%;
+    box-shadow: 0px 0px 4px 3px #eeeeee;
   }
   .login .login-content .login-form .form-input .usernameinput,
   .login .login-content .login-form .form-input .passwordinput {
@@ -320,9 +321,7 @@ body {
   }
   .login .login-content .login-form {
     margin-top: 30px;
-  }
-  .login .login-content .login-form .form-input {
-    padding: 20px;
+    padding: 25px;
   }
   .login .login-content .login-form .form-input label {
     font-size: 15px;
