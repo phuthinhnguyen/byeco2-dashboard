@@ -2472,22 +2472,25 @@ nav .nav-footer img {
   }
   #content #content-dashboard #myTab {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     background-color: transparent;
     margin-top: 20px;
-  }
-  #content #content-dashboard #myTab #overview-tab,
-  #content #content-dashboard #myTab #energy-tab {
-    padding: 10px 100px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 25px;
   }
   #content #content-dashboard #myTab #ghgemission-tab {
-    padding: 10px 80px;
-    margin-left: -55px;
+    display: block;
+    -webkit-text-size-adjust: none;
+       -moz-text-size-adjust: none;
+            text-size-adjust: none;
+    min-width: 150px;
   }
   #content #content-dashboard #myTab #projectportfolio-tab {
-    padding: 10px 60px;
+    display: block;
+    min-width: 180px;
   }
   #content #content-dashboard #overview {
     padding-top: 30px;

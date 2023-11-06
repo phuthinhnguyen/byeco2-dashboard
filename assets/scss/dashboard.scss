@@ -3297,23 +3297,30 @@ nav {
 
             #myTab {
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
                 align-items: center;
                 width: 100%;
                 background-color: transparent;
                 margin-top: 20px;
-           
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                padding-bottom: 25px;
                 #overview-tab,
                 #energy-tab {
-                    padding: 10px 100px;
+                    // padding: 10px 100px;
             
                 }
                 #ghgemission-tab{
-                    padding: 10px 80px;
-                    margin-left: -55px;
+                    display: block;
+                    // padding: 10px 80px;
+                    // margin-left: -55px;
+                    text-size-adjust: none;
+                    min-width: 150px;
                 }
                 #projectportfolio-tab{
-                    padding: 10px 60px;
+                    display: block;
+                    // padding: 10px 60px;
+                    min-width: 180px;
                 }
             }
 
